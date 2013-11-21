@@ -333,6 +333,22 @@
 		<value condition="Container(313).Position(5)">$INFO[Container(313).ListItem(-5).Label2]</value>
 		<value>$INFO[Container(313).ListItem(0).Label2]</value>
 	</variable>
+	<variable name="NowPlaying_Label_Pictures">
+		<value condition="Container(314).Position(1)">$INFO[Container(314).ListItem(-1).Label]</value>
+		<value condition="Container(314).Position(2)">$INFO[Container(314).ListItem(-2).Label]</value>
+		<value condition="Container(314).Position(3)">$INFO[Container(314).ListItem(-3).Label]</value>
+		<value condition="Container(314).Position(4)">$INFO[Container(314).ListItem(-4).Label]</value>
+		<value condition="Container(314).Position(5)">$INFO[Container(314).ListItem(-5).Label]</value>
+		<value>$INFO[Container(314).ListItem(0).Label]</value>
+	</variable>
+	<variable name="NowPlaying_Label2_Pictures">
+		<value condition="Container(314).Position(1)">$INFO[Container(314).ListItem(-1).Label2]</value>
+		<value condition="Container(314).Position(2)">$INFO[Container(314).ListItem(-2).Label2]</value>
+		<value condition="Container(314).Position(3)">$INFO[Container(314).ListItem(-3).Label2]</value>
+		<value condition="Container(314).Position(4)">$INFO[Container(314).ListItem(-4).Label2]</value>
+		<value condition="Container(314).Position(5)">$INFO[Container(314).ListItem(-5).Label2]</value>
+		<value>$INFO[Container(314).ListItem(0).Label2]</value>
+	</variable>
 		
 	<include name="Movie_Icon_Properties">
 		<width>RA_IconPoster_Width</width>
@@ -3956,7 +3972,7 @@
 				<control type="group" description="Item (5r --> 6r)">
 					<posx>RA_IconSquare7_PosX</posx>
 					<visible>Container(314).HasNext + Container(314).OnScrollPrevious + !stringcompare(Container(314).Listitem(6).Property(CheckRecent),one) +
-						IsEmpty(Container(314).Listitem(6).Property(CheckQuicklink)) + !stringcompare(Container(314).Listitem(6).Property(CheckNowPlaying),*.*)</visible>
+						!stringcompare(Container(314).Listitem(6).Property(CheckNowPlaying),*.*)</visible>
 					<camera x="1777" y="143"/>
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
 					<animation effect="slide" time="RA_AnimationTime" end="300,0" reversible="false" tween="sine" easing="inout">Hidden</animation>
