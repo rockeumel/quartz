@@ -4072,7 +4072,7 @@
 			</control>
 		
 			<control type="label" description="Shortcuts">
-				<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
+				<visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
 				<posx>118</posx>
 				<posy>46</posy>
 				<width>600</width>
