@@ -1346,14 +1346,9 @@
 				<texture>home_recentlyadded/Square_Selector.png</texture>
 				<aspectratio>scale</aspectratio>
 				<visible>Control.HasFocus(311) + Container(311).Position(0) + Player.HasAudio + !Container(311).HasPrevious</visible>
-				<animation type="Hidden">
-					<effect type="slide" time="150" end="100"/>
-					<effect type="fade" time="150" start="100" end="0"/>
-				</animation>
-				<animation type="Visible">
-					<effect type="slide" time="150" start="100" end="0"/>
-					<effect type="fade" time="250" start="0" end="100"/>
-				</animation>
+				<animation condition="Container(311).Position(1)" effect="slide" start="0,0" end="294,0" time="150" tween="sine" easing="inout">Conditional</animation>
+				<animation effect="fade" time="150" start="100" end="0">Hidden</animation>
+				<animation effect="fade" time="250" start="0" end="100">Visible</animation>
 			</control>
 			
 			<control type="label" description="New Movies">
