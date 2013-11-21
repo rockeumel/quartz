@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fonts>
   <fontset id="Default" unicode="true">
+    <!--
+    Roboto-Light.ttf
+    Roboto-Thin.ttf
+    Roboto-Regular.ttf
+    Roboto-Medium.ttf
+    Roboto-Bold.ttf
+    Roboto-Black.ttf    -->
+    <font>
+      <name>Shelf_Title</name>
+      <filename>Roboto-Medium.ttf</filename>
+      <size>28</size>
+    </font>
+    <font>
+      <name>Shelf_Title2</name>
+      <filename>Roboto-Medium.ttf</filename>
+      <size>26</size>
+    </font>
+    <font>
+      <name>Shelf_Headline</name>
+      <filename>Roboto-Regular.ttf</filename>
+      <size>32</size>
+    </font>
+    <font>
+      <name>HomeNav</name>
+      <filename>Roboto-Regular.ttf</filename>
+      <size>40</size>
+    </font>
+    <font>
+      <name>HomeNav_Submenu</name>
+      <filename>Roboto-Regular.ttf</filename>
+      <size>36</size>
+    </font>
+    
     <font>
       <name>font13</name>
       <filename>Default.ttf</filename>

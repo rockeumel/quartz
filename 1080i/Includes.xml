@@ -17,7 +17,7 @@
   <include file="View_LiveTV.xml" />
   <include file="View_PVR.xml" />
   <include file="Includes_Home.xml" />
-  <include file="Includes_Shelf.xml" />
+  <include file="Includes_HomePanel.xml" />
   <include file="Includes_WP10DayForecast.xml" />
   <include file="Includes_WP36HourForecast.xml" />
   <include file="Includes_WPWeekendForecast.xml" />
