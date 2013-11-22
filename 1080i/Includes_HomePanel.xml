@@ -437,8 +437,7 @@
 				</focusedlayout>
 				
 				<content>
-					<!--  Now Playing  -->
-					<item id="30">
+					<item id="99" description="Now Playing">
 						<label>$INFO[MusicPlayer.Title]</label>
 						<label2>$INFO[MusicPlayer.Artist]</label2>
 						<property name="CheckNowPlaying">*.*</property>
@@ -446,22 +445,108 @@
 						<thumb>$INFO[MusicPlayer.Cover]</thumb>
 						<visible>Player.HasAudio</visible>
 					</item>
-					
-					<!-- ============== -->
-					<!-- Recently Added -->
-					<!-- ============== -->
-					<item id="1" description="Latest Movie">
+					<item id="1" description="Addons">
+						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMovies.1.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfMovies.1.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.1.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfMovies.1.Label)])</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">one</property>
+					</item>
+					<item id="2" description="Addons">
+						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMovies.2.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfMovies.2.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.2.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfMovies.2.Label)])</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">two</property>
+					</item>
+					<item id="3" description="Addons">
+						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMovies.3.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfMovies.3.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.3.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfMovies.3.Label)])</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">three</property>
+					</item>
+					<item id="4" description="Addons">
+						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMovies.4.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfMovies.4.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.4.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfMovies.4.Label)])</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">four</property>
+					</item>
+					<item id="5" description="Addons">
+						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMovies.5.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfMovies.5.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.5.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfMovies.5.Label)])</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">five</property>
+					</item>
+					<item id="6" description="Fav">
+						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMovies.6.Label))</visible>
+						<label>$INFO[Skin.String(ShelfMovies.6.Label)]</label>
+						<thumb>$INFO[Skin.String(ShelfMovies.6.Icon)]</thumb>
+						<onclick>$INFO[Skin.String(ShelfMovies.6.Path)]</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">six</property>
+					</item>
+					<item id="7" description="Fav">
+						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMovies.7.Label))</visible>
+						<label>$INFO[Skin.String(ShelfMovies.7.Label)]</label>
+						<thumb>$INFO[Skin.String(ShelfMovies.7.Icon)]</thumb>
+						<onclick>$INFO[Skin.String(ShelfMovies.7.Path)]</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">seven</property>
+					</item>
+					<item id="8" description="Fav">
+						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMovies.8.Label))</visible>
+						<label>$INFO[Skin.String(ShelfMovies.8.Label)]</label>
+						<thumb>$INFO[Skin.String(ShelfMovies.8.Icon)]</thumb>
+						<onclick>$INFO[Skin.String(ShelfMovies.8.Path)]</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">eight</property>
+					</item>
+					<item id="9" description="Fav">
+						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMovies.9.Label))</visible>
+						<label>$INFO[Skin.String(ShelfMovies.9.Label)]</label>
+						<thumb>$INFO[Skin.String(ShelfMovies.9.Icon)]</thumb>
+						<onclick>$INFO[Skin.String(ShelfMovies.9.Path)]</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">nine</property>
+					</item>
+					<item id="10" description="Fav">
+						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMovies.10.Label))</visible>
+						<label>$INFO[Skin.String(ShelfMovies.10.Label)]</label>
+						<thumb>$INFO[Skin.String(ShelfMovies.10.Icon)]</thumb>
+						<onclick>$INFO[Skin.String(ShelfMovies.10.Path)]</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">ten</property>
+					</item>
+					<item id="11" description="Latest Movie">
 						<visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
 						<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
-						<property name="CheckRecent">one</property>
 						<onclick>$INFO[Window.Property(LatestMovie.1.Path),PlayMedia(,)]</onclick>
 						<onclick>Skin.SetBool(Content_Movies)</onclick>
 						<onclick>Skin.Reset(Content_TvShows)</onclick>
 						<thumb>$INFO[Window.Property(LatestMovie.1.Thumb)]</thumb>
 						<visible>!IsEmpty(Window.Property(LatestMovie.1.Title))</visible>
 						<property name="ItemType">$LOCALIZE[20386]</property>
+						<property name="CheckPosition">eleven</property>
 					</item>
-					<item id="2" description="Latest Movie">
+					<item id="12" description="Latest Movie">
 						<visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
 						<label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
 						<onclick>$INFO[Window.Property(LatestMovie.2.Path),PlayMedia(,)]</onclick>
@@ -470,8 +555,9 @@
 						<thumb>$INFO[Window.Property(LatestMovie.2.Thumb)]</thumb>
 						<visible>!IsEmpty(Window.Property(LatestMovie.2.Title))</visible>
 						<property name="ItemType">$LOCALIZE[20386]</property>
+						<property name="CheckPosition">twelve</property>
 					</item>
-					<item id="3" description="Latest Movie">
+					<item id="13" description="Latest Movie">
 						<visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
 						<label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
 						<onclick>$INFO[Window.Property(LatestMovie.3.Path),PlayMedia(,)]</onclick>
@@ -480,8 +566,9 @@
 						<thumb>$INFO[Window.Property(LatestMovie.3.Thumb)]</thumb>
 						<visible>!IsEmpty(Window.Property(LatestMovie.3.Title))</visible>
 						<property name="ItemType">$LOCALIZE[20386]</property>
+						<property name="CheckPosition">thirteen</property>
 					</item>
-					<item id="4" description="Latest Movie">
+					<item id="14" description="Latest Movie">
 						<visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
 						<label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
 						<onclick>$INFO[Window.Property(LatestMovie.4.Path),PlayMedia(,)]</onclick>
@@ -490,8 +577,9 @@
 						<thumb>$INFO[Window.Property(LatestMovie.4.Thumb)]</thumb>
 						<visible>!IsEmpty(Window.Property(LatestMovie.4.Title))</visible>
 						<property name="ItemType">$LOCALIZE[20386]</property>
+						<property name="CheckPosition">fourteen</property>
 					</item>
-					<item id="5" description="Latest Movie">
+					<item id="15" description="Latest Movie">
 						<visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
 						<label>$INFO[Window.Property(LatestMovie.5.Title)]</label>
 						<onclick>$INFO[Window.Property(LatestMovie.5.Path),PlayMedia(,)]</onclick>
@@ -500,8 +588,9 @@
 						<thumb>$INFO[Window.Property(LatestMovie.5.Thumb)]</thumb>
 						<visible>!IsEmpty(Window.Property(LatestMovie.5.Title))</visible>
 						<property name="ItemType">$LOCALIZE[20386]</property>
+						<property name="CheckPosition">fifteen</property>
 					</item>
-					<item id="6" description="Latest Movie">
+					<item id="16" description="Latest Movie">
 						<visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
 						<label>$INFO[Window.Property(LatestMovie.6.Title)]</label>
 						<onclick>$INFO[Window.Property(LatestMovie.6.Path),PlayMedia(,)]</onclick>
@@ -510,8 +599,9 @@
 						<thumb>$INFO[Window.Property(LatestMovie.6.Thumb)]</thumb>
 						<visible>!IsEmpty(Window.Property(LatestMovie.6.Title))</visible>
 						<property name="ItemType">$LOCALIZE[20386]</property>
+						<property name="CheckPosition">sixteen</property>
 					</item>
-					<item id="7" description="Latest Movie">
+					<item id="17" description="Latest Movie">
 						<visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
 						<label>$INFO[Window.Property(LatestMovie.7.Title)]</label>
 						<onclick>$INFO[Window.Property(LatestMovie.7.Path),PlayMedia(,)]</onclick>
@@ -520,8 +610,9 @@
 						<thumb>$INFO[Window.Property(LatestMovie.7.Thumb)]</thumb>
 						<visible>!IsEmpty(Window.Property(LatestMovie.7.Title))</visible>
 						<property name="ItemType">$LOCALIZE[20386]</property>
+						<property name="CheckPosition">seventeen</property>
 					</item>
-					<item id="8" description="Latest Movie">
+					<item id="18" description="Latest Movie">
 						<visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
 						<label>$INFO[Window.Property(LatestMovie.8.Title)]</label>
 						<onclick>$INFO[Window.Property(LatestMovie.8.Path),PlayMedia(,)]</onclick>
@@ -530,8 +621,9 @@
 						<thumb>$INFO[Window.Property(LatestMovie.8.Thumb)]</thumb>
 						<visible>!IsEmpty(Window.Property(LatestMovie.8.Title))</visible>
 						<property name="ItemType">$LOCALIZE[20386]</property>
+						<property name="CheckPosition">eighteen</property>
 					</item>
-					<item id="9" description="Latest Movie">
+					<item id="19" description="Latest Movie">
 						<visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
 						<label>$INFO[Window.Property(LatestMovie.9.Title)]</label>
 						<onclick>$INFO[Window.Property(LatestMovie.9.Path),PlayMedia(,)]</onclick>
@@ -540,8 +632,9 @@
 						<thumb>$INFO[Window.Property(LatestMovie.9.Thumb)]</thumb>
 						<visible>!IsEmpty(Window.Property(LatestMovie.9.Title))</visible>
 						<property name="ItemType">$LOCALIZE[20386]</property>
+						<property name="CheckPosition">nineteen</property>
 					</item>
-					<item id="10" description="Latest Movie">
+					<item id="20" description="Latest Movie">
 						<visible>!Skin.HasSetting(MoviesShelf_Custom)</visible>
 						<label>$INFO[Window.Property(LatestMovie.10.Title)]</label>
 						<property name="CheckRecent">last</property>
@@ -551,87 +644,7 @@
 						<thumb>$INFO[Window.Property(LatestMovie.10.Thumb)]</thumb>
 						<visible>!IsEmpty(Window.Property(LatestMovie.10.Title))</visible>
 						<property name="ItemType">$LOCALIZE[20386]</property>
-					</item>
-					<item id="1" description="Addons">
-						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMovies.1.Label))</visible>
-						<label>$INFO[system.addontitle(Skin.String(ShelfMovies.1.Label))]</label>
-						<thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.1.Label))]</thumb>
-						<onclick>RunAddon($INFO[Skin.String(ShelfMovies.1.Label)])</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
-						<property name="CheckRecent">one</property>
-					</item>
-					<item id="2" description="Addons">
-						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMovies.2.Label))</visible>
-						<label>$INFO[system.addontitle(Skin.String(ShelfMovies.2.Label))]</label>
-						<thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.2.Label))]</thumb>
-						<onclick>RunAddon($INFO[Skin.String(ShelfMovies.2.Label)])</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
-					</item>
-					<item id="3" description="Addons">
-						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMovies.3.Label))</visible>
-						<label>$INFO[system.addontitle(Skin.String(ShelfMovies.3.Label))]</label>
-						<thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.3.Label))]</thumb>
-						<onclick>RunAddon($INFO[Skin.String(ShelfMovies.3.Label)])</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
-					</item>
-					<item id="4" description="Addons">
-						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMovies.4.Label))</visible>
-						<label>$INFO[system.addontitle(Skin.String(ShelfMovies.4.Label))]</label>
-						<thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.4.Label))]</thumb>
-						<onclick>RunAddon($INFO[Skin.String(ShelfMovies.4.Label)])</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
-					</item>
-					<item id="5" description="Addons">
-						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMovies.5.Label))</visible>
-						<label>$INFO[system.addontitle(Skin.String(ShelfMovies.5.Label))]</label>
-						<thumb>$INFO[system.addonicon(Skin.String(ShelfMovies.5.Label))]</thumb>
-						<onclick>RunAddon($INFO[Skin.String(ShelfMovies.5.Label)])</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
-					</item>
-					<item id="6" description="Fav">
-						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMovies.6.Label))</visible>
-						<label>$INFO[Skin.String(ShelfMovies.6.Label)]</label>
-						<thumb>$INFO[Skin.String(ShelfMovies.6.Icon)]</thumb>
-						<onclick>$INFO[Skin.String(ShelfMovies.6.Path)]</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
-					</item>
-					<item id="7" description="Fav">
-						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMovies.7.Label))</visible>
-						<label>$INFO[Skin.String(ShelfMovies.7.Label)]</label>
-						<thumb>$INFO[Skin.String(ShelfMovies.7.Icon)]</thumb>
-						<onclick>$INFO[Skin.String(ShelfMovies.7.Path)]</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
-					</item>
-					<item id="8" description="Fav">
-						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMovies.8.Label))</visible>
-						<label>$INFO[Skin.String(ShelfMovies.8.Label)]</label>
-						<thumb>$INFO[Skin.String(ShelfMovies.8.Icon)]</thumb>
-						<onclick>$INFO[Skin.String(ShelfMovies.8.Path)]</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
-					</item>
-					<item id="9" description="Fav">
-						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMovies.9.Label))</visible>
-						<label>$INFO[Skin.String(ShelfMovies.9.Label)]</label>
-						<thumb>$INFO[Skin.String(ShelfMovies.9.Icon)]</thumb>
-						<onclick>$INFO[Skin.String(ShelfMovies.9.Path)]</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
-					</item>
-					<item id="10" description="Fav">
-						<visible>Skin.HasSetting(MoviesShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMovies.10.Label))</visible>
-						<label>$INFO[Skin.String(ShelfMovies.10.Label)]</label>
-						<thumb>$INFO[Skin.String(ShelfMovies.10.Icon)]</thumb>
-						<onclick>$INFO[Skin.String(ShelfMovies.10.Path)]</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">twenty</property>
 					</item>
 				</content>
 			</control>
@@ -951,7 +964,9 @@
 				<control type="group" description="Item (-1r --> -2r)">
 					<posx>RA_IconPoster1_PosX</posx>
 					<visible>Container(311).HasPrevious + Container(311).OnScrollNext + 
-						[[Player.HasAudio + !stringcompare(Container(311).Listitem(-6).Property(CheckNowPlaying),*.*)] | [!Player.HasAudio + !stringcompare(Container(311).Listitem(-6).Property(CheckRecent),one)]]</visible>
+						[Player.HasAudio + !stringcompare(Container(311).Listitem(-6).Property(CheckNowPlaying),*.*) |
+						[!Player.HasAudio + !stringcompare(Container(311).Listitem(-6).Property(CheckPosition),one) +
+						!stringcompare(Container(311).Listitem(-6).Property(CheckPosition),eleven)]]</visible>
 					<camera x="108" y="162"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-40" end="-40">Conditional</animation>
 					<animation effect="slide" time="RA_AnimationTime" end="-216" reversible="false" tween="sine" easing="inout">Hidden</animation>
@@ -1277,8 +1292,10 @@
 				</control>
 				<control type="group" description="Item (6r --> 7r)">
 					<posx>RA_IconPoster8_PosX</posx>
-					<visible>Container(311).HasNext + Container(311).OnScrollPrevious + !stringcompare(Container(311).Listitem(7).Property(CheckRecent),one) +
-						IsEmpty(Container(311).Listitem(7).Property(CheckQuicklink)) + !stringcompare(Container(311).Listitem(7).Property(CheckNowPlaying),*.*)</visible>
+					<visible>Container(311).HasNext + Container(311).OnScrollPrevious + 
+						[Player.HasAudio + !stringcompare(Container(311).Listitem(7).Property(CheckNowPlaying),*.*) |
+						[!Player.HasAudio + !stringcompare(Container(311).Listitem(7).Property(CheckPosition),one) +
+						!stringcompare(Container(311).Listitem(7).Property(CheckPosition),eleven)]]</visible>
 					<camera x="1812" y="162"/>
 					<animation effect="rotatey" center="1920" start="40" end="40" time="0" condition="true">Conditional</animation>
 					<animation type="Hidden" reversible="false">
@@ -1521,128 +1538,13 @@
 				</focusedlayout>
 				
 				<content>
-					<!--  Now Playing  -->
-					<item id="30">
+					<item id="99" description="Now Playing">
 						<label>$INFO[MusicPlayer.Title]</label>
 						<label2>$INFO[MusicPlayer.Artist]</label2>
-						<property name="CheckNowPlaying">*.*</property>
 						<onclick>ActivateWindow(MusicPlaylist)</onclick>
 						<thumb>$INFO[MusicPlayer.Cover]</thumb>
 						<visible>Player.HasAudio</visible>
-					</item>
-					
-					<!--  Recently Added  -->
-					<item id="1" description="Latest Episode">
-						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-						<label>$INFO[Window.Property(LatestEpisode.1.EpisodeTitle)]</label>
-						<label2>$INFO[Window.Property(LatestEpisode.1.ShowTitle)]</label2>
-						<property name="CheckRecent">one</property>
-						<onclick>$INFO[Window.Property(LatestEpisode.1.Path),PlayMedia(",")]</onclick>
-						<onclick>Skin.SetBool(Content_TvShows)</onclick>
-						<onclick>Skin.Reset(Content_Movies)</onclick>
-						<thumb>$INFO[Window.Property(LatestEpisode.1.Thumb)]</thumb>
-						<visible>!IsEmpty(Window.Property(LatestEpisode.1.EpisodeTitle))</visible>
-						<property name="ItemType">$LOCALIZE[20387]</property>
-					</item>
-					<item id="2" description="Latest Episode">
-						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-						<label>$INFO[Window.Property(LatestEpisode.2.EpisodeTitle)]</label>
-						<label2>$INFO[Window.Property(LatestEpisode.2.ShowTitle)]</label2>
-						<onclick>$INFO[Window.Property(LatestEpisode.2.Path),PlayMedia(",")]</onclick>
-						<onclick>Skin.SetBool(Content_TvShows)</onclick>
-						<onclick>Skin.Reset(Content_Movies)</onclick>
-						<thumb>$INFO[Window.Property(LatestEpisode.2.Thumb)]</thumb>
-						<visible>!IsEmpty(Window.Property(LatestEpisode.2.EpisodeTitle))</visible>
-						<property name="ItemType">$LOCALIZE[20387]</property>
-					</item>
-					<item id="3" description="Latest Episode">
-						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-						<label>$INFO[Window.Property(LatestEpisode.3.EpisodeTitle)]</label>
-						<label2>$INFO[Window.Property(LatestEpisode.3.ShowTitle)]</label2>
-						<onclick>$INFO[Window.Property(LatestEpisode.3.Path),PlayMedia(",")]</onclick>
-						<onclick>Skin.SetBool(Content_TvShows)</onclick>
-						<onclick>Skin.Reset(Content_Movies)</onclick>
-						<thumb>$INFO[Window.Property(LatestEpisode.3.Thumb)]</thumb>
-						<visible>!IsEmpty(Window.Property(LatestEpisode.3.EpisodeTitle))</visible>
-						<property name="ItemType">$LOCALIZE[20387]</property>
-					</item>
-					<item id="4" description="Latest Episode">
-						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-						<label>$INFO[Window.Property(LatestEpisode.4.EpisodeTitle)]</label>
-						<label2>$INFO[Window.Property(LatestEpisode.4.ShowTitle)]</label2>
-						<onclick>$INFO[Window.Property(LatestEpisode.4.Path),PlayMedia(",")]</onclick>
-						<onclick>Skin.SetBool(Content_TvShows)</onclick>
-						<onclick>Skin.Reset(Content_Movies)</onclick>
-						<thumb>$INFO[Window.Property(LatestEpisode.4.Thumb)]</thumb>
-						<visible>!IsEmpty(Window.Property(LatestEpisode.4.EpisodeTitle))</visible>
-						<property name="ItemType">$LOCALIZE[20387]</property>
-					</item>
-					<item id="5" description="Latest Episode">
-						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-						<label>$INFO[Window.Property(LatestEpisode.5.EpisodeTitle)]</label>
-						<label2>$INFO[Window.Property(LatestEpisode.5.ShowTitle)]</label2>
-						<onclick>$INFO[Window.Property(LatestEpisode.5.Path),PlayMedia(",")]</onclick>
-						<onclick>Skin.SetBool(Content_TvShows)</onclick>
-						<onclick>Skin.Reset(Content_Movies)</onclick>
-						<thumb>$INFO[Window.Property(LatestEpisode.5.Thumb)]</thumb>
-						<visible>!IsEmpty(Window.Property(LatestEpisode.5.EpisodeTitle))</visible>
-						<property name="ItemType">$LOCALIZE[20387]</property>
-					</item>
-					<item id="6" description="Latest Episode">
-						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-						<label>$INFO[Window.Property(LatestEpisode.6.EpisodeTitle)]</label>
-						<label2>$INFO[Window.Property(LatestEpisode.6.ShowTitle)]</label2>
-						<onclick>$INFO[Window.Property(LatestEpisode.6.Path),PlayMedia(",")]</onclick>
-						<onclick>Skin.SetBool(Content_TvShows)</onclick>
-						<onclick>Skin.Reset(Content_Movies)</onclick>
-						<thumb>$INFO[Window.Property(LatestEpisode.6.Thumb)]</thumb>
-						<visible>!IsEmpty(Window.Property(LatestEpisode.6.EpisodeTitle))</visible>
-						<property name="ItemType">$LOCALIZE[20387]</property>
-					</item>
-					<item id="7" description="Latest Episode">
-						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-						<label>$INFO[Window.Property(LatestEpisode.7.EpisodeTitle)]</label>
-						<label2>$INFO[Window.Property(LatestEpisode.7.ShowTitle)]</label2>
-						<onclick>$INFO[Window.Property(LatestEpisode.7.Path),PlayMedia(",")]</onclick>
-						<onclick>Skin.SetBool(Content_TvShows)</onclick>
-						<onclick>Skin.Reset(Content_Movies)</onclick>
-						<thumb>$INFO[Window.Property(LatestEpisode.7.Thumb)]</thumb>
-						<visible>!IsEmpty(Window.Property(LatestEpisode.7.EpisodeTitle))</visible>
-						<property name="ItemType">$LOCALIZE[20387]</property>
-					</item>
-					<item id="8" description="Latest Episode">
-						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-						<label>$INFO[Window.Property(LatestEpisode.8.EpisodeTitle)]</label>
-						<label2>$INFO[Window.Property(LatestEpisode.8.ShowTitle)]</label2>
-						<onclick>$INFO[Window.Property(LatestEpisode.8.Path),PlayMedia(",")]</onclick>
-						<onclick>Skin.SetBool(Content_TvShows)</onclick>
-						<onclick>Skin.Reset(Content_Movies)</onclick>
-						<thumb>$INFO[Window.Property(LatestEpisode.8.Thumb)]</thumb>
-						<visible>!IsEmpty(Window.Property(LatestEpisode.8.EpisodeTitle))</visible>
-						<property name="ItemType">$LOCALIZE[20387]</property>
-					</item>
-					<item id="9" description="Latest Episode">
-						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-						<label>$INFO[Window.Property(LatestEpisode.9.EpisodeTitle)]</label>
-						<label2>$INFO[Window.Property(LatestEpisode.9.ShowTitle)]</label2>
-						<onclick>$INFO[Window.Property(LatestEpisode.9.Path),PlayMedia(",")]</onclick>
-						<onclick>Skin.SetBool(Content_TvShows)</onclick>
-						<onclick>Skin.Reset(Content_Movies)</onclick>
-						<thumb>$INFO[Window.Property(LatestEpisode.9.Thumb)]</thumb>
-						<visible>!IsEmpty(Window.Property(LatestEpisode.9.EpisodeTitle))</visible>
-						<property name="ItemType">$LOCALIZE[20387]</property>
-					</item>
-					<item id="10" description="Latest Episode">
-						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
-						<label>$INFO[Window.Property(LatestEpisode.10.EpisodeTitle)]</label>
-						<label2>$INFO[Window.Property(LatestEpisode.10.ShowTitle)]</label2>
-						<property name="CheckRecent">last</property>
-						<onclick>$INFO[Window.Property(LatestEpisode.10.Path),PlayMedia(",")]</onclick>
-						<onclick>Skin.SetBool(Content_TvShows)</onclick>
-						<onclick>Skin.Reset(Content_Movies)</onclick>
-						<thumb>$INFO[Window.Property(LatestEpisode.10.Thumb)]</thumb>
-						<visible>!IsEmpty(Window.Property(LatestEpisode.10.EpisodeTitle))</visible>
-						<property name="ItemType">$LOCALIZE[20387]</property>
+						<property name="CheckNowPlaying">*.*</property>
 					</item>
 					<item id="1" description="Addons">
 						<visible>Skin.HasSetting(TVShelf_Custom)</visible>
@@ -1651,7 +1553,7 @@
 						<thumb>$INFO[system.addonicon(Skin.String(ShelfTV.1.Label))]</thumb>
 						<onclick>RunAddon($INFO[Skin.String(ShelfTV.1.Label)])</onclick>
 						<property name="ItemType">$LOCALIZE[111]</property>
-						<property name="CheckRecent">one</property>
+						<property name="CheckPosition">one</property>
 					</item>
 					<item id="2" description="Addons">
 						<visible>Skin.HasSetting(TVShelf_Custom)</visible>
@@ -1660,6 +1562,7 @@
 						<thumb>$INFO[system.addonicon(Skin.String(ShelfTV.2.Label))]</thumb>
 						<onclick>RunAddon($INFO[Skin.String(ShelfTV.2.Label)])</onclick>
 						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">two</property>
 					</item>
 					<item id="3" description="Addons">
 						<visible>Skin.HasSetting(TVShelf_Custom)</visible>
@@ -1668,6 +1571,7 @@
 						<thumb>$INFO[system.addonicon(Skin.String(ShelfTV.3.Label))]</thumb>
 						<onclick>RunAddon($INFO[Skin.String(ShelfTV.3.Label)])</onclick>
 						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">three</property>
 					</item>
 					<item id="4" description="Addons">
 						<visible>Skin.HasSetting(TVShelf_Custom)</visible>
@@ -1676,6 +1580,7 @@
 						<thumb>$INFO[system.addonicon(Skin.String(ShelfTV.4.Label))]</thumb>
 						<onclick>RunAddon($INFO[Skin.String(ShelfTV.4.Label)])</onclick>
 						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">four</property>
 					</item>
 					<item id="5" description="Addons">
 						<visible>Skin.HasSetting(TVShelf_Custom)</visible>
@@ -1684,6 +1589,7 @@
 						<thumb>$INFO[system.addonicon(Skin.String(ShelfTV.5.Label))]</thumb>
 						<onclick>RunAddon($INFO[Skin.String(ShelfTV.5.Label)])</onclick>
 						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">five</property>
 					</item>
 					<item id="6" description="Fav">
 						<visible>Skin.HasSetting(TVShelf_Custom)</visible>
@@ -1692,6 +1598,7 @@
 						<thumb>$INFO[Skin.String(ShelfTV.6.Icon)]</thumb>
 						<onclick>$INFO[Skin.String(ShelfTV.6.Path)]</onclick>
 						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">six</property>
 					</item>
 					<item id="7" description="Fav">
 						<visible>Skin.HasSetting(TVShelf_Custom)</visible>
@@ -1700,6 +1607,7 @@
 						<thumb>$INFO[Skin.String(ShelfTV.7.Icon)]</thumb>
 						<onclick>$INFO[Skin.String(ShelfTV.7.Path)]</onclick>
 						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">seven</property>
 					</item>
 					<item id="8" description="Fav">
 						<visible>Skin.HasSetting(TVShelf_Custom)</visible>
@@ -1708,6 +1616,7 @@
 						<thumb>$INFO[Skin.String(ShelfTV.8.Icon)]</thumb>
 						<onclick>$INFO[Skin.String(ShelfTV.8.Path)]</onclick>
 						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">eight</property>
 					</item>
 					<item id="9" description="Fav">
 						<visible>Skin.HasSetting(TVShelf_Custom)</visible>
@@ -1716,6 +1625,7 @@
 						<thumb>$INFO[Skin.String(ShelfTV.9.Icon)]</thumb>
 						<onclick>$INFO[Skin.String(ShelfTV.9.Path)]</onclick>
 						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">nine</property>
 					</item>
 					<item id="10" description="Fav">
 						<visible>Skin.HasSetting(TVShelf_Custom)</visible>
@@ -1724,7 +1634,109 @@
 						<thumb>$INFO[Skin.String(ShelfTV.10.Icon)]</thumb>
 						<onclick>$INFO[Skin.String(ShelfTV.10.Path)]</onclick>
 						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">ten</property>
 					</item>
+					<item id="11" description="Latest Episode">
+						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
+						<label>$INFO[Window.Property(LatestEpisode.1.EpisodeTitle)]</label>
+						<label2>$INFO[Window.Property(LatestEpisode.1.ShowTitle)]</label2>
+						<onclick>$INFO[Window.Property(LatestEpisode.1.Path),PlayMedia(",")]</onclick>
+						<thumb>$INFO[Window.Property(LatestEpisode.1.Thumb)]</thumb>
+						<visible>!IsEmpty(Window.Property(LatestEpisode.1.EpisodeTitle))</visible>
+						<property name="ItemType">$LOCALIZE[20387]</property>
+						<property name="CheckPosition">eleven</property>
+					</item>
+					<item id="12" description="Latest Episode">
+						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
+						<label>$INFO[Window.Property(LatestEpisode.2.EpisodeTitle)]</label>
+						<label2>$INFO[Window.Property(LatestEpisode.2.ShowTitle)]</label2>
+						<onclick>$INFO[Window.Property(LatestEpisode.2.Path),PlayMedia(",")]</onclick>
+						<thumb>$INFO[Window.Property(LatestEpisode.2.Thumb)]</thumb>
+						<visible>!IsEmpty(Window.Property(LatestEpisode.2.EpisodeTitle))</visible>
+						<property name="ItemType">$LOCALIZE[20387]</property>
+						<property name="CheckPosition">twelve</property>
+					</item>
+					<item id="13" description="Latest Episode">
+						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
+						<label>$INFO[Window.Property(LatestEpisode.3.EpisodeTitle)]</label>
+						<label2>$INFO[Window.Property(LatestEpisode.3.ShowTitle)]</label2>
+						<onclick>$INFO[Window.Property(LatestEpisode.3.Path),PlayMedia(",")]</onclick>
+						<thumb>$INFO[Window.Property(LatestEpisode.3.Thumb)]</thumb>
+						<visible>!IsEmpty(Window.Property(LatestEpisode.3.EpisodeTitle))</visible>
+						<property name="ItemType">$LOCALIZE[20387]</property>
+						<property name="CheckPosition">thirteen</property>
+					</item>
+					<item id="14" description="Latest Episode">
+						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
+						<label>$INFO[Window.Property(LatestEpisode.4.EpisodeTitle)]</label>
+						<label2>$INFO[Window.Property(LatestEpisode.4.ShowTitle)]</label2>
+						<onclick>$INFO[Window.Property(LatestEpisode.4.Path),PlayMedia(",")]</onclick>
+						<thumb>$INFO[Window.Property(LatestEpisode.4.Thumb)]</thumb>
+						<visible>!IsEmpty(Window.Property(LatestEpisode.4.EpisodeTitle))</visible>
+						<property name="ItemType">$LOCALIZE[20387]</property>
+						<property name="CheckPosition">fourteen</property>
+					</item>
+					<item id="15" description="Latest Episode">
+						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
+						<label>$INFO[Window.Property(LatestEpisode.5.EpisodeTitle)]</label>
+						<label2>$INFO[Window.Property(LatestEpisode.5.ShowTitle)]</label2>
+						<onclick>$INFO[Window.Property(LatestEpisode.5.Path),PlayMedia(",")]</onclick>
+						<thumb>$INFO[Window.Property(LatestEpisode.5.Thumb)]</thumb>
+						<visible>!IsEmpty(Window.Property(LatestEpisode.5.EpisodeTitle))</visible>
+						<property name="ItemType">$LOCALIZE[20387]</property>
+						<property name="CheckPosition">fifteen</property>
+					</item>
+					<item id="16" description="Latest Episode">
+						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
+						<label>$INFO[Window.Property(LatestEpisode.6.EpisodeTitle)]</label>
+						<label2>$INFO[Window.Property(LatestEpisode.6.ShowTitle)]</label2>
+						<onclick>$INFO[Window.Property(LatestEpisode.6.Path),PlayMedia(",")]</onclick>
+						<thumb>$INFO[Window.Property(LatestEpisode.6.Thumb)]</thumb>
+						<visible>!IsEmpty(Window.Property(LatestEpisode.6.EpisodeTitle))</visible>
+						<property name="ItemType">$LOCALIZE[20387]</property>
+						<property name="CheckPosition">sixteen</property>
+					</item>
+					<item id="17" description="Latest Episode">
+						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
+						<label>$INFO[Window.Property(LatestEpisode.7.EpisodeTitle)]</label>
+						<label2>$INFO[Window.Property(LatestEpisode.7.ShowTitle)]</label2>
+						<onclick>$INFO[Window.Property(LatestEpisode.7.Path),PlayMedia(",")]</onclick>
+						<thumb>$INFO[Window.Property(LatestEpisode.7.Thumb)]</thumb>
+						<visible>!IsEmpty(Window.Property(LatestEpisode.7.EpisodeTitle))</visible>
+						<property name="ItemType">$LOCALIZE[20387]</property>
+						<property name="CheckPosition">seventeen</property>
+					</item>
+					<item id="18" description="Latest Episode">
+						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
+						<label>$INFO[Window.Property(LatestEpisode.8.EpisodeTitle)]</label>
+						<label2>$INFO[Window.Property(LatestEpisode.8.ShowTitle)]</label2>
+						<onclick>$INFO[Window.Property(LatestEpisode.8.Path),PlayMedia(",")]</onclick>
+						<thumb>$INFO[Window.Property(LatestEpisode.8.Thumb)]</thumb>
+						<visible>!IsEmpty(Window.Property(LatestEpisode.8.EpisodeTitle))</visible>
+						<property name="ItemType">$LOCALIZE[20387]</property>
+						<property name="CheckPosition">eighteen</property>
+					</item>
+					<item id="19" description="Latest Episode">
+						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
+						<label>$INFO[Window.Property(LatestEpisode.9.EpisodeTitle)]</label>
+						<label2>$INFO[Window.Property(LatestEpisode.9.ShowTitle)]</label2>
+						<onclick>$INFO[Window.Property(LatestEpisode.9.Path),PlayMedia(",")]</onclick>
+						<thumb>$INFO[Window.Property(LatestEpisode.9.Thumb)]</thumb>
+						<visible>!IsEmpty(Window.Property(LatestEpisode.9.EpisodeTitle))</visible>
+						<property name="ItemType">$LOCALIZE[20387]</property>
+						<property name="CheckPosition">nineteen</property>
+					</item>
+					<item id="20" description="Latest Episode">
+						<visible>!Skin.HasSetting(TVShelf_Custom)</visible>
+						<label>$INFO[Window.Property(LatestEpisode.10.EpisodeTitle)]</label>
+						<label2>$INFO[Window.Property(LatestEpisode.10.ShowTitle)]</label2>
+						<onclick>$INFO[Window.Property(LatestEpisode.10.Path),PlayMedia(",")]</onclick>
+						<thumb>$INFO[Window.Property(LatestEpisode.10.Thumb)]</thumb>
+						<visible>!IsEmpty(Window.Property(LatestEpisode.10.EpisodeTitle))</visible>
+						<property name="ItemType">$LOCALIZE[20387]</property>
+						<property name="CheckPosition">twenty</property>
+					</item>
+					
 				</content>
 			</control>
 			
@@ -2008,7 +2020,9 @@
 				<control type="group" description="Item (-1r --> -2r)">
 					<posx>RA_IconSquare1_PosX</posx>
 					<visible>Container(312).HasPrevious + Container(312).OnScrollNext + 
-						[[Player.HasAudio + !stringcompare(Container(312).Listitem(-5).Property(CheckNowPlaying),*.*)] | [!Player.HasAudio + !stringcompare(Container(312).Listitem(-5).Property(CheckRecent),one)]]</visible>
+						[Player.HasAudio + !stringcompare(Container(312).Listitem(-5).Property(CheckNowPlaying),*.*) |
+						[!Player.HasAudio + !stringcompare(Container(312).Listitem(-5).Property(CheckPosition),one) +
+						!stringcompare(Container(312).Listitem(-5).Property(CheckPosition),eleven)]]</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
 					<animation effect="slide" time="RA_AnimationTime" end="-300,0" reversible="false" tween="sine" easing="inout">Hidden</animation>
@@ -2214,8 +2228,10 @@
 				</control>
 				<control type="group" description="Item (5r --> 6r)">
 					<posx>RA_IconSquare7_PosX</posx>
-					<visible>Container(312).HasNext + Container(312).OnScrollPrevious + !stringcompare(Container(312).Listitem(6).Property(CheckRecent),one) +
-						IsEmpty(Container(312).Listitem(6).Property(CheckQuicklink)) + !stringcompare(Container(312).Listitem(6).Property(CheckNowPlaying),*.*)</visible>
+					<visible>Container(312).HasNext + Container(312).OnScrollPrevious + 
+						[Player.HasAudio + !stringcompare(Container(312).Listitem(6).Property(CheckNowPlaying),*.*) |
+						[!Player.HasAudio + !stringcompare(Container(312).Listitem(6).Property(CheckPosition),one) +
+						!stringcompare(Container(312).Listitem(6).Property(CheckPosition),eleven)]]</visible>
 					<camera x="1777" y="143"/>
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
 					<animation effect="slide" time="RA_AnimationTime" end="300,0" reversible="false" tween="sine" easing="inout">Hidden</animation>
@@ -2419,28 +2435,116 @@
 				</focusedlayout>
 				
 				<content>
-				    <!--  Now Playing  -->
-				    <item id="30" description="Now PLaying">
+				    <item id="99" description="Now PLaying">
 				        <label>$INFO[MusicPlayer.Title]</label>
 				        <label2>$INFO[MusicPlayer.Artist]</label2>
-				        <property name="CheckNowPlaying">*.*</property>
 				        <onclick>ActivateWindow(MusicPlaylist)</onclick>
 				        <thumb>$INFO[MusicPlayer.Cover]</thumb>
-				        <visible>Player.HasAudio</visible>
+				    	<visible>Player.HasAudio</visible>
+				    	<property name="CheckNowPlaying">*.*</property>
 				    </item>
-				    
-				    <!--  Recently Added  -->
-				    <item id="1" description="Latest Album">
+					<item id="1" description="Addons">
+						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMusic.1.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfMusic.1.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfMusic.1.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfMusic.1.Label)])</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">one</property>
+					</item>
+					<item id="2" description="Addons">
+						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMusic.2.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfMusic.2.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfMusic.2.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfMusic.2.Label)])</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">two</property>
+					</item>
+					<item id="3" description="Addons">
+						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMusic.3.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfMusic.3.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfMusic.3.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfMusic.3.Label)])</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">three</property>
+					</item>
+					<item id="4" description="Addons">
+						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMusic.4.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfMusic.4.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfMusic.4.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfMusic.4.Label)])</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">four</property>
+					</item>
+					<item id="5" description="Addons">
+						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMusic.5.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfMusic.5.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfMusic.5.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfMusic.5.Label)])</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">five</property>
+					</item>
+					<item id="6" description="Fav">
+						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMusic.6.Path))</visible>
+						<label>$INFO[Skin.String(ShelfMusic.6.Label)]</label>
+						<thumb>$INFO[Skin.String(ShelfMusic.6.Icon)]</thumb>
+						<onclick>$INFO[Skin.String(ShelfMusic.6.Path)]</onclick>
+						<property name="Horst">$ESCINFO[Skin.String(ShelfMusic.6.Path)]</property>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">six</property>
+					</item>
+					<item id="7" description="Fav">
+						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMusic.7.Path))</visible>
+						<label>$INFO[Skin.String(ShelfMusic.7.Label)]</label>
+						<thumb>$INFO[Skin.String(ShelfMusic.7.Icon)]</thumb>
+						<onclick>$INFO[Skin.String(ShelfMusic.7.Path)]</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">seven</property>
+					</item>
+					<item id="8" description="Fav">
+						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMusic.8.Path))</visible>
+						<label>$INFO[Skin.String(ShelfMusic.8.Label)]</label>
+						<thumb>$INFO[Skin.String(ShelfMusic.8.Icon)]</thumb>
+						<onclick>$INFO[Skin.String(ShelfMusic.8.Path)]</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">eight</property>
+					</item>
+					<item id="9" description="Fav">
+						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMusic.9.Path))</visible>
+						<label>$INFO[Skin.String(ShelfMusic.9.Label)]</label>
+						<thumb>$INFO[Skin.String(ShelfMusic.9.Icon)]</thumb>
+						<onclick>$INFO[Skin.String(ShelfMusic.9.Path)]</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">nine</property>
+					</item>
+					<item id="10" description="Fav">
+						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfMusic.10.Path))</visible>
+						<label>$INFO[Skin.String(ShelfMusic.10.Label)]</label>
+						<thumb>$INFO[Skin.String(ShelfMusic.10.Icon)]</thumb>
+						<onclick>$INFO[Skin.String(ShelfMusic.10.Path)]</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">ten</property>
+					</item>
+				    <item id="11" description="Latest Album">
 				        <label>$INFO[Window.Property(LatestAlbum.1.Title)]</label>
 				        <label2>$INFO[Window.Property(LatestAlbum.1.Artist)]</label2>
-				        <property name="CheckRecent">one</property>
 				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.1.Path)])</onclick>
 				        <thumb>$INFO[Window.Property(LatestAlbum.1.Thumb)]</thumb>
 				    	<visible>!IsEmpty(Window.Property(LatestAlbum.1.Title))</visible>
 				    	<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 				    	<property name="ItemType">$LOCALIZE[359]</property>
+				    	<property name="CheckPosition">eleven</property>
 				    </item>
-					<item id="2" description="Latest Album">
+					<item id="12" description="Latest Album">
 				        <label>$INFO[Window.Property(LatestAlbum.2.Title)]</label>
 				        <label2>$INFO[Window.Property(LatestAlbum.2.Artist)]</label2>
 				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.2.Path)])</onclick>
@@ -2448,8 +2552,9 @@
 						<visible>!IsEmpty(Window.Property(LatestAlbum.2.Title))</visible>
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<property name="ItemType">$LOCALIZE[359]</property>
+						<property name="CheckPosition">twelve</property>
 				    </item>
-					<item id="3" description="Latest Album">
+					<item id="13" description="Latest Album">
 				        <label>$INFO[Window.Property(LatestAlbum.3.Title)]</label>
 				        <label2>$INFO[Window.Property(LatestAlbum.3.Artist)]</label2>
 				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.3.Path)])</onclick>
@@ -2457,8 +2562,9 @@
 						<visible>!IsEmpty(Window.Property(LatestAlbum.3.Title))</visible>
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<property name="ItemType">$LOCALIZE[359]</property>
+						<property name="CheckPosition">thirteen</property>
 				    </item>
-					<item id="4" description="Latest Album">
+					<item id="14" description="Latest Album">
 				        <label>$INFO[Window.Property(LatestAlbum.4.Title)]</label>
 				        <label2>$INFO[Window.Property(LatestAlbum.4.Artist)]</label2>
 				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.4.Path)])</onclick>
@@ -2466,8 +2572,9 @@
 						<visible>!IsEmpty(Window.Property(LatestAlbum.4.Title))</visible>
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<property name="ItemType">$LOCALIZE[359]</property>
+						<property name="CheckPosition">fourteen</property>
 				    </item>
-					<item id="5" description="Latest Album">
+					<item id="15" description="Latest Album">
 				        <label>$INFO[Window.Property(LatestAlbum.5.Title)]</label>
 				        <label2>$INFO[Window.Property(LatestAlbum.5.Artist)]</label2>
 				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.5.Path)])</onclick>
@@ -2475,8 +2582,9 @@
 						<visible>!IsEmpty(Window.Property(LatestAlbum.5.Title))</visible>
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<property name="ItemType">$LOCALIZE[359]</property>
+						<property name="CheckPosition">fifteen</property>
 				    </item>
-					<item id="6" description="Latest Album">
+					<item id="16" description="Latest Album">
 				        <label>$INFO[Window.Property(LatestAlbum.6.Title)]</label>
 				        <label2>$INFO[Window.Property(LatestAlbum.6.Artist)]</label2>
 				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.6.Path)])</onclick>
@@ -2484,8 +2592,9 @@
 						<visible>!IsEmpty(Window.Property(LatestAlbum.6.Title))</visible>
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<property name="ItemType">$LOCALIZE[359]</property>
+						<property name="CheckPosition">sixteen</property>
 				    </item>
-					<item id="7" description="Latest Album">
+					<item id="17" description="Latest Album">
 				        <label>$INFO[Window.Property(LatestAlbum.7.Title)]</label>
 				        <label2>$INFO[Window.Property(LatestAlbum.7.Artist)]</label2>
 				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.7.Path)])</onclick>
@@ -2493,8 +2602,9 @@
 						<visible>!IsEmpty(Window.Property(LatestAlbum.7.Title))</visible>
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<property name="ItemType">$LOCALIZE[359]</property>
+						<property name="CheckPosition">seventeen</property>
 				    </item>
-					<item id="8" description="Latest Album">
+					<item id="18" description="Latest Album">
 				        <label>$INFO[Window.Property(LatestAlbum.8.Title)]</label>
 				        <label2>$INFO[Window.Property(LatestAlbum.8.Artist)]</label2>
 				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.8.Path)])</onclick>
@@ -2502,8 +2612,9 @@
 						<visible>!IsEmpty(Window.Property(LatestAlbum.8.Title))</visible>
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<property name="ItemType">$LOCALIZE[359]</property>
+						<property name="CheckPosition">eighteen</property>
 				    </item>
-					<item id="9" description="Latest Album">
+					<item id="19" description="Latest Album">
 				        <label>$INFO[Window.Property(LatestAlbum.9.Title)]</label>
 				        <label2>$INFO[Window.Property(LatestAlbum.9.Artist)]</label2>
 				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.9.Path)])</onclick>
@@ -2511,8 +2622,9 @@
 						<visible>!IsEmpty(Window.Property(LatestAlbum.9.Title))</visible>
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<property name="ItemType">$LOCALIZE[359]</property>
+						<property name="CheckPosition">nineteen</property>
 				    </item>
-					<item id="10" description="Latest Album">
+					<item id="20" description="Latest Album">
 				        <label>$INFO[Window.Property(LatestAlbum.10.Title)]</label>
 				        <label2>$INFO[Window.Property(LatestAlbum.10.Artist)]</label2>
 				        <property name="CheckRecent">last</property>
@@ -2521,8 +2633,9 @@
 				        <visible>!IsEmpty(Window.Property(LatestAlbum.10.Title))</visible>
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<property name="ItemType">$LOCALIZE[359]</property>
+						<property name="CheckPosition">twenty</property>
 				    </item>
-					<item id="11" description="LatestMusicVideo1">
+					<item id="21" description="LatestMusicVideo1">
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.1.Path))</visible>
 						<label>$INFO[Window(Home).Property(LatestMusicVideo.1.Title)]</label>
@@ -2531,8 +2644,9 @@
 						<onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestMusicVideo.1.Path)])</onclick>
 						<thumb>$INFO[Window(Home).Property(LatestMusicVideo.1.Thumb)]</thumb>
 						<property name="ItemType">$LOCALIZE[20390]</property>
+						<property name="CheckPosition">twentyone</property>
 					</item>
-					<item id="12" description="LatestMusicVideo2">
+					<item id="22" description="LatestMusicVideo2">
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.2.Path))</visible>
 						<label>$INFO[Window(Home).Property(LatestMusicVideo.2.Title)]</label>
@@ -2541,8 +2655,9 @@
 						<onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestMusicVideo.2.Path)])</onclick>
 						<thumb>$INFO[Window(Home).Property(LatestMusicVideo.2.Thumb)]</thumb>
 						<property name="ItemType">$LOCALIZE[20390]</property>
+						<property name="CheckPosition">twentytwo</property>
 					</item>
-					<item id="13" description="LatestMusicVideo3">
+					<item id="23" description="LatestMusicVideo3">
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.3.Path))</visible>
 						<label>$INFO[Window(Home).Property(LatestMusicVideo.3.Title)]</label>
@@ -2551,8 +2666,9 @@
 						<onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestMusicVideo.3.Path)])</onclick>
 						<thumb>$INFO[Window(Home).Property(LatestMusicVideo.3.Thumb)]</thumb>
 						<property name="ItemType">$LOCALIZE[20390]</property>
+						<property name="CheckPosition">twentythree</property>
 					</item>
-					<item id="14" description="LatestMusicVideo4">
+					<item id="24" description="LatestMusicVideo4">
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.4.Path))</visible>
 						<label>$INFO[Window(Home).Property(LatestMusicVideo.4.Title)]</label>
@@ -2561,8 +2677,9 @@
 						<onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestMusicVideo.4.Path)])</onclick>
 						<thumb>$INFO[Window(Home).Property(LatestMusicVideo.4.Thumb)]</thumb>
 						<property name="ItemType">$LOCALIZE[20390]</property>
+						<property name="CheckPosition">twentyfour</property>
 					</item>
-					<item id="15" description="LatestMusicVideo5">
+					<item id="25" description="LatestMusicVideo5">
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.5.Path))</visible>
 						<label>$INFO[Window(Home).Property(LatestMusicVideo.5.Title)]</label>
@@ -2571,8 +2688,9 @@
 						<onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestMusicVideo.5.Path)])</onclick>
 						<thumb>$INFO[Window(Home).Property(LatestMusicVideo.5.Thumb)]</thumb>
 						<property name="ItemType">$LOCALIZE[20390]</property>
+						<property name="CheckPosition">twentyfive</property>
 					</item>
-					<item id="16" description="LatestMusicVideo6">
+					<item id="26" description="LatestMusicVideo6">
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.6.Path))</visible>
 						<label>$INFO[Window(Home).Property(LatestMusicVideo.6.Title)]</label>
@@ -2581,8 +2699,9 @@
 						<onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestMusicVideo.6.Path)])</onclick>
 						<thumb>$INFO[Window(Home).Property(LatestMusicVideo.6.Thumb)]</thumb>
 						<property name="ItemType">$LOCALIZE[20390]</property>
+						<property name="CheckPosition">twentysix</property>
 					</item>
-					<item id="17" description="LatestMusicVideo7">
+					<item id="27" description="LatestMusicVideo7">
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.7.Path))</visible>
 						<label>$INFO[Window(Home).Property(LatestMusicVideo.7.Title)]</label>
@@ -2591,8 +2710,9 @@
 						<onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestMusicVideo.7.Path)])</onclick>
 						<thumb>$INFO[Window(Home).Property(LatestMusicVideo.7.Thumb)]</thumb>
 						<property name="ItemType">$LOCALIZE[20390]</property>
+						<property name="CheckPosition">twentyseven</property>
 					</item>
-					<item id="18" description="LatestMusicVideo8">
+					<item id="28" description="LatestMusicVideo8">
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.8.Path))</visible>
 						<label>$INFO[Window(Home).Property(LatestMusicVideo.8.Title)]</label>
@@ -2601,8 +2721,9 @@
 						<onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestMusicVideo.8.Path)])</onclick>
 						<thumb>$INFO[Window(Home).Property(LatestMusicVideo.8.Thumb)]</thumb>
 						<property name="ItemType">$LOCALIZE[20390]</property>
+						<property name="CheckPosition">twentyeight</property>
 					</item>
-					<item id="19" description="LatestMusicVideo9">
+					<item id="29" description="LatestMusicVideo9">
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.9.Path))</visible>
 						<label>$INFO[Window(Home).Property(LatestMusicVideo.9.Title)]</label>
@@ -2611,8 +2732,9 @@
 						<onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestMusicVideo.9.Path)])</onclick>
 						<thumb>$INFO[Window(Home).Property(LatestMusicVideo.9.Thumb)]</thumb>
 						<property name="ItemType">$LOCALIZE[20390]</property>
+						<property name="CheckPosition">twentynine</property>
 					</item>
-					<item id="20" description="LatestMusicVideo10">
+					<item id="30" description="LatestMusicVideo10">
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.10.Path))</visible>
 						<label>$INFO[Window(Home).Property(LatestMusicVideo.10.Title)]</label>
@@ -2621,88 +2743,7 @@
 						<onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestMusicVideo.10.Path)])</onclick>
 						<thumb>$INFO[Window(Home).Property(LatestMusicVideo.10.Thumb)]</thumb>
 						<property name="ItemType">$LOCALIZE[20390]</property>
-					</item>
-					<item id="21" description="Addons">
-						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMusic.1.Label))</visible>
-						<label>$INFO[system.addontitle(Skin.String(ShelfMusic.1.Label))]</label>
-						<thumb>$INFO[system.addonicon(Skin.String(ShelfMusic.1.Label))]</thumb>
-						<onclick>RunAddon($INFO[Skin.String(ShelfMusic.1.Label)])</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
-						<property name="CheckRecent">one</property>
-					</item>
-					<item id="22" description="Addons">
-						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMusic.2.Label))</visible>
-						<label>$INFO[system.addontitle(Skin.String(ShelfMusic.2.Label))]</label>
-						<thumb>$INFO[system.addonicon(Skin.String(ShelfMusic.2.Label))]</thumb>
-						<onclick>RunAddon($INFO[Skin.String(ShelfMusic.2.Label)])</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
-					</item>
-					<item id="23" description="Addons">
-						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMusic.3.Label))</visible>
-						<label>$INFO[system.addontitle(Skin.String(ShelfMusic.3.Label))]</label>
-						<thumb>$INFO[system.addonicon(Skin.String(ShelfMusic.3.Label))]</thumb>
-						<onclick>RunAddon($INFO[Skin.String(ShelfMusic.3.Label)])</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
-					</item>
-					<item id="24" description="Addons">
-						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMusic.4.Label))</visible>
-						<label>$INFO[system.addontitle(Skin.String(ShelfMusic.4.Label))]</label>
-						<thumb>$INFO[system.addonicon(Skin.String(ShelfMusic.4.Label))]</thumb>
-						<onclick>RunAddon($INFO[Skin.String(ShelfMusic.4.Label)])</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
-					</item>
-					<item id="25" description="Addons">
-						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMusic.5.Label))</visible>
-						<label>$INFO[system.addontitle(Skin.String(ShelfMusic.5.Label))]</label>
-						<thumb>$INFO[system.addonicon(Skin.String(ShelfMusic.5.Label))]</thumb>
-						<onclick>RunAddon($INFO[Skin.String(ShelfMusic.5.Label)])</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
-					</item>
-					<item id="26" description="Fav">
-						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMusic.6.Path))</visible>
-						<label>$INFO[Skin.String(ShelfMusic.6.Label)]</label>
-						<thumb>$INFO[Skin.String(ShelfMusic.6.Icon)]</thumb>
-						<onclick>$INFO[Skin.String(ShelfMusic.6.Path)]</onclick>
-						<property name="Horst">$ESCINFO[Skin.String(ShelfMusic.6.Path)]</property>
-						<property name="ItemType">$LOCALIZE[111]</property>
-					</item>
-					<item id="27" description="Fav">
-						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMusic.7.Path))</visible>
-						<label>$INFO[Skin.String(ShelfMusic.7.Label)]</label>
-						<thumb>$INFO[Skin.String(ShelfMusic.7.Icon)]</thumb>
-						<onclick>$INFO[Skin.String(ShelfMusic.7.Path)]</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
-					</item>
-					<item id="28" description="Fav">
-						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMusic.8.Path))</visible>
-						<label>$INFO[Skin.String(ShelfMusic.8.Label)]</label>
-						<thumb>$INFO[Skin.String(ShelfMusic.8.Icon)]</thumb>
-						<onclick>$INFO[Skin.String(ShelfMusic.8.Path)]</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
-					</item>
-					<item id="29" description="Fav">
-						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMusic.9.Path))</visible>
-						<label>$INFO[Skin.String(ShelfMusic.9.Label)]</label>
-						<thumb>$INFO[Skin.String(ShelfMusic.9.Icon)]</thumb>
-						<onclick>$INFO[Skin.String(ShelfMusic.9.Path)]</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
-					</item>
-					<item id="30" description="Fav">
-						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
-						<visible>!IsEmpty(Skin.String(ShelfMusic.10.Path))</visible>
-						<label>$INFO[Skin.String(ShelfMusic.10.Label)]</label>
-						<thumb>$INFO[Skin.String(ShelfMusic.10.Icon)]</thumb>
-						<onclick>$INFO[Skin.String(ShelfMusic.10.Path)]</onclick>
-						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">thirty</property>
 					</item>
 				</content>
 			</control>
@@ -2987,7 +3028,9 @@
 				<control type="group" description="Item (-1r --> -2r)">
 					<posx>RA_IconSquare1_PosX</posx>
 					<visible>Container(313).HasPrevious + Container(313).OnScrollNext + 
-						[[Player.HasAudio + !stringcompare(Container(313).Listitem(-5).Property(CheckNowPlaying),*.*)] | [!Player.HasAudio + !stringcompare(Container(313).Listitem(-5).Property(CheckRecent),one)]]</visible>
+						[Player.HasAudio + !stringcompare(Container(313).Listitem(-5).Property(CheckNowPlaying),*.*) |
+						[!Player.HasAudio + !stringcompare(Container(313).Listitem(-5).Property(CheckPosition),one) +
+						!stringcompare(Container(313).Listitem(-5).Property(CheckPosition),eleven)]]</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
 					<animation effect="slide" time="RA_AnimationTime" end="-300,0" reversible="false" tween="sine" easing="inout">Hidden</animation>
@@ -3193,8 +3236,10 @@
 				</control>
 				<control type="group" description="Item (5r --> 6r)">
 					<posx>RA_IconSquare7_PosX</posx>
-					<visible>Container(313).HasNext + Container(313).OnScrollPrevious + !stringcompare(Container(313).Listitem(6).Property(CheckRecent),one) +
-						IsEmpty(Container(313).Listitem(6).Property(CheckQuicklink)) + !stringcompare(Container(313).Listitem(6).Property(CheckNowPlaying),*.*)</visible>
+					<visible>Container(313).HasNext + Container(313).OnScrollPrevious + 
+						[Player.HasAudio + !stringcompare(Container(313).Listitem(6).Property(CheckNowPlaying),*.*) |
+						[!Player.HasAudio + !stringcompare(Container(313).Listitem(6).Property(CheckPosition),one) +
+						!stringcompare(Container(313).Listitem(6).Property(CheckPosition),eleven)]]</visible>
 					<camera x="1777" y="143"/>
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
 					<animation effect="slide" time="RA_AnimationTime" end="300,0" reversible="false" tween="sine" easing="inout">Hidden</animation>
@@ -3398,8 +3443,7 @@
 				</focusedlayout>
 				
 				<content>
-				    <!--  Now Playing  -->
-				    <item id="30" description="Now PLaying">
+				    <item id="99" description="Now PLaying">
 				        <label>$INFO[MusicPlayer.Title]</label>
 				        <label2>$INFO[MusicPlayer.Artist]</label2>
 				        <property name="CheckNowPlaying">*.*</property>
@@ -3414,7 +3458,7 @@
 				        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.1.Label))]</thumb>
 				        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.1.Label)])</onclick>
 				        <property name="ItemType">$LOCALIZE[111]</property>
-				    	<property name="CheckRecent">one</property>
+				    	<property name="CheckPosition">one</property>
 				    </item>
 				    <item id="2" description="Addons">
 				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
@@ -3422,7 +3466,8 @@
 				        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.2.Label))]</label>
 				        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.2.Label))]</thumb>
 				        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.2.Label)])</onclick>
-				        <property name="ItemType">$LOCALIZE[111]</property>
+				    	<property name="ItemType">$LOCALIZE[111]</property>
+				    	<property name="CheckPosition">two</property>
 				    </item>
 				    <item id="3" description="Addons">
 				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
@@ -3430,7 +3475,8 @@
 				        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.3.Label))]</label>
 				        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.3.Label))]</thumb>
 				        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.3.Label)])</onclick>
-				        <property name="ItemType">$LOCALIZE[111]</property>
+				    	<property name="ItemType">$LOCALIZE[111]</property>
+				    	<property name="CheckPosition">three</property>
 				    </item>
 				    <item id="4" description="Addons">
 				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
@@ -3438,7 +3484,8 @@
 				        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.4.Label))]</label>
 				        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.4.Label))]</thumb>
 				        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.4.Label)])</onclick>
-				        <property name="ItemType">$LOCALIZE[111]</property>
+				    	<property name="ItemType">$LOCALIZE[111]</property>
+				    	<property name="CheckPosition">four</property>
 				    </item>
 				    <item id="5" description="Addons">
 				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
@@ -3446,7 +3493,8 @@
 				        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.5.Label))]</label>
 				        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.5.Label))]</thumb>
 				        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.5.Label)])</onclick>
-				        <property name="ItemType">$LOCALIZE[111]</property>
+				    	<property name="ItemType">$LOCALIZE[111]</property>
+				    	<property name="CheckPosition">five</property>
 				    </item>
 				    <item id="6" description="Fav">
 				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
@@ -3454,7 +3502,8 @@
 				        <label>$INFO[Skin.String(ShelfPictures.6.Label)]</label>
 				        <thumb>$INFO[Skin.String(ShelfPictures.6.Icon)]</thumb>
 				        <onclick>$INFO[Skin.String(ShelfPictures.6.Path)]</onclick>
-				        <property name="ItemType">$LOCALIZE[111]</property>
+				    	<property name="ItemType">$LOCALIZE[111]</property>
+				    	<property name="CheckPosition">six</property>
 				    </item>
 				    <item id="7" description="Fav">
 				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
@@ -3462,7 +3511,8 @@
 				        <label>$INFO[Skin.String(ShelfPictures.7.Label)]</label>
 				        <thumb>$INFO[Skin.String(ShelfPictures.7.Icon)]</thumb>
 				        <onclick>$INFO[Skin.String(ShelfPictures.7.Path)]</onclick>
-				        <property name="ItemType">$LOCALIZE[111]</property>
+				    	<property name="ItemType">$LOCALIZE[111]</property>
+				    	<property name="CheckPosition">seven</property>
 				    </item>
 				    <item id="8" description="Fav">
 				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
@@ -3470,7 +3520,8 @@
 				        <label>$INFO[Skin.String(ShelfPictures.8.Label)]</label>
 				        <thumb>$INFO[Skin.String(ShelfPictures.8.Icon)]</thumb>
 				        <onclick>$INFO[Skin.String(ShelfPictures.8.Path)]</onclick>
-				        <property name="ItemType">$LOCALIZE[111]</property>
+				    	<property name="ItemType">$LOCALIZE[111]</property>
+				    	<property name="CheckPosition">eight</property>
 				    </item>
 				    <item id="9" description="Fav">
 				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
@@ -3478,7 +3529,8 @@
 				        <label>$INFO[Skin.String(ShelfPictures.9.Label)]</label>
 				        <thumb>$INFO[Skin.String(ShelfPictures.9.Icon)]</thumb>
 				        <onclick>$INFO[Skin.String(ShelfPictures.9.Path)]</onclick>
-				        <property name="ItemType">$LOCALIZE[111]</property>
+				    	<property name="ItemType">$LOCALIZE[111]</property>
+				    	<property name="CheckPosition">nine</property>
 				    </item>
 				    <item id="10" description="Fav">
 				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
@@ -3486,7 +3538,8 @@
 				        <label>$INFO[Skin.String(ShelfPictures.10.Label)]</label>
 				        <thumb>$INFO[Skin.String(ShelfPictures.10.Icon)]</thumb>
 				        <onclick>$INFO[Skin.String(ShelfPictures.10.Path)]</onclick>
-				        <property name="ItemType">$LOCALIZE[111]</property>
+				    	<property name="ItemType">$LOCALIZE[111]</property>
+				    	<property name="CheckPosition">ten</property>
 				    </item>
 				</content>
 			</control>
@@ -3771,7 +3824,9 @@
 				<control type="group" description="Item (-1r --> -2r)">
 					<posx>RA_IconSquare1_PosX</posx>
 					<visible>Container(314).HasPrevious + Container(314).OnScrollNext + 
-						[[Player.HasAudio + !stringcompare(Container(314).Listitem(-5).Property(CheckNowPlaying),*.*)] | [!Player.HasAudio + !stringcompare(Container(314).Listitem(-5).Property(CheckRecent),one)]]</visible>
+						[Player.HasAudio + !stringcompare(Container(314).Listitem(-5).Property(CheckNowPlaying),*.*) |
+						[!Player.HasAudio + !stringcompare(Container(314).Listitem(-5).Property(CheckPosition),one) +
+						!stringcompare(Container(314).Listitem(-5).Property(CheckPosition),eleven)]]</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
 					<animation effect="slide" time="RA_AnimationTime" end="-300,0" reversible="false" tween="sine" easing="inout">Hidden</animation>
@@ -3977,8 +4032,10 @@
 				</control>
 				<control type="group" description="Item (5r --> 6r)">
 					<posx>RA_IconSquare7_PosX</posx>
-					<visible>Container(314).HasNext + Container(314).OnScrollPrevious + !stringcompare(Container(314).Listitem(6).Property(CheckRecent),one) +
-						!stringcompare(Container(314).Listitem(6).Property(CheckNowPlaying),*.*)</visible>
+					<visible>Container(314).HasNext + Container(314).OnScrollPrevious + 
+						[Player.HasAudio + !stringcompare(Container(314).Listitem(6).Property(CheckNowPlaying),*.*) |
+						[!Player.HasAudio + !stringcompare(Container(314).Listitem(6).Property(CheckPosition),one) +
+						!stringcompare(Container(314).Listitem(6).Property(CheckPosition),eleven)]]</visible>
 					<camera x="1777" y="143"/>
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
 					<animation effect="slide" time="RA_AnimationTime" end="300,0" reversible="false" tween="sine" easing="inout">Hidden</animation>
