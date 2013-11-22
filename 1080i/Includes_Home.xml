@@ -127,9 +127,39 @@
 			<visible>Window.IsActive(Home)</visible>
 			<animation condition="true" loop="true" effect="slide" start="0,0" end="2550,0" time="1000" delay="15000">Conditional</animation>
 		</control>-->
-
+		<control type="panel" id="310" description="to get the number of active menuitems">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>6</width>
+			<height>1</height>
+			<orientation>vertical</orientation>
+			<itemlayout height="1" width="1">
+			</itemlayout>
+			<focusedlayout height="1" width="1">
+			</focusedlayout>
+			<content>
+				<item id="1" description="Movies"><visible>!Skin.HasSetting(MoviesSectionHide)</visible></item>
+				<item id="2" description="TvShows"><visible>!Skin.HasSetting(TVSectionHide)</visible></item>
+				<item id="3" description="Music"><visible>!Skin.HasSetting(MusicSectionHide)</visible></item>
+				<item id="4" description="Pictures"><visible>!Skin.HasSetting(PicturesSectionHide)</visible></item>
+				<item id="5" description="Addons"><visible>!Skin.HasSetting(AddonsSectionHide)</visible></item>
+				<item id="6" description="XBMC"><visible>true</visible></item>
+			</content>
+		</control>
 		<!-- Menu: Movies -->
 		<control type="group">
+			<!--<animation type="Conditional" condition="!IntegerGreaterThan(Container(310).NumItems,5)">
+				<effect type="slide" start="0" end="30" time="0" reversible="false" />
+			</animation>
+			<animation type="Conditional" condition="!IntegerGreaterThan(Container(310).NumItems,4)">
+				<effect type="slide" start="0" end="45" time="0" reversible="false" />
+			</animation>
+			<animation type="Conditional" condition="!IntegerGreaterThan(Container(310).NumItems,3)">
+				<effect type="slide" start="0" end="75" time="0" reversible="false" />
+			</animation>
+			<animation type="Conditional" condition="!IntegerGreaterThan(Container(310).NumItems,2)">
+				<effect type="slide" start="0" end="150" time="0" reversible="false" />
+			</animation>-->
 			<visible>!Skin.HasSetting(MoviesSectionHide)</visible>
 			<posx>45</posx>
 			<posy>486</posy>
@@ -1133,6 +1163,248 @@
 					</item>
 				</content>
 			</control>
+		</control>
+	</include>
+	
+	<include name=".HomeNav_Menu">
+		<control type="grouplist" id="9000" description="Submenus">
+			<posx>60</posx>
+			<posy>591</posy>
+			<width>auto</width>
+			<height>420</height>
+			<itemgap>0</itemgap>
+			<align>center</align>
+			<aligny>top</aligny>
+			<onup>700</onup>
+			<orientation>horizontal</orientation>
+			
+			<control type="list" id="301" description="Movies">
+				<visible allowhiddenfocus="true">!Skin.HasSetting(MoviesSectionHide)</visible>
+				<width>auto</width>
+				<height>420</height>
+				<onup>311</onup>
+				<ondown>301</ondown>
+				<onleft>307</onleft>
+				<onright>302</onright>
+				<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
+				<onright>Skin.Reset(HomeMenuDirection)</onright>
+				<focusposition>3</focusposition>
+				<movement>3</movement>
+				<!-- Unselected Items -->
+				<itemlayout height="60" width="300">
+					<control type="label">
+						<posx>150</posx>
+						<width>250</width>
+						<height>60</height>
+						<info>ListItem.Label</info>
+						<font>HomeNav_Submenu</font>
+						<textcolor>HomeNav</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<scroll>false</scroll>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+				</itemlayout>
+				
+				<!-- Selected Item -->
+				<focusedlayout height="60" width="300">
+					<control type="label">
+						<posx>150</posx>
+						<width>250</width>
+						<height>60</height>
+						<info>ListItem.Label</info>
+						<font>HomeNav_Submenu</font>
+						<textcolor>HomeNav</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<scroll>false</scroll>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+				</focusedlayout>
+				
+				<content>
+					<!-- Menu Items -->
+					<item id="0" description="MyMovies">
+						<visible>!Skin.HasSetting(Movies1)</visible>
+						<visible>Library.HasContent(Movies)</visible>
+						<label>342</label>
+						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
+					</item>
+					<item id="1" description="RA Movies">
+						<visible>!Skin.HasSetting(Movies2)</visible>
+						<visible>Library.HasContent(Movies)</visible>
+						<label>31289</label>
+						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
+					</item>
+					<item id="2" description="Genres">
+						<visible>!Skin.HasSetting(Movies3)</visible>
+						<visible>Library.HasContent(Movies)</visible>
+						<label>135</label>
+						<onclick>ActivateWindow(videolibrary,moviegenres,return)</onclick>
+					</item>
+					<item id="3" description="Custom Movies">
+						<visible>!IsEmpty(Skin.String(CustomMovies.1.Path))</visible>
+						<label>$INFO[Skin.String(CustomMovies.1.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomMovies.1.Path)]</onclick>
+					</item>
+					<item id="4" description="Shortcut2">
+						<visible>!IsEmpty(Skin.String(CustomMovies.2.Path))</visible>
+						<label>$INFO[Skin.String(CustomMovies.2.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomMovies.2.Path)]</onclick>
+					</item>
+					<item id="5" description="Shortcut3">
+						<visible>!IsEmpty(Skin.String(CustomMovies.3.Path))</visible>
+						<label>$INFO[Skin.String(CustomMovies.3.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomMovies.3.Path)]</onclick>
+					</item>
+					<item id="6" description="Shortcut4">
+						<visible>!IsEmpty(Skin.String(CustomMovies.4.Path))</visible>
+						<label>$INFO[Skin.String(CustomMovies.4.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomMovies.4.Path)]</onclick>
+					</item>
+					<item id="7" description="Shortcut5">
+						<visible>!IsEmpty(Skin.String(CustomMovies.5.Path))</visible>
+						<label>$INFO[Skin.String(CustomMovies.5.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomMovies.5.Path)]</onclick>
+					</item>
+					<item id="7" description="Shortcut6">
+						<visible>!IsEmpty(Skin.String(CustomMovies.6.Path))</visible>
+						<label>$INFO[Skin.String(CustomMovies.6.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomMovies.6.Path)]</onclick>
+					</item>
+					<item id="7" description="Shortcut7">
+						<visible>!IsEmpty(Skin.String(CustomMovies.7.Path))</visible>
+						<label>$INFO[Skin.String(CustomMovies.7.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomMovies.7.Path)]</onclick>
+					</item>
+					<item id="8" description="Browse">
+						<visible>!Skin.HasSetting(Movies4)</visible>
+						<label>1024</label>
+						<onclick>ActivateWindow(Videolibrary,root)</onclick>
+					</item>
+					<item id="9" description="Search">
+						<visible>!Skin.HasSetting(Movies5)</visible>
+						<visible>Library.HasContent(Movies)</visible>
+						<label>137</label>
+						<onclick>ActivateWindow(VideoLibrary)</onclick>
+						<onclick>SendClick(8)</onclick>
+					</item>
+				</content>
+			</control>
+			<control type="list" id="302" description="TvShows">
+				<visible allowhiddenfocus="true">!Skin.HasSetting(TVSectionHide)</visible>
+				<width>auto</width>
+				<height>420</height>
+				<onup>312</onup>
+				<ondown>302</ondown>
+				<onleft>301</onleft>
+				<onright>303</onright>
+				<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
+				<onright>Skin.Reset(HomeMenuDirection)</onright>
+				<focusposition>3</focusposition>
+				<movement>3</movement>
+				<!-- Unselected Items -->
+				<itemlayout height="60" width="300">
+					<control type="label">
+						<posx>150</posx>
+						<width>250</width>
+						<height>60</height>
+						<info>ListItem.Label</info>
+						<font>HomeNav_Submenu</font>
+						<textcolor>HomeNav</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<scroll>false</scroll>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+				</itemlayout>
+				
+				<!-- Selected Item -->
+				<focusedlayout height="60" width="300">
+					<control type="label">
+						<posx>150</posx>
+						<width>250</width>
+						<height>60</height>
+						<info>ListItem.Label</info>
+						<font>HomeNav_Submenu</font>
+						<textcolor>HomeNav</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<scroll>false</scroll>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+				</focusedlayout>
+				
+				<!-- Menu Items -->
+				<content>
+					<item id="0" description="MyTV">
+						<visible>!Skin.HasSetting(TV1)</visible>
+						<visible>Library.HasContent(TVShows)</visible>
+						<label>20343</label>
+						<onclick>ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
+					</item>
+					<item id="1" description="RA TV">
+						<visible>!Skin.HasSetting(TV2)</visible>
+						<visible>Library.HasContent(TVShows)</visible>
+						<label>31289</label>
+						<onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</onclick>
+					</item>
+					<item id="2" description="Browse 5 MENU ITEM ADDED Watchlist">
+						<visible>!Skin.HasSetting(TV5)</visible>
+						<visible>Library.HasContent(TVShows)</visible>
+						<label>575</label>
+						<onclick>ActivateWindow(Videos,&quot;library://video/inprogressshows.xml/&quot;,return)</onclick>
+					</item>
+					<item id="3" description="Custom TV">
+						<visible>!IsEmpty(Skin.String(CustomTV.1.Path))</visible>
+						<label>$INFO[Skin.String(CustomTV.1.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomTV.1.Path)]</onclick>
+					</item>
+					<item id="4" description="Shortcut2">
+						<visible>!IsEmpty(Skin.String(CustomTV.2.Path))</visible>
+						<label>$INFO[Skin.String(CustomTV.2.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomTV.2.Path)]</onclick>
+					</item>
+					<item id="5" description="Shortcut3">
+						<visible>!IsEmpty(Skin.String(CustomTV.3.Path))</visible>
+						<label>$INFO[Skin.String(CustomTV.3.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomTV.3.Path)]</onclick>
+					</item>
+					<item id="6" description="Shortcut4">
+						<visible>!IsEmpty(Skin.String(CustomTV.4.Path))</visible>
+						<label>$INFO[Skin.String(CustomTV.4.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomTV.4.Path)]</onclick>
+					</item>
+					<item id="7" description="Shortcut5">
+						<visible>!IsEmpty(Skin.String(CustomTV.5.Path))</visible>
+						<label>$INFO[Skin.String(CustomTV.5.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomTV.5.Path)]</onclick>
+					</item>
+					<item id="7" description="Shortcut6">
+						<visible>!IsEmpty(Skin.String(CustomTV.6.Path))</visible>
+						<label>$INFO[Skin.String(CustomTV.6.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomTV.6.Path)]</onclick>
+					</item>
+					<item id="7" description="Shortcut7">
+						<visible>!IsEmpty(Skin.String(CustomTV.7.Path))</visible>
+						<label>$INFO[Skin.String(CustomTV.7.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomTV.7.Path)]</onclick>
+					</item>
+					<item id="8" description="Browse">
+						<visible>!Skin.HasSetting(TV3)</visible>
+						<label>1024</label>
+						<onclick>ActivateWindow(Videolibrary,root)</onclick>
+					</item>
+					<item id="9" description="Search">
+						<visible>!Skin.HasSetting(TV4)</visible>
+						<visible>Library.HasContent(TVShows)</visible>
+						<label>137</label>
+						<onclick>ActivateWindow(VideoLibrary)</onclick>
+						<onclick>SendClick(8)</onclick>
+					</item>
+				</content>
+			</control>
+			
 		</control>
 	</include>
 </includes>
