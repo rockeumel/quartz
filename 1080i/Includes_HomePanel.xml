@@ -666,15 +666,14 @@
 						]] | [Container(311).HasPrevious + !Player.HasAudio]</visible>
 					<camera x="108" y="162"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-40" end="-40">Conditional</animation>
-					<!--   Movie Covers and reflections     -->
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture fallback="DefaultVideoCover.png">$VAR[MovieIcon_-1]</texture>
+						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_-1]</texture>
 						<visible>IsEmpty(Container(311).Listitem(-1).Property(CheckNowPlaying))</visible>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideoCover.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_-1]</texture>
+						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_-1]</texture>
 						<visible>IsEmpty(Container(311).Listitem(-1).Property(CheckNowPlaying))</visible>
 					</control>
 
@@ -698,14 +697,13 @@
 						]</visible>
 					<camera x="143" y="162"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-40" end="-40">Conditional</animation>
-					<!--   Now Playing Icon and reflections     -->
 					<control type="image" description="Now Playing Icon">
 						<include>Now_Playing_Icon_Properties</include>
-						<texture fallback="DefaultVideoCover.png">$VAR[MovieIcon_-1]</texture>
+						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_-1]</texture>
 					</control>
 					<control type="image" description="Now Playing Icon Reflection">
 						<include>Now_Playing_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideoCover.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png"
+						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png"
 							>$VAR[MovieIcon_-1]</texture>
 					</control>
 
@@ -730,11 +728,11 @@
 					<animation effect="rotatey" center="1920" start="40" end="40" time="0" condition="true">Conditional</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture fallback="DefaultVideoCover.png">$VAR[MovieIcon_6]</texture>
+						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_6]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideoCover.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_6]</texture>
+						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_6]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconPoster_Width</width>
@@ -748,14 +746,12 @@
 					<posx>RA_IconPoster2_PosX</posx>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture fallback="DefaultVideoCover.png">$VAR[MovieIcon_0]</texture>
-						<!--<visible>IsEmpty(Container(311).Listitem(0).Property(CheckNowPlaying))</visible>-->
+						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_0]</texture>
 						<visible>!Player.HasAudio | [Player.HasAudio + Container(311).HasPrevious]</visible>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideoCover.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_0]</texture>
-						<!--<visible>IsEmpty(Container(311).Listitem(0).Property(CheckNowPlaying))</visible>-->
+						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_0]</texture>
 						<visible>!Player.HasAudio | [Player.HasAudio + Container(311).HasPrevious]</visible>
 					</control>
 					<control type="label" description="Movie Title">
@@ -779,12 +775,12 @@
 					<control type="image" description="Now Playing Icon">
 						<include>Now_Playing_Icon_Properties</include>
 						<visible>!Container(311).HasPrevious + Player.HasAudio</visible>
-						<texture fallback="DefaultVideoCover.png">$VAR[MovieIcon_0]</texture>
+						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_0]</texture>
 					</control>
 					<control type="image" description="Now Playing Icon Reflection">
 						<include>Now_Playing_Icon_Reflection_Properties</include>
 						<visible>!Container(311).HasPrevious + Player.HasAudio</visible>
-						<texture fallback="DefaultVideoCover.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png"
+						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png"
 							>$VAR[MovieIcon_0]</texture>
 					</control>
 					<control type="label" description="Now Playing Song Title">
@@ -821,13 +817,11 @@
 					<posx>RA_IconPoster3_PosX</posx>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture fallback="DefaultVideoCover.png">$VAR[MovieIcon_1]</texture>
-						<!--<visible>IsEmpty(Container(311).Listitem(0).Property(CheckNowPlaying))</visible>-->
+						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_1]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideoCover.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_1]</texture>
-						<!--<visible>IsEmpty(Container(311).Listitem(0).Property(CheckNowPlaying))</visible>-->
+						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_1]</texture>
 					</control>
 					<control type="label" description="Movie Title">
 						<posx>-39</posx>
@@ -849,13 +843,11 @@
 					<posx>RA_IconPoster4_PosX</posx>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture fallback="DefaultVideoCover.png">$VAR[MovieIcon_2]</texture>
-						<!--<visible>IsEmpty(Container(311).Listitem(0).Property(CheckNowPlaying))</visible>-->
+						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_2]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideoCover.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_2]</texture>
-						<!--<visible>IsEmpty(Container(311).Listitem(0).Property(CheckNowPlaying))</visible>-->
+						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_2]</texture>
 					</control>
 					<control type="label" description="Movie Title">
 						<posx>-39</posx>
@@ -877,13 +869,11 @@
 					<posx>RA_IconPoster5_PosX</posx>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture fallback="DefaultVideoCover.png">$VAR[MovieIcon_3]</texture>
-						<!--<visible>IsEmpty(Container(311).Listitem(0).Property(CheckNowPlaying))</visible>-->
+						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_3]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideoCover.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_3]</texture>
-						<!--<visible>IsEmpty(Container(311).Listitem(0).Property(CheckNowPlaying))</visible>-->
+						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_3]</texture>
 					</control>
 					<control type="label" description="Movie Title">
 						<posx>-39</posx>
@@ -905,13 +895,11 @@
 					<posx>RA_IconPoster6_PosX</posx>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture fallback="DefaultVideoCover.png">$VAR[MovieIcon_4]</texture>
-						<!--<visible>IsEmpty(Container(311).Listitem(0).Property(CheckNowPlaying))</visible>-->
+						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_4]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideoCover.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_4]</texture>
-						<!--<visible>IsEmpty(Container(311).Listitem(0).Property(CheckNowPlaying))</visible>-->
+						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_4]</texture>
 					</control>
 					<control type="label" description="Movie Title">
 						<posx>-39</posx>
@@ -933,13 +921,11 @@
 					<posx>RA_IconPoster7_PosX</posx>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture fallback="DefaultVideoCover.png">$VAR[MovieIcon_5]</texture>
-						<!--<visible>IsEmpty(Container(311).Listitem(0).Property(CheckNowPlaying))</visible>-->
+						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_5]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideoCover.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_5]</texture>
-						<!--<visible>IsEmpty(Container(311).Listitem(0).Property(CheckNowPlaying))</visible>-->
+						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_5]</texture>
 					</control>
 					<control type="label" description="Movie Title">
 						<posx>-39</posx>
@@ -981,9 +967,8 @@
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconPoster_Width</width>
 						<height>RA_IconPoster_Height</height>
-						<bordersize>0</bordersize>
 						<texture>home_recentlyadded/Poster_Dim.png</texture>
-						<aspectratio scalediffuse="false">scale</aspectratio>
+						<aspectratio>scale</aspectratio>
 					</control>
 				</control>
 				<control type="group" description="Item (-1r --> -2r) square">
@@ -1003,7 +988,6 @@
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
 						<height>RA_IconSquare_Height</height>
-						<bordersize>0</bordersize>
 						<texture>home_recentlyadded/Square_Dim.png</texture>
 						<aspectratio>scale</aspectratio>
 					</control>
@@ -1026,7 +1010,6 @@
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconPoster_Width</width>
 						<height>RA_IconPoster_Height</height>
-						<bordersize>0</bordersize>
 						<texture>home_recentlyadded/Poster_Dim.png</texture>
 						<aspectratio>scale</aspectratio>
 					</control>
@@ -1051,7 +1034,6 @@
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconPoster_Width</width>
 						<height>RA_IconPoster_Height</height>
-						<bordersize>0</bordersize>
 						<texture>home_recentlyadded/Poster_Dim.png</texture>
 						<aspectratio>scale</aspectratio>
 						<visible>Container(311).OnScrollNext</visible>
@@ -1079,7 +1061,6 @@
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconPoster_Width</width>
 						<height>RA_IconPoster_Height</height>
-						<bordersize>0</bordersize>
 						<texture>home_recentlyadded/Poster_Dim.png</texture>
 						<aspectratio>scale</aspectratio>
 						<visible>Container(311).OnScrollNext</visible>
@@ -1109,7 +1090,6 @@
 						<description>Dim</description>
 						<width>RA_IconSquare_Width</width>
 						<height>RA_IconSquare_Height</height>
-						<bordersize>0</bordersize>
 						<texture>home_recentlyadded/Square_Dim.png</texture>
 						<aspectratio>scale</aspectratio>
 						<visible>Container(311).OnScrollNext</visible>
@@ -1752,11 +1732,11 @@
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
 					<control type="image" description="Episode Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[EpisodeIcon_-1]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_-1]</texture>
 					</control>
 					<control type="image" description="Episode Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_-1]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_-1]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
@@ -1772,11 +1752,11 @@
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
 					<control type="image" description="Episode Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[EpisodeIcon_5]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_5]</texture>
 					</control>
 					<control type="image" description="Episode Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_5]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_5]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
@@ -1789,11 +1769,11 @@
 					<posx>RA_IconSquare2_PosX</posx>
 					<control type="image" description="Episode Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[EpisodeIcon_0]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_0]</texture>
 					</control>
 					<control type="image" description="Episode Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_0]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_0]</texture>
 					</control>
 					<control type="label" description="Now Playing Song Title">
 						<posx>-4</posx>
@@ -1857,11 +1837,11 @@
 					<posx>RA_IconSquare3_PosX</posx>
 					<control type="image" description="Episode Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[EpisodeIcon_1]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_1]</texture>
 					</control>
 					<control type="image" description="Episode Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_1]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_1]</texture>
 					</control>
 					<control type="label" description="Episode Title">
 						<posx>-4</posx>
@@ -1897,11 +1877,11 @@
 					<posx>RA_IconSquare4_PosX</posx>
 					<control type="image" description="Episode Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[EpisodeIcon_2]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_2]</texture>
 					</control>
 					<control type="image" description="Episode Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_2]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_2]</texture>
 					</control>
 					<control type="label" description="Episode Title">
 						<posx>-4</posx>
@@ -1937,11 +1917,11 @@
 					<posx>RA_IconSquare5_PosX</posx>
 					<control type="image" description="Episode Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[EpisodeIcon_3]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_3]</texture>
 					</control>
 					<control type="image" description="Episode Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_3]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_3]</texture>
 					</control>
 					<control type="label" description="Episode Title">
 						<posx>-4</posx>
@@ -1977,11 +1957,11 @@
 					<posx>RA_IconSquare6_PosX</posx>
 					<control type="image" description="Episode Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[EpisodeIcon_4]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_4]</texture>
 					</control>
 					<control type="image" description="Episode Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_4]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_4]</texture>
 					</control>
 					<control type="label" description="Episode Title">
 						<posx>-4</posx>
@@ -2760,11 +2740,11 @@
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[AlbumIcon_-1]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_-1]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_-1]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_-1]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
@@ -2780,11 +2760,11 @@
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[AlbumIcon_5]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_5]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_5]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_5]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
@@ -2797,11 +2777,11 @@
 					<posx>RA_IconSquare2_PosX</posx>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[AlbumIcon_0]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_0]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_0]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_0]</texture>
 					</control>
 					<control type="label" description="Now Playing Song Title">
 						<posx>-4</posx>
@@ -2865,11 +2845,11 @@
 					<posx>RA_IconSquare3_PosX</posx>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[AlbumIcon_1]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_1]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_1]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_1]</texture>
 					</control>
 					<control type="label" description="Album Title">
 						<posx>-4</posx>
@@ -2905,11 +2885,11 @@
 					<posx>RA_IconSquare4_PosX</posx>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[AlbumIcon_2]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_2]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_2]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_2]</texture>
 					</control>
 					<control type="label" description="Album Title">
 						<posx>-4</posx>
@@ -2945,11 +2925,11 @@
 					<posx>RA_IconSquare5_PosX</posx>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[AlbumIcon_3]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_3]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_3]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_3]</texture>
 					</control>
 					<control type="label" description="Album Title">
 						<posx>-4</posx>
@@ -2985,11 +2965,11 @@
 					<posx>RA_IconSquare6_PosX</posx>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[AlbumIcon_4]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_4]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_4]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_4]</texture>
 					</control>
 					<control type="label" description="Album Title">
 						<posx>-4</posx>
