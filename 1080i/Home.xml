@@ -30,7 +30,7 @@
 	<controls>
 		<include>Home_Background</include>
 		<control type="label" description="debug label">
-			<label>-</label>
+			<label></label>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1500</width>

@@ -950,8 +950,8 @@
 				<!--r=rotated, f=flat-->
 				<control type="group" description="Item (-1r --> -2r)">
 					<posx>RA_IconPoster1_PosX</posx>
-					<visible>Container(311).HasPrevious + Container(311).OnScrollNext + !stringcompare(Container(311).Listitem(-6).Property(CheckNowPlaying),*.*) +
-						!stringcompare(Container(311).Listitem(-6).Property(CheckRecent),one)</visible>
+					<visible>Container(311).HasPrevious + Container(311).OnScrollNext + 
+						[[Player.HasAudio + !stringcompare(Container(311).Listitem(-6).Property(CheckNowPlaying),*.*)] | [!Player.HasAudio + !stringcompare(Container(311).Listitem(-6).Property(CheckRecent),one)]]</visible>
 					<camera x="108" y="162"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-40" end="-40">Conditional</animation>
 					<animation effect="slide" time="RA_AnimationTime" end="-216" reversible="false" tween="sine" easing="inout">Hidden</animation>
@@ -2007,8 +2007,8 @@
 				
 				<control type="group" description="Item (-1r --> -2r)">
 					<posx>RA_IconSquare1_PosX</posx>
-					<visible>Container(312).HasPrevious + Container(312).OnScrollNext + !stringcompare(Container(312).Listitem(-5).Property(CheckNowPlaying),*.*)
-						+ !stringcompare(Container(314).Listitem(-5).Property(CheckRecent),one)</visible>
+					<visible>Container(312).HasPrevious + Container(312).OnScrollNext + 
+						[[Player.HasAudio + !stringcompare(Container(312).Listitem(-5).Property(CheckNowPlaying),*.*)] | [!Player.HasAudio + !stringcompare(Container(312).Listitem(-5).Property(CheckRecent),one)]]</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
 					<animation effect="slide" time="RA_AnimationTime" end="-300,0" reversible="false" tween="sine" easing="inout">Hidden</animation>
@@ -2986,8 +2986,8 @@
 				
 				<control type="group" description="Item (-1r --> -2r)">
 					<posx>RA_IconSquare1_PosX</posx>
-					<visible>Container(313).HasPrevious + Container(313).OnScrollNext + !stringcompare(Container(313).Listitem(-5).Property(CheckNowPLaying),*.*)
-						+ !stringcompare(Container(314).Listitem(-5).Property(CheckRecent),one)</visible>
+					<visible>Container(313).HasPrevious + Container(313).OnScrollNext + 
+						[[Player.HasAudio + !stringcompare(Container(313).Listitem(-5).Property(CheckNowPlaying),*.*)] | [!Player.HasAudio + !stringcompare(Container(313).Listitem(-5).Property(CheckRecent),one)]]</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
 					<animation effect="slide" time="RA_AnimationTime" end="-300,0" reversible="false" tween="sine" easing="inout">Hidden</animation>
@@ -3770,8 +3770,8 @@
 				
 				<control type="group" description="Item (-1r --> -2r)">
 					<posx>RA_IconSquare1_PosX</posx>
-					<visible>Container(314).HasPrevious + Container(314).OnScrollNext + !stringcompare(Container(314).Listitem(-5).Property(CheckNowPlaying),*.*)
-						+ !stringcompare(Container(314).Listitem(-5).Property(CheckRecent),one)</visible>
+					<visible>Container(314).HasPrevious + Container(314).OnScrollNext + 
+						[[Player.HasAudio + !stringcompare(Container(314).Listitem(-5).Property(CheckNowPlaying),*.*)] | [!Player.HasAudio + !stringcompare(Container(314).Listitem(-5).Property(CheckRecent),one)]]</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
 					<animation effect="slide" time="RA_AnimationTime" end="-300,0" reversible="false" tween="sine" easing="inout">Hidden</animation>
