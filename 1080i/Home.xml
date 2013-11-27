@@ -8,24 +8,26 @@
 	305 - Submenu Extras
 	307 - Submenu Settings
 	
-	311 - HomePanel Movies
-	325 - Coverflow Fake OnNext Movies
-	326 - Coverflow Fake OnPrevious Movies
-	312 - HomePanel Tv Shows
-	321 - Coverflow Fake OnNext Tv Shows
-	322 - Coverflow Fake OnPrevious Tv Shows
-	313 - HomePanel Music
-	323 - Coverflow Fake OnNext Music
-	324 - Coverflow Fake OnPrevious Music
-	314 - HomePanel Pictures
-	327 - Coverflow Fake OnNext Pictures
-	328 - Coverflow Fake OnPrevious Pictures
+	311 - Shelf Movies
+	312 - Shelf Tv Shows
+	313 - Shelf Music
+	314 - Shelf Pictures
+	
+	319 - Shelf VisibleChange Indicator Music
+	320 - Shelf VisibleChange Indicator TvShows
+	
+	321 - Shelf OnNext Tv Shows
+	322 - Shelf OnPrevious Tv Shows
+	323 - Shelf OnNext Music
+	324 - Shelf OnPrevious Music
+	325 - Shelf OnNext Movies
+	326 - Shelf OnPrevious Movies
+	327 - Shelf OnNext Pictures
+	328 - Shelf OnPrevious Pictures
 -->
 <window id="0">
 	<defaultcontrol>301</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-
-	<include>Animation_DefaultWindowOpenClose</include>
 
 	<controls>
 		<include>Home_Background</include>
@@ -41,24 +43,23 @@
 			<align>left</align>
 			<aligny>center</aligny>
 			<textcolor>HomeNavSelected</textcolor>
+			<visible>false</visible>
 		</control>
 
-		<!-- Home Navigation & Coverflow for Recently Added -->
-		<include>HomePanel_Movies</include>
-		<include>HomePanel_TvShows</include>
-		<include>HomePanel_Music</include>
+		<!-- Home Navigation & Shelf -->
+		<!--<include>HomeShelf_Movies</include>-->
+		<include>HomeShelf_TvShows</include>
+		<include>HomeShelf_Music</include>
+		<include>HomeShelf_Pictures</include>
 
-		<include condition="!Skin.HasSetting(HomePanel_Off) + !Skin.HasSetting(HomePanel_CoverFlowOff)">HomePanel_CoverFlow_Pictures</include>
-		<include condition="!Skin.HasSetting(HomePanel_Off)">HomePanel_Pictures</include>
+		<include>HomeShelf_Extras</include>
+		<include>HomeShelf_Systeminfo</include>
 
-		<include condition="!Skin.HasSetting(HomePanel_Off)">HomePanel_Extras</include>
-		<include condition="!Skin.HasSetting(HomePanel_Off)">HomePanel_Systeminfo</include>
-
-		<include>HomeNav_Menu</include>
+		<include>Home_Menu</include>
 
 		<!-- Time, Date, RSS and Debug Grid -->
 		<include>Global_TimeDate</include>
 		<include>Global_RSS</include>
-		<include>DebugMode</include>
+		
 	</controls>
 </window>
