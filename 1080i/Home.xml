@@ -47,7 +47,7 @@
 		</control>
 
 		<!-- Home Navigation & Shelf -->
-		<!--<include>HomeShelf_Movies</include>-->
+		<include>HomeShelf_Movies</include>
 		<include>HomeShelf_TvShows</include>
 		<include>HomeShelf_Music</include>
 		<include>HomeShelf_Pictures</include>
