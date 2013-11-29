@@ -13,6 +13,8 @@
 	313 - Shelf Music
 	314 - Shelf Pictures
 	
+	317 - Shelf VisibleChange Indicator Movies
+	318 - Shelf VisibleChange Indicator Pictures
 	319 - Shelf VisibleChange Indicator Music
 	320 - Shelf VisibleChange Indicator TvShows
 	
@@ -26,13 +28,18 @@
 	328 - Shelf OnPrevious Pictures
 -->
 <window id="0">
-	<defaultcontrol>301</defaultcontrol>
+	<defaultcontrol>8998</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
 		<include>Home_Background</include>
+		<control type="button" id="8998" description="Fix ATV1 focus bug">
+			<include>HiddenButton</include>
+			<onfocus>Control.SetFocus(301)</onfocus>
+			<onclick>Control.SetFocus(301)</onclick>
+		</control>
 		<control type="label" description="debug label">
-			<label>$INFO[Container(310).NumItems]</label>
+			<label>$INFO[Container(310).NumItems] - $INFO[Skin.String(NumberOfMenuitems)]</label>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1500</width>
@@ -43,23 +50,22 @@
 			<align>left</align>
 			<aligny>center</aligny>
 			<textcolor>HomeNavSelected</textcolor>
-			<visible>false</visible>
+			<!--<visible>false</visible>-->
 		</control>
 
 		<!-- Home Navigation & Shelf -->
-		<include>HomeShelf_Movies</include>
-		<include>HomeShelf_TvShows</include>
-		<include>HomeShelf_Music</include>
-		<include>HomeShelf_Pictures</include>
-
-		<include>HomeShelf_Extras</include>
-		<include>HomeShelf_Systeminfo</include>
+		<include condition="!Skin.HasSetting(MoviesSectionHide)">HomeShelf_Movies</include>
+		<include condition="!Skin.HasSetting(TVSectionHide)">HomeShelf_TvShows</include>
+		<include condition="!Skin.HasSetting(MusicSectionHide)">HomeShelf_Music</include>
+		<include condition="!Skin.HasSetting(PicturesSectionHide)">HomeShelf_Pictures</include>
+		<include condition="!Skin.HasSetting(AddonsSectionHide)">HomeShelf_Addons</include>
+		<include>HomeShelf_XBMC</include>
 
 		<include>Home_Menu</include>
 
 		<!-- Time, Date, RSS and Debug Grid -->
-		<include>Global_TimeDate</include>
-		<include>Global_RSS</include>
+		<!--<include>Global_TimeDate</include>
+		<include>Global_RSS</include>-->
 		
 	</controls>
 </window>

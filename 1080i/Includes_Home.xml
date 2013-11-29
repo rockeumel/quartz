@@ -67,7 +67,81 @@
 		<animation effect="fade" time="200" start="0" end="100">Visible</animation>
 		<animation effect="fade" time="100" start="100" end="0">Hidden</animation>
 	</include>
-
+	
+	<include name="HomeMenu_Width_Items_1">
+		<width>1800</width>
+	</include>
+	<include name="HomeMenu_Width_Items_2">
+		<width>900</width>
+	</include>
+	<include name="HomeMenu_Width_Items_3">
+		<width>600</width>
+	</include>
+	<include name="HomeMenu_Width_Items_4">
+		<width>450</width>
+	</include>
+	<include name="HomeMenu_Width_Items_5">
+		<width>360</width>
+	</include>
+	<include name="HomeMenu_Width_Items_6">
+		<width>300</width>
+	</include>
+	
+	<include name="HomeMenu_PosX_Items_1">
+		<posx>900</posx>
+		<width>1800</width>
+	</include>
+	<include name="HomeMenu_PosX_Items_2">
+		<posx>450</posx>
+		<width>900</width>
+	</include>
+	<include name="HomeMenu_PosX_Items_3">
+		<posx>300</posx>
+		<width>600</width>
+	</include>
+	<include name="HomeMenu_PosX_Items_4">
+		<posx>225</posx>
+		<width>450</width>
+	</include>
+	<include name="HomeMenu_PosX_Items_5">
+		<posx>180</posx>
+		<width>360</width>
+	</include>
+	<include name="HomeMenu_PosX_Items_6">
+		<posx>150</posx>
+		<width>300</width>
+	</include>
+	
+	<include name="omeMenu_SliderWidth_Items_1">
+		<width>1860</width>
+	</include>
+	<include name="omeMenu_SliderWidth_Items_2">
+		<width>930</width>
+	</include>
+	<include name="omeMenu_SliderWidth_Items_3">
+		<width>620</width>
+	</include>
+	<include name="omeMenu_SliderWidth_Items_4">
+		<width>465</width>
+	</include>
+	<include name="omeMenu_SliderWidth_Items_5">
+		<width>372</width>
+	</include>
+	<include name="omeMenu_SliderWidth_Items_6">
+		<width>330</width>
+	</include>
+	
+	<variable name="HomeMenu_SliderWidth">
+		<value condition="StringCompare(Skin.String(NumberOfMenuitems),1)">1860</value>
+		<value condition="StringCompare(Skin.String(NumberOfMenuitems),2)">930</value>
+		<value condition="StringCompare(Skin.String(NumberOfMenuitems),3)">620</value>
+		<value condition="StringCompare(Skin.String(NumberOfMenuitems),4)">465</value>
+		<value condition="StringCompare(Skin.String(NumberOfMenuitems),5)">372</value>
+		<value condition="StringCompare(Skin.String(NumberOfMenuitems),6)">330</value>
+		<value>330</value>
+	</variable>
+	
+	
 	<!-- ======================= -->
 	<!-- ### Home Navigation ### -->
 	<!-- ======================= -->
@@ -328,6 +402,18 @@
 			</control>
 		</control>
 		<control type="group" description="Submenu: TvShows">
+			<animation type="Conditional" condition="!IntegerGreaterThan(Container(310).NumItems,5)">
+				<effect type="slide" start="0" end="30" time="0" reversible="false" />
+			</animation>
+			<animation type="Conditional" condition="!IntegerGreaterThan(Container(310).NumItems,4)">
+				<effect type="slide" start="0" end="45" time="0" reversible="false" />
+			</animation>
+			<animation type="Conditional" condition="!IntegerGreaterThan(Container(310).NumItems,3)">
+				<effect type="slide" start="0" end="75" time="0" reversible="false" />
+			</animation>
+			<animation type="Conditional" condition="!IntegerGreaterThan(Container(310).NumItems,2)">
+				<effect type="slide" start="0" end="150" time="0" reversible="false" />
+			</animation>
 			<visible>!Skin.HasSetting(TVSectionHide)</visible>
 			<posx>345</posx>
 			<posy>486</posy>
@@ -473,22 +559,22 @@
 						<label>$INFO[Skin.String(CustomTV.5.Label)]</label>
 						<onclick>$INFO[Skin.String(CustomTV.5.Path)]</onclick>
 					</item>
-					<item id="7" description="Shortcut6">
+					<item id="8" description="Shortcut6">
 						<visible>!IsEmpty(Skin.String(CustomTV.6.Path))</visible>
 						<label>$INFO[Skin.String(CustomTV.6.Label)]</label>
 						<onclick>$INFO[Skin.String(CustomTV.6.Path)]</onclick>
 					</item>
-					<item id="7" description="Shortcut7">
+					<item id="9" description="Shortcut7">
 						<visible>!IsEmpty(Skin.String(CustomTV.7.Path))</visible>
 						<label>$INFO[Skin.String(CustomTV.7.Label)]</label>
 						<onclick>$INFO[Skin.String(CustomTV.7.Path)]</onclick>
 					</item>
-					<item id="8" description="Browse">
+					<item id="70" description="Browse">
 						<visible>!Skin.HasSetting(TV3)</visible>
 						<label>1024</label>
 						<onclick>ActivateWindow(Videolibrary,root)</onclick>
 					</item>
-					<item id="9" description="Search">
+					<item id="11" description="Search">
 						<visible>!Skin.HasSetting(TV4)</visible>
 						<visible>Library.HasContent(TVShows)</visible>
 						<label>137</label>
@@ -988,7 +1074,6 @@
 			</control>
 		</control>
 		<control type="group" description="Submenu: XBMC">
-			<!--<visible>!Skin.HasSetting(Home_HideSystemMenu)</visible>-->
 			<posx>1545</posx>
 			<posy>486</posy>
 			
@@ -1168,35 +1253,194 @@
 		</control>
 	</include>
 	
-	<include name=".HomeNav_Menu">
-		<control type="grouplist" id="9000" description="Submenus">
+	<include name=".Home_Menu">
+		<control type="grouplist" description="Submenus" id="9000">
+			<posx>45</posx>
+			<posy>591</posy>
+			<height>132</height>
+			<width>1860</width>
+			<itemgap>0</itemgap>
+			<align>left</align>
+			<aligny>top</aligny>
+			<orientation>horizontal</orientation>
+			<control type="image">
+				<visible>!Skin.HasSetting(MoviesSectionHide)</visible>
+				<animation type="Conditional" condition="!ControlGroup(9000).HasFocus(301)">
+					<effect type="fade" start="100" end="0" time="0" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="ControlGroup(9000).HasFocus(301)">
+					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="Control.HasFocus(311)">
+					<effect type="fade" start="100" end="60" time="100" reversible="true" />
+				</animation>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">omeMenu_SliderWidth_Items_1</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">omeMenu_SliderWidth_Items_2</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">omeMenu_SliderWidth_Items_3</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">omeMenu_SliderWidth_Items_4</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">omeMenu_SliderWidth_Items_5</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">omeMenu_SliderWidth_Items_6</include>
+				<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">omeMenu_SliderWidth_Items_6</include>
+				<height>132</height>
+				<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
+				<aspectratio>center</aspectratio>
+			</control>
+			<control type="image">
+				<visible>!Skin.HasSetting(MoviesSectionHide)</visible>
+				<animation type="Conditional" condition="!ControlGroup(9000).HasFocus(302)">
+					<effect type="fade" start="100" end="0" time="0" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="ControlGroup(9000).HasFocus(302)">
+					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="Control.HasFocus(312)">
+					<effect type="fade" start="100" end="60" time="100" reversible="true" />
+				</animation>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">omeMenu_SliderWidth_Items_1</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">omeMenu_SliderWidth_Items_2</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">omeMenu_SliderWidth_Items_3</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">omeMenu_SliderWidth_Items_4</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">omeMenu_SliderWidth_Items_5</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">omeMenu_SliderWidth_Items_6</include>
+				<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">omeMenu_SliderWidth_Items_6</include>
+				<height>132</height>
+				<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
+				<aspectratio>center</aspectratio>
+			</control>
+			<control type="image">
+				<visible>!Skin.HasSetting(MoviesSectionHide)</visible>
+				<animation type="Conditional" condition="!ControlGroup(9000).HasFocus(303)">
+					<effect type="fade" start="100" end="0" time="0" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="ControlGroup(9000).HasFocus(303)">
+					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="Control.HasFocus(313)">
+					<effect type="fade" start="100" end="60" time="100" reversible="true" />
+				</animation>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">omeMenu_SliderWidth_Items_1</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">omeMenu_SliderWidth_Items_2</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">omeMenu_SliderWidth_Items_3</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">omeMenu_SliderWidth_Items_4</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">omeMenu_SliderWidth_Items_5</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">omeMenu_SliderWidth_Items_6</include>
+				<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">omeMenu_SliderWidth_Items_6</include>
+				<height>132</height>
+				<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
+				<aspectratio>center</aspectratio>
+			</control>
+			<control type="image">
+				<visible>!Skin.HasSetting(MoviesSectionHide)</visible>
+				<animation type="Conditional" condition="!ControlGroup(9000).HasFocus(304)">
+					<effect type="fade" start="100" end="0" time="0" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="ControlGroup(9000).HasFocus(304)">
+					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="Control.HasFocus(314)">
+					<effect type="fade" start="100" end="60" time="100" reversible="true" />
+				</animation>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">omeMenu_SliderWidth_Items_1</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">omeMenu_SliderWidth_Items_2</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">omeMenu_SliderWidth_Items_3</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">omeMenu_SliderWidth_Items_4</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">omeMenu_SliderWidth_Items_5</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">omeMenu_SliderWidth_Items_6</include>
+				<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">omeMenu_SliderWidth_Items_6</include>
+				<height>132</height>
+				<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
+				<aspectratio>center</aspectratio>
+			</control>
+			<control type="image">
+				<visible>!Skin.HasSetting(MoviesSectionHide)</visible>
+				<animation type="Conditional" condition="!ControlGroup(9000).HasFocus(305)">
+					<effect type="fade" start="100" end="0" time="0" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="ControlGroup(9000).HasFocus(305)">
+					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="Control.HasFocus(315)">
+					<effect type="fade" start="100" end="60" time="100" reversible="true" />
+				</animation>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">omeMenu_SliderWidth_Items_1</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">omeMenu_SliderWidth_Items_2</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">omeMenu_SliderWidth_Items_3</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">omeMenu_SliderWidth_Items_4</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">omeMenu_SliderWidth_Items_5</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">omeMenu_SliderWidth_Items_6</include>
+				<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">omeMenu_SliderWidth_Items_6</include>
+				<height>132</height>
+				<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
+				<aspectratio>center</aspectratio>
+			</control>
+			<control type="image">
+				<visible>!Skin.HasSetting(MoviesSectionHide)</visible>
+				<animation type="Conditional" condition="!ControlGroup(9000).HasFocus(307)">
+					<effect type="fade" start="100" end="0" time="0" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="ControlGroup(9000).HasFocus(307)">
+					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false" />
+				</animation>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">omeMenu_SliderWidth_Items_1</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">omeMenu_SliderWidth_Items_2</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">omeMenu_SliderWidth_Items_3</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">omeMenu_SliderWidth_Items_4</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">omeMenu_SliderWidth_Items_5</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">omeMenu_SliderWidth_Items_6</include>
+				<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">omeMenu_SliderWidth_Items_6</include>
+				<height>132</height>
+				<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
+				<aspectratio>center</aspectratio>
+			</control>
+		</control>
+		<control type="grouplist" description="Submenus" id="9000">
 			<posx>60</posx>
 			<posy>591</posy>
-			<width>auto</width>
 			<height>420</height>
+			<width>1800</width>
 			<itemgap>0</itemgap>
 			<align>center</align>
 			<aligny>top</aligny>
-			<onup>700</onup>
 			<orientation>horizontal</orientation>
-			
-			<control type="list" id="301" description="Movies">
-				<visible allowhiddenfocus="true">!Skin.HasSetting(MoviesSectionHide)</visible>
-				<width>auto</width>
+			<control type="list" description="Submenu: Movies" id="301">
+				<visible>!Skin.HasSetting(MoviesSectionHide)</visible>
+				<animation type="Conditional" condition="!ControlGroup(9000).HasFocus(301)">
+					<effect type="fade" start="100" end="0" time="0" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="ControlGroup(9000).HasFocus(301)">
+					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="Control.HasFocus(311)">
+					<effect type="fade" start="100" end="60" time="100" reversible="true" />
+				</animation>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_Width_Items_1</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_Width_Items_2</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_Width_Items_3</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_Width_Items_4</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_Width_Items_5</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_Width_Items_6</include>
+				<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_Width_Items_6</include>
 				<height>420</height>
 				<onup>311</onup>
 				<ondown>301</ondown>
 				<onleft>307</onleft>
 				<onright>302</onright>
+				<align>center</align>
 				<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
 				<onright>Skin.Reset(HomeMenuDirection)</onright>
 				<focusposition>3</focusposition>
 				<movement>3</movement>
 				<!-- Unselected Items -->
-				<itemlayout height="60" width="300">
+				<itemlayout height="60" width="900">
 					<control type="label">
-						<posx>150</posx>
-						<width>250</width>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_PosX_Items_1</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_PosX_Items_2</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_PosX_Items_3</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_PosX_Items_4</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_PosX_Items_5</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_PosX_Items_6</include>
+						<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_PosX_Items_6</include>
+						<!--<width min="300" max="900">auto</width>-->
 						<height>60</height>
 						<info>ListItem.Label</info>
 						<font>HomeNav_Submenu</font>
@@ -1209,10 +1453,16 @@
 				</itemlayout>
 				
 				<!-- Selected Item -->
-				<focusedlayout height="60" width="300">
+				<focusedlayout height="60" width="900">
 					<control type="label">
-						<posx>150</posx>
-						<width>250</width>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_PosX_Items_1</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_PosX_Items_2</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_PosX_Items_3</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_PosX_Items_4</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_PosX_Items_5</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_PosX_Items_6</include>
+						<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_PosX_Items_6</include>
+						<!--<width min="300" max="900">auto</width>-->
 						<height>60</height>
 						<info>ListItem.Label</info>
 						<font>HomeNav_Submenu</font>
@@ -1293,9 +1543,24 @@
 					</item>
 				</content>
 			</control>
-			<control type="list" id="302" description="TvShows">
-				<visible allowhiddenfocus="true">!Skin.HasSetting(TVSectionHide)</visible>
-				<width>auto</width>
+			<control type="list" description="Submenu: TvShows" id="302">
+				<visible>!Skin.HasSetting(TVSectionHide)</visible>
+				<animation type="Conditional" condition="!ControlGroup(9000).HasFocus(302)">
+					<effect type="fade" start="100" end="0" time="0" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="ControlGroup(9000).HasFocus(302)">
+					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="Control.HasFocus(312)">
+					<effect type="fade" start="100" end="60" time="100" reversible="true" />
+				</animation>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_Width_Items_1</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_Width_Items_2</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_Width_Items_3</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_Width_Items_4</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_Width_Items_5</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_Width_Items_6</include>
+				<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_Width_Items_6</include>
 				<height>420</height>
 				<onup>312</onup>
 				<ondown>302</ondown>
@@ -1306,10 +1571,16 @@
 				<focusposition>3</focusposition>
 				<movement>3</movement>
 				<!-- Unselected Items -->
-				<itemlayout height="60" width="300">
+				<itemlayout height="60" width="900">
 					<control type="label">
-						<posx>150</posx>
-						<width>250</width>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_PosX_Items_1</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_PosX_Items_2</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_PosX_Items_3</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_PosX_Items_4</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_PosX_Items_5</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_PosX_Items_6</include>
+						<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_PosX_Items_6</include>
+						<!--<width min="300" max="900">auto</width>-->
 						<height>60</height>
 						<info>ListItem.Label</info>
 						<font>HomeNav_Submenu</font>
@@ -1322,10 +1593,16 @@
 				</itemlayout>
 				
 				<!-- Selected Item -->
-				<focusedlayout height="60" width="300">
+				<focusedlayout height="60" width="900">
 					<control type="label">
-						<posx>150</posx>
-						<width>250</width>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_PosX_Items_1</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_PosX_Items_2</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_PosX_Items_3</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_PosX_Items_4</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_PosX_Items_5</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_PosX_Items_6</include>
+						<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_PosX_Items_6</include>
+						<!--<width min="300" max="900">auto</width>-->
 						<height>60</height>
 						<info>ListItem.Label</info>
 						<font>HomeNav_Submenu</font>
@@ -1406,7 +1683,548 @@
 					</item>
 				</content>
 			</control>
-			
+			<control type="list" description="Submenu: Music" id="303">
+				<visible>!Skin.HasSetting(MusicSectionHide)</visible>
+				<animation type="Conditional" condition="!ControlGroup(9000).HasFocus(303)">
+					<effect type="fade" start="100" end="0" time="0" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="ControlGroup(9000).HasFocus(303)">
+					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="Control.HasFocus(313)">
+					<effect type="fade" start="100" end="60" time="100" reversible="true" />
+				</animation>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_Width_Items_1</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_Width_Items_2</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_Width_Items_3</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_Width_Items_4</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_Width_Items_5</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_Width_Items_6</include>
+				<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_Width_Items_6</include>
+				<height>420</height>
+				<onup>312</onup>
+				<ondown>302</ondown>
+				<onleft>301</onleft>
+				<onright>303</onright>
+				<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
+				<onright>Skin.Reset(HomeMenuDirection)</onright>
+				<focusposition>3</focusposition>
+				<movement>3</movement>
+				<!-- Unselected Items -->
+				<itemlayout height="60" width="900">
+					<control type="label">
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_PosX_Items_1</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_PosX_Items_2</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_PosX_Items_3</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_PosX_Items_4</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_PosX_Items_5</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_PosX_Items_6</include>
+						<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_PosX_Items_6</include>
+						<!--<width min="300" max="900">auto</width>-->
+						<height>60</height>
+						<info>ListItem.Label</info>
+						<font>HomeNav_Submenu</font>
+						<textcolor>HomeNav</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<scroll>false</scroll>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+				</itemlayout>
+				
+				<!-- Selected Item -->
+				<focusedlayout height="60" width="900">
+					<control type="label">
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_PosX_Items_1</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_PosX_Items_2</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_PosX_Items_3</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_PosX_Items_4</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_PosX_Items_5</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_PosX_Items_6</include>
+						<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_PosX_Items_6</include>
+						<!--<width min="300" max="900">auto</width>-->
+						<height>60</height>
+						<info>ListItem.Label</info>
+						<font>HomeNav_Submenu</font>
+						<textcolor>HomeNav</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<scroll>false</scroll>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+				</focusedlayout>
+				
+				<!-- Menu Items -->
+				<content>
+					<item id="0" description="Artists">
+						<visible>!Skin.HasSetting(Music1) + Library.HasContent(Music)</visible>
+						<label>133</label>
+						<onclick condition="Library.HasContent(Music)">ActivateWindow(MusicLibrary,Artists,return)</onclick>
+					</item>
+					<item id="1" description="Music Videos">
+						<visible>!Skin.HasSetting(Music2) + Library.HasContent(MusicVideos)</visible>
+						<label>3</label>
+						<onclick>ActivateWindow(VideoLibrary,MusicVideos,return)</onclick>
+					</item>
+					<item id="2" description="Library">
+						<visible>!Skin.HasSetting(Music3) + Library.HasContent(Music)</visible>
+						<label>14022</label>
+						<onclick>ActivateWindow(MusicLibrary,root)</onclick>
+					</item>
+					<item id="3" description="Files">
+						<visible>!Skin.HasSetting(Music4)</visible>
+						<label>744</label>
+						<onclick>ActivateWindow(MusicFiles,root)</onclick>
+					</item>
+					<item id="3" description="Party mode">
+						<visible>!Skin.HasSetting(Music7) + Library.HasContent(music)</visible>
+						<label>589</label>
+						<onclick>PlayerControl(PartyMode(music))</onclick>
+					</item>
+					<item id="3" description="Custom Music">
+						<visible>!IsEmpty(Skin.String(CustomMusic.1.Path))</visible>
+						<label>$INFO[Skin.String(CustomMusic.1.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomMusic.1.Path)]</onclick>
+					</item>
+					<item id="4" description="Shortcut2">
+						<visible>!IsEmpty(Skin.String(CustomMusic.2.Path))</visible>
+						<label>$INFO[Skin.String(CustomMusic.2.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomMusic.2.Path)]</onclick>
+					</item>
+					<item id="5" description="Shortcut3">
+						<visible>!IsEmpty(Skin.String(CustomMusic.3.Path))</visible>
+						<label>$INFO[Skin.String(CustomMusic.3.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomMusic.3.Path)]</onclick>
+					</item>
+					<item id="6" description="Shortcut4">
+						<visible>!IsEmpty(Skin.String(CustomMusic.4.Path))</visible>
+						<label>$INFO[Skin.String(CustomMusic.4.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomMusic.4.Path)]</onclick>
+					</item>
+					<item id="7" description="Shortcut5">
+						<visible>!IsEmpty(Skin.String(CustomMusic.5.Path))</visible>
+						<label>$INFO[Skin.String(CustomMusic.5.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomMusic.5.Path)]</onclick>
+					</item>
+					<item id="7" description="Shortcut6">
+						<visible>!IsEmpty(Skin.String(CustomMusic.6.Path))</visible>
+						<label>$INFO[Skin.String(CustomMusic.6.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomMusic.6.Path)]</onclick>
+					</item>
+					<item id="7" description="Shortcut7">
+						<visible>!IsEmpty(Skin.String(CustomMusic.7.Path))</visible>
+						<label>$INFO[Skin.String(CustomMusic.7.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomMusic.7.Path)]</onclick>
+					</item>
+					<item id="10" description="Search">
+						<visible>!Skin.HasSetting(Music5) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</visible>
+						<label>137</label>
+						<onclick>ActivateWindow(MusicLibrary)</onclick>
+						<onclick>SendClick(8)</onclick>
+					</item>
+				</content>
+			</control>
+			<control type="list" description="Submenu: Pictures" id="304">
+				<visible>!Skin.HasSetting(PicturesSectionHide)</visible>
+				<animation type="Conditional" condition="!ControlGroup(9000).HasFocus(304)">
+					<effect type="fade" start="100" end="0" time="0" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="ControlGroup(9000).HasFocus(304)">
+					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="Control.HasFocus(314)">
+					<effect type="fade" start="100" end="60" time="100" reversible="true" />
+				</animation>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_Width_Items_1</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_Width_Items_2</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_Width_Items_3</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_Width_Items_4</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_Width_Items_5</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_Width_Items_6</include>
+				<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_Width_Items_6</include>
+				<height>420</height>
+				<onup>312</onup>
+				<ondown>302</ondown>
+				<onleft>301</onleft>
+				<onright>303</onright>
+				<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
+				<onright>Skin.Reset(HomeMenuDirection)</onright>
+				<focusposition>3</focusposition>
+				<movement>3</movement>
+				<!-- Unselected Items -->
+				<itemlayout height="60" width="900">
+					<control type="label">
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_PosX_Items_1</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_PosX_Items_2</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_PosX_Items_3</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_PosX_Items_4</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_PosX_Items_5</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_PosX_Items_6</include>
+						<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_PosX_Items_6</include>
+						<!--<width min="300" max="900">auto</width>-->
+						<height>60</height>
+						<info>ListItem.Label</info>
+						<font>HomeNav_Submenu</font>
+						<textcolor>HomeNav</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<scroll>false</scroll>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+				</itemlayout>
+				
+				<!-- Selected Item -->
+				<focusedlayout height="60" width="900">
+					<control type="label">
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_PosX_Items_1</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_PosX_Items_2</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_PosX_Items_3</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_PosX_Items_4</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_PosX_Items_5</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_PosX_Items_6</include>
+						<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_PosX_Items_6</include>
+						<!--<width min="300" max="900">auto</width>-->
+						<height>60</height>
+						<info>ListItem.Label</info>
+						<font>HomeNav_Submenu</font>
+						<textcolor>HomeNav</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<scroll>false</scroll>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+				</focusedlayout>
+				
+				<!-- Menu Items -->
+				<content>
+					<item id="1" description="Pictures">
+						<visible>!Skin.HasSetting(Pictures1)</visible>
+						<label>1</label>
+						<onclick>ActivateWindow(Pictures)</onclick>
+					</item>
+					<item id="3" description="Custom Pictures">
+						<visible>!IsEmpty(Skin.String(CustomPictures.1.Path))</visible>
+						<label>$INFO[Skin.String(CustomPictures.1.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomPictures.1.Path)]</onclick>
+					</item>
+					<item id="4" description="Shortcut2">
+						<visible>!IsEmpty(Skin.String(CustomPictures.2.Path))</visible>
+						<label>$INFO[Skin.String(CustomPictures.2.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomPictures.2.Path)]</onclick>
+					</item>
+					<item id="5" description="Shortcut3">
+						<visible>!IsEmpty(Skin.String(CustomPictures.3.Path))</visible>
+						<label>$INFO[Skin.String(CustomPictures.3.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomPictures.3.Path)]</onclick>
+					</item>
+					<item id="6" description="Shortcut4">
+						<visible>!IsEmpty(Skin.String(CustomPictures.4.Path))</visible>
+						<label>$INFO[Skin.String(CustomPictures.4.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomPictures.4.Path)]</onclick>
+					</item>
+					<item id="7" description="Shortcut5">
+						<visible>!IsEmpty(Skin.String(CustomPictures.5.Path))</visible>
+						<label>$INFO[Skin.String(CustomPictures.5.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomPictures.5.Path)]</onclick>
+					</item>
+					<item id="8" description="Shortcut6">
+						<visible>!IsEmpty(Skin.String(CustomPictures.6.Path))</visible>
+						<label>$INFO[Skin.String(CustomPictures.6.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomPictures.6.Path)]</onclick>
+					</item>
+					<item id="9" description="Shortcut7">
+						<visible>!IsEmpty(Skin.String(CustomPictures.7.Path))</visible>
+						<label>$INFO[Skin.String(CustomPictures.7.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomPictures.7.Path)]</onclick>
+					</item>
+				</content>
+			</control>
+			<control type="list" description="Submenu: Addons" id="305">
+				<animation type="Conditional" condition="!ControlGroup(9000).HasFocus(305)">
+					<effect type="fade" start="100" end="0" time="0" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="ControlGroup(9000).HasFocus(305)">
+					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="Control.HasFocus(315)">
+					<effect type="fade" start="100" end="60" time="100" reversible="true" />
+				</animation>
+				<visible>!Skin.HasSetting(AddonsSectionHide)</visible>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_Width_Items_1</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_Width_Items_2</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_Width_Items_3</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_Width_Items_4</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_Width_Items_5</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_Width_Items_6</include>
+				<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_Width_Items_6</include>
+				<height>420</height>
+				<onup>312</onup>
+				<ondown>302</ondown>
+				<onleft>301</onleft>
+				<onright>303</onright>
+				<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
+				<onright>Skin.Reset(HomeMenuDirection)</onright>
+				<focusposition>3</focusposition>
+				<movement>3</movement>
+				<!-- Unselected Items -->
+				<itemlayout height="60" width="900">
+					<control type="label">
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_PosX_Items_1</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_PosX_Items_2</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_PosX_Items_3</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_PosX_Items_4</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_PosX_Items_5</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_PosX_Items_6</include>
+						<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_PosX_Items_6</include>
+						<!--<width min="300" max="900">auto</width>-->
+						<height>60</height>
+						<info>ListItem.Label</info>
+						<font>HomeNav_Submenu</font>
+						<textcolor>HomeNav</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<scroll>false</scroll>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+				</itemlayout>
+				
+				<!-- Selected Item -->
+				<focusedlayout height="60" width="900">
+					<control type="label">
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_PosX_Items_1</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_PosX_Items_2</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_PosX_Items_3</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_PosX_Items_4</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_PosX_Items_5</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_PosX_Items_6</include>
+						<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_PosX_Items_6</include>
+						<!--<width min="300" max="900">auto</width>-->
+						<height>60</height>
+						<info>ListItem.Label</info>
+						<font>HomeNav_Submenu</font>
+						<textcolor>HomeNav</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<scroll>false</scroll>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+				</focusedlayout>
+				
+				<!-- Menu Items -->
+				<content>
+					<item id="0" description="LiveTV">
+						<visible>System.GetBool(pvrmanager.enabled)</visible>
+						<label>31502</label>
+						<onclick>ActivateWindow(PVR)</onclick>
+					</item>
+					<item id="1" description="Weather">
+						<visible>!Skin.HasSetting(Addons1)</visible>
+						<label>8</label>
+						<onclick>ActivateWindow(Weather)</onclick>
+					</item>
+					<item id="2" description="Program apps">
+						<visible>!Skin.HasSetting(Addons2)</visible>
+						<label>0</label>
+						<onclick>XBMC.ActivateWindow(Programs,Addons,return)</onclick>
+					</item>
+					<item id="3" description="Picture apps">
+						<visible>!Skin.HasSetting(Addons3)</visible>
+						<label>1</label>
+						<onclick>XBMC.ActivateWindow(Pictures,Addons,return)</onclick>
+					</item>
+					<item id="4" description="Video apps">
+						<visible>!Skin.HasSetting(Addons4)</visible>
+						<label>157</label>
+						<onclick>ActivateWindow(VideoLibrary,Addons,return)</onclick>
+					</item>
+					<item id="5" description="Music apps">
+						<visible>!Skin.HasSetting(Addons5)</visible>
+						<label>2</label>
+						<onclick condition="Library.HasContent(Music)">ActivateWindow(MusicLibrary,Addons,return)</onclick>
+						<onclick condition="!Library.HasContent(Music)">ActivateWindow(MusicFiles,Addons,return)</onclick>
+					</item>
+					<item id="6" description="Settings">
+						<visible>!Skin.HasSetting(Addons6)</visible>
+						<label>5</label>
+						<onclick>ActivateWindow(AddonBrowser,root)</onclick>
+					</item>
+					<item id="3" description="Custom Apps">
+						<visible>!IsEmpty(Skin.String(CustomAddons.1.Path))</visible>
+						<label>$INFO[Skin.String(CustomAddons.1.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomAddons.1.Path)]</onclick>
+					</item>
+					<item id="4" description="Shortcut2">
+						<visible>!IsEmpty(Skin.String(CustomAddons.2.Path))</visible>
+						<label>$INFO[Skin.String(CustomAddons.2.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomAddons.2.Path)]</onclick>
+					</item>
+					<item id="5" description="Shortcut3">
+						<visible>!IsEmpty(Skin.String(CustomAddons.3.Path))</visible>
+						<label>$INFO[Skin.String(CustomAddons.3.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomAddons.3.Path)]</onclick>
+					</item>
+					<item id="6" description="Shortcut4">
+						<visible>!IsEmpty(Skin.String(CustomAddons.4.Path))</visible>
+						<label>$INFO[Skin.String(CustomAddons.4.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomAddons.4.Path)]</onclick>
+					</item>
+					<item id="7" description="Shortcut5">
+						<visible>!IsEmpty(Skin.String(CustomAddons.5.Path))</visible>
+						<label>$INFO[Skin.String(CustomAddons.5.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomAddons.5.Path)]</onclick>
+					</item>
+					<item id="8" description="Shortcut6">
+						<visible>!IsEmpty(Skin.String(CustomAddons.6.Path))</visible>
+						<label>$INFO[Skin.String(CustomAddons.6.Label)]</label>
+						<onclick>$INFO[Skin.String(CustomAddons.6.Path)]</onclick>
+					</item>
+				</content>
+			</control>
+			<control type="list" description="Submenu: XBMC" id="307">
+				<animation type="Conditional" condition="!ControlGroup(9000).HasFocus(307)">
+					<effect type="fade" start="100" end="0" time="0" reversible="false" />
+				</animation>
+				<animation type="Conditional" condition="ControlGroup(9000).HasFocus(307)">
+					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false" />
+				</animation>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_Width_Items_1</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_Width_Items_2</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_Width_Items_3</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_Width_Items_4</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_Width_Items_5</include>
+				<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_Width_Items_6</include>
+				<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_Width_Items_6</include>
+				<height>420</height>
+				<onup>312</onup>
+				<ondown>302</ondown>
+				<onleft>301</onleft>
+				<onright>303</onright>
+				<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
+				<onright>Skin.Reset(HomeMenuDirection)</onright>
+				<focusposition>3</focusposition>
+				<movement>3</movement>
+				<!-- Unselected Items -->
+				<itemlayout height="60" width="900">
+					<control type="label">
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_PosX_Items_1</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_PosX_Items_2</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_PosX_Items_3</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_PosX_Items_4</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_PosX_Items_5</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_PosX_Items_6</include>
+						<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_PosX_Items_6</include>
+						<!--<width min="300" max="900">auto</width>-->
+						<height>60</height>
+						<info>ListItem.Label</info>
+						<font>HomeNav_Submenu</font>
+						<textcolor>HomeNav</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<scroll>false</scroll>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+				</itemlayout>
+				
+				<!-- Selected Item -->
+				<focusedlayout height="60" width="900">
+					<control type="label">
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_PosX_Items_1</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_PosX_Items_2</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_PosX_Items_3</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_PosX_Items_4</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_PosX_Items_5</include>
+						<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_PosX_Items_6</include>
+						<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_PosX_Items_6</include>
+						<!--<width min="300" max="900">auto</width>-->
+						<height>60</height>
+						<info>ListItem.Label</info>
+						<font>HomeNav_Submenu</font>
+						<textcolor>HomeNav</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<scroll>false</scroll>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+				</focusedlayout>
+				
+				<!-- Menu Items -->
+				<content>
+					<item id="0" description="Update library">
+						<visible>!Skin.HasSetting(XBMC0)</visible>
+						<label>653</label>
+						<onclick>UpdateLibrary(Video)</onclick>
+						<onclick condition="Library.HasContent(Music)">UpdateLibrary(Music)</onclick>
+					</item>
+					<item id="1" description="Now playing Video">
+						<visible>Player.HasMedia</visible>
+						<label>31977</label>
+						<onclick>fullscreen</onclick>
+					</item>
+					<item id="2" description="Settings">
+						<visible>!Skin.HasSetting(HideSettings)</visible>
+						<label>5</label>
+						<onclick>ActivateWindow(Settings)</onclick>
+					</item>
+					<item id="3" description="Favorites">
+						<visible>!Skin.HasSetting(XBMC2)</visible>
+						<label>1036</label>
+						<onclick>ActivateWindow(Favourites)</onclick>
+					</item>
+					<item id="4" description="LogOff Profile">
+						<visible>System.HasLoginScreen</visible>
+						<visible>System.Loggedon</visible>
+						<label>20126</label>
+						<onclick>dialog.close(all,true)</onclick>
+						<onclick>System.LogOff</onclick>
+					</item>
+					<item id="5" description="Master mode button">
+						<visible>System.HasLocks + System.IsMaster</visible>
+						<label>12332</label>
+						<onclick>xbmc.mastermode</onclick>
+					</item>
+					<item id="6" description="Master mode button">
+						<visible>System.HasLocks + !System.IsMaster</visible>
+						<label>12333</label>
+						<onclick>xbmc.mastermode</onclick>
+					</item>
+					<item id="7" description="Disc">
+						<visible>![System.Platform.ios | System.Platform.atv2]</visible>
+						<visible>!Skin.HasSetting(XBMC3)</visible>
+						<label>446</label>
+						<onclick>ActivateWindow(1112)</onclick>
+					</item>
+					<item id="8" description="Quit">
+						<visible>!Skin.HasSetting(XBMC4) + IsEmpty(Skin.String(shutdown))</visible>
+						<label fallback="13009">$VAR[QuitLabel2]</label>
+						<onclick>ActivateWindow(shutdownmenu)</onclick>
+					</item>
+					<item id="9" description="Quit">
+						<visible>!Skin.HasSetting(XBMC4) + StringCompare(Skin.String(shutdown),quit)</visible>
+						<label fallback="13009">$VAR[QuitLabel2]</label>
+						<onclick>XBMC.quit()</onclick>
+					</item>
+					<item id="10" description="Quit">
+						<visible>!Skin.HasSetting(XBMC4) + StringCompare(Skin.String(shutdown),powerdown)</visible>
+						<label fallback="13009">$VAR[QuitLabel2]</label>
+						<onclick>XBMC.powerdown()</onclick>
+					</item>
+					<item id="11" description="Quit">
+						<visible>!Skin.HasSetting(XBMC4) + StringCompare(Skin.String(shutdown),hibernate)</visible>
+						<label fallback="13009">$VAR[QuitLabel2]</label>
+						<onclick>XBMC.hibernate()</onclick>
+					</item>
+					<item id="12" description="Quit">
+						<visible>!Skin.HasSetting(XBMC4) + StringCompare(Skin.String(shutdown),suspend)</visible>
+						<label fallback="13009">$VAR[QuitLabel2]</label>
+						<onclick>XBMC.suspend()</onclick>
+					</item>
+					<item id="13" description="Quit">
+						<visible>!Skin.HasSetting(XBMC4) + StringCompare(Skin.String(shutdown),reboot)</visible>
+						<label fallback="13009">$VAR[QuitLabel2]</label>
+						<onclick>XBMC.reboot()</onclick>
+					</item>
+				</content>
+			</control>
 		</control>
 	</include>
 </includes>

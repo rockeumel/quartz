@@ -6373,7 +6373,7 @@
 		</control>
 	</include>
 
-	<include name="HomeShelf_Extras">
+	<include name="HomeShelf_Addons">
 		<control type="label">
 			<posy>80</posy>
 			<width>1920</width>
@@ -6396,7 +6396,7 @@
 		</control>
 	</include>
 
-	<include name="HomeShelf_Systeminfo">
+	<include name="HomeShelf_XBMC">
 		<control type="label">
 			<posy>80</posy>
 			<width>1920</width>
