@@ -38,8 +38,8 @@
 	<constant name="RA_IconSquare6_PosX">1517</constant>
 	<!--  Rotated Icon RIGHT Side  -->
 	<constant name="RA_IconSquare7_PosX">1634</constant>
-	
-	
+
+
 	<variable name="MovieIcon_-1">
 		<value condition="Container(311).Position(1)">$INFO[Container(311).ListItem(-2).Icon]</value>
 		<value condition="Container(311).Position(2)">$INFO[Container(311).ListItem(-3).Icon]</value>
@@ -104,7 +104,7 @@
 		<value condition="Container(311).Position(5)">$INFO[Container(311).ListItem(1).Icon]</value>
 		<value>$INFO[Container(311).ListItem(6).Icon]</value>
 	</variable>
-	
+
 	<variable name="EpisodeIcon_-1">
 		<value condition="Container(312).Position(1)">$INFO[Container(312).ListItem(-2).Icon]</value>
 		<value condition="Container(312).Position(2)">$INFO[Container(312).ListItem(-3).Icon]</value>
@@ -161,7 +161,7 @@
 		<value condition="Container(312).Position(5)">$INFO[Container(312).ListItem(0).Icon]</value>
 		<value>$INFO[Container(312).ListItem(5).Icon]</value>
 	</variable>
-	
+
 	<variable name="AlbumIcon_-1">
 		<value condition="Container(313).Position(0)">$INFO[Container(313).ListItem(-1).Icon]</value>
 		<value condition="Container(313).Position(1)">$INFO[Container(313).ListItem(-2).Icon]</value>
@@ -218,7 +218,7 @@
 		<value condition="Container(313).Position(4)">$INFO[Container(313).ListItem(1).Icon]</value>
 		<value condition="Container(313).Position(5)">$INFO[Container(313).ListItem(0).Icon]</value>
 	</variable>
-	
+
 	<variable name="PictureIcon_-1">
 		<value condition="Container(314).Position(0)">$INFO[Container(314).ListItem(-1).Icon]</value>
 		<value condition="Container(314).Position(1)">$INFO[Container(314).ListItem(-2).Icon]</value>
@@ -275,7 +275,7 @@
 		<value condition="Container(314).Position(4)">$INFO[Container(314).ListItem(1).Icon]</value>
 		<value condition="Container(314).Position(5)">$INFO[Container(314).ListItem(0).Icon]</value>
 	</variable>
-	
+
 	<variable name="NowPlaying_Label">
 		<value condition="Container(311).Position(1)">$INFO[Container(311).ListItem(-1).Label]</value>
 		<value condition="Container(311).Position(2)">$INFO[Container(311).ListItem(-2).Label]</value>
@@ -340,7 +340,7 @@
 		<value condition="Container(314).Position(5)">$INFO[Container(314).ListItem(-5).Label2]</value>
 		<value>$INFO[Container(314).ListItem(0).Label2]</value>
 	</variable>
-		
+
 	<include name="Movie_Icon_Properties">
 		<width>RA_IconPoster_Width</width>
 		<height>RA_IconPoster_Height</height>
@@ -393,7 +393,7 @@
 	<include name="HomeShelf_Movies">
 		<control type="group">
 			<visible>!Skin.HasSetting(MoviesSectionHide) + Library.HasContent(Movies)</visible>
-			
+
 			<control type="label" description="indicator for shelf visiblechange animation" id="317">
 				<posx>-1</posx>
 				<posy>-1</posy>
@@ -420,13 +420,11 @@
 				<scrolltime>250</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
-				
-				<itemlayout height="382" width="294">
-				</itemlayout>
-				
-				<focusedlayout height="382" width="294">
-				</focusedlayout>
-				
+
+				<itemlayout height="382" width="294"> </itemlayout>
+
+				<focusedlayout height="382" width="294"> </focusedlayout>
+
 				<content>
 					<item id="99" description="Now Playing">
 						<label>$INFO[MusicPlayer.Title]</label>
@@ -639,7 +637,7 @@
 					</item>
 				</content>
 			</control>
-			
+
 			<control type="group" description="Icons: Not OnScroll">
 				<posy>RA_IconPoster_PosY</posy>
 				<visible>!Container(311).OnScrollNext + !Container(311).OnScrollPrevious + Control.HasFocus(311)</visible>
@@ -649,27 +647,26 @@
 				<animation type="Visible" condition="!Control.IsVisible(325) + !Control.IsVisible(326)">
 					<effect type="fade" start="0" end="100" time="0"/>
 				</animation>
-				
+
 				<control type="group" description="Item (-1) rotated">
 					<posx>RA_IconPoster1_PosX</posx>
-					<visible>[Container(311).HasPrevious + Player.HasAudio + [
-						[Container(311).Position(0) + IsEmpty(Container(311).Listitem(-1).Property(CheckNowPlaying))] |
-						[Container(311).Position(1) + IsEmpty(Container(311).Listitem(-2).Property(CheckNowPlaying))] |
-						[Container(311).Position(2) + IsEmpty(Container(311).Listitem(-3).Property(CheckNowPlaying))] |
-						[Container(311).Position(3) + IsEmpty(Container(311).Listitem(-4).Property(CheckNowPlaying))] |
-						[Container(311).Position(4) + IsEmpty(Container(311).Listitem(-5).Property(CheckNowPlaying))] |
-						[Container(311).Position(5) + IsEmpty(Container(311).Listitem(-6).Property(CheckNowPlaying))]
-						]] | [Container(311).HasPrevious + !Player.HasAudio]</visible>
+					<visible>[Container(311).HasPrevious + Player.HasAudio + [ [Container(311).Position(0) +
+						IsEmpty(Container(311).Listitem(-1).Property(CheckNowPlaying))] | [Container(311).Position(1) +
+						IsEmpty(Container(311).Listitem(-2).Property(CheckNowPlaying))] | [Container(311).Position(2) +
+						IsEmpty(Container(311).Listitem(-3).Property(CheckNowPlaying))] | [Container(311).Position(3) +
+						IsEmpty(Container(311).Listitem(-4).Property(CheckNowPlaying))] | [Container(311).Position(4) +
+						IsEmpty(Container(311).Listitem(-5).Property(CheckNowPlaying))] | [Container(311).Position(5) +
+						IsEmpty(Container(311).Listitem(-6).Property(CheckNowPlaying))] ]] | [Container(311).HasPrevious + !Player.HasAudio]</visible>
 					<camera x="108" y="162"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-40" end="-40">Conditional</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_-1]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_-1]</texture>
 						<visible>IsEmpty(Container(311).Listitem(-1).Property(CheckNowPlaying))</visible>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_-1]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_-1]</texture>
 						<visible>IsEmpty(Container(311).Listitem(-1).Property(CheckNowPlaying))</visible>
 					</control>
 
@@ -683,24 +680,22 @@
 				</control>
 				<control type="group" description="Item (-1) rotated-square">
 					<posx>RA_IconPoster1_PosX</posx>
-					<visible>Container(311).HasPrevious + Player.HasAudio + [
-						[Container(311).Position(0) + !IsEmpty(Container(311).Listitem(-1).Property(CheckNowPlaying))] |
-						[Container(311).Position(1) + !IsEmpty(Container(311).Listitem(-2).Property(CheckNowPlaying))] |
-						[Container(311).Position(2) + !IsEmpty(Container(311).Listitem(-3).Property(CheckNowPlaying))] |
-						[Container(311).Position(3) + !IsEmpty(Container(311).Listitem(-4).Property(CheckNowPlaying))] |
-						[Container(311).Position(4) + !IsEmpty(Container(311).Listitem(-5).Property(CheckNowPlaying))] |
-						[Container(311).Position(5) + !IsEmpty(Container(311).Listitem(-6).Property(CheckNowPlaying))]
-						]</visible>
+					<visible>Container(311).HasPrevious + Player.HasAudio + [ [Container(311).Position(0) +
+						!IsEmpty(Container(311).Listitem(-1).Property(CheckNowPlaying))] | [Container(311).Position(1) +
+						!IsEmpty(Container(311).Listitem(-2).Property(CheckNowPlaying))] | [Container(311).Position(2) +
+						!IsEmpty(Container(311).Listitem(-3).Property(CheckNowPlaying))] | [Container(311).Position(3) +
+						!IsEmpty(Container(311).Listitem(-4).Property(CheckNowPlaying))] | [Container(311).Position(4) +
+						!IsEmpty(Container(311).Listitem(-5).Property(CheckNowPlaying))] | [Container(311).Position(5) +
+						!IsEmpty(Container(311).Listitem(-6).Property(CheckNowPlaying))] ]</visible>
 					<camera x="143" y="162"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-40" end="-40">Conditional</animation>
 					<control type="image" description="Now Playing Icon">
 						<include>Now_Playing_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_-1]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_-1]</texture>
 					</control>
 					<control type="image" description="Now Playing Icon Reflection">
 						<include>Now_Playing_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png"
-							>$VAR[MovieIcon_-1]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[MovieIcon_-1]</texture>
 					</control>
 
 					<control type="image" description="Icon Dimmer">
@@ -724,11 +719,11 @@
 					<animation effect="rotatey" center="1920" start="40" end="40" time="0" condition="true">Conditional</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_6]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_6]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_6]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_6]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconPoster_Width</width>
@@ -742,12 +737,12 @@
 					<posx>RA_IconPoster2_PosX</posx>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_0]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_0]</texture>
 						<visible>!Player.HasAudio | [Player.HasAudio + Container(311).HasPrevious]</visible>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_0]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_0]</texture>
 						<visible>!Player.HasAudio | [Player.HasAudio + Container(311).HasPrevious]</visible>
 					</control>
 					<control type="label" description="Movie Title">
@@ -761,8 +756,8 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[Container(311).ListItem(0).Label]</label>
-						<visible>Control.HasFocus(311) + Container(311).Position(0) + [[!Player.HasAudio + !Container(311).HasPrevious]
-							| [Player.HasAudio + Container(311).HasPrevious]]</visible>
+						<visible>Control.HasFocus(311) + Container(311).Position(0) + [[!Player.HasAudio + !Container(311).HasPrevious] | [Player.HasAudio +
+							Container(311).HasPrevious]]</visible>
 						<animation effect="fade" start="0" end="100" time="75" delay="75">Visible</animation>
 					</control>
 				</control>
@@ -771,13 +766,12 @@
 					<control type="image" description="Now Playing Icon">
 						<include>Now_Playing_Icon_Properties</include>
 						<visible>!Container(311).HasPrevious + Player.HasAudio</visible>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_0]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_0]</texture>
 					</control>
 					<control type="image" description="Now Playing Icon Reflection">
 						<include>Now_Playing_Icon_Reflection_Properties</include>
 						<visible>!Container(311).HasPrevious + Player.HasAudio</visible>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png"
-							>$VAR[MovieIcon_0]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[MovieIcon_0]</texture>
 					</control>
 					<control type="label" description="Now Playing Song Title">
 						<posx>-4</posx>
@@ -813,11 +807,11 @@
 					<posx>RA_IconPoster3_PosX</posx>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_1]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_1]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_1]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_1]</texture>
 					</control>
 					<control type="label" description="Movie Title">
 						<posx>-39</posx>
@@ -839,11 +833,11 @@
 					<posx>RA_IconPoster4_PosX</posx>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_2]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_2]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_2]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_2]</texture>
 					</control>
 					<control type="label" description="Movie Title">
 						<posx>-39</posx>
@@ -865,11 +859,11 @@
 					<posx>RA_IconPoster5_PosX</posx>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_3]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_3]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_3]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_3]</texture>
 					</control>
 					<control type="label" description="Movie Title">
 						<posx>-39</posx>
@@ -891,11 +885,11 @@
 					<posx>RA_IconPoster6_PosX</posx>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_4]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_4]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_4]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_4]</texture>
 					</control>
 					<control type="label" description="Movie Title">
 						<posx>-39</posx>
@@ -917,11 +911,11 @@
 					<posx>RA_IconPoster7_PosX</posx>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_5]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_5]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_5]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_5]</texture>
 					</control>
 					<control type="label" description="Movie Title">
 						<posx>-39</posx>
@@ -938,7 +932,7 @@
 						<animation effect="fade" start="0" end="100" time="75" delay="75">Visible</animation>
 					</control>
 				</control>
-			
+
 			</control>
 			<control type="group" description="Icons: OnScrollNext">
 				<posy>RA_IconPoster_PosY</posy>
@@ -947,9 +941,9 @@
 				<control type="group" description="Item (-1r --> -2r)">
 					<posx>RA_IconPoster1_PosX</posx>
 					<!--<visible>Container(311).HasPrevious(1) + !Container(311).HasPrevious(2) + Container(311).OnScrollNext</visible>-->
-					<visible>Container(311).HasPrevious + Container(311).OnScrollNext + 
-						[Player.HasAudio + !stringcompare(Container(311).Listitem(-6).Property(CheckNowPlaying),*.*) |
-						[!Player.HasAudio + !stringcompare(Container(311).Listitem(-6).Property(CheckPosition),one) +
+					<visible>Container(311).HasPrevious + Container(311).OnScrollNext + [Player.HasAudio +
+						!stringcompare(Container(311).Listitem(-6).Property(CheckNowPlaying),*.*) | [!Player.HasAudio +
+						!stringcompare(Container(311).Listitem(-6).Property(CheckPosition),one) +
 						!stringcompare(Container(311).Listitem(-6).Property(CheckPosition),eleven)]]</visible>
 					<camera x="108" y="162"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-40" end="-40">Conditional</animation>
@@ -1270,9 +1264,9 @@
 				</control>
 				<control type="group" description="Item (6r --> 7r)">
 					<posx>RA_IconPoster8_PosX</posx>
-					<visible>Container(311).HasNext + Container(311).OnScrollPrevious + 
-						[Player.HasAudio + !stringcompare(Container(311).Listitem(7).Property(CheckNowPlaying),*.*) |
-						[!Player.HasAudio + !stringcompare(Container(311).Listitem(7).Property(CheckPosition),one) +
+					<visible>Container(311).HasNext + Container(311).OnScrollPrevious + [Player.HasAudio +
+						!stringcompare(Container(311).Listitem(7).Property(CheckNowPlaying),*.*) | [!Player.HasAudio +
+						!stringcompare(Container(311).Listitem(7).Property(CheckPosition),one) +
 						!stringcompare(Container(311).Listitem(7).Property(CheckPosition),eleven)]]</visible>
 					<camera x="1812" y="162"/>
 					<animation effect="rotatey" center="1920" start="40" end="40" time="0" condition="true">Conditional</animation>
@@ -1391,7 +1385,7 @@
 			</control>
 			<control type="group" description="Icons: VisibleChange Animation">
 				<posy>RA_IconPoster_PosY</posy>
-				
+
 				<control type="group" description="Item (-1) rotated">
 					<posx>RA_IconPoster1_PosX</posx>
 					<visible>Container(311).HasPrevious + !Player.HasAudio + Control.HasFocus(301)</visible>
@@ -1409,12 +1403,12 @@
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_-1]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_-1]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<visible>Control.IsVisible(317)</visible>
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_-1]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_-1]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconPoster_Width</width>
@@ -1441,13 +1435,12 @@
 					</animation>
 					<control type="image" description="Now Playing Icon">
 						<include>Now_Playing_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_-1]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_-1]</texture>
 					</control>
 					<control type="image" description="Now Playing Icon Reflection">
 						<visible>Control.IsVisible(317)</visible>
 						<include>Now_Playing_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png"
-							>$VAR[MovieIcon_-1]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[MovieIcon_-1]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
@@ -1473,12 +1466,12 @@
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_6]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_6]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<visible>Control.IsVisible(317)</visible>
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_6]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_6]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconPoster_Width</width>
@@ -1507,12 +1500,12 @@
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_0]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_0]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<visible>Control.IsVisible(317)</visible>
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_0]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_0]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (0) flat square">
@@ -1534,13 +1527,12 @@
 					</animation>
 					<control type="image" description="Now Playing Icon">
 						<include>Now_Playing_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_0]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_0]</texture>
 					</control>
 					<control type="image" description="Now Playing Icon Reflection">
 						<visible>Control.IsVisible(317)</visible>
 						<include>Now_Playing_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png"
-							>$VAR[MovieIcon_0]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[MovieIcon_0]</texture>
 					</control>
 					<control type="label" description="Now Playing Song Title">
 						<posx>-4</posx>
@@ -1586,12 +1578,12 @@
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_1]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_1]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<visible>Control.IsVisible(317)</visible>
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_1]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_1]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (2) flat">
@@ -1613,12 +1605,12 @@
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_2]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_2]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<visible>Control.IsVisible(317)</visible>
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_2]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_2]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (3) flat">
@@ -1640,12 +1632,12 @@
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_3]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_3]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<visible>Control.IsVisible(317)</visible>
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_3]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_3]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (4) flat">
@@ -1667,12 +1659,12 @@
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_4]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_4]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<visible>Control.IsVisible(317)</visible>
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_4]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_4]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (5) flat">
@@ -1694,15 +1686,15 @@
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_5]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_5]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<visible>Control.IsVisible(317)</visible>
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_5]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_5]</texture>
 					</control>
 				</control>
-				
+
 				<control type="group" description="Item (-1) rotated">
 					<posx>RA_IconPoster1_PosX</posx>
 					<visible>Container(311).HasPrevious + !Player.HasAudio + Control.HasFocus(301)</visible>
@@ -1719,15 +1711,15 @@
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_-1]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_-1]</texture>
 						<visible>IsEmpty(Container(311).Listitem(-1).Property(CheckNowPlaying))</visible>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_-1]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_-1]</texture>
 						<visible>IsEmpty(Container(311).Listitem(-1).Property(CheckNowPlaying))</visible>
 					</control>
-					
+
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconPoster_Width</width>
 						<height>RA_IconPoster_Height</height>
@@ -1752,14 +1744,13 @@
 					</animation>
 					<control type="image" description="Now Playing Icon">
 						<include>Now_Playing_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_-1]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_-1]</texture>
 					</control>
 					<control type="image" description="Now Playing Icon Reflection">
 						<include>Now_Playing_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png"
-							>$VAR[MovieIcon_-1]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[MovieIcon_-1]</texture>
 					</control>
-					
+
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
 						<height>RA_IconSquare_Height</height>
@@ -1791,11 +1782,11 @@
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_6]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_6]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_6]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_6]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconPoster_Width</width>
@@ -1824,11 +1815,11 @@
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_5]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_5]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_5]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_5]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (4) flat">
@@ -1850,11 +1841,11 @@
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_4]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_4]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_4]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_4]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (3) flat">
@@ -1876,11 +1867,11 @@
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_3]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_3]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_3]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_3]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (2) flat">
@@ -1902,11 +1893,11 @@
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_2]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_2]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_2]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_2]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (1) flat">
@@ -1928,11 +1919,11 @@
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_1]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_1]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_1]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_1]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (0) flat">
@@ -1954,11 +1945,11 @@
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_0]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_0]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_0]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_0]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (0) flat square">
@@ -1980,12 +1971,11 @@
 					</animation>
 					<control type="image" description="Now Playing Icon">
 						<include>Now_Playing_Icon_Properties</include>
-						<texture  fallback="DefaultVideo.png">$VAR[MovieIcon_0]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_0]</texture>
 					</control>
 					<control type="image" description="Now Playing Icon Reflection">
 						<include>Now_Playing_Icon_Reflection_Properties</include>
-						<texture  fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png"
-							>$VAR[MovieIcon_0]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[MovieIcon_0]</texture>
 					</control>
 					<control type="label" description="Now Playing Song Title">
 						<posx>-4</posx>
@@ -2013,7 +2003,7 @@
 					</control>
 				</control>
 			</control>
-			
+
 			<control type="image" description="Movie Focuser">
 				<posx>88</posx>
 				<posy>74</posy>
@@ -2061,7 +2051,7 @@
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
-				
+
 				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
@@ -2089,7 +2079,7 @@
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
-				
+
 				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
@@ -2108,7 +2098,8 @@
 				<font>Shelf_Headline</font>
 				<textcolor>Shelf_Headline</textcolor>
 				<label>31023</label>
-				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(311).HasPrevious" tween="sine" easing="inout">Conditional</animation>
+				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(311).HasPrevious" tween="sine" easing="inout"
+					>Conditional</animation>
 				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
@@ -2116,7 +2107,7 @@
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
-				
+
 				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
@@ -2134,7 +2125,8 @@
 				<height>214</height>
 				<texture>home_recentlyadded/RecentlyAdded_Seperator.png</texture>
 				<aspectratio>scale</aspectratio>
-				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(311).HasPrevious" tween="sine" easing="inout">Conditional</animation>
+				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(311).HasPrevious" tween="sine" easing="inout"
+					>Conditional</animation>
 				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
@@ -2142,7 +2134,7 @@
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
-				
+
 				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
@@ -2151,14 +2143,14 @@
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 			</control>
-			
+
 		</control>
 	</include>
 
 	<include name="HomeShelf_TvShows">
 		<control type="group">
 			<visible>Library.HasContent(TVShows) + !Skin.HasSetting(TVSectionHide)</visible>
-			
+
 			<control type="label" description="indicator for shelf visiblechange animation" id="320">
 				<posx>-1</posx>
 				<posy>-1</posy>
@@ -2173,7 +2165,7 @@
 					<effect type="fade" time="VisibleChange_AnimationTime" start="100" end="0"/>
 				</animation>
 			</control>
-			
+
 			<control type="panel" id="312" description="Indicator + Content">
 				<posx>10</posx>
 				<posy>10</posy>
@@ -2186,13 +2178,11 @@
 				<scrolltime>250</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
-				
-				<itemlayout height="1" width="1">
-				</itemlayout>
-				
-				<focusedlayout height="1" width="1">
-				</focusedlayout>
-				
+
+				<itemlayout height="1" width="1"> </itemlayout>
+
+				<focusedlayout height="1" width="1"> </focusedlayout>
+
 				<content>
 					<item id="99" description="Now Playing">
 						<label>$INFO[MusicPlayer.Title]</label>
@@ -2392,10 +2382,10 @@
 						<property name="ItemType">$LOCALIZE[20387]</property>
 						<property name="CheckPosition">twenty</property>
 					</item>
-					
+
 				</content>
 			</control>
-						
+
 			<control type="group" description="Icons: Not OnScroll">
 				<posy>RA_IconSquare_PosY</posy>
 				<visible>!Container(312).OnScrollNext + !Container(312).OnScrollPrevious + Control.HasFocus(312)</visible>
@@ -2405,7 +2395,7 @@
 				<animation type="Visible" condition="!Control.IsVisible(321) + !Control.IsVisible(322)">
 					<effect type="fade" start="0" end="100" time="0"/>
 				</animation>
-				
+
 				<control type="group" description="Item (-1) rotated">
 					<posx>RA_IconSquare1_PosX</posx>
 					<visible>Container(312).HasPrevious</visible>
@@ -2495,7 +2485,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[Container(312).ListItem(0).Label]</label>
-						<visible>Control.HasFocus(312) + Container(312).Position(0) + [!Player.HasAudio	| [Player.HasAudio + Container(312).HasPrevious]]</visible>
+						<visible>Control.HasFocus(312) + Container(312).Position(0) + [!Player.HasAudio | [Player.HasAudio + Container(312).HasPrevious]]</visible>
 						<animation effect="fade" start="0" end="100" time="75" delay="75">Visible</animation>
 					</control>
 					<control type="label" description="Tv Show Title">
@@ -2673,18 +2663,18 @@
 						<animation effect="fade" start="0" end="100" time="75" delay="75">Visible</animation>
 					</control>
 				</control>
-				
+
 			</control>
 			<control type="group" description="Icons: OnScrollNext">
 				<posy>RA_IconSquare_PosY</posy>
 				<!--<visible>Control.IsVisible(312)</visible>-->
 				<visible>Control.HasFocus(312)</visible>
-				
+
 				<control type="group" description="Item (-1r --> -2r)">
 					<posx>RA_IconSquare1_PosX</posx>
-					<visible>Container(312).HasPrevious + Container(312).OnScrollNext + 
-						[Player.HasAudio + !stringcompare(Container(312).Listitem(-5).Property(CheckNowPlaying),*.*) |
-						[!Player.HasAudio + !stringcompare(Container(312).Listitem(-5).Property(CheckPosition),one) +
+					<visible>Container(312).HasPrevious + Container(312).OnScrollNext + [Player.HasAudio +
+						!stringcompare(Container(312).Listitem(-5).Property(CheckNowPlaying),*.*) | [!Player.HasAudio +
+						!stringcompare(Container(312).Listitem(-5).Property(CheckPosition),one) +
 						!stringcompare(Container(312).Listitem(-5).Property(CheckPosition),eleven)]]</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
@@ -2746,7 +2736,7 @@
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
 						<height>RA_IconSquare_Height</height>
-						<aspectratio>scale</aspectratio>						
+						<aspectratio>scale</aspectratio>
 						<texture>home_recentlyadded/Square_Dim.png</texture>
 						<visible>Container(312).OnScrollNext</visible>
 						<animation type="Hidden" reversible="false">
@@ -2839,7 +2829,7 @@
 				<posy>RA_IconSquare_PosY</posy>
 				<!--<visible>Control.IsVisible(312)</visible>-->
 				<visible>Control.HasFocus(312)</visible>
-				
+
 				<control type="group" description="Item (-2r --> -1r)">
 					<posx>RA_IconSquare1_PosX</posx>
 					<visible>Container(312).HasPrevious + Container(312).OnScrollPrevious</visible>
@@ -2892,9 +2882,9 @@
 				</control>
 				<control type="group" description="Item (5r --> 6r)">
 					<posx>RA_IconSquare7_PosX</posx>
-					<visible>Container(312).HasNext + Container(312).OnScrollPrevious + 
-						[Player.HasAudio + !stringcompare(Container(312).Listitem(6).Property(CheckNowPlaying),*.*) |
-						[!Player.HasAudio + !stringcompare(Container(312).Listitem(6).Property(CheckPosition),one) +
+					<visible>Container(312).HasNext + Container(312).OnScrollPrevious + [Player.HasAudio +
+						!stringcompare(Container(312).Listitem(6).Property(CheckNowPlaying),*.*) | [!Player.HasAudio +
+						!stringcompare(Container(312).Listitem(6).Property(CheckPosition),one) +
 						!stringcompare(Container(312).Listitem(6).Property(CheckPosition),eleven)]]</visible>
 					<camera x="1777" y="143"/>
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
@@ -2997,7 +2987,8 @@
 			</control>
 			<control type="group" description="Icons: VisibleChange Animation">
 				<posy>RA_IconSquare_PosY</posy>
-				
+				<visible>false</visible>
+
 				<control type="group" description="Item (-1) rotated">
 					<posx>RA_IconSquare1_PosX</posx>
 					<visible>Container(312).HasPrevious + Control.HasFocus(302)</visible>
@@ -3222,7 +3213,7 @@
 						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_4]</texture>
 					</control>
 				</control>
-				
+
 				<control type="group" description="Item (-1) rotated">
 					<posx>RA_IconSquare1_PosX</posx>
 					<visible>Container(312).HasPrevious + Control.HasFocus(302)</visible>
@@ -3423,9 +3414,439 @@
 						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_0]</texture>
 					</control>
 				</control>
-				
+
 			</control>
-		
+			<control type="group" description="Icons: VisibleChange Animation">
+				<posy>RA_IconSquare_PosY</posy>
+
+				<control type="group" description="Item (-1) rotated">
+					<posx>RA_IconSquare1_PosX</posx>
+					<visible>Container(312).HasPrevious + Control.HasFocus(302)</visible>
+					<camera x="143" y="143"/>
+					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
+					<animation type="Visible" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="-286" end="0"/>
+					</animation>
+					<animation type="Hidden" condition="Container(9000).OnNext" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-286,0"/>
+						<effect type="slide" time="0" start="0,0" end="286,0" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnNext" reversible="false">
+						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<control type="image" description="Episode Icon">
+						<include>Square_Icon_Properties</include>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_-1]</texture>
+					</control>
+					<control type="image" description="Episode Icon Reflection">
+						<visible>Control.IsVisible(320)</visible>
+						<include>Square_Icon_Reflection_Properties</include>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_-1]</texture>
+					</control>
+					<control type="image" description="Icon Dimmer">
+						<width>RA_IconSquare_Width</width>
+						<height>RA_IconSquare_Height</height>
+						<aspectratio>scale</aspectratio>
+						<texture>home_recentlyadded/Square_Dim.png</texture>
+					</control>
+				</control>
+				<control type="group" description="Item (5) rotated">
+					<posx>RA_IconSquare7_PosX</posx>
+					<visible>Container(312).HasNext + Control.HasFocus(302)</visible>
+					<camera x="1777" y="143"/>
+					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
+					<animation type="Visible" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<animation type="Hidden" condition="Container(9000).OnNext" reversible="false">
+						<effect type="fade" time="150" start="100" end="0"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnNext" reversible="false">
+						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<control type="image" description="Episode Icon">
+						<include>Square_Icon_Properties</include>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_5]</texture>
+					</control>
+					<control type="image" description="Episode Icon Reflection">
+						<visible>Control.IsVisible(320)</visible>
+						<include>Square_Icon_Reflection_Properties</include>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_5]</texture>
+					</control>
+					<control type="image" description="Icon Dimmer">
+						<width>RA_IconSquare_Width</width>
+						<height>RA_IconSquare_Height</height>
+						<aspectratio>scale</aspectratio>
+						<texture>home_recentlyadded/Square_Dim.png</texture>
+					</control>
+				</control>
+				<control type="group" description="Item (0) flat">
+					<visible>Control.HasFocus(302)</visible>
+					<posx>RA_IconSquare2_PosX</posx>
+					<camera x="-143" y="246"/>
+					<animation type="Hidden" condition="Container(9000).OnNext" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
+						<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="403,0" start="0" end="-45"/>
+						<effect type="rotatey" time="0" center="403,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="403,0" start="-45" end="0"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnNext" reversible="false">
+						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<control type="image" description="Episode Icon">
+						<include>Square_Icon_Properties</include>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_0]</texture>
+					</control>
+					<control type="image" description="Episode Icon Reflection">
+						<visible>Control.IsVisible(320)</visible>
+						<include>Square_Icon_Reflection_Properties</include>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_0]</texture>
+					</control>
+					<control type="label" description="Now Playing Song Title">
+						<posx>-4</posx>
+						<posy>292</posy>
+						<width>294</width>
+						<height>45</height>
+						<font>Shelf_Title</font>
+						<textcolor>Shelf_Title</textcolor>
+						<shadowcolor>Shelf_TitleShadow</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[NowPlaying_Label_Episodes]</label>
+						<visible>!Container(312).HasPrevious + Player.HasAudio</visible>
+						<animation effect="fade" start="0" end="100" time="75" delay="75">Visible</animation>
+					</control>
+					<control type="label" description="Now Playing Artist">
+						<posx>-4</posx>
+						<posy>322</posy>
+						<width>294</width>
+						<height>45</height>
+						<font>Shelf_Title2</font>
+						<textcolor>Shelf_Title2</textcolor>
+						<shadowcolor>Shelf_TitleShadow</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[NowPlaying_Label2_Episodes]</label>
+						<visible>!Container(312).HasPrevious + Player.HasAudio</visible>
+						<animation effect="fade" start="0" end="100" time="75" delay="75">Visible</animation>
+					</control>
+				</control>
+				<control type="group" description="Item (1) flat">
+					<visible>IntegerGreaterThan(Container(312).NumItems,1) + Control.HasFocus(302)</visible>
+					<posx>RA_IconSquare3_PosX</posx>
+					<camera x="-143" y="246"/>
+					<animation type="Hidden" condition="Container(9000).OnNext" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-753,0"/>
+						<effect type="slide" time="0" start="0,0" end="753,0" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="753,0" start="0" end="-45"/>
+						<effect type="rotatey" time="0" center="753,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="-753" end="0"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="753,0" start="-45" end="0"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnNext" reversible="false">
+						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<control type="image" description="Episode Icon">
+						<include>Square_Icon_Properties</include>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_1]</texture>
+					</control>
+					<control type="image" description="Episode Icon Reflection">
+						<visible>Control.IsVisible(320)</visible>
+						<include>Square_Icon_Reflection_Properties</include>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_1]</texture>
+					</control>
+				</control>
+				<control type="group" description="Item (2) flat">
+					<visible>IntegerGreaterThan(Container(312).NumItems,2) + Control.HasFocus(302)</visible>
+					<posx>RA_IconSquare4_PosX</posx>
+					<camera x="-143" y="246"/>
+					<animation type="Hidden" condition="Container(9000).OnNext" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1103,0"/>
+						<effect type="slide" time="0" start="0,0" end="1103,0" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1103,0" start="0" end="-45"/>
+						<effect type="rotatey" time="0" center="1103,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="-1103" end="0"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1103,0" start="-45" end="0"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnNext" reversible="false">
+						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<control type="image" description="Episode Icon">
+						<include>Square_Icon_Properties</include>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_2]</texture>
+					</control>
+					<control type="image" description="Episode Icon Reflection">
+						<visible>Control.IsVisible(320)</visible>
+						<include>Square_Icon_Reflection_Properties</include>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_2]</texture>
+					</control>
+				</control>
+				<control type="group" description="Item (3) flat">
+					<visible>IntegerGreaterThan(Container(312).NumItems,3) + Control.HasFocus(302)</visible>
+					<posx>RA_IconSquare5_PosX</posx>
+					<camera x="-143" y="246"/>
+					<animation type="Hidden" condition="Container(9000).OnNext" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1433,0"/>
+						<effect type="slide" time="0" start="0,0" end="1433,0" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1433,0" start="0" end="-45"/>
+						<effect type="rotatey" time="0" center="1433,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="-1433" end="0"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1433,0" start="-45" end="0"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnNext" reversible="false">
+						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<control type="image" description="Episode Icon">
+						<include>Square_Icon_Properties</include>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_3]</texture>
+					</control>
+					<control type="image" description="Episode Icon Reflection">
+						<visible>Control.IsVisible(320)</visible>
+						<include>Square_Icon_Reflection_Properties</include>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_3]</texture>
+					</control>
+				</control>
+				<control type="group" description="Item (4) flat">
+					<visible>IntegerGreaterThan(Container(312).NumItems,4) + Control.HasFocus(302)</visible>
+					<posx>RA_IconSquare6_PosX</posx>
+					<camera x="-143" y="246"/>
+					<animation type="Hidden" condition="Container(9000).OnNext" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1803,0"/>
+						<effect type="slide" time="0" start="0,0" end="1803,0" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1803,0" start="0" end="-45"/>
+						<effect type="rotatey" time="0" center="1803,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="-1803" end="0"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1803,0" start="-45" end="0"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnNext" reversible="false">
+						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<control type="image" description="Episode Icon">
+						<include>Square_Icon_Properties</include>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_4]</texture>
+					</control>
+					<control type="image" description="Episode Icon Reflection">
+						<visible>Control.IsVisible(320)</visible>
+						<include>Square_Icon_Reflection_Properties</include>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_4]</texture>
+					</control>
+				</control>
+
+				<control type="group" description="Item (-1) rotated">
+					<posx>RA_IconSquare1_PosX</posx>
+					<visible>Container(312).HasPrevious + Control.HasFocus(302)</visible>
+					<camera x="143" y="143"/>
+					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
+					<animation type="Visible" condition="Container(9000).OnNext" reversible="false">
+						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<animation type="Hidden" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="fade" time="150" start="100" end="0"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<control type="image" description="Episode Icon">
+						<include>Square_Icon_Properties</include>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_-1]</texture>
+					</control>
+					<control type="image" description="Episode Icon Reflection">
+						<include>Square_Icon_Reflection_Properties</include>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_-1]</texture>
+					</control>
+					<control type="image" description="Icon Dimmer">
+						<width>RA_IconSquare_Width</width>
+						<height>RA_IconSquare_Height</height>
+						<aspectratio>scale</aspectratio>
+						<texture>home_recentlyadded/Square_Dim.png</texture>
+					</control>
+				</control>
+				<control type="group" description="Item (5) rotated">
+					<posx>RA_IconSquare7_PosX</posx>
+					<visible>Container(312).HasNext + Control.HasFocus(302)</visible>
+					<camera x="1777" y="143"/>
+					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
+					<animation type="Visible" condition="Container(9000).OnNext" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="286" end="0"/>
+					</animation>
+					<animation type="Hidden" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="286,0"/>
+						<effect type="slide" time="0" start="0,0" end="-286,0" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<control type="image" description="Episode Icon">
+						<include>Square_Icon_Properties</include>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_5]</texture>
+					</control>
+					<control type="image" description="Episode Icon Reflection">
+						<include>Square_Icon_Reflection_Properties</include>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_5]</texture>
+					</control>
+					<control type="image" description="Icon Dimmer">
+						<width>RA_IconSquare_Width</width>
+						<height>RA_IconSquare_Height</height>
+						<aspectratio>scale</aspectratio>
+						<texture>home_recentlyadded/Square_Dim.png</texture>
+					</control>
+				</control>
+				<control type="group" description="Item (4) flat">
+					<visible>IntegerGreaterThan(Container(312).NumItems,4) + Control.HasFocus(302)</visible>
+					<posx>RA_IconSquare6_PosX</posx>
+					<width>286</width>
+					<height>400</height>
+					<camera x="2063" y="246"/>
+					<animation type="Visible" condition="Container(9000).OnNext" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="403" end="0"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1517" start="45" end="0"/>
+					</animation>
+					<animation type="Hidden" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="403,0"/>
+						<effect type="slide" time="0" start="0,0" end="-403,0" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1517" start="0" end="45" tween="quadratic" easing="in"/>
+						<effect type="rotatey" time="0" center="1517" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<control type="image" description="Episode Icon">
+						<include>Square_Icon_Properties</include>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_4]</texture>
+					</control>
+					<control type="image" description="Episode Icon Reflection">
+						<include>Square_Icon_Reflection_Properties</include>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_4]</texture>
+					</control>
+				</control>
+				<control type="group" description="Item (3) flat">
+					<visible>IntegerGreaterThan(Container(312).NumItems,3) + Control.HasFocus(302)</visible>
+					<posx>RA_IconSquare5_PosX</posx>
+					<width>286</width>
+					<height>400</height>
+					<camera x="2063" y="246"/>
+					<animation type="Visible" condition="Container(9000).OnNext" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="753" end="0"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1167" start="45" end="0"/>
+					</animation>
+					<animation type="Hidden" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="753,0"/>
+						<effect type="slide" time="0" start="0,0" end="-753,0" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1167" start="0" end="45" tween="quadratic" easing="in"/>
+						<effect type="rotatey" time="0" center="1167" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<control type="image" description="Episode Icon">
+						<include>Square_Icon_Properties</include>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_3]</texture>
+					</control>
+					<control type="image" description="Episode Icon Reflection">
+						<include>Square_Icon_Reflection_Properties</include>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_3]</texture>
+					</control>
+				</control>
+				<control type="group" description="Item (2) flat">
+					<visible>IntegerGreaterThan(Container(312).NumItems,2) + Control.HasFocus(302)</visible>
+					<posx>RA_IconSquare4_PosX</posx>
+					<width>286</width>
+					<height>400</height>
+					<camera x="2063" y="246"/>
+					<animation type="Visible" condition="Container(9000).OnNext" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="1103" end="0"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="817" start="45" end="0"/>
+					</animation>
+					<animation type="Hidden" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1103,0"/>
+						<effect type="slide" time="0" start="0,0" end="-1103,0" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="817" start="0" end="45" tween="quadratic" easing="in"/>
+						<effect type="rotatey" time="0" center="817" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<control type="image" description="Episode Icon">
+						<include>Square_Icon_Properties</include>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_2]</texture>
+					</control>
+					<control type="image" description="Episode Icon Reflection">
+						<include>Square_Icon_Reflection_Properties</include>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_2]</texture>
+					</control>
+				</control>
+				<control type="group" description="Item (1) flat">
+					<visible>IntegerGreaterThan(Container(312).NumItems,1) + Control.HasFocus(302)</visible>
+					<posx>RA_IconSquare3_PosX</posx>
+					<width>286</width>
+					<height>400</height>
+					<camera x="2063" y="246"/>
+					<animation type="Visible" condition="Container(9000).OnNext" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="1443" end="0"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="467" start="45" end="0"/>
+					</animation>
+					<animation type="Hidden" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1443,0"/>
+						<effect type="slide" time="0" start="0,0" end="-1443,0" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="467" start="0" end="45" tween="quadratic" easing="in"/>
+						<effect type="rotatey" time="0" center="467" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<control type="image" description="Episode Icon">
+						<include>Square_Icon_Properties</include>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_1]</texture>
+					</control>
+					<control type="image" description="Episode Icon Reflection">
+						<include>Square_Icon_Reflection_Properties</include>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_1]</texture>
+					</control>
+				</control>
+				<control type="group" description="Item (0) flat">
+					<visible>Control.HasFocus(302)</visible>
+					<posy>0</posy>
+					<posx>RA_IconSquare2_PosX</posx>
+					<width>286</width>
+					<height>400</height>
+					<camera x="2063" y="246"/>
+					<animation type="Visible" condition="Container(9000).OnNext" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="117" start="45" end="0"/>
+					</animation>
+					<animation type="Visible" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<animation type="Hidden" condition="Container(9000).OnPrevious" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
+						<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="117" start="0" end="45" tween="quadratic" easing="in"/>
+						<effect type="rotatey" time="0" center="117" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
+					</animation>
+					<control type="image" description="Episode Icon">
+						<include>Square_Icon_Properties</include>
+						<texture fallback="DefaultVideo.png">$VAR[EpisodeIcon_0]</texture>
+					</control>
+					<control type="image" description="Episode Icon Reflection">
+						<include>Square_Icon_Reflection_Properties</include>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_0]</texture>
+					</control>
+				</control>
+
+			</control>
+
 			<control type="image" description="Episode Focuser">
 				<visible>Control.HasFocus(312)</visible>
 				<posx>87</posx>
@@ -3457,7 +3878,7 @@
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
-				
+
 				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
@@ -3484,7 +3905,7 @@
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
-				
+
 				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
@@ -3502,7 +3923,8 @@
 				<font>Shelf_Headline</font>
 				<textcolor>Shelf_Headline</textcolor>
 				<label>31023</label>
-				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(312).HasPrevious" tween="sine" easing="inout">Conditional</animation>
+				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(312).HasPrevious" tween="sine" easing="inout"
+					>Conditional</animation>
 				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
@@ -3510,7 +3932,7 @@
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
-				
+
 				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
@@ -3527,7 +3949,8 @@
 				<height>214</height>
 				<texture>home_recentlyadded/RecentlyAdded_Seperator.png</texture>
 				<aspectratio>scale</aspectratio>
-				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(312).HasPrevious" tween="sine" easing="inout">Conditional</animation>
+				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(312).HasPrevious" tween="sine" easing="inout"
+					>Conditional</animation>
 				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
@@ -3535,7 +3958,7 @@
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
-				
+
 				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
@@ -3546,11 +3969,11 @@
 			</control>
 		</control>
 	</include>
-	
+
 	<include name="HomeShelf_Music">
 		<control type="group">
 			<visible>[Library.HasContent(Music) | Library.HasContent(MusicVideos)] + !Skin.HasSetting(MusicSectionHide)</visible>
-			
+
 			<control type="label" description="indicator for shelf visiblechange animation" id="319">
 				<posx>-1</posx>
 				<posy>-1</posy>
@@ -3574,22 +3997,20 @@
 				<scrolltime>250</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
-				
-				<itemlayout height="440" width="350">
-				</itemlayout>
-				
-				<focusedlayout height="440" width="350">
-				</focusedlayout>
-				
+
+				<itemlayout height="440" width="350"> </itemlayout>
+
+				<focusedlayout height="440" width="350"> </focusedlayout>
+
 				<content>
-				    <item id="99" description="Now PLaying">
-				        <label>$INFO[MusicPlayer.Title]</label>
-				        <label2>$INFO[MusicPlayer.Artist]</label2>
-				        <onclick>ActivateWindow(MusicPlaylist)</onclick>
-				        <thumb>$INFO[MusicPlayer.Cover]</thumb>
-				    	<visible>Player.HasAudio</visible>
-				    	<property name="CheckNowPlaying">*.*</property>
-				    </item>
+					<item id="99" description="Now PLaying">
+						<label>$INFO[MusicPlayer.Title]</label>
+						<label2>$INFO[MusicPlayer.Artist]</label2>
+						<onclick>ActivateWindow(MusicPlaylist)</onclick>
+						<thumb>$INFO[MusicPlayer.Cover]</thumb>
+						<visible>Player.HasAudio</visible>
+						<property name="CheckNowPlaying">*.*</property>
+					</item>
 					<item id="1" description="Addons">
 						<visible>Skin.HasSetting(MusicShelf_Custom)</visible>
 						<visible>!IsEmpty(Skin.String(ShelfMusic.1.Label))</visible>
@@ -3681,107 +4102,107 @@
 						<property name="ItemType">$LOCALIZE[111]</property>
 						<property name="CheckPosition">ten</property>
 					</item>
-				    <item id="11" description="Latest Album">
-				        <label>$INFO[Window.Property(LatestAlbum.1.Title)]</label>
-				        <label2>$INFO[Window.Property(LatestAlbum.1.Artist)]</label2>
-				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.1.Path)])</onclick>
-				        <thumb>$INFO[Window.Property(LatestAlbum.1.Thumb)]</thumb>
-				    	<visible>!IsEmpty(Window.Property(LatestAlbum.1.Title))</visible>
-				    	<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
-				    	<property name="ItemType">$LOCALIZE[359]</property>
-				    	<property name="CheckPosition">eleven</property>
-				    </item>
+					<item id="11" description="Latest Album">
+						<label>$INFO[Window.Property(LatestAlbum.1.Title)]</label>
+						<label2>$INFO[Window.Property(LatestAlbum.1.Artist)]</label2>
+						<onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.1.Path)])</onclick>
+						<thumb>$INFO[Window.Property(LatestAlbum.1.Thumb)]</thumb>
+						<visible>!IsEmpty(Window.Property(LatestAlbum.1.Title))</visible>
+						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
+						<property name="ItemType">$LOCALIZE[359]</property>
+						<property name="CheckPosition">eleven</property>
+					</item>
 					<item id="12" description="Latest Album">
-				        <label>$INFO[Window.Property(LatestAlbum.2.Title)]</label>
-				        <label2>$INFO[Window.Property(LatestAlbum.2.Artist)]</label2>
-				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.2.Path)])</onclick>
-				        <thumb>$INFO[Window.Property(LatestAlbum.2.Thumb)]</thumb>
+						<label>$INFO[Window.Property(LatestAlbum.2.Title)]</label>
+						<label2>$INFO[Window.Property(LatestAlbum.2.Artist)]</label2>
+						<onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.2.Path)])</onclick>
+						<thumb>$INFO[Window.Property(LatestAlbum.2.Thumb)]</thumb>
 						<visible>!IsEmpty(Window.Property(LatestAlbum.2.Title))</visible>
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<property name="ItemType">$LOCALIZE[359]</property>
 						<property name="CheckPosition">twelve</property>
-				    </item>
+					</item>
 					<item id="13" description="Latest Album">
-				        <label>$INFO[Window.Property(LatestAlbum.3.Title)]</label>
-				        <label2>$INFO[Window.Property(LatestAlbum.3.Artist)]</label2>
-				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.3.Path)])</onclick>
-				        <thumb>$INFO[Window.Property(LatestAlbum.3.Thumb)]</thumb>
+						<label>$INFO[Window.Property(LatestAlbum.3.Title)]</label>
+						<label2>$INFO[Window.Property(LatestAlbum.3.Artist)]</label2>
+						<onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.3.Path)])</onclick>
+						<thumb>$INFO[Window.Property(LatestAlbum.3.Thumb)]</thumb>
 						<visible>!IsEmpty(Window.Property(LatestAlbum.3.Title))</visible>
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<property name="ItemType">$LOCALIZE[359]</property>
 						<property name="CheckPosition">thirteen</property>
-				    </item>
+					</item>
 					<item id="14" description="Latest Album">
-				        <label>$INFO[Window.Property(LatestAlbum.4.Title)]</label>
-				        <label2>$INFO[Window.Property(LatestAlbum.4.Artist)]</label2>
-				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.4.Path)])</onclick>
-				        <thumb>$INFO[Window.Property(LatestAlbum.4.Thumb)]</thumb>
+						<label>$INFO[Window.Property(LatestAlbum.4.Title)]</label>
+						<label2>$INFO[Window.Property(LatestAlbum.4.Artist)]</label2>
+						<onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.4.Path)])</onclick>
+						<thumb>$INFO[Window.Property(LatestAlbum.4.Thumb)]</thumb>
 						<visible>!IsEmpty(Window.Property(LatestAlbum.4.Title))</visible>
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<property name="ItemType">$LOCALIZE[359]</property>
 						<property name="CheckPosition">fourteen</property>
-				    </item>
+					</item>
 					<item id="15" description="Latest Album">
-				        <label>$INFO[Window.Property(LatestAlbum.5.Title)]</label>
-				        <label2>$INFO[Window.Property(LatestAlbum.5.Artist)]</label2>
-				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.5.Path)])</onclick>
-				        <thumb>$INFO[Window.Property(LatestAlbum.5.Thumb)]</thumb>
+						<label>$INFO[Window.Property(LatestAlbum.5.Title)]</label>
+						<label2>$INFO[Window.Property(LatestAlbum.5.Artist)]</label2>
+						<onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.5.Path)])</onclick>
+						<thumb>$INFO[Window.Property(LatestAlbum.5.Thumb)]</thumb>
 						<visible>!IsEmpty(Window.Property(LatestAlbum.5.Title))</visible>
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<property name="ItemType">$LOCALIZE[359]</property>
 						<property name="CheckPosition">fifteen</property>
-				    </item>
+					</item>
 					<item id="16" description="Latest Album">
-				        <label>$INFO[Window.Property(LatestAlbum.6.Title)]</label>
-				        <label2>$INFO[Window.Property(LatestAlbum.6.Artist)]</label2>
-				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.6.Path)])</onclick>
-				        <thumb>$INFO[Window.Property(LatestAlbum.6.Thumb)]</thumb>
+						<label>$INFO[Window.Property(LatestAlbum.6.Title)]</label>
+						<label2>$INFO[Window.Property(LatestAlbum.6.Artist)]</label2>
+						<onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.6.Path)])</onclick>
+						<thumb>$INFO[Window.Property(LatestAlbum.6.Thumb)]</thumb>
 						<visible>!IsEmpty(Window.Property(LatestAlbum.6.Title))</visible>
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<property name="ItemType">$LOCALIZE[359]</property>
 						<property name="CheckPosition">sixteen</property>
-				    </item>
+					</item>
 					<item id="17" description="Latest Album">
-				        <label>$INFO[Window.Property(LatestAlbum.7.Title)]</label>
-				        <label2>$INFO[Window.Property(LatestAlbum.7.Artist)]</label2>
-				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.7.Path)])</onclick>
-				        <thumb>$INFO[Window.Property(LatestAlbum.7.Thumb)]</thumb>
+						<label>$INFO[Window.Property(LatestAlbum.7.Title)]</label>
+						<label2>$INFO[Window.Property(LatestAlbum.7.Artist)]</label2>
+						<onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.7.Path)])</onclick>
+						<thumb>$INFO[Window.Property(LatestAlbum.7.Thumb)]</thumb>
 						<visible>!IsEmpty(Window.Property(LatestAlbum.7.Title))</visible>
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<property name="ItemType">$LOCALIZE[359]</property>
 						<property name="CheckPosition">seventeen</property>
-				    </item>
+					</item>
 					<item id="18" description="Latest Album">
-				        <label>$INFO[Window.Property(LatestAlbum.8.Title)]</label>
-				        <label2>$INFO[Window.Property(LatestAlbum.8.Artist)]</label2>
-				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.8.Path)])</onclick>
-				        <thumb>$INFO[Window.Property(LatestAlbum.8.Thumb)]</thumb>
+						<label>$INFO[Window.Property(LatestAlbum.8.Title)]</label>
+						<label2>$INFO[Window.Property(LatestAlbum.8.Artist)]</label2>
+						<onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.8.Path)])</onclick>
+						<thumb>$INFO[Window.Property(LatestAlbum.8.Thumb)]</thumb>
 						<visible>!IsEmpty(Window.Property(LatestAlbum.8.Title))</visible>
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<property name="ItemType">$LOCALIZE[359]</property>
 						<property name="CheckPosition">eighteen</property>
-				    </item>
+					</item>
 					<item id="19" description="Latest Album">
-				        <label>$INFO[Window.Property(LatestAlbum.9.Title)]</label>
-				        <label2>$INFO[Window.Property(LatestAlbum.9.Artist)]</label2>
-				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.9.Path)])</onclick>
-				        <thumb>$INFO[Window.Property(LatestAlbum.9.Thumb)]</thumb>
+						<label>$INFO[Window.Property(LatestAlbum.9.Title)]</label>
+						<label2>$INFO[Window.Property(LatestAlbum.9.Artist)]</label2>
+						<onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.9.Path)])</onclick>
+						<thumb>$INFO[Window.Property(LatestAlbum.9.Thumb)]</thumb>
 						<visible>!IsEmpty(Window.Property(LatestAlbum.9.Title))</visible>
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<property name="ItemType">$LOCALIZE[359]</property>
 						<property name="CheckPosition">nineteen</property>
-				    </item>
+					</item>
 					<item id="20" description="Latest Album">
-				        <label>$INFO[Window.Property(LatestAlbum.10.Title)]</label>
-				        <label2>$INFO[Window.Property(LatestAlbum.10.Artist)]</label2>
-				        <property name="CheckRecent">last</property>
-				        <onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.10.Path)])</onclick>
-				        <thumb>$INFO[Window.Property(LatestAlbum.10.Thumb)]</thumb>
-				        <visible>!IsEmpty(Window.Property(LatestAlbum.10.Title))</visible>
+						<label>$INFO[Window.Property(LatestAlbum.10.Title)]</label>
+						<label2>$INFO[Window.Property(LatestAlbum.10.Artist)]</label2>
+						<property name="CheckRecent">last</property>
+						<onclick>ActivateWindow(musiclibrary ,$INFO[Window.Property(LatestAlbum.10.Path)])</onclick>
+						<thumb>$INFO[Window.Property(LatestAlbum.10.Thumb)]</thumb>
+						<visible>!IsEmpty(Window.Property(LatestAlbum.10.Title))</visible>
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<property name="ItemType">$LOCALIZE[359]</property>
 						<property name="CheckPosition">twenty</property>
-				    </item>
+					</item>
 					<item id="21" description="LatestMusicVideo1">
 						<visible>!Skin.HasSetting(MusicShelf_Custom)</visible>
 						<visible>!IsEmpty(Window(Home).Property(LatestMusicVideo.1.Path))</visible>
@@ -3894,7 +4315,7 @@
 					</item>
 				</content>
 			</control>
-			
+
 			<control type="group" description="Icons: Not OnScroll">
 				<posy>RA_IconSquare_PosY</posy>
 				<visible>!Container(313).OnScrollNext + !Container(313).OnScrollPrevious + Control.HasFocus(313)</visible>
@@ -3904,7 +4325,7 @@
 				<animation type="Visible" condition="!Control.IsVisible(323) + !Control.IsVisible(324)">
 					<effect type="fade" start="0" end="100" time="0"/>
 				</animation>
-				
+
 				<control type="group" description="Item (-1) rotated">
 					<posx>RA_IconSquare1_PosX</posx>
 					<visible>Container(313).HasPrevious</visible>
@@ -3994,7 +4415,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[Container(313).ListItem(0).Label]</label>
-						<visible>Control.HasFocus(313) + Container(313).Position(0) + [!Player.HasAudio	| [Player.HasAudio + Container(313).HasPrevious]]</visible>
+						<visible>Control.HasFocus(313) + Container(313).Position(0) + [!Player.HasAudio | [Player.HasAudio + Container(313).HasPrevious]]</visible>
 						<animation effect="fade" start="0" end="100" time="75" delay="75">Visible</animation>
 					</control>
 					<control type="label" description="Artist Name">
@@ -4210,12 +4631,12 @@
 						<effect type="slide" time="ShelfScroll_AnimationTime" end="-350" reversible="false" tween="sine" easing="inout"/>
 					</animation>
 				</control>
-				
+
 				<control type="group" description="Item (-1r --> -2r)">
 					<posx>RA_IconSquare1_PosX</posx>
-					<visible>Container(313).HasPrevious + Container(313).OnScrollNext + 
-						[Player.HasAudio + !stringcompare(Container(313).Listitem(-5).Property(CheckNowPlaying),*.*) |
-						[!Player.HasAudio + !stringcompare(Container(313).Listitem(-5).Property(CheckPosition),one) +
+					<visible>Container(313).HasPrevious + Container(313).OnScrollNext + [Player.HasAudio +
+						!stringcompare(Container(313).Listitem(-5).Property(CheckNowPlaying),*.*) | [!Player.HasAudio +
+						!stringcompare(Container(313).Listitem(-5).Property(CheckPosition),one) +
 						!stringcompare(Container(313).Listitem(-5).Property(CheckPosition),eleven)]]</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
@@ -4277,7 +4698,7 @@
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
 						<height>RA_IconSquare_Height</height>
-						<aspectratio>scale</aspectratio>						
+						<aspectratio>scale</aspectratio>
 						<texture>home_recentlyadded/Square_Dim.png</texture>
 						<visible>Container(313).OnScrollNext</visible>
 						<animation type="Hidden" reversible="false">
@@ -4403,7 +4824,7 @@
 						<effect type="slide" time="ShelfScroll_AnimationTime" end="350" reversible="false" tween="sine" easing="inout"/>
 					</animation>
 				</control>
-				
+
 				<control type="group" description="Item (-2r --> -1r)">
 					<posx>RA_IconSquare1_PosX</posx>
 					<visible>Container(313).HasPrevious + Container(313).OnScrollPrevious</visible>
@@ -4456,9 +4877,9 @@
 				</control>
 				<control type="group" description="Item (5r --> 6r)">
 					<posx>RA_IconSquare7_PosX</posx>
-					<visible>Container(313).HasNext + Container(313).OnScrollPrevious + 
-						[Player.HasAudio + !stringcompare(Container(313).Listitem(6).Property(CheckNowPlaying),*.*) |
-						[!Player.HasAudio + !stringcompare(Container(313).Listitem(6).Property(CheckPosition),one) +
+					<visible>Container(313).HasNext + Container(313).OnScrollPrevious + [Player.HasAudio +
+						!stringcompare(Container(313).Listitem(6).Property(CheckNowPlaying),*.*) | [!Player.HasAudio +
+						!stringcompare(Container(313).Listitem(6).Property(CheckPosition),one) +
 						!stringcompare(Container(313).Listitem(6).Property(CheckPosition),eleven)]]</visible>
 					<camera x="1777" y="143"/>
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
@@ -4561,7 +4982,7 @@
 			</control>
 			<control type="group" description="Icons: VisibleChange Animation">
 				<posy>RA_IconSquare_PosY</posy>
-				
+
 				<control type="group" description="Item (-1) rotated">
 					<posx>RA_IconSquare1_PosX</posx>
 					<visible>Container(313).HasPrevious + Control.HasFocus(303)</visible>
@@ -4786,7 +5207,7 @@
 						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_4]</texture>
 					</control>
 				</control>
-				
+
 				<control type="group" description="Item (-1) rotated">
 					<posx>RA_IconSquare1_PosX</posx>
 					<visible>Container(313).HasPrevious + Control.HasFocus(303)</visible>
@@ -4987,9 +5408,9 @@
 						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_0]</texture>
 					</control>
 				</control>
-				
+
 			</control>
-		
+
 			<control type="image" description="Album Focuser">
 				<posx>87</posx>
 				<posy>73</posy>
@@ -5047,7 +5468,7 @@
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
-				
+
 				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
@@ -5065,7 +5486,8 @@
 				<font>Shelf_Headline</font>
 				<textcolor>Shelf_Headline</textcolor>
 				<label>31023</label>
-				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(313).HasPrevious" tween="sine" easing="inout">Conditional</animation>
+				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(313).HasPrevious" tween="sine" easing="inout"
+					>Conditional</animation>
 				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
@@ -5073,7 +5495,7 @@
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
-				
+
 				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
@@ -5090,7 +5512,8 @@
 				<height>214</height>
 				<texture>home_recentlyadded/RecentlyAdded_Seperator.png</texture>
 				<aspectratio>scale</aspectratio>
-				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(313).HasPrevious" tween="sine" easing="inout">Conditional</animation>
+				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(313).HasPrevious" tween="sine" easing="inout"
+					>Conditional</animation>
 				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
@@ -5098,7 +5521,7 @@
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
-				
+
 				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
@@ -5113,7 +5536,7 @@
 	<include name="HomeShelf_Pictures">
 		<control type="group">
 			<visible>!Skin.HasSetting(PicturesSectionHide)</visible>
-			
+
 			<control type="label" description="indicator for shelf visiblechange animation" id="318">
 				<posx>-1</posx>
 				<posy>-1</posy>
@@ -5137,115 +5560,113 @@
 				<scrolltime>250</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
-				
-				<itemlayout height="440" width="350">
-				</itemlayout>
-				
-				<focusedlayout height="440" width="350">
-				</focusedlayout>
-				
+
+				<itemlayout height="440" width="350"> </itemlayout>
+
+				<focusedlayout height="440" width="350"> </focusedlayout>
+
 				<content>
-				    <item id="99" description="Now PLaying">
-				        <label>$INFO[MusicPlayer.Title]</label>
-				        <label2>$INFO[MusicPlayer.Artist]</label2>
-				        <property name="CheckNowPlaying">*.*</property>
-				        <onclick>ActivateWindow(MusicPlaylist)</onclick>
-				        <thumb>$INFO[MusicPlayer.Cover]</thumb>
-				        <visible>Player.HasAudio</visible>
-				    </item>
-				    <item id="1" description="Addons">
-				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
-				        <visible>!IsEmpty(Skin.String(ShelfPictures.1.Label))</visible>
-				        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.1.Label))]</label>
-				        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.1.Label))]</thumb>
-				        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.1.Label)])</onclick>
-				        <property name="ItemType">$LOCALIZE[111]</property>
-				    	<property name="CheckPosition">one</property>
-				    </item>
-				    <item id="2" description="Addons">
-				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
-				        <visible>!IsEmpty(Skin.String(ShelfPictures.2.Label))</visible>
-				        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.2.Label))]</label>
-				        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.2.Label))]</thumb>
-				        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.2.Label)])</onclick>
-				    	<property name="ItemType">$LOCALIZE[111]</property>
-				    	<property name="CheckPosition">two</property>
-				    </item>
-				    <item id="3" description="Addons">
-				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
-				        <visible>!IsEmpty(Skin.String(ShelfPictures.3.Label))</visible>
-				        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.3.Label))]</label>
-				        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.3.Label))]</thumb>
-				        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.3.Label)])</onclick>
-				    	<property name="ItemType">$LOCALIZE[111]</property>
-				    	<property name="CheckPosition">three</property>
-				    </item>
-				    <item id="4" description="Addons">
-				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
-				        <visible>!IsEmpty(Skin.String(ShelfPictures.4.Label))</visible>
-				        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.4.Label))]</label>
-				        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.4.Label))]</thumb>
-				        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.4.Label)])</onclick>
-				    	<property name="ItemType">$LOCALIZE[111]</property>
-				    	<property name="CheckPosition">four</property>
-				    </item>
-				    <item id="5" description="Addons">
-				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
-				        <visible>!IsEmpty(Skin.String(ShelfPictures.5.Label))</visible>
-				        <label>$INFO[system.addontitle(Skin.String(ShelfPictures.5.Label))]</label>
-				        <thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.5.Label))]</thumb>
-				        <onclick>RunAddon($INFO[Skin.String(ShelfPictures.5.Label)])</onclick>
-				    	<property name="ItemType">$LOCALIZE[111]</property>
-				    	<property name="CheckPosition">five</property>
-				    </item>
-				    <item id="6" description="Fav">
-				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
-				        <visible>!IsEmpty(Skin.String(ShelfPictures.6.Path))</visible>
-				        <label>$INFO[Skin.String(ShelfPictures.6.Label)]</label>
-				        <thumb>$INFO[Skin.String(ShelfPictures.6.Icon)]</thumb>
-				        <onclick>$INFO[Skin.String(ShelfPictures.6.Path)]</onclick>
-				    	<property name="ItemType">$LOCALIZE[111]</property>
-				    	<property name="CheckPosition">six</property>
-				    </item>
-				    <item id="7" description="Fav">
-				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
-				        <visible>!IsEmpty(Skin.String(ShelfPictures.7.Path))</visible>
-				        <label>$INFO[Skin.String(ShelfPictures.7.Label)]</label>
-				        <thumb>$INFO[Skin.String(ShelfPictures.7.Icon)]</thumb>
-				        <onclick>$INFO[Skin.String(ShelfPictures.7.Path)]</onclick>
-				    	<property name="ItemType">$LOCALIZE[111]</property>
-				    	<property name="CheckPosition">seven</property>
-				    </item>
-				    <item id="8" description="Fav">
-				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
-				        <visible>!IsEmpty(Skin.String(ShelfPictures.8.Path))</visible>
-				        <label>$INFO[Skin.String(ShelfPictures.8.Label)]</label>
-				        <thumb>$INFO[Skin.String(ShelfPictures.8.Icon)]</thumb>
-				        <onclick>$INFO[Skin.String(ShelfPictures.8.Path)]</onclick>
-				    	<property name="ItemType">$LOCALIZE[111]</property>
-				    	<property name="CheckPosition">eight</property>
-				    </item>
-				    <item id="9" description="Fav">
-				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
-				        <visible>!IsEmpty(Skin.String(ShelfPictures.9.Path))</visible>
-				        <label>$INFO[Skin.String(ShelfPictures.9.Label)]</label>
-				        <thumb>$INFO[Skin.String(ShelfPictures.9.Icon)]</thumb>
-				        <onclick>$INFO[Skin.String(ShelfPictures.9.Path)]</onclick>
-				    	<property name="ItemType">$LOCALIZE[111]</property>
-				    	<property name="CheckPosition">nine</property>
-				    </item>
-				    <item id="10" description="Fav">
-				        <visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
-				        <visible>!IsEmpty(Skin.String(ShelfPictures.10.Path))</visible>
-				        <label>$INFO[Skin.String(ShelfPictures.10.Label)]</label>
-				        <thumb>$INFO[Skin.String(ShelfPictures.10.Icon)]</thumb>
-				        <onclick>$INFO[Skin.String(ShelfPictures.10.Path)]</onclick>
-				    	<property name="ItemType">$LOCALIZE[111]</property>
-				    	<property name="CheckPosition">ten</property>
-				    </item>
+					<item id="99" description="Now PLaying">
+						<label>$INFO[MusicPlayer.Title]</label>
+						<label2>$INFO[MusicPlayer.Artist]</label2>
+						<property name="CheckNowPlaying">*.*</property>
+						<onclick>ActivateWindow(MusicPlaylist)</onclick>
+						<thumb>$INFO[MusicPlayer.Cover]</thumb>
+						<visible>Player.HasAudio</visible>
+					</item>
+					<item id="1" description="Addons">
+						<visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfPictures.1.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfPictures.1.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.1.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfPictures.1.Label)])</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">one</property>
+					</item>
+					<item id="2" description="Addons">
+						<visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfPictures.2.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfPictures.2.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.2.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfPictures.2.Label)])</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">two</property>
+					</item>
+					<item id="3" description="Addons">
+						<visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfPictures.3.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfPictures.3.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.3.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfPictures.3.Label)])</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">three</property>
+					</item>
+					<item id="4" description="Addons">
+						<visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfPictures.4.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfPictures.4.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.4.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfPictures.4.Label)])</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">four</property>
+					</item>
+					<item id="5" description="Addons">
+						<visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfPictures.5.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfPictures.5.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfPictures.5.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfPictures.5.Label)])</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">five</property>
+					</item>
+					<item id="6" description="Fav">
+						<visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfPictures.6.Path))</visible>
+						<label>$INFO[Skin.String(ShelfPictures.6.Label)]</label>
+						<thumb>$INFO[Skin.String(ShelfPictures.6.Icon)]</thumb>
+						<onclick>$INFO[Skin.String(ShelfPictures.6.Path)]</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">six</property>
+					</item>
+					<item id="7" description="Fav">
+						<visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfPictures.7.Path))</visible>
+						<label>$INFO[Skin.String(ShelfPictures.7.Label)]</label>
+						<thumb>$INFO[Skin.String(ShelfPictures.7.Icon)]</thumb>
+						<onclick>$INFO[Skin.String(ShelfPictures.7.Path)]</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">seven</property>
+					</item>
+					<item id="8" description="Fav">
+						<visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfPictures.8.Path))</visible>
+						<label>$INFO[Skin.String(ShelfPictures.8.Label)]</label>
+						<thumb>$INFO[Skin.String(ShelfPictures.8.Icon)]</thumb>
+						<onclick>$INFO[Skin.String(ShelfPictures.8.Path)]</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">eight</property>
+					</item>
+					<item id="9" description="Fav">
+						<visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfPictures.9.Path))</visible>
+						<label>$INFO[Skin.String(ShelfPictures.9.Label)]</label>
+						<thumb>$INFO[Skin.String(ShelfPictures.9.Icon)]</thumb>
+						<onclick>$INFO[Skin.String(ShelfPictures.9.Path)]</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">nine</property>
+					</item>
+					<item id="10" description="Fav">
+						<visible>Skin.HasSetting(PicturesShelf_Custom)</visible>
+						<visible>!IsEmpty(Skin.String(ShelfPictures.10.Path))</visible>
+						<label>$INFO[Skin.String(ShelfPictures.10.Label)]</label>
+						<thumb>$INFO[Skin.String(ShelfPictures.10.Icon)]</thumb>
+						<onclick>$INFO[Skin.String(ShelfPictures.10.Path)]</onclick>
+						<property name="ItemType">$LOCALIZE[111]</property>
+						<property name="CheckPosition">ten</property>
+					</item>
 				</content>
 			</control>
-			
+
 			<control type="group" description="Icons: Not OnScroll">
 				<posy>RA_IconSquare_PosY</posy>
 				<visible>!Container(314).OnScrollNext + !Container(314).OnScrollPrevious + Control.HasFocus(314)</visible>
@@ -5255,7 +5676,7 @@
 				<animation type="Visible" condition="!Control.IsVisible(327) + !Control.IsVisible(328)">
 					<effect type="fade" start="0" end="100" time="0"/>
 				</animation>
-				
+
 				<control type="group" description="Item (-1) rotated">
 					<posx>RA_IconSquare1_PosX</posx>
 					<visible>Container(314).HasPrevious</visible>
@@ -5345,7 +5766,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[Container(314).ListItem(0).Label]</label>
-						<visible>Control.HasFocus(314) + Container(314).Position(0) + [!Player.HasAudio	| [Player.HasAudio + Container(314).HasPrevious]]</visible>
+						<visible>Control.HasFocus(314) + Container(314).Position(0) + [!Player.HasAudio | [Player.HasAudio + Container(314).HasPrevious]]</visible>
 						<animation effect="fade" start="0" end="100" time="75" delay="75">Visible</animation>
 					</control>
 					<control type="label" description="Artist Name">
@@ -5527,12 +5948,12 @@
 			<control type="group" description="Icons: OnScrollNext">
 				<posy>RA_IconSquare_PosY</posy>
 				<visible>Control.IsVisible(314)</visible>
-				
+
 				<control type="group" description="Item (-1r --> -2r)">
 					<posx>RA_IconSquare1_PosX</posx>
-					<visible>Container(314).HasPrevious + Container(314).OnScrollNext + 
-						[Player.HasAudio + !stringcompare(Container(314).Listitem(-5).Property(CheckNowPlaying),*.*) |
-						[!Player.HasAudio + !stringcompare(Container(314).Listitem(-5).Property(CheckPosition),one) +
+					<visible>Container(314).HasPrevious + Container(314).OnScrollNext + [Player.HasAudio +
+						!stringcompare(Container(314).Listitem(-5).Property(CheckNowPlaying),*.*) | [!Player.HasAudio +
+						!stringcompare(Container(314).Listitem(-5).Property(CheckPosition),one) +
 						!stringcompare(Container(314).Listitem(-5).Property(CheckPosition),eleven)]]</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
@@ -5594,7 +6015,7 @@
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
 						<height>RA_IconSquare_Height</height>
-						<aspectratio>scale</aspectratio>						
+						<aspectratio>scale</aspectratio>
 						<texture>home_recentlyadded/Square_Dim.png</texture>
 						<visible>Container(314).OnScrollNext</visible>
 						<animation type="Hidden" reversible="false">
@@ -5686,7 +6107,7 @@
 			<control type="group" description="Icons: OnScrollPrevious">
 				<posy>RA_IconSquare_PosY</posy>
 				<visible>Control.IsVisible(314)</visible>
-				
+
 				<control type="group" description="Item (-2r --> -1r)">
 					<posx>RA_IconSquare1_PosX</posx>
 					<visible>Container(314).HasPrevious + Container(314).OnScrollPrevious</visible>
@@ -5739,9 +6160,9 @@
 				</control>
 				<control type="group" description="Item (5r --> 6r)">
 					<posx>RA_IconSquare7_PosX</posx>
-					<visible>Container(314).HasNext + Container(314).OnScrollPrevious + 
-						[Player.HasAudio + !stringcompare(Container(314).Listitem(6).Property(CheckNowPlaying),*.*) |
-						[!Player.HasAudio + !stringcompare(Container(314).Listitem(6).Property(CheckPosition),one) +
+					<visible>Container(314).HasNext + Container(314).OnScrollPrevious + [Player.HasAudio +
+						!stringcompare(Container(314).Listitem(6).Property(CheckNowPlaying),*.*) | [!Player.HasAudio +
+						!stringcompare(Container(314).Listitem(6).Property(CheckPosition),one) +
 						!stringcompare(Container(314).Listitem(6).Property(CheckPosition),eleven)]]</visible>
 					<camera x="1777" y="143"/>
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
@@ -5844,7 +6265,7 @@
 			</control>
 			<control type="group" description="Icons: VisibleChange Animation">
 				<posy>RA_IconSquare_PosY</posy>
-				
+
 				<control type="group" description="Item (-1) rotated">
 					<posx>RA_IconSquare1_PosX</posx>
 					<visible>Container(314).HasPrevious + Control.HasFocus(304)</visible>
@@ -6071,7 +6492,7 @@
 						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[PictureIcon_4]</texture>
 					</control>
 				</control>
-				
+
 				<control type="group" description="Item (-1) rotated">
 					<posx>RA_IconSquare1_PosX</posx>
 					<visible>Container(314).HasPrevious + Control.HasFocus(304)</visible>
@@ -6272,10 +6693,10 @@
 						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[PictureIcon_0]</texture>
 					</control>
 				</control>
-				
+
 			</control>
 
-		
+
 			<control type="image" description="Picture Focuser">
 				<posx>87</posx>
 				<posy>73</posy>
@@ -6307,7 +6728,7 @@
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
-				
+
 				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
@@ -6326,7 +6747,8 @@
 				<textcolor>Shelf_Headline</textcolor>
 				<label>31023</label>
 				<visible>Player.HasAudio + [Control.HasFocus(304) | Control.HasFocus(314)]</visible>
-				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(314).HasPrevious" tween="sine" easing="inout">Conditional</animation>
+				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(314).HasPrevious" tween="sine" easing="inout"
+					>Conditional</animation>
 				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
@@ -6334,7 +6756,7 @@
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
-				
+
 				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
@@ -6351,9 +6773,10 @@
 				<height>214</height>
 				<texture>home_recentlyadded/RecentlyAdded_Seperator.png</texture>
 				<aspectratio>scale</aspectratio>
-<!--				<animation effect="slide" start="-351,0" time="ShelfScroll_AnimationTime" tween="sine" easing="inout">Visible</animation>
+				<!--				<animation effect="slide" start="-351,0" time="ShelfScroll_AnimationTime" tween="sine" easing="inout">Visible</animation>
 				<animation effect="slide" end="-351,0" time="ShelfScroll_AnimationTime" tween="sine" easing="inout">Hidden</animation>-->
-				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(314).HasPrevious" tween="sine" easing="inout">Conditional</animation>
+				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(314).HasPrevious" tween="sine" easing="inout"
+					>Conditional</animation>
 				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
@@ -6361,7 +6784,7 @@
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
-				
+
 				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
