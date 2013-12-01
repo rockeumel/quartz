@@ -2987,7 +2987,6 @@
 			</control>
 			<control type="group" description="Icons: VisibleChange Animation">
 				<posy>RA_IconSquare_PosY</posy>
-				<visible>false</visible>
 
 				<control type="group" description="Item (-1) rotated">
 					<posx>RA_IconSquare1_PosX</posx>
@@ -3418,6 +3417,7 @@
 			</control>
 			<control type="group" description="Icons: VisibleChange Animation">
 				<posy>RA_IconSquare_PosY</posy>
+				<visible>false</visible>
 
 				<control type="group" description="Item (-1) rotated">
 					<posx>RA_IconSquare1_PosX</posx>

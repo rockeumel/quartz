@@ -35,8 +35,8 @@
 		<include>Home_Background</include>
 		<control type="button" id="8998" description="Fix ATV1 focus bug">
 			<include>HiddenButton</include>
-			<onfocus>Control.SetFocus(9000)</onfocus>
-			<onclick>Control.SetFocus(9000)</onclick>
+			<onfocus>Control.SetFocus(301)</onfocus>
+			<onclick>Control.SetFocus(301)</onclick>
 		</control>
 		<control type="label" description="debug label">
 			<label>$INFO[Container(310).NumItems] - $INFO[Skin.String(NumberOfMenuitems)]</label>
