@@ -12,6 +12,8 @@
 	312 - Shelf Tv Shows
 	313 - Shelf Music
 	314 - Shelf Pictures
+	315 - reserved for Shelf Addons
+	316 - reserved for Shelf Xbmc
 	
 	317 - Shelf VisibleChange Indicator Movies
 	318 - Shelf VisibleChange Indicator Pictures
@@ -38,20 +40,6 @@
 			<onfocus>Control.SetFocus(301)</onfocus>
 			<onclick>Control.SetFocus(301)</onclick>
 		</control>
-		<control type="label" description="debug label">
-			<label>$INFO[Container(310).NumItems] - $INFO[Skin.String(NumberOfMenuitems)]</label>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1500</width>
-			<height>87</height>
-			<font>Font_HomeNav</font>
-			<shadowcolor>ff000000</shadowcolor>
-			<scroll>false</scroll>
-			<align>left</align>
-			<aligny>center</aligny>
-			<textcolor>HomeNavSelected</textcolor>
-			<!--<visible>false</visible>-->
-		</control>
 
 		<!-- Home Navigation & Shelf -->
 		<include condition="!Skin.HasSetting(MoviesSectionHide)">HomeShelf_Movies</include>
@@ -62,10 +50,5 @@
 		<include>HomeShelf_XBMC</include>
 
 		<include>Home_Menu</include>
-
-		<!-- Time, Date, RSS and Debug Grid -->
-		<!--<include>Global_TimeDate</include>
-		<include>Global_RSS</include>-->
-
 	</controls>
 </window>
