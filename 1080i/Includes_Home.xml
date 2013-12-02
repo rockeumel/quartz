@@ -1289,11 +1289,11 @@
 				<width>300</width>
 				<height>420</height>
 				<control type="list" id="301">
-					<animation type="Conditional" condition="!ControlGroup(9000).HasFocus(301)">
-						<effect type="fade" start="100" end="0" time="0" reversible="false"/>
+					<animation type="Conditional" condition="!Control.HasFocus(301)">
+						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
-					<animation type="Conditional" condition="ControlGroup(9000).HasFocus(301)">
-						<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false"/>
+					<animation type="Conditional" condition="Control.HasFocus(301)">
+						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 					</animation>
 					<animation type="Conditional" condition="Control.HasFocus(311)">
 						<effect type="fade" start="100" end="60" time="100" reversible="true"/>
@@ -1417,11 +1417,11 @@
 				<width>300</width>
 				<height>420</height>
 				<control type="list" id="302">
-					<animation type="Conditional" condition="!ControlGroup(9000).HasFocus(302)">
-						<effect type="fade" start="100" end="0" time="0" reversible="false"/>
+					<animation type="Conditional" condition="!Control.HasFocus(302)">
+						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
-					<animation type="Conditional" condition="ControlGroup(9000).HasFocus(302)">
-						<effect type="fade" start="0" end="100" time="150" delay="250"
+					<animation type="Conditional" condition="Control.HasFocus(302)">
+						<effect type="fade" start="0" end="100" time="150" delay="180"
 							reversible="false"/>
 					</animation>
 					<animation type="Conditional" condition="Control.HasFocus(312)">
@@ -1544,11 +1544,11 @@
 				<width>300</width>
 				<height>420</height>
 				<control type="list" id="303">
-					<animation type="Conditional" condition="!ControlGroup(9000).HasFocus(303)">
-						<effect type="fade" start="100" end="0" time="0" reversible="false"/>
+					<animation type="Conditional" condition="!Control.HasFocus(303)">
+						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
-					<animation type="Conditional" condition="ControlGroup(9000).HasFocus(303)">
-						<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false"/>
+					<animation type="Conditional" condition="Control.HasFocus(303)">
+						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 					</animation>
 					<animation type="Conditional" condition="Control.HasFocus(313)">
 						<effect type="fade" start="100" end="60" time="100" reversible="true"/>
@@ -1671,11 +1671,11 @@
 				<width>300</width>
 				<height>420</height>
 				<control type="list" id="304">
-					<animation type="Conditional" condition="!ControlGroup(9000).HasFocus(304)">
-						<effect type="fade" start="100" end="0" time="0" reversible="false"/>
+					<animation type="Conditional" condition="!Control.HasFocus(304)">
+						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
-					<animation type="Conditional" condition="ControlGroup(9000).HasFocus(304)">
-						<effect type="fade" start="0" end="100" time="150" delay="250"
+					<animation type="Conditional" condition="Control.HasFocus(304)">
+						<effect type="fade" start="0" end="100" time="150" delay="180"
 							reversible="false"/>
 					</animation>
 					<animation type="Conditional" condition="Control.HasFocus(314)">
@@ -1773,11 +1773,11 @@
 				<width>300</width>
 				<height>420</height>
 				<control type="list" id="305">
-					<animation type="Conditional" condition="!ControlGroup(9000).HasFocus(305)">
-						<effect type="fade" start="100" end="0" time="0" reversible="false"/>
+					<animation type="Conditional" condition="!Control.HasFocus(305)">
+						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
-					<animation type="Conditional" condition="ControlGroup(9000).HasFocus(305)">
-						<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false"/>
+					<animation type="Conditional" condition="Control.HasFocus(305)">
+						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 					</animation>
 					<animation type="Conditional" condition="Control.HasFocus(315)">
 						<effect type="fade" start="100" end="60" time="100" reversible="true"/>
@@ -1899,11 +1899,11 @@
 				<width>300</width>
 				<height>420</height>
 				<control type="list" id="306">
-					<animation type="Conditional" condition="!ControlGroup(9000).HasFocus(306)">
-						<effect type="fade" start="100" end="0" time="0" reversible="false"/>
+					<animation type="Conditional" condition="!Control.HasFocus(306)">
+						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
-					<animation type="Conditional" condition="ControlGroup(9000).HasFocus(306)">
-						<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false"/>
+					<animation type="Conditional" condition="Control.HasFocus(306)">
+						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 					</animation>
 					<width>300</width>
 					<height>420</height>
@@ -2045,10 +2045,10 @@
 			<control type="image" description="Movie Menu Slider">
 				<visible>!Skin.HasSetting(MoviesSectionHide)</visible>
 				<animation type="Conditional" condition="!Control.HasFocus(301)">
-					<effect type="fade" start="100" end="0" time="0" reversible="false"/>
+					<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 				</animation>
 				<animation type="Conditional" condition="Control.HasFocus(301)">
-					<effect type="fade" start="0" end="100" time="150" reversible="false"/>
+					<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 				</animation>
 				<width>330</width>
 				<height>132</height>
@@ -2064,10 +2064,10 @@
 			<control type="image" description="TvShows Menu Slider">
 				<visible>!Skin.HasSetting(TVSectionHide)</visible>
 				<animation type="Conditional" condition="!Control.HasFocus(302)">
-					<effect type="fade" start="100" end="0" time="0" reversible="false"/>
+					<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 				</animation>
 				<animation type="Conditional" condition="Control.HasFocus(302)">
-					<effect type="fade" start="0" end="100" time="150" reversible="false"/>
+					<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 				</animation>
 				<width>330</width>
 				<height>132</height>
@@ -2083,10 +2083,10 @@
 			<control type="image" description="Music Menu Slider">
 				<visible>!Skin.HasSetting(MusicSectionHide)</visible>
 				<animation type="Conditional" condition="!Control.HasFocus(303)">
-					<effect type="fade" start="100" end="0" time="0" reversible="false"/>
+					<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 				</animation>
 				<animation type="Conditional" condition="Control.HasFocus(303)">
-					<effect type="fade" start="0" end="100" time="150" reversible="false"/>
+					<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 				</animation>
 				<width>330</width>
 				<height>132</height>
@@ -2102,10 +2102,10 @@
 			<control type="image" description="Pictures Menu Slider">
 				<visible>!Skin.HasSetting(PicturesSectionHide)</visible>
 				<animation type="Conditional" condition="!Control.HasFocus(304)">
-					<effect type="fade" start="100" end="0" time="0" reversible="false"/>
+					<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 				</animation>
 				<animation type="Conditional" condition="Control.HasFocus(304)">
-					<effect type="fade" start="0" end="100" time="150" reversible="false"/>
+					<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 				</animation>
 				<width>330</width>
 				<height>132</height>
@@ -2121,10 +2121,10 @@
 			<control type="image" description="Addons Menu Slider">
 				<visible>!Skin.HasSetting(AddonsSectionHide)</visible>
 				<animation type="Conditional" condition="!Control.HasFocus(305)">
-					<effect type="fade" start="100" end="0" time="0" reversible="false"/>
+					<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 				</animation>
 				<animation type="Conditional" condition="Control.HasFocus(305)">
-					<effect type="fade" start="0" end="100" time="150" reversible="false"/>
+					<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 				</animation>
 				<width>330</width>
 				<height>132</height>
@@ -2139,10 +2139,10 @@
 			</control>
 			<control type="image" description="Xbmc Menu Slider">
 				<animation type="Conditional" condition="!Control.HasFocus(306)">
-					<effect type="fade" start="100" end="0" time="0" reversible="false"/>
+					<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 				</animation>
 				<animation type="Conditional" condition="Control.HasFocus(306)">
-					<effect type="fade" start="0" end="100" time="150" reversible="false"/>
+					<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 				</animation>
 				<width>330</width>
 				<height>132</height>

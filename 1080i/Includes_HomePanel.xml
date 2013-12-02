@@ -1485,7 +1485,7 @@
 					<visible>Control.HasFocus(301) + [!Player.HasAudio | [Player.HasAudio + Container(311).HasPrevious]]</visible>
 					<posx>RA_IconPoster2_PosX</posx>
 					<camera x="-108" y="265"/>
-					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !!StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-333,0"/>
 						<effect type="slide" time="0" start="0,0" end="333,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="333,0" start="0" end="-45"/>
