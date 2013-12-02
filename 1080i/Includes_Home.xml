@@ -1300,11 +1300,9 @@
 					</animation>
 					<width>300</width>
 					<height>420</height>
-					<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
-					<onright>Skin.Reset(HomeMenuDirection)</onright>
-					<onup>Skin.SetBool(HomeTVupdown)</onup>
-					<onleft>Skin.Reset(HomeTVupdown)</onleft>
-					<onright>Skin.Reset(HomeTVupdown)</onright>
+					<onleft>SetProperty(HomeMenuDirection,left)</onleft>
+					<onright>SetProperty(HomeMenuDirection,right)</onright>
+					<onup>SetProperty(HomeMenuDirection,up)</onup>
 					<onup>311</onup>
 					<ondown>301</ondown>
 					<onleft>306</onleft>
@@ -1435,11 +1433,9 @@
 					<ondown>302</ondown>
 					<onleft>301</onleft>
 					<onright>303</onright>
-					<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
-					<onright>Skin.Reset(HomeMenuDirection)</onright>
-					<onup>Skin.SetBool(HomeTVupdown)</onup>
-					<onleft>Skin.Reset(HomeTVupdown)</onleft>
-					<onright>Skin.Reset(HomeTVupdown)</onright>
+					<onleft>SetProperty(HomeMenuDirection,left)</onleft>
+					<onright>SetProperty(HomeMenuDirection,right)</onright>
+					<onup>SetProperty(HomeMenuDirection,up)</onup>
 					<focusposition>3</focusposition>
 					<movement>3</movement>
 					<!-- Unselected Items -->
@@ -1563,11 +1559,9 @@
 					<ondown>303</ondown>
 					<onleft>302</onleft>
 					<onright>304</onright>
-					<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
-					<onright>Skin.Reset(HomeMenuDirection)</onright>
-					<onup>Skin.SetBool(HomeTVupdown)</onup>
-					<onleft>Skin.Reset(HomeTVupdown)</onleft>
-					<onright>Skin.Reset(HomeTVupdown)</onright>
+					<onleft>SetProperty(HomeMenuDirection,left)</onleft>
+					<onright>SetProperty(HomeMenuDirection,right)</onright>
+					<onup>SetProperty(HomeMenuDirection,up)</onup>
 					<focusposition>3</focusposition>
 					<movement>3</movement>
 					<!-- Unselected Items -->
@@ -1693,11 +1687,9 @@
 					<ondown>304</ondown>
 					<onleft>303</onleft>
 					<onright>305</onright>
-					<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
-					<onright>Skin.Reset(HomeMenuDirection)</onright>
-					<onup>Skin.SetBool(HomeTVupdown)</onup>
-					<onleft>Skin.Reset(HomeTVupdown)</onleft>
-					<onright>Skin.Reset(HomeTVupdown)</onright>
+					<onleft>SetProperty(HomeMenuDirection,left)</onleft>
+					<onright>SetProperty(HomeMenuDirection,right)</onright>
+					<onup>SetProperty(HomeMenuDirection,up)</onup>
 					<focusposition>3</focusposition>
 					<movement>3</movement>
 					<!-- Unselected Items -->
@@ -1796,11 +1788,9 @@
 					<ondown>305</ondown>
 					<onleft>304</onleft>
 					<onright>306</onright>
-					<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
-					<onright>Skin.Reset(HomeMenuDirection)</onright>
-					<onup>Skin.SetBool(HomeTVupdown)</onup>
-					<onleft>Skin.Reset(HomeTVupdown)</onleft>
-					<onright>Skin.Reset(HomeTVupdown)</onright>
+					<onleft>SetProperty(HomeMenuDirection,left)</onleft>
+					<onright>SetProperty(HomeMenuDirection,right)</onright>
+					<onup>SetProperty(HomeMenuDirection,up)</onup>
 					<focusposition>3</focusposition>
 					<movement>3</movement>
 					<!-- Unselected Items -->
@@ -1921,11 +1911,9 @@
 					<ondown>306</ondown>
 					<onleft>305</onleft>
 					<onright>301</onright>
-					<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
-					<onright>Skin.Reset(HomeMenuDirection)</onright>
-					<onup>Skin.SetBool(HomeTVupdown)</onup>
-					<onleft>Skin.Reset(HomeTVupdown)</onleft>
-					<onright>Skin.Reset(HomeTVupdown)</onright>
+					<onleft>SetProperty(HomeMenuDirection,left)</onleft>
+					<onright>SetProperty(HomeMenuDirection,right)</onright>
+					<onup>SetProperty(HomeMenuDirection,up)</onup>
 					<focusposition>3</focusposition>
 					<movement>3</movement>
 					<!-- Unselected Items -->
