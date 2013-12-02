@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<constant name="ShelfScroll_AnimationTime">250</constant>
-	<constant name="VisibleChange_AnimationTime">250</constant>
+	<constant name="VisibleChange_AnimationTime">350</constant>
 	<!-- =============================== -->
 	<!-- ###  Poster Icon Dimensions ### -->
 	<!-- =============================== -->
@@ -400,7 +400,7 @@
 				<width>1</width>
 				<height>1</height>
 				<label>-</label>
-				<visible>!Control.HasFocus(301) + !Skin.HasSetting(HomeTVupdown)</visible>
+				<visible>!Control.HasFocus(301) + !StringCompare(Window().Property(HomeMenuDirection),up)</visible>
 				<animation type="Visible" reversible="false">
 					<effect type="fade" time="VisibleChange_AnimationTime" start="0" end="100"/>
 				</animation>
@@ -1391,14 +1391,14 @@
 					<visible>Container(311).HasPrevious + !Player.HasAudio + Control.HasFocus(301)</visible>
 					<camera x="108" y="162"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-40" end="-40">Conditional</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-216" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-216,0"/>
 						<effect type="slide" time="0" start="0,0" end="216,0" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Movie Icon">
@@ -1423,14 +1423,14 @@
 					<visible>Container(311).HasPrevious + Player.HasAudio + Control.HasFocus(301)</visible>
 					<camera x="143" y="162"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-40" end="-40">Conditional</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-286" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-286,0"/>
 						<effect type="slide" time="0" start="0,0" end="286,0" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Now Playing Icon">
@@ -1455,13 +1455,13 @@
 					<visible>Container(311).HasNext + Control.HasFocus(301)</visible>
 					<camera x="1812" y="162"/>
 					<animation effect="rotatey" center="1920" start="40" end="40" time="0" condition="true">Conditional</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="150" start="100" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Movie Icon">
@@ -1485,17 +1485,17 @@
 					<visible>Control.HasFocus(301) + [!Player.HasAudio | [Player.HasAudio + Container(311).HasPrevious]]</visible>
 					<posx>RA_IconPoster2_PosX</posx>
 					<camera x="-108" y="265"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-333,0"/>
 						<effect type="slide" time="0" start="0,0" end="333,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="333,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="333,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-333" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="333,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Movie Icon">
@@ -1512,17 +1512,17 @@
 					<visible>Control.HasFocus(301) + !Container(311).HasPrevious + Player.HasAudio</visible>
 					<posx>82</posx>
 					<camera x="-143" y="246"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-368,0"/>
 						<effect type="slide" time="0" start="0,0" end="368,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="368,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="368,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-368" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="368,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Now Playing Icon">
@@ -1563,17 +1563,17 @@
 					<visible>IntegerGreaterThan(Container(311).NumItems,1) + Control.HasFocus(301)</visible>
 					<posx>RA_IconPoster3_PosX</posx>
 					<camera x="-108" y="265"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-627,0"/>
 						<effect type="slide" time="0" start="0,0" end="627,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="627,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="627,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-627" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="627,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Movie Icon">
@@ -1590,17 +1590,17 @@
 					<visible>IntegerGreaterThan(Container(311).NumItems,2) + Control.HasFocus(301)</visible>
 					<posx>RA_IconPoster4_PosX</posx>
 					<camera x="-108" y="265"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-921,0"/>
 						<effect type="slide" time="0" start="0,0" end="921,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="921,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="921,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-921" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="921,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Movie Icon">
@@ -1617,17 +1617,17 @@
 					<visible>IntegerGreaterThan(Container(311).NumItems,3) + Control.HasFocus(301)</visible>
 					<posx>RA_IconPoster5_PosX</posx>
 					<camera x="-108" y="265"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1215,0"/>
 						<effect type="slide" time="0" start="0,0" end="1215,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1215,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="1215,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-1215" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1215,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Movie Icon">
@@ -1644,17 +1644,17 @@
 					<visible>IntegerGreaterThan(Container(311).NumItems,4) + Control.HasFocus(301)</visible>
 					<posx>RA_IconPoster6_PosX</posx>
 					<camera x="-108" y="265"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1509,0"/>
 						<effect type="slide" time="0" start="0,0" end="1509,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1509,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="1509,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-1509" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1509,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Movie Icon">
@@ -1671,17 +1671,17 @@
 					<visible>IntegerGreaterThan(Container(311).NumItems,5) + Control.HasFocus(301)</visible>
 					<posx>RA_IconPoster7_PosX</posx>
 					<camera x="-108" y="265"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1803,0"/>
 						<effect type="slide" time="0" start="0,0" end="1803,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1803,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="1803,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-1803" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1803,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Movie Icon">
@@ -1700,13 +1700,13 @@
 					<visible>Container(311).HasPrevious + !Player.HasAudio + Control.HasFocus(301)</visible>
 					<camera x="108" y="162"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-40" end="-40">Conditional</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="150" start="100" end="0"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Movie Icon">
@@ -1733,13 +1733,13 @@
 					<visible>Container(311).HasPrevious + Player.HasAudio + Control.HasFocus(301)</visible>
 					<camera x="143" y="162"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-40" end="-40">Conditional</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="150" start="100" end="0"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Now Playing Icon">
@@ -1770,14 +1770,14 @@
 					<visible>Container(311).HasNext + Control.HasFocus(301)</visible>
 					<camera x="1812" y="162"/>
 					<animation effect="rotatey" center="1920" start="40" end="40" time="0" condition="true">Conditional</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="216" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="216,0"/>
 						<effect type="slide" time="0" start="0,0" end="-216,0" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Movie Icon">
@@ -1800,17 +1800,17 @@
 					<visible>IntegerGreaterThan(Container(311).NumItems,5) + Control.HasFocus(301)</visible>
 					<posx>RA_IconPoster7_PosX</posx>
 					<camera x="2028" y="265"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="333" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1587" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="333,0"/>
 						<effect type="slide" time="0" start="0,0" end="-333,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1587" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="1587" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Movie Icon">
@@ -1826,17 +1826,17 @@
 					<visible>IntegerGreaterThan(Container(311).NumItems,4) + Control.HasFocus(301)</visible>
 					<posx>RA_IconPoster6_PosX</posx>
 					<camera x="2028" y="265"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="627" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1293" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="627,0"/>
 						<effect type="slide" time="0" start="0,0" end="-627,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1293" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="1293" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Movie Icon">
@@ -1852,17 +1852,17 @@
 					<visible>IntegerGreaterThan(Container(311).NumItems,3) + Control.HasFocus(301)</visible>
 					<posx>RA_IconPoster5_PosX</posx>
 					<camera x="2028" y="265"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="921" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="999" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="921,0"/>
 						<effect type="slide" time="0" start="0,0" end="-921,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="999" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="999" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Movie Icon">
@@ -1878,17 +1878,17 @@
 					<visible>IntegerGreaterThan(Container(311).NumItems,2) + Control.HasFocus(301)</visible>
 					<posx>RA_IconPoster4_PosX</posx>
 					<camera x="2028" y="265"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="1215" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="705" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1215,0"/>
 						<effect type="slide" time="0" start="0,0" end="-1215,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="705" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="705" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Movie Icon">
@@ -1904,17 +1904,17 @@
 					<visible>IntegerGreaterThan(Container(311).NumItems,1) + Control.HasFocus(301)</visible>
 					<posx>RA_IconPoster3_PosX</posx>
 					<camera x="2028" y="265"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="1509" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="411" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1509,0"/>
 						<effect type="slide" time="0" start="0,0" end="-1509,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="411" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="411" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Movie Icon">
@@ -1930,17 +1930,17 @@
 					<visible>Control.HasFocus(301) + [!Player.HasAudio | [Player.HasAudio + Container(311).HasPrevious]]</visible>
 					<posx>RA_IconPoster2_PosX</posx>
 					<camera x="2028" y="265"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="117" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 						<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="117" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="117" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Movie Icon">
@@ -1956,17 +1956,17 @@
 					<visible>Control.HasFocus(301) + !Container(311).HasPrevious + Player.HasAudio</visible>
 					<posx>82</posx>
 					<camera x="2063" y="265"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="1838" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="82" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1838,0"/>
 						<effect type="slide" time="0" start="0,0" end="-1838,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="82" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="82" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Now Playing Icon">
@@ -2044,18 +2044,18 @@
 				<label>$LOCALIZE[20386]</label>
 				<animation effect="slide" start="0,0" end="293,0" time="ShelfScroll_AnimationTime" condition="Player.HasAudio + !Container(311).HasPrevious" tween="sine"
 					easing="inout">Conditional</animation>
-				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 
-				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
@@ -2072,18 +2072,18 @@
 				<label>$LOCALIZE[111]</label>
 				<animation effect="slide" start="0,0" end="351,0" time="ShelfScroll_AnimationTime" condition="Player.HasAudio + !Container(311).HasPrevious" tween="sine"
 					easing="inout">Conditional</animation>
-				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 
-				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
@@ -2100,18 +2100,18 @@
 				<label>31023</label>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(311).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
-				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 
-				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
@@ -2127,18 +2127,18 @@
 				<aspectratio>scale</aspectratio>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(311).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
-				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 
-				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
@@ -2157,7 +2157,7 @@
 				<width>1</width>
 				<height>1</height>
 				<label>-</label>
-				<visible>!Control.HasFocus(302) + !Skin.HasSetting(HomeTVupdown)</visible>
+				<visible>!Control.HasFocus(302) + !StringCompare(Window().Property(HomeMenuDirection),up)</visible>
 				<animation type="Visible" reversible="false">
 					<effect type="fade" time="VisibleChange_AnimationTime" start="0" end="100"/>
 				</animation>
@@ -2993,14 +2993,14 @@
 					<visible>Container(312).HasPrevious + Control.HasFocus(302)</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-286" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-286,0"/>
 						<effect type="slide" time="0" start="0,0" end="286,0" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Episode Icon">
@@ -3024,13 +3024,13 @@
 					<visible>Container(312).HasNext + Control.HasFocus(302)</visible>
 					<camera x="1777" y="143"/>
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="150" start="100" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Episode Icon">
@@ -3053,17 +3053,17 @@
 					<visible>Control.HasFocus(302)</visible>
 					<posx>RA_IconSquare2_PosX</posx>
 					<camera x="-143" y="246"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 						<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="403,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="403,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="403,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Episode Icon">
@@ -3108,17 +3108,17 @@
 					<visible>IntegerGreaterThan(Container(312).NumItems,1) + Control.HasFocus(302)</visible>
 					<posx>RA_IconSquare3_PosX</posx>
 					<camera x="-143" y="246"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-753,0"/>
 						<effect type="slide" time="0" start="0,0" end="753,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="753,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="753,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-753" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="753,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Episode Icon">
@@ -3135,17 +3135,17 @@
 					<visible>IntegerGreaterThan(Container(312).NumItems,2) + Control.HasFocus(302)</visible>
 					<posx>RA_IconSquare4_PosX</posx>
 					<camera x="-143" y="246"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1103,0"/>
 						<effect type="slide" time="0" start="0,0" end="1103,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1103,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="1103,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-1103" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1103,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Episode Icon">
@@ -3162,17 +3162,17 @@
 					<visible>IntegerGreaterThan(Container(312).NumItems,3) + Control.HasFocus(302)</visible>
 					<posx>RA_IconSquare5_PosX</posx>
 					<camera x="-143" y="246"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1433,0"/>
 						<effect type="slide" time="0" start="0,0" end="1433,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1433,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="1433,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-1433" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1433,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Episode Icon">
@@ -3189,17 +3189,17 @@
 					<visible>IntegerGreaterThan(Container(312).NumItems,4) + Control.HasFocus(302)</visible>
 					<posx>RA_IconSquare6_PosX</posx>
 					<camera x="-143" y="246"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1803,0"/>
 						<effect type="slide" time="0" start="0,0" end="1803,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1803,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="1803,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-1803" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1803,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Episode Icon">
@@ -3218,13 +3218,13 @@
 					<visible>Container(312).HasPrevious + Control.HasFocus(302)</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="150" start="100" end="0"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Episode Icon">
@@ -3247,14 +3247,14 @@
 					<visible>Container(312).HasNext + Control.HasFocus(302)</visible>
 					<camera x="1777" y="143"/>
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="286" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="286,0"/>
 						<effect type="slide" time="0" start="0,0" end="-286,0" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Episode Icon">
@@ -3278,17 +3278,17 @@
 					<width>286</width>
 					<height>400</height>
 					<camera x="2063" y="246"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="403" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1517" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="403,0"/>
 						<effect type="slide" time="0" start="0,0" end="-403,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1517" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="1517" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Episode Icon">
@@ -3306,17 +3306,17 @@
 					<width>286</width>
 					<height>400</height>
 					<camera x="2063" y="246"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="753" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1167" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="753,0"/>
 						<effect type="slide" time="0" start="0,0" end="-753,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1167" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="1167" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Episode Icon">
@@ -3334,17 +3334,17 @@
 					<width>286</width>
 					<height>400</height>
 					<camera x="2063" y="246"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="1103" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="817" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1103,0"/>
 						<effect type="slide" time="0" start="0,0" end="-1103,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="817" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="817" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Episode Icon">
@@ -3362,17 +3362,17 @@
 					<width>286</width>
 					<height>400</height>
 					<camera x="2063" y="246"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="1443" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="467" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1443,0"/>
 						<effect type="slide" time="0" start="0,0" end="-1443,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="467" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="467" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Episode Icon">
@@ -3391,14 +3391,14 @@
 					<width>286</width>
 					<height>400</height>
 					<camera x="2063" y="246"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="117" start="45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 						<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="117" start="0" end="45" tween="quadratic" easing="in"/>
@@ -3871,18 +3871,18 @@
 				<label>$LOCALIZE[20387]</label>
 				<animation effect="slide" start="0,0" end="351,0" time="ShelfScroll_AnimationTime" condition="Player.HasAudio + !Container(312).HasPrevious" tween="sine"
 					easing="inout">Conditional</animation>
-				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 
-				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
@@ -3898,18 +3898,18 @@
 				<label>$LOCALIZE[111]</label>
 				<animation effect="slide" start="0,0" end="351,0" time="ShelfScroll_AnimationTime" condition="Player.HasAudio + !Container(312).HasPrevious" tween="sine"
 					easing="inout">Conditional</animation>
-				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 
-				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
@@ -3925,18 +3925,18 @@
 				<label>31023</label>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(312).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
-				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 
-				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
@@ -3951,18 +3951,18 @@
 				<aspectratio>scale</aspectratio>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(312).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
-				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 
-				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
@@ -3980,7 +3980,7 @@
 				<width>1</width>
 				<height>1</height>
 				<label>-</label>
-				<visible>!Control.HasFocus(303) + !Skin.HasSetting(HomeTVupdown)</visible>
+				<visible>!Control.HasFocus(303) + !StringCompare(Window().Property(HomeMenuDirection),up)</visible>
 				<animation type="Hidden" reversible="false">
 					<effect type="fade" time="VisibleChange_AnimationTime" start="100" end="0"/>
 				</animation>
@@ -4988,14 +4988,14 @@
 					<visible>Container(313).HasPrevious + Control.HasFocus(303)</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-286" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-286,0"/>
 						<effect type="slide" time="0" start="0,0" end="286,0" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Album Icon">
@@ -5019,13 +5019,13 @@
 					<visible>Container(313).HasNext + Control.HasFocus(303)</visible>
 					<camera x="1777" y="143"/>
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="150" start="100" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Album Icon">
@@ -5048,17 +5048,17 @@
 					<visible>Control.HasFocus(303)</visible>
 					<posx>RA_IconSquare2_PosX</posx>
 					<camera x="-143" y="246"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 						<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="403,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="403,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="403,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Album Icon">
@@ -5103,17 +5103,17 @@
 					<visible>IntegerGreaterThan(Container(313).NumItems,1) + Control.HasFocus(303)</visible>
 					<posx>RA_IconSquare3_PosX</posx>
 					<camera x="-143" y="246"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-753,0"/>
 						<effect type="slide" time="0" start="0,0" end="753,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="753,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="753,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-753" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="753,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Album Icon">
@@ -5130,17 +5130,17 @@
 					<visible>IntegerGreaterThan(Container(313).NumItems,2) + Control.HasFocus(303)</visible>
 					<posx>RA_IconSquare4_PosX</posx>
 					<camera x="-143" y="246"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1103,0"/>
 						<effect type="slide" time="0" start="0,0" end="1103,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1103,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="1103,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-1103" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1103,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Album Icon">
@@ -5157,17 +5157,17 @@
 					<visible>IntegerGreaterThan(Container(313).NumItems,3) + Control.HasFocus(303)</visible>
 					<posx>RA_IconSquare5_PosX</posx>
 					<camera x="-143" y="246"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1433,0"/>
 						<effect type="slide" time="0" start="0,0" end="1433,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1433,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="1433,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-1433" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1433,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Album Icon">
@@ -5184,17 +5184,17 @@
 					<visible>IntegerGreaterThan(Container(313).NumItems,4) + Control.HasFocus(303)</visible>
 					<posx>RA_IconSquare6_PosX</posx>
 					<camera x="-143" y="246"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1803,0"/>
 						<effect type="slide" time="0" start="0,0" end="1803,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1803,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="1803,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-1803" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1803,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Album Icon">
@@ -5213,13 +5213,13 @@
 					<visible>Container(313).HasPrevious + Control.HasFocus(303)</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="150" start="100" end="0"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Album Icon">
@@ -5242,14 +5242,14 @@
 					<visible>Container(313).HasNext + Control.HasFocus(303)</visible>
 					<camera x="1777" y="143"/>
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="286" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="286,0"/>
 						<effect type="slide" time="0" start="0,0" end="-286,0" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Album Icon">
@@ -5273,17 +5273,17 @@
 					<width>286</width>
 					<height>400</height>
 					<camera x="2063" y="246"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="403" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1517" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="403,0"/>
 						<effect type="slide" time="0" start="0,0" end="-403,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1517" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="1517" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Album Icon">
@@ -5301,17 +5301,17 @@
 					<width>286</width>
 					<height>400</height>
 					<camera x="2063" y="246"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="753" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1167" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="753,0"/>
 						<effect type="slide" time="0" start="0,0" end="-753,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1167" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="1167" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Album Icon">
@@ -5329,17 +5329,17 @@
 					<width>286</width>
 					<height>400</height>
 					<camera x="2063" y="246"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="1103" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="817" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1103,0"/>
 						<effect type="slide" time="0" start="0,0" end="-1103,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="817" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="817" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Album Icon">
@@ -5357,17 +5357,17 @@
 					<width>286</width>
 					<height>400</height>
 					<camera x="2063" y="246"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="1443" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="467" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1443,0"/>
 						<effect type="slide" time="0" start="0,0" end="-1443,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="467" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="467" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Album Icon">
@@ -5386,14 +5386,14 @@
 					<width>286</width>
 					<height>400</height>
 					<camera x="2063" y="246"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="117" start="45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 						<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="117" start="0" end="45" tween="quadratic" easing="in"/>
@@ -5435,17 +5435,17 @@
 				<label>$LOCALIZE[359]</label>
 				<animation effect="slide" start="0,0" end="351,0" time="ShelfScroll_AnimationTime" condition="Player.HasAudio + !Container(313).HasPrevious" tween="sine"
 					easing="inout">Conditional</animation>
-				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
-				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
@@ -5461,18 +5461,18 @@
 				<label>$LOCALIZE[111]</label>
 				<animation effect="slide" start="0,0" end="351,0" time="ShelfScroll_AnimationTime" condition="Player.HasAudio + !Container(313).HasPrevious" tween="sine"
 					easing="inout">Conditional</animation>
-				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 
-				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
@@ -5488,18 +5488,18 @@
 				<label>31023</label>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(313).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
-				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 
-				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
@@ -5514,18 +5514,18 @@
 				<aspectratio>scale</aspectratio>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(313).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
-				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 
-				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
@@ -5543,7 +5543,7 @@
 				<width>1</width>
 				<height>1</height>
 				<label>-</label>
-				<visible>!Control.HasFocus(304) + !Skin.HasSetting(HomeTVupdown)</visible>
+				<visible>!Control.HasFocus(304) + !StringCompare(Window().Property(HomeMenuDirection),up)</visible>
 				<animation type="Hidden" reversible="false">
 					<effect type="fade" time="VisibleChange_AnimationTime" start="100" end="0"/>
 				</animation>
@@ -6271,14 +6271,14 @@
 					<visible>Container(314).HasPrevious + Control.HasFocus(304)</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-286" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-286,0"/>
 						<effect type="slide" time="0" start="0,0" end="286,0" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Picture Icon">
@@ -6303,13 +6303,13 @@
 					<visible>Container(314).HasNext + Control.HasFocus(304)</visible>
 					<camera x="1777" y="143"/>
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="150" start="100" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Picture Icon">
@@ -6333,17 +6333,17 @@
 					<visible>Control.HasFocus(304)</visible>
 					<posx>RA_IconSquare2_PosX</posx>
 					<camera x="-143" y="246"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 						<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="403,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="403,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="403,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Picture Icon">
@@ -6388,17 +6388,17 @@
 					<visible>IntegerGreaterThan(Container(314).NumItems,1) + Control.HasFocus(304)</visible>
 					<posx>RA_IconSquare3_PosX</posx>
 					<camera x="-143" y="246"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-753,0"/>
 						<effect type="slide" time="0" start="0,0" end="753,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="753,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="753,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-753" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="753,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Picture Icon">
@@ -6415,17 +6415,17 @@
 					<visible>IntegerGreaterThan(Container(314).NumItems,2) + Control.HasFocus(304)</visible>
 					<posx>RA_IconSquare4_PosX</posx>
 					<camera x="-143" y="246"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1103,0"/>
 						<effect type="slide" time="0" start="0,0" end="1103,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1103,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="1103,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-1103" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1103,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Picture Icon">
@@ -6442,17 +6442,17 @@
 					<visible>IntegerGreaterThan(Container(314).NumItems,3) + Control.HasFocus(304)</visible>
 					<posx>RA_IconSquare5_PosX</posx>
 					<camera x="-143" y="246"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1433,0"/>
 						<effect type="slide" time="0" start="0,0" end="1433,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1433,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="1433,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-1433" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1433,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Picture Icon">
@@ -6469,17 +6469,17 @@
 					<visible>IntegerGreaterThan(Container(314).NumItems,4) + Control.HasFocus(304)</visible>
 					<posx>RA_IconSquare6_PosX</posx>
 					<camera x="-143" y="246"/>
-					<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1803,0"/>
 						<effect type="slide" time="0" start="0,0" end="1803,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1803,0" start="0" end="-45"/>
 						<effect type="rotatey" time="0" center="1803,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-1803" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1803,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Picture Icon">
@@ -6498,13 +6498,13 @@
 					<visible>Container(314).HasPrevious + Control.HasFocus(304)</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="150" start="100" end="0"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Picture Icon">
@@ -6527,14 +6527,14 @@
 					<visible>Container(314).HasNext + Control.HasFocus(304)</visible>
 					<camera x="1777" y="143"/>
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="286" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="286,0"/>
 						<effect type="slide" time="0" start="0,0" end="-286,0" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Picture Icon">
@@ -6558,17 +6558,17 @@
 					<width>286</width>
 					<height>400</height>
 					<camera x="2063" y="246"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="403" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1517" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="403,0"/>
 						<effect type="slide" time="0" start="0,0" end="-403,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1517" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="1517" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Picture Icon">
@@ -6586,17 +6586,17 @@
 					<width>286</width>
 					<height>400</height>
 					<camera x="2063" y="246"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="753" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1167" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="753,0"/>
 						<effect type="slide" time="0" start="0,0" end="-753,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1167" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="1167" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Picture Icon">
@@ -6614,17 +6614,17 @@
 					<width>286</width>
 					<height>400</height>
 					<camera x="2063" y="246"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="1103" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="817" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1103,0"/>
 						<effect type="slide" time="0" start="0,0" end="-1103,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="817" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="817" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Picture Icon">
@@ -6642,17 +6642,17 @@
 					<width>286</width>
 					<height>400</height>
 					<camera x="2063" y="246"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="1443" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="467" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1443,0"/>
 						<effect type="slide" time="0" start="0,0" end="-1443,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="467" start="0" end="45" tween="quadratic" easing="in"/>
 						<effect type="rotatey" time="0" center="467" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
 					<control type="image" description="Picture Icon">
@@ -6671,14 +6671,14 @@
 					<width>286</width>
 					<height>400</height>
 					<camera x="2063" y="246"/>
-					<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="117" start="45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
 					</animation>
-					<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 						<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 						<effect type="rotatey" time="VisibleChange_AnimationTime" center="117" start="0" end="45" tween="quadratic" easing="in"/>
@@ -6721,18 +6721,18 @@
 				<label>$LOCALIZE[111]</label>
 				<animation effect="slide" start="0,0" end="351,0" time="ShelfScroll_AnimationTime" condition="Player.HasAudio + !Container(314).HasPrevious" tween="sine"
 					easing="inout">Conditional</animation>
-				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 
-				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
@@ -6749,18 +6749,18 @@
 				<visible>Player.HasAudio + [Control.HasFocus(304) | Control.HasFocus(314)]</visible>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(314).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
-				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 
-				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
@@ -6777,18 +6777,18 @@
 				<animation effect="slide" end="-351,0" time="ShelfScroll_AnimationTime" tween="sine" easing="inout">Hidden</animation>-->
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(314).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
-				<animation type="Visible" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 
-				<animation type="Visible" condition="Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="!Skin.HasSetting(HomeMenuDirection) + !Skin.HasSetting(HomeTVupdown)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
