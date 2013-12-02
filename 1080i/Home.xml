@@ -37,8 +37,8 @@
 		<include>Home_Background</include>
 		<control type="button" id="8998" description="Fix ATV1 focus bug">
 			<include>HiddenButton</include>
-			<onfocus>Control.SetFocus(301)</onfocus>
-			<onclick>Control.SetFocus(301)</onclick>
+			<onfocus>Control.SetFocus(9000)</onfocus>
+			<onclick>Control.SetFocus(9000)</onclick>
 		</control>
 
 		<!-- Home Navigation & Shelf -->

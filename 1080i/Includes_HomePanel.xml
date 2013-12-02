@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<constant name="ShelfScroll_AnimationTime">250</constant>
-	<constant name="VisibleChange_AnimationTime">250</constant>
+	<constant name="VisibleChange_AnimationTime">350</constant>
 	<!-- =============================== -->
 	<!-- ###  Poster Icon Dimensions ### -->
 	<!-- =============================== -->
