@@ -40,13 +40,6 @@
 			<onfocus>Control.SetFocus(9000)</onfocus>
 			<onclick>Control.SetFocus(9000)</onclick>
 		</control>
-		<control type="label">
-			<posx>5</posx>
-			<posy>5</posy>
-			<width>500</width>
-			<height>50</height>
-			<label>$INFO[Window().Property(HomeMenuDirection)]</label>
-		</control>
 
 		<!-- Home Navigation & Shelf -->
 		<include condition="!Skin.HasSetting(MoviesSectionHide)">HomeShelf_Movies</include>

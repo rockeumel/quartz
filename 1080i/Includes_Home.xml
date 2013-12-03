@@ -1289,10 +1289,11 @@
 				<width>300</width>
 				<height>420</height>
 				<control type="list" id="301">
-					<animation type="Conditional" condition="!Control.HasFocus(301)">
+					<visible allowhiddenfocus="true">Control.HasFocus(301) | Control.HasFocus(311)</visible>
+					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
-					<animation type="Conditional" condition="Control.HasFocus(301)">
+					<animation type="Visible">
 						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 					</animation>
 					<animation type="Conditional" condition="Control.HasFocus(311)">
@@ -1417,12 +1418,12 @@
 				<width>300</width>
 				<height>420</height>
 				<control type="list" id="302">
-					<animation type="Conditional" condition="!Control.HasFocus(302)">
+					<visible allowhiddenfocus="true">Control.HasFocus(302) | Control.HasFocus(312)</visible>
+					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
-					<animation type="Conditional" condition="Control.HasFocus(302)">
-						<effect type="fade" start="0" end="100" time="150" delay="180"
-							reversible="false"/>
+					<animation type="Visible">
+						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 					</animation>
 					<animation type="Conditional" condition="Control.HasFocus(312)">
 						<effect type="fade" start="100" end="60" time="100" reversible="true"/>
@@ -1544,10 +1545,11 @@
 				<width>300</width>
 				<height>420</height>
 				<control type="list" id="303">
-					<animation type="Conditional" condition="!Control.HasFocus(303)">
+					<visible allowhiddenfocus="true">Control.HasFocus(303) | Control.HasFocus(313)</visible>
+					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
-					<animation type="Conditional" condition="Control.HasFocus(303)">
+					<animation type="Visible">
 						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 					</animation>
 					<animation type="Conditional" condition="Control.HasFocus(313)">
@@ -1671,12 +1673,12 @@
 				<width>300</width>
 				<height>420</height>
 				<control type="list" id="304">
-					<animation type="Conditional" condition="!Control.HasFocus(304)">
+					<visible allowhiddenfocus="true">Control.HasFocus(304) | Control.HasFocus(314)</visible>
+					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
-					<animation type="Conditional" condition="Control.HasFocus(304)">
-						<effect type="fade" start="0" end="100" time="150" delay="180"
-							reversible="false"/>
+					<animation type="Visible">
+						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 					</animation>
 					<animation type="Conditional" condition="Control.HasFocus(314)">
 						<effect type="fade" start="100" end="60" time="100" reversible="true"/>
@@ -1773,10 +1775,11 @@
 				<width>300</width>
 				<height>420</height>
 				<control type="list" id="305">
-					<animation type="Conditional" condition="!Control.HasFocus(305)">
+					<visible allowhiddenfocus="true">Control.HasFocus(305) | Control.HasFocus(315)</visible>
+					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
-					<animation type="Conditional" condition="Control.HasFocus(305)">
+					<animation type="Visible">
 						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 					</animation>
 					<animation type="Conditional" condition="Control.HasFocus(315)">
@@ -1899,11 +1902,15 @@
 				<width>300</width>
 				<height>420</height>
 				<control type="list" id="306">
-					<animation type="Conditional" condition="!Control.HasFocus(306)">
+					<visible allowhiddenfocus="true">Control.HasFocus(306) | Control.HasFocus(316)</visible>
+					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
-					<animation type="Conditional" condition="Control.HasFocus(306)">
+					<animation type="Visible">
 						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
+					</animation>
+					<animation type="Conditional" condition="Control.HasFocus(316)">
+						<effect type="fade" start="100" end="60" time="100" reversible="true"/>
 					</animation>
 					<width>300</width>
 					<height>420</height>
@@ -2042,118 +2049,167 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<orientation>horizontal</orientation>
-			<control type="image" description="Movie Menu Slider">
+			<control type="group" description="Movie Menu Slider">
 				<visible>!Skin.HasSetting(MoviesSectionHide)</visible>
-				<animation type="Conditional" condition="!Control.HasFocus(301)">
-					<effect type="fade" start="100" end="0" time="100" reversible="false"/>
-				</animation>
-				<animation type="Conditional" condition="Control.HasFocus(301)">
-					<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
-				</animation>
 				<width>330</width>
 				<height>132</height>
-				<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
-				<aspectratio>scale</aspectratio>
-				<animation condition="Container(301).Position(1)" effect="slide" start="0,0" end="0,60" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(301).Position(2)" effect="slide" start="0,0" end="0,120" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(301).Position(3)" effect="slide" start="0,0" end="0,180" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(301).Position(4)" effect="slide" start="0,0" end="0,240" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(301).Position(5)" effect="slide" start="0,0" end="0,300" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(301).Position(6)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+				<control type="image">
+					<visible>Control.HasFocus(301)</visible>
+					<animation type="Hidden">
+						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
+					</animation>
+					<animation type="Visible" condition="!StringCompare(Window().Property(HomeMenuDirection),up)">
+						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
+					</animation>
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),up)">
+						<effect type="fade" start="0" end="100" time="150" reversible="false"/>
+					</animation>
+					<width>330</width>
+					<height>132</height>
+					<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
+					<aspectratio>scale</aspectratio>
+					<animation condition="Container(301).Position(1)" effect="slide" start="0,0" end="0,60" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(301).Position(2)" effect="slide" start="0,0" end="0,120" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(301).Position(3)" effect="slide" start="0,0" end="0,180" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(301).Position(4)" effect="slide" start="0,0" end="0,240" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(301).Position(5)" effect="slide" start="0,0" end="0,300" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(301).Position(6)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+				</control>
 			</control>
-			<control type="image" description="TvShows Menu Slider">
+			<control type="group" description="TvShows Menu Slider">
 				<visible>!Skin.HasSetting(TVSectionHide)</visible>
-				<animation type="Conditional" condition="!Control.HasFocus(302)">
-					<effect type="fade" start="100" end="0" time="100" reversible="false"/>
-				</animation>
-				<animation type="Conditional" condition="Control.HasFocus(302)">
-					<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
-				</animation>
 				<width>330</width>
 				<height>132</height>
-				<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
-				<aspectratio>scale</aspectratio>
-				<animation condition="Container(302).Position(1)" effect="slide" start="0,0" end="0,60" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(302).Position(2)" effect="slide" start="0,0" end="0,120" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(302).Position(3)" effect="slide" start="0,0" end="0,180" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(302).Position(4)" effect="slide" start="0,0" end="0,240" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(302).Position(5)" effect="slide" start="0,0" end="0,300" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(302).Position(6)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+				<control type="image">
+					<visible>Control.HasFocus(302)</visible>
+					<animation type="Hidden">
+						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
+					</animation>
+					<animation type="Visible" condition="!StringCompare(Window().Property(HomeMenuDirection),up)">
+						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
+					</animation>
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),up)">
+						<effect type="fade" start="0" end="100" time="150" reversible="false"/>
+					</animation>
+					<width>330</width>
+					<height>132</height>
+					<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
+					<aspectratio>scale</aspectratio>
+					<animation condition="Container(302).Position(1)" effect="slide" start="0,0" end="0,60" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(302).Position(2)" effect="slide" start="0,0" end="0,120" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(302).Position(3)" effect="slide" start="0,0" end="0,180" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(302).Position(4)" effect="slide" start="0,0" end="0,240" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(302).Position(5)" effect="slide" start="0,0" end="0,300" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(302).Position(6)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+				</control>
 			</control>
-			<control type="image" description="Music Menu Slider">
+			<control type="group" description="Music Menu Slider">
 				<visible>!Skin.HasSetting(MusicSectionHide)</visible>
-				<animation type="Conditional" condition="!Control.HasFocus(303)">
-					<effect type="fade" start="100" end="0" time="100" reversible="false"/>
-				</animation>
-				<animation type="Conditional" condition="Control.HasFocus(303)">
-					<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
-				</animation>
 				<width>330</width>
 				<height>132</height>
-				<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
-				<aspectratio>scale</aspectratio>
-				<animation condition="Container(303).Position(1)" effect="slide" start="0,0" end="0,60" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(303).Position(2)" effect="slide" start="0,0" end="0,120" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(303).Position(3)" effect="slide" start="0,0" end="0,180" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(303).Position(4)" effect="slide" start="0,0" end="0,240" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(303).Position(5)" effect="slide" start="0,0" end="0,300" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(303).Position(6)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+				<control type="image">
+					<visible>Control.HasFocus(303)</visible>
+					<animation type="Hidden">
+						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
+					</animation>
+					<animation type="Visible" condition="!StringCompare(Window().Property(HomeMenuDirection),up)">
+						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
+					</animation>
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),up)">
+						<effect type="fade" start="0" end="100" time="150" reversible="false"/>
+					</animation>
+					<width>330</width>
+					<height>132</height>
+					<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
+					<aspectratio>scale</aspectratio>
+					<animation condition="Container(303).Position(1)" effect="slide" start="0,0" end="0,60" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(303).Position(2)" effect="slide" start="0,0" end="0,120" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(303).Position(3)" effect="slide" start="0,0" end="0,180" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(303).Position(4)" effect="slide" start="0,0" end="0,240" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(303).Position(5)" effect="slide" start="0,0" end="0,300" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(303).Position(6)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+				</control>
 			</control>
-			<control type="image" description="Pictures Menu Slider">
+			<control type="group" description="Pictures Menu Slider">
 				<visible>!Skin.HasSetting(PicturesSectionHide)</visible>
-				<animation type="Conditional" condition="!Control.HasFocus(304)">
-					<effect type="fade" start="100" end="0" time="100" reversible="false"/>
-				</animation>
-				<animation type="Conditional" condition="Control.HasFocus(304)">
-					<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
-				</animation>
 				<width>330</width>
 				<height>132</height>
-				<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
-				<aspectratio>scale</aspectratio>
-				<animation condition="Container(304).Position(1)" effect="slide" start="0,0" end="0,60" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(304).Position(2)" effect="slide" start="0,0" end="0,120" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(304).Position(3)" effect="slide" start="0,0" end="0,180" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(304).Position(4)" effect="slide" start="0,0" end="0,240" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(304).Position(5)" effect="slide" start="0,0" end="0,300" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(304).Position(6)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+				<control type="image">
+					<visible>Control.HasFocus(304)</visible>
+					<animation type="Hidden">
+						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
+					</animation>
+					<animation type="Visible" condition="!StringCompare(Window().Property(HomeMenuDirection),up)">
+						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
+					</animation>
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),up)">
+						<effect type="fade" start="0" end="100" time="150" reversible="false"/>
+					</animation>
+					<width>330</width>
+					<height>132</height>
+					<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
+					<aspectratio>scale</aspectratio>
+					<animation condition="Container(304).Position(1)" effect="slide" start="0,0" end="0,60" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(304).Position(2)" effect="slide" start="0,0" end="0,120" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(304).Position(3)" effect="slide" start="0,0" end="0,180" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(304).Position(4)" effect="slide" start="0,0" end="0,240" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(304).Position(5)" effect="slide" start="0,0" end="0,300" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(304).Position(6)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+				</control>
 			</control>
-			<control type="image" description="Addons Menu Slider">
+			<control type="group" description="Addons Menu Slider">
 				<visible>!Skin.HasSetting(AddonsSectionHide)</visible>
-				<animation type="Conditional" condition="!Control.HasFocus(305)">
-					<effect type="fade" start="100" end="0" time="100" reversible="false"/>
-				</animation>
-				<animation type="Conditional" condition="Control.HasFocus(305)">
-					<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
-				</animation>
 				<width>330</width>
 				<height>132</height>
-				<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
-				<aspectratio>scale</aspectratio>
-				<animation condition="Container(305).Position(1)" effect="slide" start="0,0" end="0,60" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(305).Position(2)" effect="slide" start="0,0" end="0,120" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(305).Position(3)" effect="slide" start="0,0" end="0,180" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(305).Position(4)" effect="slide" start="0,0" end="0,240" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(305).Position(5)" effect="slide" start="0,0" end="0,300" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(305).Position(6)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+				<control type="image">
+					<visible>Control.HasFocus(306)</visible>
+					<animation type="Hidden">
+						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
+					</animation>
+					<animation type="Visible" condition="!StringCompare(Window().Property(HomeMenuDirection),up)">
+						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
+					</animation>
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),up)">
+						<effect type="fade" start="0" end="100" time="150" reversible="false"/>
+					</animation>
+					<width>330</width>
+					<height>132</height>
+					<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
+					<aspectratio>scale</aspectratio>
+					<animation condition="Container(305).Position(1)" effect="slide" start="0,0" end="0,60" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(305).Position(2)" effect="slide" start="0,0" end="0,120" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(305).Position(3)" effect="slide" start="0,0" end="0,180" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(305).Position(4)" effect="slide" start="0,0" end="0,240" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(305).Position(5)" effect="slide" start="0,0" end="0,300" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(305).Position(6)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+				</control>
 			</control>
-			<control type="image" description="Xbmc Menu Slider">
-				<animation type="Conditional" condition="!Control.HasFocus(306)">
-					<effect type="fade" start="100" end="0" time="100" reversible="false"/>
-				</animation>
-				<animation type="Conditional" condition="Control.HasFocus(306)">
-					<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
-				</animation>
+			<control type="group" description="Xbmc Menu Slider">
+				<visible>true</visible>
 				<width>330</width>
 				<height>132</height>
-				<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
-				<aspectratio>scale</aspectratio>
-				<animation condition="Container(306).Position(1)" effect="slide" start="0,0" end="0,60" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(306).Position(2)" effect="slide" start="0,0" end="0,120" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(306).Position(3)" effect="slide" start="0,0" end="0,180" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(306).Position(4)" effect="slide" start="0,0" end="0,240" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(306).Position(5)" effect="slide" start="0,0" end="0,300" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(306).Position(6)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+				<control type="image">
+					<visible>Control.HasFocus(306)</visible>
+					<animation type="Hidden">
+						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
+					</animation>
+					<animation type="Visible" condition="!StringCompare(Window().Property(HomeMenuDirection),up)">
+						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
+					</animation>
+					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),up)">
+						<effect type="fade" start="0" end="100" time="150" reversible="false"/>
+					</animation>
+					<width>330</width>
+					<height>132</height>
+					<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
+					<aspectratio>scale</aspectratio>
+					<animation condition="Container(306).Position(1)" effect="slide" start="0,0" end="0,60" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(306).Position(2)" effect="slide" start="0,0" end="0,120" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(306).Position(3)" effect="slide" start="0,0" end="0,180" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(306).Position(4)" effect="slide" start="0,0" end="0,240" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(306).Position(5)" effect="slide" start="0,0" end="0,300" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(306).Position(6)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+				</control>
 			</control>
 		</control>
 		<control type="image" description="Bar NF">
