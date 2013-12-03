@@ -1651,14 +1651,16 @@
 
 				<control type="group" description="Item (-1) rotated">
 					<posx>RA_IconPoster1_PosX</posx>
-					<visible>Control.HasFocus(301) + [Container(311).HasPrevious + Player.HasAudio + [ [Container(311).Position(0) +
-						IsEmpty(Container(311).Listitem(-1).Property(CheckNowPlaying))] | [Container(311).Position(1) +
-						IsEmpty(Container(311).Listitem(-2).Property(CheckNowPlaying))] | [Container(311).Position(2) +
-						IsEmpty(Container(311).Listitem(-3).Property(CheckNowPlaying))] | [Container(311).Position(3) +
-						IsEmpty(Container(311).Listitem(-4).Property(CheckNowPlaying))] | [Container(311).Position(4) +
-						IsEmpty(Container(311).Listitem(-5).Property(CheckNowPlaying))] | [Container(311).Position(5) +
-						IsEmpty(Container(311).Listitem(-6).Property(CheckNowPlaying))] | [Container(311).Position(6) +
-						IsEmpty(Container(311).Listitem(-7).Property(CheckNowPlaying))] ]] | [Container(311).HasPrevious + !Player.HasAudio]</visible>
+					<visible>Control.HasFocus(301)</visible>
+					<visible>[[Container(311).HasPrevious + Player.HasAudio + 
+						[Container(311).Position(0) + IsEmpty(Container(311).Listitem(-1).Property(CheckNowPlaying))] | 
+						[Container(311).Position(1) + IsEmpty(Container(311).Listitem(-2).Property(CheckNowPlaying))] | 
+						[Container(311).Position(2) + IsEmpty(Container(311).Listitem(-3).Property(CheckNowPlaying))] | 
+						[Container(311).Position(3) + IsEmpty(Container(311).Listitem(-4).Property(CheckNowPlaying))] | 
+						[Container(311).Position(4) + IsEmpty(Container(311).Listitem(-5).Property(CheckNowPlaying))] | 
+						[Container(311).Position(5) + IsEmpty(Container(311).Listitem(-6).Property(CheckNowPlaying))] | 
+						[Container(311).Position(6) + IsEmpty(Container(311).Listitem(-7).Property(CheckNowPlaying))] ] | 
+						[Container(311).HasPrevious + !Player.HasAudio]]</visible>
 					<camera x="101" y="151"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-40" end="-40">Conditional</animation>
 					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
@@ -1690,14 +1692,15 @@
 				</control>
 				<control type="group" description="Item (-1) rotated-square">
 					<posx>RA_IconPoster1_PosX</posx>
-					<visible>Control.HasFocus(301) + Container(311).HasPrevious + Player.HasAudio + [ [Container(311).Position(0) +
-						!IsEmpty(Container(311).Listitem(-1).Property(CheckNowPlaying))] | [Container(311).Position(1) +
-						!IsEmpty(Container(311).Listitem(-2).Property(CheckNowPlaying))] | [Container(311).Position(2) +
-						!IsEmpty(Container(311).Listitem(-3).Property(CheckNowPlaying))] | [Container(311).Position(3) +
-						!IsEmpty(Container(311).Listitem(-4).Property(CheckNowPlaying))] | [Container(311).Position(4) +
-						!IsEmpty(Container(311).Listitem(-5).Property(CheckNowPlaying))] | [Container(311).Position(5) +
-						!IsEmpty(Container(311).Listitem(-6).Property(CheckNowPlaying))] | [Container(311).Position(6) +
-						!IsEmpty(Container(311).Listitem(-7).Property(CheckNowPlaying))] ]</visible>
+					<visible>Control.HasFocus(301) + Container(311).HasPrevious + Player.HasAudio</visible>
+					<visible>
+						[Container(311).Position(0) + !IsEmpty(Container(311).Listitem(-1).Property(CheckNowPlaying))] | 
+						[Container(311).Position(1) + !IsEmpty(Container(311).Listitem(-2).Property(CheckNowPlaying))] | 
+						[Container(311).Position(2) + !IsEmpty(Container(311).Listitem(-3).Property(CheckNowPlaying))] | 
+						[Container(311).Position(3) + !IsEmpty(Container(311).Listitem(-4).Property(CheckNowPlaying))] | 
+						[Container(311).Position(4) + !IsEmpty(Container(311).Listitem(-5).Property(CheckNowPlaying))] | 
+						[Container(311).Position(5) + !IsEmpty(Container(311).Listitem(-6).Property(CheckNowPlaying))] | 
+						[Container(311).Position(6) + !IsEmpty(Container(311).Listitem(-7).Property(CheckNowPlaying))]</visible>
 					<camera x="143" y="162"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-40" end="-40">Conditional</animation>
 					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
@@ -2008,7 +2011,8 @@
 
 				<control type="group" description="Item (-1) rotated">
 					<posx>RA_IconPoster1_PosX</posx>
-					<visible>Control.HasFocus(301) + [Container(311).HasPrevious + Player.HasAudio + [ [Container(311).Position(0) +
+					<visible>Control.HasFocus(301)</visible>
+					<visible>[Container(311).HasPrevious + Player.HasAudio + [ [Container(311).Position(0) +
 						IsEmpty(Container(311).Listitem(-1).Property(CheckNowPlaying))] | [Container(311).Position(1) +
 						IsEmpty(Container(311).Listitem(-2).Property(CheckNowPlaying))] | [Container(311).Position(2) +
 						IsEmpty(Container(311).Listitem(-3).Property(CheckNowPlaying))] | [Container(311).Position(3) +
@@ -2048,7 +2052,8 @@
 				</control>
 				<control type="group" description="Item (-1) rotated-square">
 					<posx>RA_IconPoster1_PosX</posx>
-					<visible>Control.HasFocus(301) + Container(311).HasPrevious + Player.HasAudio + [ [Container(311).Position(0) +
+					<visible>Control.HasFocus(301)</visible>
+					<visible>Container(311).HasPrevious + Player.HasAudio + [ [Container(311).Position(0) +
 						!IsEmpty(Container(311).Listitem(-1).Property(CheckNowPlaying))] | [Container(311).Position(1) +
 						!IsEmpty(Container(311).Listitem(-2).Property(CheckNowPlaying))] | [Container(311).Position(2) +
 						!IsEmpty(Container(311).Listitem(-3).Property(CheckNowPlaying))] | [Container(311).Position(3) +
