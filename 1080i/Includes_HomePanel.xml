@@ -666,6 +666,7 @@
 				<height>45</height>
 				<font>Shelf_Headline</font>
 				<textcolor>Shelf_Headline</textcolor>
+				<shadowcolor>Shelf_Headline_Shadow</shadowcolor>
 				<label>$LOCALIZE[20386]</label>
 				<animation effect="slide" start="0,0" end="328,0" time="ShelfScroll_AnimationTime" condition="Player.HasAudio + !Container(311).HasPrevious" tween="sine"
 					easing="inout">Conditional</animation>
@@ -694,6 +695,7 @@
 				<height>45</height>
 				<font>Shelf_Headline</font>
 				<textcolor>Shelf_Headline</textcolor>
+				<shadowcolor>Shelf_Headline_Shadow</shadowcolor>
 				<label>$LOCALIZE[111]</label>
 				<animation effect="slide" start="0,0" end="328,0" time="ShelfScroll_AnimationTime" condition="Player.HasAudio + !Container(311).HasPrevious" tween="sine"
 					easing="inout">Conditional</animation>
@@ -722,6 +724,7 @@
 				<height>45</height>
 				<font>Shelf_Headline</font>
 				<textcolor>Shelf_Headline</textcolor>
+				<shadowcolor>Shelf_Headline_Shadow</shadowcolor>
 				<label>31023</label>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(311).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
@@ -744,11 +747,11 @@
 			<control type="image" description="Now Playing - separation line">
 				<visible>Player.HasAudio + !Container(311).HasPrevious + [Control.HasFocus(301) | Control.HasFocus(311)]</visible>
 				<posx>399</posx>
-				<posy>157</posy>
-				<width>1</width>
-				<height>214</height>
+				<posy>110</posy>
+				<width>3</width>
+				<height>204</height>
 				<texture>home_recentlyadded/RecentlyAdded_Seperator.png</texture>
-				<aspectratio>scale</aspectratio>
+				<aspectratio>stretch</aspectratio>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(311).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
 				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
@@ -2643,6 +2646,7 @@
 				<height>45</height>
 				<font>Shelf_Headline</font>
 				<textcolor>Shelf_Headline</textcolor>
+				<shadowcolor>Shelf_Headline_Shadow</shadowcolor>
 				<label>$LOCALIZE[20387]</label>
 				<animation effect="slide" start="0,0" end="351,0" time="ShelfScroll_AnimationTime" condition="Player.HasAudio + !Container(312).HasPrevious" tween="sine"
 					easing="inout">Conditional</animation>
@@ -2670,6 +2674,7 @@
 				<height>45</height>
 				<font>Shelf_Headline</font>
 				<textcolor>Shelf_Headline</textcolor>
+				<shadowcolor>Shelf_Headline_Shadow</shadowcolor>
 				<label>$LOCALIZE[111]</label>
 				<animation effect="slide" start="0,0" end="351,0" time="ShelfScroll_AnimationTime" condition="Player.HasAudio + !Container(312).HasPrevious" tween="sine"
 					easing="inout">Conditional</animation>
@@ -2697,6 +2702,7 @@
 				<height>45</height>
 				<font>Shelf_Headline</font>
 				<textcolor>Shelf_Headline</textcolor>
+				<shadowcolor>Shelf_Headline_Shadow</shadowcolor>
 				<label>31023</label>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(312).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
@@ -2719,11 +2725,11 @@
 			<control type="image" description="Now Playing - separation line">
 				<visible>Player.HasAudio + !Container(312).HasPrevious + [Control.HasFocus(302) | Control.HasFocus(312)]</visible>
 				<posx>433</posx>
-				<posy>157</posy>
-				<width>1</width>
-				<height>214</height>
+				<posy>102</posy>
+				<width>3</width>
+				<height>288</height>
 				<texture>home_recentlyadded/RecentlyAdded_Seperator.png</texture>
-				<aspectratio>scale</aspectratio>
+				<aspectratio>stretch</aspectratio>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(312).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
 				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
@@ -4573,6 +4579,7 @@
 				<height>45</height>
 				<font>Shelf_Headline</font>
 				<textcolor>Shelf_Headline</textcolor>
+				<shadowcolor>Shelf_Headline_Shadow</shadowcolor>
 				<label>$LOCALIZE[359]</label>
 				<animation effect="slide" start="0,0" end="351,0" time="ShelfScroll_AnimationTime" condition="Player.HasAudio + !Container(313).HasPrevious" tween="sine"
 					easing="inout">Conditional</animation>
@@ -4599,6 +4606,7 @@
 				<height>45</height>
 				<font>Shelf_Headline</font>
 				<textcolor>Shelf_Headline</textcolor>
+				<shadowcolor>Shelf_Headline_Shadow</shadowcolor>
 				<label>$LOCALIZE[111]</label>
 				<animation effect="slide" start="0,0" end="351,0" time="ShelfScroll_AnimationTime" condition="Player.HasAudio + !Container(313).HasPrevious" tween="sine"
 					easing="inout">Conditional</animation>
@@ -4626,6 +4634,7 @@
 				<height>45</height>
 				<font>Shelf_Headline</font>
 				<textcolor>Shelf_Headline</textcolor>
+				<shadowcolor>Shelf_Headline_Shadow</shadowcolor>
 				<label>31023</label>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(313).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
@@ -4648,11 +4657,11 @@
 			<control type="image" description="Now Playing - separation line">
 				<visible>Player.HasAudio + !Container(313).HasPrevious + [Control.HasFocus(303) | Control.HasFocus(313)]</visible>
 				<posx>433</posx>
-				<posy>157</posy>
-				<width>1</width>
-				<height>214</height>
+				<posy>102</posy>
+				<width>3</width>
+				<height>288</height>
 				<texture>home_recentlyadded/RecentlyAdded_Seperator.png</texture>
-				<aspectratio>scale</aspectratio>
+				<aspectratio>stretch</aspectratio>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(313).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
 				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
@@ -5924,6 +5933,7 @@
 				<height>45</height>
 				<font>Shelf_Headline</font>
 				<textcolor>Shelf_Headline</textcolor>
+				<shadowcolor>Shelf_Headline_Shadow</shadowcolor>
 				<label>$LOCALIZE[111]</label>
 				<animation effect="slide" start="0,0" end="351,0" time="ShelfScroll_AnimationTime" condition="Player.HasAudio + !Container(314).HasPrevious" tween="sine"
 					easing="inout">Conditional</animation>
@@ -5951,6 +5961,7 @@
 				<height>45</height>
 				<font>Shelf_Headline</font>
 				<textcolor>Shelf_Headline</textcolor>
+				<shadowcolor>Shelf_Headline_Shadow</shadowcolor>
 				<label>31023</label>
 				<visible>Player.HasAudio + [Control.HasFocus(304) | Control.HasFocus(314)]</visible>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(314).HasPrevious" tween="sine" easing="inout"
@@ -5973,14 +5984,12 @@
 			</control>
 			<control type="image" description="Now Playing - separation line">
 				<visible>Player.HasAudio + !Container(314).HasPrevious + [Control.HasFocus(304) | Control.HasFocus(314)]</visible>
-				<posx>433</posx>
-				<posy>157</posy>
-				<width>1</width>
-				<height>214</height>
+				<posx>432</posx>
+				<posy>102</posy>
+				<width>3</width>
+				<height>288</height>
 				<texture>home_recentlyadded/RecentlyAdded_Seperator.png</texture>
-				<aspectratio>scale</aspectratio>
-				<!--				<animation effect="slide" start="-351,0" time="ShelfScroll_AnimationTime" tween="sine" easing="inout">Visible</animation>
-				<animation effect="slide" end="-351,0" time="ShelfScroll_AnimationTime" tween="sine" easing="inout">Hidden</animation>-->
+				<aspectratio>stretch</aspectratio>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(314).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
 				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
