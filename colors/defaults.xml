@@ -20,7 +20,9 @@
 	<color name="ShadowDark">FF262626</color>
 	
 	<color name="Shelf_Reflection_Diffuse">7FFFFFFF</color>
-	<color name="Shelf_Headline">FF2D2D2D</color>
+	<!--<color name="Shelf_Headline">FF2D2D2D</color>-->
+	<color name="Shelf_Headline">FFFFFFFF</color>
+	<color name="Shelf_Headline_Shadow">FF2D2D2D</color>
 	<color name="Shelf_Title">FFFFFFFF</color>
 	<color name="Shelf_Title2">FF808080</color>
 	<color name="Shelf_TitleShadow">FF000000</color>
