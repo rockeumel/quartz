@@ -1272,7 +1272,7 @@
 		<control type="grouplist" description="Submenus" id="9000">
 			<posx>60</posx>
 			<posy>591</posy>
-			<height>420</height>
+			<height>432</height>
 			<width>1800</width>
 			<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_Gap6</include>
 			<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_Gap1</include>
@@ -1287,7 +1287,7 @@
 			<control type="group" description="Submenu: Movies">
 				<visible>!Skin.HasSetting(MoviesSectionHide)</visible>
 				<width>300</width>
-				<height>420</height>
+				<height>432</height>
 				<control type="list" id="301">
 					<visible allowhiddenfocus="true">Control.HasFocus(301) | Control.HasFocus(311)</visible>
 					<animation type="Hidden">
@@ -1300,7 +1300,7 @@
 						<effect type="fade" start="100" end="60" time="100" reversible="true"/>
 					</animation>
 					<width>300</width>
-					<height>420</height>
+					<height>432</height>
 					<onleft>SetProperty(HomeMenuDirection,left)</onleft>
 					<onright>SetProperty(HomeMenuDirection,right)</onright>
 					<onup>SetProperty(HomeMenuDirection,up)</onup>
@@ -1312,11 +1312,11 @@
 					<focusposition>3</focusposition>
 					<movement>3</movement>
 					<!-- Unselected Items -->
-					<itemlayout height="60" width="300">
+					<itemlayout height="72" width="300">
 						<control type="label">
 							<posx>150</posx>
 							<width>300</width>
-							<height>60</height>
+							<height>72</height>
 							<info>ListItem.Label</info>
 							<font>HomeNav_Submenu</font>
 							<textcolor>HomeNav</textcolor>
@@ -1328,11 +1328,11 @@
 					</itemlayout>
 	
 					<!-- Selected Item -->
-					<focusedlayout height="60" width="300">
+					<focusedlayout height="72" width="300">
 						<control type="label">
 							<posx>150</posx>
 							<width>300</width>
-							<height>60</height>
+							<height>72</height>
 							<info>ListItem.Label</info>
 							<font>HomeNav_Submenu</font>
 							<textcolor>HomeNav</textcolor>
@@ -1416,7 +1416,7 @@
 			<control type="group" description="Submenu: TvShows">
 				<visible>!Skin.HasSetting(TVSectionHide)</visible>
 				<width>300</width>
-				<height>420</height>
+				<height>432</height>
 				<control type="list" id="302">
 					<visible allowhiddenfocus="true">Control.HasFocus(302) | Control.HasFocus(312)</visible>
 					<animation type="Hidden">
@@ -1429,7 +1429,7 @@
 						<effect type="fade" start="100" end="60" time="100" reversible="true"/>
 					</animation>
 					<width>300</width>
-					<height>420</height>
+					<height>432</height>
 					<onup>312</onup>
 					<ondown>302</ondown>
 					<onleft>301</onleft>
@@ -1440,11 +1440,11 @@
 					<focusposition>3</focusposition>
 					<movement>3</movement>
 					<!-- Unselected Items -->
-					<itemlayout height="60" width="300">
+					<itemlayout height="72" width="300">
 						<control type="label">
 							<posx>150</posx>
 							<width>300</width>
-							<height>60</height>
+							<height>72</height>
 							<info>ListItem.Label</info>
 							<font>HomeNav_Submenu</font>
 							<textcolor>HomeNav</textcolor>
@@ -1456,11 +1456,11 @@
 					</itemlayout>
 
 					<!-- Selected Item -->
-					<focusedlayout height="60" width="300">
+					<focusedlayout height="72" width="300">
 						<control type="label">
 							<posx>150</posx>
 							<width>300</width>
-							<height>60</height>
+							<height>72</height>
 							<info>ListItem.Label</info>
 							<font>HomeNav_Submenu</font>
 							<textcolor>HomeNav</textcolor>
@@ -1543,7 +1543,7 @@
 			<control type="group" description="Submenu: Music">
 				<visible>!Skin.HasSetting(MusicSectionHide)</visible>
 				<width>300</width>
-				<height>420</height>
+				<height>432</height>
 				<control type="list" id="303">
 					<visible allowhiddenfocus="true">Control.HasFocus(303) | Control.HasFocus(313)</visible>
 					<animation type="Hidden">
@@ -1556,7 +1556,7 @@
 						<effect type="fade" start="100" end="60" time="100" reversible="true"/>
 					</animation>
 					<width>300</width>
-					<height>420</height>
+					<height>432</height>
 					<onup>313</onup>
 					<ondown>303</ondown>
 					<onleft>302</onleft>
@@ -1567,11 +1567,11 @@
 					<focusposition>3</focusposition>
 					<movement>3</movement>
 					<!-- Unselected Items -->
-					<itemlayout height="60" width="300">
+					<itemlayout height="72" width="300">
 						<control type="label">
 							<posx>150</posx>
 							<width>300</width>
-							<height>60</height>
+							<height>72</height>
 							<info>ListItem.Label</info>
 							<font>HomeNav_Submenu</font>
 							<textcolor>HomeNav</textcolor>
@@ -1583,11 +1583,11 @@
 					</itemlayout>
 					
 					<!-- Selected Item -->
-					<focusedlayout height="60" width="300">
+					<focusedlayout height="72" width="300">
 						<control type="label">
 							<posx>150</posx>
 							<width>300</width>
-							<height>60</height>
+							<height>72</height>
 							<info>ListItem.Label</info>
 							<font>HomeNav_Submenu</font>
 							<textcolor>HomeNav</textcolor>
@@ -1671,7 +1671,7 @@
 			<control type="group" description="Submenu: Pictures">
 				<visible>!Skin.HasSetting(PicturesSectionHide)</visible>
 				<width>300</width>
-				<height>420</height>
+				<height>432</height>
 				<control type="list" id="304">
 					<visible allowhiddenfocus="true">Control.HasFocus(304) | Control.HasFocus(314)</visible>
 					<animation type="Hidden">
@@ -1684,7 +1684,7 @@
 						<effect type="fade" start="100" end="60" time="100" reversible="true"/>
 					</animation>
 					<width>300</width>
-					<height>420</height>
+					<height>432</height>
 					<onup>314</onup>
 					<ondown>304</ondown>
 					<onleft>303</onleft>
@@ -1695,11 +1695,11 @@
 					<focusposition>3</focusposition>
 					<movement>3</movement>
 					<!-- Unselected Items -->
-					<itemlayout height="60" width="300">
+					<itemlayout height="72" width="300">
 						<control type="label">
 							<posx>150</posx>
 							<width>300</width>
-							<height>60</height>
+							<height>72</height>
 							<info>ListItem.Label</info>
 							<font>HomeNav_Submenu</font>
 							<textcolor>HomeNav</textcolor>
@@ -1711,11 +1711,11 @@
 					</itemlayout>
 
 					<!-- Selected Item -->
-					<focusedlayout height="60" width="300">
+					<focusedlayout height="72" width="300">
 						<control type="label">
 							<posx>150</posx>
 							<width>300</width>
-							<height>60</height>
+							<height>72</height>
 							<info>ListItem.Label</info>
 							<font>HomeNav_Submenu</font>
 							<textcolor>HomeNav</textcolor>
@@ -1773,7 +1773,7 @@
 			<control type="group" description="Submenu: Addons">
 				<visible>!Skin.HasSetting(AddonsSectionHide)</visible>
 				<width>300</width>
-				<height>420</height>
+				<height>432</height>
 				<control type="list" id="305">
 					<visible allowhiddenfocus="true">Control.HasFocus(305) | Control.HasFocus(315)</visible>
 					<animation type="Hidden">
@@ -1786,7 +1786,7 @@
 						<effect type="fade" start="100" end="60" time="100" reversible="true"/>
 					</animation>
 					<width>300</width>
-					<height>420</height>
+					<height>432</height>
 					<onup>315</onup>
 					<ondown>305</ondown>
 					<onleft>304</onleft>
@@ -1797,11 +1797,11 @@
 					<focusposition>3</focusposition>
 					<movement>3</movement>
 					<!-- Unselected Items -->
-					<itemlayout height="60" width="300">
+					<itemlayout height="72" width="300">
 						<control type="label">
 							<posx>150</posx>
 							<width>300</width>
-							<height>60</height>
+							<height>72</height>
 							<info>ListItem.Label</info>
 							<font>HomeNav_Submenu</font>
 							<textcolor>HomeNav</textcolor>
@@ -1813,11 +1813,11 @@
 					</itemlayout>
 					
 					<!-- Selected Item -->
-					<focusedlayout height="60" width="300">
+					<focusedlayout height="72" width="300">
 						<control type="label">
 							<posx>150</posx>
 							<width>300</width>
-							<height>60</height>
+							<height>72</height>
 							<info>ListItem.Label</info>
 							<font>HomeNav_Submenu</font>
 							<textcolor>HomeNav</textcolor>
@@ -1900,7 +1900,7 @@
 			</control>
 			<control type="group" description="Submenu: XBMC">
 				<width>300</width>
-				<height>420</height>
+				<height>432</height>
 				<control type="list" id="306">
 					<visible allowhiddenfocus="true">Control.HasFocus(306) | Control.HasFocus(316)</visible>
 					<animation type="Hidden">
@@ -1913,7 +1913,7 @@
 						<effect type="fade" start="100" end="60" time="100" reversible="true"/>
 					</animation>
 					<width>300</width>
-					<height>420</height>
+					<height>432</height>
 					<onup>noop</onup>
 					<ondown>306</ondown>
 					<onleft>305</onleft>
@@ -1924,11 +1924,11 @@
 					<focusposition>3</focusposition>
 					<movement>3</movement>
 					<!-- Unselected Items -->
-					<itemlayout height="60" width="300">
+					<itemlayout height="72" width="300">
 						<control type="label">
 							<posx>150</posx>
 							<width>300</width>
-							<height>60</height>
+							<height>72</height>
 							<info>ListItem.Label</info>
 							<font>HomeNav_Submenu</font>
 							<textcolor>HomeNav</textcolor>
@@ -1940,11 +1940,11 @@
 					</itemlayout>
 					
 					<!-- Selected Item -->
-					<focusedlayout height="60" width="300">
+					<focusedlayout height="72" width="300">
 						<control type="label">
 							<posx>150</posx>
 							<width>300</width>
-							<height>60</height>
+							<height>72</height>
 							<info>ListItem.Label</info>
 							<font>HomeNav_Submenu</font>
 							<textcolor>HomeNav</textcolor>
@@ -2036,7 +2036,7 @@
 		</control>
 		<control type="grouplist" description="Slider">
 			<posx>30</posx>
-			<posy>555</posy>
+			<posy>561</posy>
 			<height>492</height>
 			<width>1860</width>
 			<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeSlider_Gap6</include>
@@ -2068,12 +2068,12 @@
 					<height>132</height>
 					<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
 					<aspectratio>scale</aspectratio>
-					<animation condition="Container(301).Position(1)" effect="slide" start="0,0" end="0,60" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(301).Position(2)" effect="slide" start="0,0" end="0,120" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(301).Position(3)" effect="slide" start="0,0" end="0,180" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(301).Position(4)" effect="slide" start="0,0" end="0,240" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(301).Position(5)" effect="slide" start="0,0" end="0,300" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(301).Position(6)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(301).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(301).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(301).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(301).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(301).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(301).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
 				</control>
 			</control>
 			<control type="group" description="TvShows Menu Slider">
@@ -2095,12 +2095,12 @@
 					<height>132</height>
 					<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
 					<aspectratio>scale</aspectratio>
-					<animation condition="Container(302).Position(1)" effect="slide" start="0,0" end="0,60" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(302).Position(2)" effect="slide" start="0,0" end="0,120" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(302).Position(3)" effect="slide" start="0,0" end="0,180" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(302).Position(4)" effect="slide" start="0,0" end="0,240" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(302).Position(5)" effect="slide" start="0,0" end="0,300" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(302).Position(6)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(302).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(302).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(302).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(302).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(302).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(302).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
 				</control>
 			</control>
 			<control type="group" description="Music Menu Slider">
@@ -2122,12 +2122,12 @@
 					<height>132</height>
 					<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
 					<aspectratio>scale</aspectratio>
-					<animation condition="Container(303).Position(1)" effect="slide" start="0,0" end="0,60" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(303).Position(2)" effect="slide" start="0,0" end="0,120" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(303).Position(3)" effect="slide" start="0,0" end="0,180" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(303).Position(4)" effect="slide" start="0,0" end="0,240" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(303).Position(5)" effect="slide" start="0,0" end="0,300" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(303).Position(6)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(303).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(303).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(303).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(303).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(303).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(303).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
 				</control>
 			</control>
 			<control type="group" description="Pictures Menu Slider">
@@ -2149,12 +2149,12 @@
 					<height>132</height>
 					<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
 					<aspectratio>scale</aspectratio>
-					<animation condition="Container(304).Position(1)" effect="slide" start="0,0" end="0,60" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(304).Position(2)" effect="slide" start="0,0" end="0,120" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(304).Position(3)" effect="slide" start="0,0" end="0,180" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(304).Position(4)" effect="slide" start="0,0" end="0,240" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(304).Position(5)" effect="slide" start="0,0" end="0,300" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(304).Position(6)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(304).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(304).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(304).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(304).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(304).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(304).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
 				</control>
 			</control>
 			<control type="group" description="Addons Menu Slider">
@@ -2162,7 +2162,7 @@
 				<width>330</width>
 				<height>132</height>
 				<control type="image">
-					<visible>Control.HasFocus(306)</visible>
+					<visible>Control.HasFocus(305)</visible>
 					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
@@ -2176,12 +2176,12 @@
 					<height>132</height>
 					<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
 					<aspectratio>scale</aspectratio>
-					<animation condition="Container(305).Position(1)" effect="slide" start="0,0" end="0,60" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(305).Position(2)" effect="slide" start="0,0" end="0,120" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(305).Position(3)" effect="slide" start="0,0" end="0,180" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(305).Position(4)" effect="slide" start="0,0" end="0,240" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(305).Position(5)" effect="slide" start="0,0" end="0,300" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(305).Position(6)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(305).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(305).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(305).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(305).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(305).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(305).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
 				</control>
 			</control>
 			<control type="group" description="Xbmc Menu Slider">
@@ -2203,12 +2203,12 @@
 					<height>132</height>
 					<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
 					<aspectratio>scale</aspectratio>
-					<animation condition="Container(306).Position(1)" effect="slide" start="0,0" end="0,60" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(306).Position(2)" effect="slide" start="0,0" end="0,120" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(306).Position(3)" effect="slide" start="0,0" end="0,180" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(306).Position(4)" effect="slide" start="0,0" end="0,240" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(306).Position(5)" effect="slide" start="0,0" end="0,300" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(306).Position(6)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(306).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(306).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(306).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(306).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(306).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(306).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
 				</control>
 			</control>
 		</control>
