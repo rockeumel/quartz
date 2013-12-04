@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 	Control Id's:
+	9000 - Submenu Grouplist
 	301 - Submenu Movies
 	302 - Submenu Tv Shows
 	303 - Submenu Music
 	304 - Submenu Pictues
-	305 - Submenu Extras
-	307 - Submenu Settings
+	305 - Submenu Addons
+	306 - Submenu Xbmc
 	
 	311 - Shelf Movies
 	312 - Shelf Tv Shows
 	313 - Shelf Music
 	314 - Shelf Pictures
-	315 - reserved for Shelf Addons
+	315 - Shelf Addons
 	316 - reserved for Shelf Xbmc
 	
 	317 - Shelf VisibleChange Indicator Movies
 	318 - Shelf VisibleChange Indicator Pictures
 	319 - Shelf VisibleChange Indicator Music
 	320 - Shelf VisibleChange Indicator TvShows
+	333 - Shelf VisibleChange Indicator Addons
+	334 - reserved for Shelf VisibleChange Indicator Xbmc
 	
 	321 - Shelf OnNext Tv Shows
 	322 - Shelf OnPrevious Tv Shows
@@ -28,6 +31,10 @@
 	326 - Shelf OnPrevious Movies
 	327 - Shelf OnNext Pictures
 	328 - Shelf OnPrevious Pictures
+	329 - Shelf OnNext Addons
+	330 - Shelf OnPrevious Addons
+	331 - reserved for Shelf OnNext Xbmc
+	332 - reserved for Shelf OnPrevious Xbmc
 -->
 <window id="0">
 	<defaultcontrol>8998</defaultcontrol>
