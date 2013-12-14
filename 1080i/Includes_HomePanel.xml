@@ -2967,8 +2967,42 @@
 			</control>
 			<control type="group" description="Icons: OnScrollNext">
 				<posy>RA_IconSquare_PosY</posy>
-				<!--<visible>Control.IsVisible(3201)</visible>-->
 				<visible>Control.HasFocus(3201)</visible>
+				<control type="label" description="Episode Title">
+					<posx>1513</posx>
+					<posy>292</posy>
+					<width>294</width>
+					<height>45</height>
+					<font>Shelf_Title</font>
+					<textcolor>Shelf_Title</textcolor>
+					<shadowcolor>Shelf_TitleShadow</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[Container(3201).ListItem(-1).Label]</label>
+					<visible>Container(3201).OnScrollNext</visible>
+					<animation type="Hidden">
+						<effect type="fade" start="100" end="0" time="ShelfScroll_AnimationTime"/>
+						<effect type="slide" time="ShelfScroll_AnimationTime" end="-350" reversible="false" tween="sine" easing="inout"/>
+					</animation>
+				</control>
+				<control type="label" description="Tv Show Title">
+					<posx>1513</posx>
+					<posy>322</posy>
+					<width>294</width>
+					<height>45</height>
+					<font>Shelf_Title2</font>
+					<textcolor>Shelf_Title2</textcolor>
+					<shadowcolor>Shelf_TitleShadow</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[Container(3201).ListItem(-1).Label2]</label>
+					<visible>Container(3201).OnScrollNext</visible>
+					<animation type="Hidden">
+						<effect type="fade" start="100" end="0" time="ShelfScroll_AnimationTime"/>
+						<effect type="slide" time="ShelfScroll_AnimationTime" end="-350" reversible="false" tween="sine" easing="inout"/>
+					</animation>
+				</control>
+				
 				<control type="group" description="Item (-1r --> -2r)">
 					<posx>RA_IconSquare1_PosX</posx>
 					<visible>Container(3201).HasPrevious + Container(3201).OnScrollNext + [Player.HasAudio +
@@ -3126,8 +3160,41 @@
 			</control>
 			<control type="group" description="Icons: OnScrollPrevious">
 				<posy>RA_IconSquare_PosY</posy>
-				<!--<visible>Control.IsVisible(3201)</visible>-->
 				<visible>Control.HasFocus(3201)</visible>
+				<control type="label" description="Album Title">
+					<posx>113</posx>
+					<posy>292</posy>
+					<width>294</width>
+					<height>45</height>
+					<font>Shelf_Title</font>
+					<textcolor>Shelf_Title</textcolor>
+					<shadowcolor>Shelf_TitleShadow</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[Container(3201).ListItem(1).Label]</label>
+					<visible>Container(3201).OnScrollPrevious</visible>
+					<animation type="Hidden">
+						<effect type="fade" start="100" end="0" time="ShelfScroll_AnimationTime"/>
+						<effect type="slide" time="ShelfScroll_AnimationTime" end="350" reversible="false" tween="sine" easing="inout"/>
+					</animation>
+				</control>
+				<control type="label" description="Artist Name">
+					<posx>113</posx>
+					<posy>322</posy>
+					<width>294</width>
+					<height>45</height>
+					<font>Shelf_Title2</font>
+					<textcolor>Shelf_Title2</textcolor>
+					<shadowcolor>Shelf_TitleShadow</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[Container(3201).ListItem(1).Label2]</label>
+					<visible>Container(3201).OnScrollPrevious</visible>
+					<animation type="Hidden">
+						<effect type="fade" start="100" end="0" time="ShelfScroll_AnimationTime"/>
+						<effect type="slide" time="ShelfScroll_AnimationTime" end="350" reversible="false" tween="sine" easing="inout"/>
+					</animation>
+				</control>
 
 				<control type="group" description="Item (-2r --> -1r)">
 					<posx>RA_IconSquare1_PosX</posx>
