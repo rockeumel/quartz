@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<!-- Home Background -->
 	<include name="Home_Background">
 		<control type="group" description="Furniture">
 			<control type="image" description="Stage">
@@ -31,43 +30,43 @@
 	</include>
 
 	<include name="Animation_MainBar_Focuser">
-		<animation condition="[Control.HasFocus(302) | Control.HasFocus(312)] + StringCompare(Skin.String(NumberOfMenuitems),6)" effect="slide" start="0,0" end="300,0" time="180">Conditional</animation>
-		<animation condition="[Control.HasFocus(302) | Control.HasFocus(312)] + StringCompare(Skin.String(NumberOfMenuitems),5) + !Skin.HasSetting(MoviesSectionHide)" effect="slide" start="0,0" end="360,0" time="180">Conditional</animation>
-		<animation condition="[Control.HasFocus(302) | Control.HasFocus(312)] + StringCompare(Skin.String(NumberOfMenuitems),4) + !Skin.HasSetting(MoviesSectionHide)" effect="slide" start="0,0" end="450,0" time="180">Conditional</animation>
-		<animation condition="[Control.HasFocus(302) | Control.HasFocus(312)] + StringCompare(Skin.String(NumberOfMenuitems),3) + !Skin.HasSetting(MoviesSectionHide)" effect="slide" start="0,0" end="600,0" time="180">Conditional</animation>
-<!--	<animation condition="[Control.HasFocus(302) | Control.HasFocus(312)] + StringCompare(Skin.String(NumberOfMenuitems),2)" effect="slide" start="0,0" end="0,0" time="180">Conditional</animation>-->
+		<animation condition="[Control.HasFocus(320) | Control.HasFocus(3201)] + StringCompare(Skin.String(NumberOfMenuitems),6)" effect="slide" start="0,0" end="300,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(320) | Control.HasFocus(3201)] + StringCompare(Skin.String(NumberOfMenuitems),5) + !Skin.HasSetting(MoviesSectionHide)" effect="slide" start="0,0" end="360,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(320) | Control.HasFocus(3201)] + StringCompare(Skin.String(NumberOfMenuitems),4) + !Skin.HasSetting(MoviesSectionHide)" effect="slide" start="0,0" end="450,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(320) | Control.HasFocus(3201)] + StringCompare(Skin.String(NumberOfMenuitems),3) + !Skin.HasSetting(MoviesSectionHide)" effect="slide" start="0,0" end="600,0" time="180">Conditional</animation>
+<!--	<animation condition="[Control.HasFocus(320) | Control.HasFocus(3201)] + StringCompare(Skin.String(NumberOfMenuitems),2)" effect="slide" start="0,0" end="0,0" time="180">Conditional</animation>-->
 		
-		<animation condition="[Control.HasFocus(303) | Control.HasFocus(313)] + StringCompare(Skin.String(NumberOfMenuitems),6) + !Skin.HasSetting(MoviesSectionHide) + !Skin.HasSetting(TVSectionHide)" effect="slide" start="0,0" end="600,0" time="180">Conditional</animation>
-		<animation condition="[Control.HasFocus(303) | Control.HasFocus(313)] + StringCompare(Skin.String(NumberOfMenuitems),5) + !Skin.HasSetting(MoviesSectionHide) + !Skin.HasSetting(TVSectionHide)" effect="slide" start="0,0" end="720,0" time="180">Conditional</animation>
-		<animation condition="[Control.HasFocus(303) | Control.HasFocus(313)] + StringCompare(Skin.String(NumberOfMenuitems),5) + [Skin.HasSetting(MoviesSectionHide) | Skin.HasSetting(TVSectionHide)]" effect="slide" start="0,0" end="360,0" time="180">Conditional</animation>
-<!--	<animation condition="[Control.HasFocus(303) | Control.HasFocus(313)] + StringCompare(Skin.String(NumberOfMenuitems),5) + Skin.HasSetting(MoviesSectionHide) + Skin.HasSetting(TVSectionHide)" effect="slide" start="0,0" end="0,0" time="180">Conditional</animation>-->
-		<animation condition="[Control.HasFocus(303) | Control.HasFocus(313)] + StringCompare(Skin.String(NumberOfMenuitems),4) + !Skin.HasSetting(MoviesSectionHide) + !Skin.HasSetting(TVSectionHide)" effect="slide" start="0,0" end="900,0" time="180">Conditional</animation>
-		<animation condition="[Control.HasFocus(303) | Control.HasFocus(313)] + StringCompare(Skin.String(NumberOfMenuitems),4) + [Skin.HasSetting(MoviesSectionHide) | Skin.HasSetting(TVSectionHide)]" effect="slide" start="0,0" end="450,0" time="180">Conditional</animation>
-<!--	<animation condition="[Control.HasFocus(303) | Control.HasFocus(313)] + StringCompare(Skin.String(NumberOfMenuitems),4) + Skin.HasSetting(MoviesSectionHide) + Skin.HasSetting(TVSectionHide)" effect="slide" start="0,0" end="0,0" time="180">Conditional</animation>-->
-		<animation condition="[Control.HasFocus(303) | Control.HasFocus(313)] + StringCompare(Skin.String(NumberOfMenuitems),3) + [Skin.HasSetting(MoviesSectionHide) | Skin.HasSetting(TVSectionHide)]" effect="slide" start="0,0" end="600,0" time="180">Conditional</animation>
-<!--	<animation condition="[Control.HasFocus(303) | Control.HasFocus(313)] + StringCompare(Skin.String(NumberOfMenuitems),3) + Skin.HasSetting(MoviesSectionHide) + Skin.HasSetting(TVSectionHide)" effect="slide" start="0,0" end="0,0" time="180">Conditional</animation>-->
-<!--	<animation condition="[Control.HasFocus(303) | Control.HasFocus(313)] + StringCompare(Skin.String(NumberOfMenuitems),2)" effect="slide" start="0,0" end="0,0" time="180">Conditional</animation>-->
+		<animation condition="[Control.HasFocus(330) | Control.HasFocus(3301)] + StringCompare(Skin.String(NumberOfMenuitems),6) + !Skin.HasSetting(MoviesSectionHide) + !Skin.HasSetting(TVSectionHide)" effect="slide" start="0,0" end="600,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(330) | Control.HasFocus(3301)] + StringCompare(Skin.String(NumberOfMenuitems),5) + !Skin.HasSetting(MoviesSectionHide) + !Skin.HasSetting(TVSectionHide)" effect="slide" start="0,0" end="720,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(330) | Control.HasFocus(3301)] + StringCompare(Skin.String(NumberOfMenuitems),5) + [Skin.HasSetting(MoviesSectionHide) | Skin.HasSetting(TVSectionHide)]" effect="slide" start="0,0" end="360,0" time="180">Conditional</animation>
+<!--	<animation condition="[Control.HasFocus(330) | Control.HasFocus(3301)] + StringCompare(Skin.String(NumberOfMenuitems),5) + Skin.HasSetting(MoviesSectionHide) + Skin.HasSetting(TVSectionHide)" effect="slide" start="0,0" end="0,0" time="180">Conditional</animation>-->
+		<animation condition="[Control.HasFocus(330) | Control.HasFocus(3301)] + StringCompare(Skin.String(NumberOfMenuitems),4) + !Skin.HasSetting(MoviesSectionHide) + !Skin.HasSetting(TVSectionHide)" effect="slide" start="0,0" end="900,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(330) | Control.HasFocus(3301)] + StringCompare(Skin.String(NumberOfMenuitems),4) + [Skin.HasSetting(MoviesSectionHide) | Skin.HasSetting(TVSectionHide)]" effect="slide" start="0,0" end="450,0" time="180">Conditional</animation>
+<!--	<animation condition="[Control.HasFocus(330) | Control.HasFocus(3301)] + StringCompare(Skin.String(NumberOfMenuitems),4) + Skin.HasSetting(MoviesSectionHide) + Skin.HasSetting(TVSectionHide)" effect="slide" start="0,0" end="0,0" time="180">Conditional</animation>-->
+		<animation condition="[Control.HasFocus(330) | Control.HasFocus(3301)] + StringCompare(Skin.String(NumberOfMenuitems),3) + [Skin.HasSetting(MoviesSectionHide) | Skin.HasSetting(TVSectionHide)]" effect="slide" start="0,0" end="600,0" time="180">Conditional</animation>
+<!--	<animation condition="[Control.HasFocus(330) | Control.HasFocus(3301)] + StringCompare(Skin.String(NumberOfMenuitems),3) + Skin.HasSetting(MoviesSectionHide) + Skin.HasSetting(TVSectionHide)" effect="slide" start="0,0" end="0,0" time="180">Conditional</animation>-->
+<!--	<animation condition="[Control.HasFocus(330) | Control.HasFocus(3301)] + StringCompare(Skin.String(NumberOfMenuitems),2)" effect="slide" start="0,0" end="0,0" time="180">Conditional</animation>-->
 		
-		<animation condition="[Control.HasFocus(304) | Control.HasFocus(314)] + StringCompare(Skin.String(NumberOfMenuitems),6)" effect="slide" start="0,0" end="900,0" time="180">Conditional</animation>
-		<animation condition="[Control.HasFocus(304) | Control.HasFocus(314)] + StringCompare(Skin.String(NumberOfMenuitems),5) + Skin.HasSetting(AddonsSectionHide)" effect="slide" start="0,0" end="1080,0" time="180">Conditional</animation>
-		<animation condition="[Control.HasFocus(304) | Control.HasFocus(314)] + StringCompare(Skin.String(NumberOfMenuitems),5) + !Skin.HasSetting(AddonsSectionHide)" effect="slide" start="0,0" end="720,0" time="180">Conditional</animation>
-		<animation condition="[Control.HasFocus(304) | Control.HasFocus(314)] + StringCompare(Skin.String(NumberOfMenuitems),4) + Skin.HasSetting(AddonsSectionHide)" effect="slide" start="0,0" end="900,0" time="180">Conditional</animation>
-		<animation condition="[Control.HasFocus(304) | Control.HasFocus(314)] + StringCompare(Skin.String(NumberOfMenuitems),4) + !Skin.HasSetting(AddonsSectionHide)" effect="slide" start="0,0" end="450,0" time="180">Conditional</animation>
-		<animation condition="[Control.HasFocus(304) | Control.HasFocus(314)] + StringCompare(Skin.String(NumberOfMenuitems),3) + Skin.HasSetting(AddonsSectionHide)" effect="slide" start="0,0" end="600,0" time="180">Conditional</animation>
-<!--	<animation condition="[Control.HasFocus(304) | Control.HasFocus(314)] + StringCompare(Skin.String(NumberOfMenuitems),3) + !Skin.HasSetting(AddonsSectionHide)" effect="slide" start="0,0" end="0,0" time="180">Conditional</animation>-->
-<!--	<animation condition="[Control.HasFocus(304) | Control.HasFocus(314)] + StringCompare(Skin.String(NumberOfMenuitems),2)" effect="slide" start="0,0" end="0,0" time="180">Conditional</animation>-->
+		<animation condition="[Control.HasFocus(340) | Control.HasFocus(3401)] + StringCompare(Skin.String(NumberOfMenuitems),6)" effect="slide" start="0,0" end="900,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(340) | Control.HasFocus(3401)] + StringCompare(Skin.String(NumberOfMenuitems),5) + Skin.HasSetting(AddonsSectionHide)" effect="slide" start="0,0" end="1080,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(340) | Control.HasFocus(3401)] + StringCompare(Skin.String(NumberOfMenuitems),5) + !Skin.HasSetting(AddonsSectionHide)" effect="slide" start="0,0" end="720,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(340) | Control.HasFocus(3401)] + StringCompare(Skin.String(NumberOfMenuitems),4) + Skin.HasSetting(AddonsSectionHide)" effect="slide" start="0,0" end="900,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(340) | Control.HasFocus(3401)] + StringCompare(Skin.String(NumberOfMenuitems),4) + !Skin.HasSetting(AddonsSectionHide)" effect="slide" start="0,0" end="450,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(340) | Control.HasFocus(3401)] + StringCompare(Skin.String(NumberOfMenuitems),3) + Skin.HasSetting(AddonsSectionHide)" effect="slide" start="0,0" end="600,0" time="180">Conditional</animation>
+<!--	<animation condition="[Control.HasFocus(340) | Control.HasFocus(3401)] + StringCompare(Skin.String(NumberOfMenuitems),3) + !Skin.HasSetting(AddonsSectionHide)" effect="slide" start="0,0" end="0,0" time="180">Conditional</animation>-->
+<!--	<animation condition="[Control.HasFocus(340) | Control.HasFocus(3401)] + StringCompare(Skin.String(NumberOfMenuitems),2)" effect="slide" start="0,0" end="0,0" time="180">Conditional</animation>-->
 		
-		<animation condition="[Control.HasFocus(305) | Control.HasFocus(315)] + StringCompare(Skin.String(NumberOfMenuitems),6)" effect="slide" start="0,0" end="1200,0" time="180">Conditional</animation>
-		<animation condition="[Control.HasFocus(305) | Control.HasFocus(315)] + StringCompare(Skin.String(NumberOfMenuitems),5)" effect="slide" start="0,0" end="1080,0" time="180">Conditional</animation>
-		<animation condition="[Control.HasFocus(305) | Control.HasFocus(315)] + StringCompare(Skin.String(NumberOfMenuitems),4)" effect="slide" start="0,0" end="900,0" time="180">Conditional</animation>
-		<animation condition="[Control.HasFocus(305) | Control.HasFocus(315)] + StringCompare(Skin.String(NumberOfMenuitems),3)" effect="slide" start="0,0" end="600,0" time="180">Conditional</animation>
-<!--	<animation condition="[Control.HasFocus(305) | Control.HasFocus(315)] + StringCompare(Skin.String(NumberOfMenuitems),2)" effect="slide" start="0,0" end="0,0" time="180">Conditional</animation>-->
+		<animation condition="[Control.HasFocus(350) | Control.HasFocus(3501)] + StringCompare(Skin.String(NumberOfMenuitems),6)" effect="slide" start="0,0" end="1200,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(350) | Control.HasFocus(3501)] + StringCompare(Skin.String(NumberOfMenuitems),5)" effect="slide" start="0,0" end="1080,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(350) | Control.HasFocus(3501)] + StringCompare(Skin.String(NumberOfMenuitems),4)" effect="slide" start="0,0" end="900,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(350) | Control.HasFocus(3501)] + StringCompare(Skin.String(NumberOfMenuitems),3)" effect="slide" start="0,0" end="600,0" time="180">Conditional</animation>
+<!--	<animation condition="[Control.HasFocus(350) | Control.HasFocus(3501)] + StringCompare(Skin.String(NumberOfMenuitems),2)" effect="slide" start="0,0" end="0,0" time="180">Conditional</animation>-->
 		
-		<animation condition="[Control.HasFocus(306) | Control.HasFocus(316)] + StringCompare(Skin.String(NumberOfMenuitems),6)" effect="slide" start="0,0" end="1500,0" time="180">Conditional</animation>
-		<animation condition="[Control.HasFocus(306) | Control.HasFocus(316)] + StringCompare(Skin.String(NumberOfMenuitems),5)" effect="slide" start="0,0" end="1440,0" time="180">Conditional</animation>
-		<animation condition="[Control.HasFocus(306) | Control.HasFocus(316)] + StringCompare(Skin.String(NumberOfMenuitems),4)" effect="slide" start="0,0" end="1350,0" time="180">Conditional</animation>
-		<animation condition="[Control.HasFocus(306) | Control.HasFocus(316)] + StringCompare(Skin.String(NumberOfMenuitems),3)" effect="slide" start="0,0" end="1200,0" time="180">Conditional</animation>
-		<animation condition="[Control.HasFocus(306) | Control.HasFocus(316)] + StringCompare(Skin.String(NumberOfMenuitems),2)" effect="slide" start="0,0" end="900,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(360) | Control.HasFocus(3601)] + StringCompare(Skin.String(NumberOfMenuitems),6)" effect="slide" start="0,0" end="1500,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(360) | Control.HasFocus(3601)] + StringCompare(Skin.String(NumberOfMenuitems),5)" effect="slide" start="0,0" end="1440,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(360) | Control.HasFocus(3601)] + StringCompare(Skin.String(NumberOfMenuitems),4)" effect="slide" start="0,0" end="1350,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(360) | Control.HasFocus(3601)] + StringCompare(Skin.String(NumberOfMenuitems),3)" effect="slide" start="0,0" end="1200,0" time="180">Conditional</animation>
+		<animation condition="[Control.HasFocus(360) | Control.HasFocus(3601)] + StringCompare(Skin.String(NumberOfMenuitems),2)" effect="slide" start="0,0" end="900,0" time="180">Conditional</animation>
 	</include>
 
 	<include name="HomeSlider_Gap1">
@@ -108,70 +107,6 @@
 		<itemgap>0</itemgap>
 	</include>
 
-	<include name="HomeMenu_Items1_PosX1">
-		<posx>750</posx>
-	</include>
-	<include name="HomeMenu_Items2_PosX1">
-		<posx>300</posx>
-	</include>
-	<include name="HomeMenu_Items2_PosX2">
-		<posx>1200</posx>
-	</include>
-	<include name="HomeMenu_Items3_PosX1">
-		<posx>150</posx>
-	</include>
-	<include name="HomeMenu_Items3_PosX2">
-		<posx>750</posx>
-	</include>
-	<include name="HomeMenu_Items3_PosX3">
-		<posx>1350</posx>
-	</include>
-	<include name="HomeMenu_Items4_PosX1">
-		<posx>75</posx>
-	</include>
-	<include name="HomeMenu_Items4_PosX2">
-		<posx>525</posx>
-	</include>
-	<include name="HomeMenu_Items4_PosX3">
-		<posx>975</posx>
-	</include>
-	<include name="HomeMenu_Items4_PosX4">
-		<posx>1425</posx>
-	</include>
-	<include name="HomeMenu_Items5_PosX1">
-		<posx>30</posx>
-	</include>
-	<include name="HomeMenu_Items5_PosX2">
-		<posx>390</posx>
-	</include>
-	<include name="HomeMenu_Items5_PosX3">
-		<posx>750</posx>
-	</include>
-	<include name="HomeMenu_Items5_PosX4">
-		<posx>1110</posx>
-	</include>
-	<include name="HomeMenu_Items5_PosX5">
-		<posx>1470</posx>
-	</include>
-	<include name="HomeMenu_Items6_PosX1">
-		<posx>0</posx>
-	</include>
-	<include name="HomeMenu_Items6_PosX2">
-		<posx>300</posx>
-	</include>
-	<include name="HomeMenu_Items6_PosX3">
-		<posx>600</posx>
-	</include>
-	<include name="HomeMenu_Items6_PosX4">
-		<posx>900</posx>
-	</include>
-	<include name="HomeMenu_Items6_PosX5">
-		<posx>1200</posx>
-	</include>
-	<include name="HomeMenu_Items6_PosX6">
-		<posx>1500</posx>
-	</include>
-	
 	<include name="HomeMainBar_Focuser_PosX1">
 		<posx>736</posx>
 	</include>
@@ -192,1083 +127,23 @@
 	</include>
 	<!-- ======================= -->
 	<!-- ### Home Navigation ### -->
-	<!-- ======================= -->
-	<include name=".Home_Menu">
-		<control type="group" description="Submenus" id="9000">
-			<posx>60</posx>
-			<posy>592</posy>
-			<height>420</height>
-			<width>1800</width>
-			<control type="group" description="Submenu: Movies">
-				<visible>!Skin.HasSetting(MoviesSectionHide)</visible>
-				<control type="list" id="301">
-					<visible allowhiddenfocus="true">Control.HasFocus(301) | Control.HasFocus(311)</visible>
-					<animation type="Hiddden">
-						<effect type="fade" start="100" end="0" time="150" reversible="false"/>
-					</animation>
-					<animation type="Visible">
-						<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false"/>
-					</animation>
-					<animation type="Conditional" condition="Control.HasFocus(311)">
-						<effect type="fade" start="100" end="50" time="100" reversible="true"/>
-					</animation>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_Items2_PosX1</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_Items3_PosX1</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_Items4_PosX1</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_Items5_PosX1</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_Items6_PosX1</include>
-					<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_Items6_PosX1</include>
-					<width>300</width>
-					<height>432</height>
-					<onup>311</onup>
-					<ondown>301</ondown>
-					<onleft>306</onleft>
-					<onright>302</onright>
-					<align>center</align>
-					<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
-					<onright>Skin.Reset(HomeMenuDirection)</onright>
-					<onup>Skin.SetBool(HomeTVupdown)</onup>
-					<onleft>Skin.Reset(HomeTVupdown)</onleft>
-					<onright>Skin.Reset(HomeTVupdown)</onright>
-					<focusposition>3</focusposition>
-					<movement>3</movement>
-					<!-- Unselected Items -->
-					<itemlayout height="72" width="300">
-						<control type="label">
-							<posx>150</posx>
-							<width>300</width>
-							<height>72</height>
-							<info>ListItem.Label</info>
-							<font>HomeNav_Submenu</font>
-							<textcolor>HomeNav</textcolor>
-							<shadowcolor>ff000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>center</align>
-							<aligny>center</aligny>
-						</control>
-					</itemlayout>
-	
-					<!-- Selected Item -->
-					<focusedlayout height="72" width="300">
-						<control type="label">
-							<posx>150</posx>
-							<width>300</width>
-							<height>72</height>
-							<info>ListItem.Label</info>
-							<font>HomeNav_Submenu</font>
-							<textcolor>HomeNav</textcolor>
-							<shadowcolor>ff000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>center</align>
-							<aligny>center</aligny>
-						</control>
-					</focusedlayout>
-	
-					<content>
-						<!-- Menu Items -->
-						<item id="0" description="MyMovies">
-							<visible>!Skin.HasSetting(Movies1)</visible>
-							<visible>Library.HasContent(Movies)</visible>
-							<label>342</label>
-							<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
-						</item>
-						<item id="1" description="RA Movies">
-							<visible>!Skin.HasSetting(Movies2)</visible>
-							<visible>Library.HasContent(Movies)</visible>
-							<label>31289</label>
-							<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
-						</item>
-						<item id="2" description="Genres">
-							<visible>!Skin.HasSetting(Movies3)</visible>
-							<visible>Library.HasContent(Movies)</visible>
-							<label>135</label>
-							<onclick>ActivateWindow(videolibrary,moviegenres,return)</onclick>
-						</item>
-						<item id="3" description="Custom Movies">
-							<visible>!IsEmpty(Skin.String(CustomMovies.1.Path))</visible>
-							<label>$INFO[Skin.String(CustomMovies.1.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomMovies.1.Path)]</onclick>
-						</item>
-						<item id="4" description="Shortcut2">
-							<visible>!IsEmpty(Skin.String(CustomMovies.2.Path))</visible>
-							<label>$INFO[Skin.String(CustomMovies.2.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomMovies.2.Path)]</onclick>
-						</item>
-						<item id="5" description="Shortcut3">
-							<visible>!IsEmpty(Skin.String(CustomMovies.3.Path))</visible>
-							<label>$INFO[Skin.String(CustomMovies.3.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomMovies.3.Path)]</onclick>
-						</item>
-						<item id="6" description="Shortcut4">
-							<visible>!IsEmpty(Skin.String(CustomMovies.4.Path))</visible>
-							<label>$INFO[Skin.String(CustomMovies.4.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomMovies.4.Path)]</onclick>
-						</item>
-						<item id="7" description="Shortcut5">
-							<visible>!IsEmpty(Skin.String(CustomMovies.5.Path))</visible>
-							<label>$INFO[Skin.String(CustomMovies.5.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomMovies.5.Path)]</onclick>
-						</item>
-						<item id="7" description="Shortcut6">
-							<visible>!IsEmpty(Skin.String(CustomMovies.6.Path))</visible>
-							<label>$INFO[Skin.String(CustomMovies.6.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomMovies.6.Path)]</onclick>
-						</item>
-						<item id="7" description="Shortcut7">
-							<visible>!IsEmpty(Skin.String(CustomMovies.7.Path))</visible>
-							<label>$INFO[Skin.String(CustomMovies.7.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomMovies.7.Path)]</onclick>
-						</item>
-						<item id="8" description="Browse">
-							<visible>!Skin.HasSetting(Movies4)</visible>
-							<label>1024</label>
-							<onclick>ActivateWindow(Videolibrary,root)</onclick>
-						</item>
-						<item id="9" description="Search">
-							<visible>!Skin.HasSetting(Movies5)</visible>
-							<visible>Library.HasContent(Movies)</visible>
-							<label>137</label>
-							<onclick>ActivateWindow(VideoLibrary)</onclick>
-							<onclick>SendClick(8)</onclick>
-						</item>
-					</content>
-				</control>
-			</control>
-			<control type="group" description="Submenu: TvShows">
-				<visible>!Skin.HasSetting(TVSectionHide)</visible>
-				<control type="list" id="302">
-					<visible allowhiddenfocus="true">Control.HasFocus(302) | Control.HasFocus(312)</visible>
-					<animation type="Hiddden">
-						<effect type="fade" start="100" end="0" time="150" reversible="false"/>
-					</animation>
-					<animation type="Visible">
-						<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false"/>
-					</animation>
-					<animation type="Conditional" condition="Control.HasFocus(312)">
-						<effect type="fade" start="100" end="50" time="100" reversible="true"/>
-					</animation>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_Items2_PosX1</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),3) + Skin.HasSetting(MoviesSectionHide)">HomeMenu_Items3_PosX1</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),3) + !Skin.HasSetting(MoviesSectionHide)">HomeMenu_Items3_PosX2</include>
-					
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),4) + Skin.HasSetting(MoviesSectionHide)">HomeMenu_Items4_PosX1</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),4) + !Skin.HasSetting(MoviesSectionHide)">HomeMenu_Items4_PosX2</include>
-					
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),5) + Skin.HasSetting(MoviesSectionHide)">HomeMenu_Items5_PosX1</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),5) + !Skin.HasSetting(MoviesSectionHide)">HomeMenu_Items5_PosX2</include>
-					
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_Items6_PosX2</include>
-					<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_Items6_PosX2</include>
-					<width>300</width>
-					<height>420</height>
-					<onup>312</onup>
-					<ondown>302</ondown>
-					<onleft>301</onleft>
-					<onright>303</onright>
-					<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
-					<onright>Skin.Reset(HomeMenuDirection)</onright>
-					<onup>Skin.SetBool(HomeTVupdown)</onup>
-					<onleft>Skin.Reset(HomeTVupdown)</onleft>
-					<onright>Skin.Reset(HomeTVupdown)</onright>
-					<focusposition>3</focusposition>
-					<movement>3</movement>
-					<!-- Unselected Items -->
-					<itemlayout height="72" width="300">
-						<control type="label">
-							<posx>150</posx>
-							<width>300</width>
-							<height>72</height>
-							<info>ListItem.Label</info>
-							<font>HomeNav_Submenu</font>
-							<textcolor>HomeNav</textcolor>
-							<shadowcolor>ff000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>center</align>
-							<aligny>center</aligny>
-						</control>
-					</itemlayout>
-					
-					<!-- Selected Item -->
-					<focusedlayout height="72" width="300">
-						<control type="label">
-							<posx>150</posx>
-							<width>300</width>
-							<height>72</height>
-							<info>ListItem.Label</info>
-							<font>HomeNav_Submenu</font>
-							<textcolor>HomeNav</textcolor>
-							<shadowcolor>ff000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>center</align>
-							<aligny>center</aligny>
-						</control>
-					</focusedlayout>
-					<!-- Menu Items -->
-					<content>
-						<item id="0" description="MyTV">
-							<visible>!Skin.HasSetting(TV1)</visible>
-							<visible>Library.HasContent(TVShows)</visible>
-							<label>20343</label>
-							<onclick>ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
-						</item>
-						<item id="1" description="RA TV">
-							<visible>!Skin.HasSetting(TV2)</visible>
-							<visible>Library.HasContent(TVShows)</visible>
-							<label>31289</label>
-							<onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</onclick>
-						</item>
-						<item id="2" description="Browse 5 MENU ITEM ADDED Watchlist">
-							<visible>!Skin.HasSetting(TV5)</visible>
-							<visible>Library.HasContent(TVShows)</visible>
-							<label>575</label>
-							<onclick>ActivateWindow(Videos,&quot;library://video/inprogressshows.xml/&quot;,return)</onclick>
-						</item>
-						<item id="3" description="Custom TV">
-							<visible>!IsEmpty(Skin.String(CustomTV.1.Path))</visible>
-							<label>$INFO[Skin.String(CustomTV.1.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomTV.1.Path)]</onclick>
-						</item>
-						<item id="4" description="Shortcut2">
-							<visible>!IsEmpty(Skin.String(CustomTV.2.Path))</visible>
-							<label>$INFO[Skin.String(CustomTV.2.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomTV.2.Path)]</onclick>
-						</item>
-						<item id="5" description="Shortcut3">
-							<visible>!IsEmpty(Skin.String(CustomTV.3.Path))</visible>
-							<label>$INFO[Skin.String(CustomTV.3.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomTV.3.Path)]</onclick>
-						</item>
-						<item id="6" description="Shortcut4">
-							<visible>!IsEmpty(Skin.String(CustomTV.4.Path))</visible>
-							<label>$INFO[Skin.String(CustomTV.4.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomTV.4.Path)]</onclick>
-						</item>
-						<item id="7" description="Shortcut5">
-							<visible>!IsEmpty(Skin.String(CustomTV.5.Path))</visible>
-							<label>$INFO[Skin.String(CustomTV.5.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomTV.5.Path)]</onclick>
-						</item>
-						<item id="7" description="Shortcut6">
-							<visible>!IsEmpty(Skin.String(CustomTV.6.Path))</visible>
-							<label>$INFO[Skin.String(CustomTV.6.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomTV.6.Path)]</onclick>
-						</item>
-						<item id="7" description="Shortcut7">
-							<visible>!IsEmpty(Skin.String(CustomTV.7.Path))</visible>
-							<label>$INFO[Skin.String(CustomTV.7.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomTV.7.Path)]</onclick>
-						</item>
-						<item id="8" description="Browse">
-							<visible>!Skin.HasSetting(TV3)</visible>
-							<label>1024</label>
-							<onclick>ActivateWindow(Videolibrary,root)</onclick>
-						</item>
-						<item id="9" description="Search">
-							<visible>!Skin.HasSetting(TV4)</visible>
-							<visible>Library.HasContent(TVShows)</visible>
-							<label>137</label>
-							<onclick>ActivateWindow(VideoLibrary)</onclick>
-							<onclick>SendClick(8)</onclick>
-						</item>
-					</content>
-				</control>
-			</control>
-			<control type="group" description="Submenu: Music">
-				<visible>!Skin.HasSetting(MusicSectionHide)</visible>
-				<control type="list" id="303">
-					<visible allowhiddenfocus="true">Control.HasFocus(303) | Control.HasFocus(313)</visible>
-					<animation type="Hiddden">
-						<effect type="fade" start="100" end="0" time="150" reversible="false"/>
-					</animation>
-					<animation type="Visible">
-						<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false"/>
-					</animation>
-					<animation type="Conditional" condition="Control.HasFocus(313)">
-						<effect type="fade" start="100" end="50" time="100" reversible="true"/>
-					</animation>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_Items2_PosX1</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),3) + Skin.HasSetting(MoviesSectionHide) + Skin.HasSetting(TVSectionHide)">HomeMenu_Items3_PosX1</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),3) + [Skin.HasSetting(TVSectionHide) | Skin.HasSetting(MoviesSectionHide)]">HomeMenu_Items3_PosX2</include>
-					
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),4) + Skin.HasSetting(MoviesSectionHide) + Skin.HasSetting(TVSectionHide)">HomeMenu_Items4_PosX1</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),4) + [Skin.HasSetting(MoviesSectionHide) | Skin.HasSetting(TVSectionHide)]">HomeMenu_Items4_PosX2</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),4) + !Skin.HasSetting(MoviesSectionHide) + !Skin.HasSetting(TVSectionHide)">HomeMenu_Items4_PosX3</include>
-					
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),5) + Skin.HasSetting(MoviesSectionHide) + Skin.HasSetting(TVSectionHide)">HomeMenu_Items5_PosX1</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),5) + [Skin.HasSetting(MoviesSectionHide) | Skin.HasSetting(TVSectionHide)]">HomeMenu_Items5_PosX2</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),5) + !Skin.HasSetting(MoviesSectionHide) + !Skin.HasSetting(TVSectionHide)">HomeMenu_Items5_PosX3</include>
-					
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_Items6_PosX3</include>
-					<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_Items6_PosX3</include>
-					<width>300</width>
-					<height>420</height>
-					<onup>313</onup>
-					<ondown>303</ondown>
-					<onleft>302</onleft>
-					<onright>304</onright>
-					<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
-					<onright>Skin.Reset(HomeMenuDirection)</onright>
-					<onup>Skin.SetBool(HomeTVupdown)</onup>
-					<onleft>Skin.Reset(HomeTVupdown)</onleft>
-					<onright>Skin.Reset(HomeTVupdown)</onright>
-					<focusposition>3</focusposition>
-					<movement>3</movement>
-					<!-- Unselected Items -->
-					<itemlayout height="72" width="300">
-						<control type="label">
-							<posx>150</posx>
-							<width>300</width>
-							<height>72</height>
-							<info>ListItem.Label</info>
-							<font>HomeNav_Submenu</font>
-							<textcolor>HomeNav</textcolor>
-							<shadowcolor>ff000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>center</align>
-							<aligny>center</aligny>
-						</control>
-					</itemlayout>
-					
-					<!-- Selected Item -->
-					<focusedlayout height="72" width="300">
-						<control type="label">
-							<posx>150</posx>
-							<width>300</width>
-							<height>72</height>
-							<info>ListItem.Label</info>
-							<font>HomeNav_Submenu</font>
-							<textcolor>HomeNav</textcolor>
-							<shadowcolor>ff000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>center</align>
-							<aligny>center</aligny>
-						</control>
-					</focusedlayout>
-					<!-- Menu Items -->
-					<content>
-						<item id="0" description="Artists">
-							<visible>!Skin.HasSetting(Music1) + Library.HasContent(Music)</visible>
-							<label>133</label>
-							<onclick condition="Library.HasContent(Music)">ActivateWindow(MusicLibrary,Artists,return)</onclick>
-						</item>
-						<item id="1" description="Music Videos">
-							<visible>!Skin.HasSetting(Music2) + Library.HasContent(MusicVideos)</visible>
-							<label>3</label>
-							<onclick>ActivateWindow(VideoLibrary,MusicVideos,return)</onclick>
-						</item>
-						<item id="2" description="Library">
-							<visible>!Skin.HasSetting(Music3) + Library.HasContent(Music)</visible>
-							<label>14022</label>
-							<onclick>ActivateWindow(MusicLibrary,root)</onclick>
-						</item>
-						<item id="3" description="Files">
-							<visible>!Skin.HasSetting(Music4)</visible>
-							<label>744</label>
-							<onclick>ActivateWindow(MusicFiles,root)</onclick>
-						</item>
-						<item id="3" description="Party mode">
-							<visible>!Skin.HasSetting(Music7) + Library.HasContent(music)</visible>
-							<label>589</label>
-							<onclick>PlayerControl(PartyMode(music))</onclick>
-						</item>
-						<item id="3" description="Custom Music">
-							<visible>!IsEmpty(Skin.String(CustomMusic.1.Path))</visible>
-							<label>$INFO[Skin.String(CustomMusic.1.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomMusic.1.Path)]</onclick>
-						</item>
-						<item id="4" description="Shortcut2">
-							<visible>!IsEmpty(Skin.String(CustomMusic.2.Path))</visible>
-							<label>$INFO[Skin.String(CustomMusic.2.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomMusic.2.Path)]</onclick>
-						</item>
-						<item id="5" description="Shortcut3">
-							<visible>!IsEmpty(Skin.String(CustomMusic.3.Path))</visible>
-							<label>$INFO[Skin.String(CustomMusic.3.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomMusic.3.Path)]</onclick>
-						</item>
-						<item id="6" description="Shortcut4">
-							<visible>!IsEmpty(Skin.String(CustomMusic.4.Path))</visible>
-							<label>$INFO[Skin.String(CustomMusic.4.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomMusic.4.Path)]</onclick>
-						</item>
-						<item id="7" description="Shortcut5">
-							<visible>!IsEmpty(Skin.String(CustomMusic.5.Path))</visible>
-							<label>$INFO[Skin.String(CustomMusic.5.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomMusic.5.Path)]</onclick>
-						</item>
-						<item id="7" description="Shortcut6">
-							<visible>!IsEmpty(Skin.String(CustomMusic.6.Path))</visible>
-							<label>$INFO[Skin.String(CustomMusic.6.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomMusic.6.Path)]</onclick>
-						</item>
-						<item id="7" description="Shortcut7">
-							<visible>!IsEmpty(Skin.String(CustomMusic.7.Path))</visible>
-							<label>$INFO[Skin.String(CustomMusic.7.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomMusic.7.Path)]</onclick>
-						</item>
-						<item id="10" description="Search">
-							<visible>!Skin.HasSetting(Music5) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</visible>
-							<label>137</label>
-							<onclick>ActivateWindow(MusicLibrary)</onclick>
-							<onclick>SendClick(8)</onclick>
-						</item>
-					</content>
-				</control>
-			</control>
-			<control type="group" description="Submenu: Pictures">
-				<visible>!Skin.HasSetting(PicturesSectionHide)</visible>
-				<control type="list" id="304">
-					<visible allowhiddenfocus="true">Control.HasFocus(304) | Control.HasFocus(314)</visible>
-					<animation type="Hiddden">
-						<effect type="fade" start="100" end="0" time="150" reversible="false"/>
-					</animation>
-					<animation type="Visible">
-						<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false"/>
-					</animation>
-					<animation type="Conditional" condition="Control.HasFocus(314)">
-						<effect type="fade" start="100" end="50" time="100" reversible="true"/>
-					</animation>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_Items2_PosX1</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),3) + !Skin.HasSetting(AddonsSectionHide)">HomeMenu_Items3_PosX1</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),3) + Skin.HasSetting(AddonsSectionHide)">HomeMenu_Items3_PosX2</include>
-					
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),4) + !Skin.HasSetting(AddonsSectionHide)">HomeMenu_Items4_PosX2</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),4) + Skin.HasSetting(AddonsSectionHide)">HomeMenu_Items4_PosX3</include>
-					
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),5) + !Skin.HasSetting(AddonsSectionHide)">HomeMenu_Items5_PosX3</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),5) + Skin.HasSetting(AddonsSectionHide)">HomeMenu_Items5_PosX4</include>
-					
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_Items6_PosX4</include>
-					<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_Items6_PosX4</include>
-					<width>300</width>
-					<height>420</height>
-					<onup>314</onup>
-					<ondown>304</ondown>
-					<onleft>303</onleft>
-					<onright>305</onright>
-					<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
-					<onright>Skin.Reset(HomeMenuDirection)</onright>
-					<onup>Skin.SetBool(HomeTVupdown)</onup>
-					<onleft>Skin.Reset(HomeTVupdown)</onleft>
-					<onright>Skin.Reset(HomeTVupdown)</onright>
-					<focusposition>3</focusposition>
-					<movement>3</movement>
-					<!-- Unselected Items -->
-					<itemlayout height="72" width="300">
-						<control type="label">
-							<posx>150</posx>
-							<width>300</width>
-							<height>72</height>
-							<info>ListItem.Label</info>
-							<font>HomeNav_Submenu</font>
-							<textcolor>HomeNav</textcolor>
-							<shadowcolor>ff000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>center</align>
-							<aligny>center</aligny>
-						</control>
-					</itemlayout>
-					
-					<!-- Selected Item -->
-					<focusedlayout height="72" width="300">
-						<control type="label">
-							<posx>150</posx>
-							<width>300</width>
-							<height>72</height>
-							<info>ListItem.Label</info>
-							<font>HomeNav_Submenu</font>
-							<textcolor>HomeNav</textcolor>
-							<shadowcolor>ff000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>center</align>
-							<aligny>center</aligny>
-						</control>
-					</focusedlayout>
-					<!-- Menu Items -->
-					<content>
-						<item id="1" description="Pictures">
-							<visible>!Skin.HasSetting(Pictures1)</visible>
-							<label>1</label>
-							<onclick>ActivateWindow(Pictures)</onclick>
-						</item>
-						<item id="3" description="Custom Pictures">
-							<visible>!IsEmpty(Skin.String(CustomPictures.1.Path))</visible>
-							<label>$INFO[Skin.String(CustomPictures.1.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomPictures.1.Path)]</onclick>
-						</item>
-						<item id="4" description="Shortcut2">
-							<visible>!IsEmpty(Skin.String(CustomPictures.2.Path))</visible>
-							<label>$INFO[Skin.String(CustomPictures.2.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomPictures.2.Path)]</onclick>
-						</item>
-						<item id="5" description="Shortcut3">
-							<visible>!IsEmpty(Skin.String(CustomPictures.3.Path))</visible>
-							<label>$INFO[Skin.String(CustomPictures.3.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomPictures.3.Path)]</onclick>
-						</item>
-						<item id="6" description="Shortcut4">
-							<visible>!IsEmpty(Skin.String(CustomPictures.4.Path))</visible>
-							<label>$INFO[Skin.String(CustomPictures.4.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomPictures.4.Path)]</onclick>
-						</item>
-						<item id="7" description="Shortcut5">
-							<visible>!IsEmpty(Skin.String(CustomPictures.5.Path))</visible>
-							<label>$INFO[Skin.String(CustomPictures.5.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomPictures.5.Path)]</onclick>
-						</item>
-						<item id="8" description="Shortcut6">
-							<visible>!IsEmpty(Skin.String(CustomPictures.6.Path))</visible>
-							<label>$INFO[Skin.String(CustomPictures.6.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomPictures.6.Path)]</onclick>
-						</item>
-						<item id="9" description="Shortcut7">
-							<visible>!IsEmpty(Skin.String(CustomPictures.7.Path))</visible>
-							<label>$INFO[Skin.String(CustomPictures.7.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomPictures.7.Path)]</onclick>
-						</item>
-					</content>
-				</control>
-			</control>
-			<control type="group" description="Submenu: Addons">
-				<visible>!Skin.HasSetting(AddonsSectionHide)</visible>
-				<control type="list" id="305">
-					<visible allowhiddenfocus="true">Control.HasFocus(305) | Control.HasFocus(315)</visible>
-					<animation type="Hiddden">
-						<effect type="fade" start="100" end="0" time="150" reversible="false"/>
-					</animation>
-					<animation type="Visible">
-						<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false"/>
-					</animation>
-					<animation type="Conditional" condition="Control.HasFocus(315)">
-						<effect type="fade" start="100" end="50" time="100" reversible="true"/>
-					</animation>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_Items2_PosX1</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_Items3_PosX2</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_Items4_PosX3</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_Items5_PosX4</include>
-					<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_Items6_PosX5</include>
-					<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_Items6_PosX5</include>
-					<width>300</width>
-					<height>420</height>
-					<onup>315</onup>
-					<ondown>305</ondown>
-					<onleft>304</onleft>
-					<onright>306</onright>
-					<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
-					<onright>Skin.Reset(HomeMenuDirection)</onright>
-					<onup>Skin.SetBool(HomeTVupdown)</onup>
-					<onleft>Skin.Reset(HomeTVupdown)</onleft>
-					<onright>Skin.Reset(HomeTVupdown)</onright>
-					<focusposition>3</focusposition>
-					<movement>3</movement>
-					<!-- Unselected Items -->
-					<itemlayout height="72" width="300">
-						<control type="label">
-							<posx>150</posx>
-							<width>300</width>
-							<height>72</height>
-							<info>ListItem.Label</info>
-							<font>HomeNav_Submenu</font>
-							<textcolor>HomeNav</textcolor>
-							<shadowcolor>ff000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>center</align>
-							<aligny>center</aligny>
-						</control>
-					</itemlayout>
-					
-					<!-- Selected Item -->
-					<focusedlayout height="72" width="300">
-						<control type="label">
-							<posx>150</posx>
-							<width>300</width>
-							<height>72</height>
-							<info>ListItem.Label</info>
-							<font>HomeNav_Submenu</font>
-							<textcolor>HomeNav</textcolor>
-							<shadowcolor>ff000000</shadowcolor>
-							<scroll>false</scroll>
-							<align>center</align>
-							<aligny>center</aligny>
-						</control>
-					</focusedlayout>
-					<!-- Menu Items -->
-					<content>
-						<item id="0" description="LiveTV">
-							<visible>System.GetBool(pvrmanager.enabled)</visible>
-							<label>31502</label>
-							<onclick>ActivateWindow(PVR)</onclick>
-						</item>
-						<item id="1" description="Weather">
-							<visible>!Skin.HasSetting(Addons1)</visible>
-							<label>8</label>
-							<onclick>ActivateWindow(Weather)</onclick>
-						</item>
-						<item id="2" description="Program apps">
-							<visible>!Skin.HasSetting(Addons2)</visible>
-							<label>0</label>
-							<onclick>XBMC.ActivateWindow(Programs,Addons,return)</onclick>
-						</item>
-						<item id="3" description="Picture apps">
-							<visible>!Skin.HasSetting(Addons3)</visible>
-							<label>1</label>
-							<onclick>XBMC.ActivateWindow(Pictures,Addons,return)</onclick>
-						</item>
-						<item id="4" description="Video apps">
-							<visible>!Skin.HasSetting(Addons4)</visible>
-							<label>157</label>
-							<onclick>ActivateWindow(VideoLibrary,Addons,return)</onclick>
-						</item>
-						<item id="5" description="Music apps">
-							<visible>!Skin.HasSetting(Addons5)</visible>
-							<label>2</label>
-							<onclick condition="Library.HasContent(Music)">ActivateWindow(MusicLibrary,Addons,return)</onclick>
-							<onclick condition="!Library.HasContent(Music)">ActivateWindow(MusicFiles,Addons,return)</onclick>
-						</item>
-						<item id="6" description="Settings">
-							<visible>!Skin.HasSetting(Addons6)</visible>
-							<label>5</label>
-							<onclick>ActivateWindow(AddonBrowser,root)</onclick>
-						</item>
-						<item id="3" description="Custom Apps">
-							<visible>!IsEmpty(Skin.String(CustomAddons.1.Path))</visible>
-							<label>$INFO[Skin.String(CustomAddons.1.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomAddons.1.Path)]</onclick>
-						</item>
-						<item id="4" description="Shortcut2">
-							<visible>!IsEmpty(Skin.String(CustomAddons.2.Path))</visible>
-							<label>$INFO[Skin.String(CustomAddons.2.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomAddons.2.Path)]</onclick>
-						</item>
-						<item id="5" description="Shortcut3">
-							<visible>!IsEmpty(Skin.String(CustomAddons.3.Path))</visible>
-							<label>$INFO[Skin.String(CustomAddons.3.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomAddons.3.Path)]</onclick>
-						</item>
-						<item id="6" description="Shortcut4">
-							<visible>!IsEmpty(Skin.String(CustomAddons.4.Path))</visible>
-							<label>$INFO[Skin.String(CustomAddons.4.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomAddons.4.Path)]</onclick>
-						</item>
-						<item id="7" description="Shortcut5">
-							<visible>!IsEmpty(Skin.String(CustomAddons.5.Path))</visible>
-							<label>$INFO[Skin.String(CustomAddons.5.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomAddons.5.Path)]</onclick>
-						</item>
-						<item id="8" description="Shortcut6">
-							<visible>!IsEmpty(Skin.String(CustomAddons.6.Path))</visible>
-							<label>$INFO[Skin.String(CustomAddons.6.Label)]</label>
-							<onclick>$INFO[Skin.String(CustomAddons.6.Path)]</onclick>
-						</item>
-					</content>
-				</control>
-			</control>
-			<control type="list" description="Submenu: XBMC" id="306">
-				<visible allowhiddenfocus="true">Control.HasFocus(306) | Control.HasFocus(316)</visible>
-				<animation type="Hiddden">
-					<effect type="fade" start="100" end="0" time="150" reversible="false"/>
-				</animation>
-				<animation type="Visible">
-					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false"/>
-				</animation>
-				<animation type="Conditional" condition="Control.HasFocus(316)">
-					<effect type="fade" start="100" end="50" time="100" reversible="true"/>
-				</animation>
-				<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMenu_Items1_PosX1</include>
-				<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMenu_Items2_PosX2</include>
-				<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMenu_Items3_PosX3</include>
-				<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMenu_Items4_PosX4</include>
-				<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMenu_Items5_PosX5</include>
-				<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMenu_Items6_PosX6</include>
-				<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMenu_Items6_PosX6</include>
-				<width>300</width>
-				<height>420</height>
-				<onup>306</onup>
-				<ondown>306</ondown>
-				<onleft>305</onleft>
-				<onright>301</onright>
-				<onleft>Skin.SetBool(HomeMenuDirection)</onleft>
-				<onright>Skin.Reset(HomeMenuDirection)</onright>
-				<onup>Skin.SetBool(HomeTVupdown)</onup>
-				<onleft>Skin.Reset(HomeTVupdown)</onleft>
-				<onright>Skin.Reset(HomeTVupdown)</onright>
-				<focusposition>3</focusposition>
-				<movement>3</movement>
-				<!-- Unselected Items -->
-				<itemlayout height="72" width="300">
-					<control type="label">
-						<posx>150</posx>
-						<width>300</width>
-						<height>72</height>
-						<info>ListItem.Label</info>
-						<font>HomeNav_Submenu</font>
-						<textcolor>HomeNav</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-						<aligny>center</aligny>
-					</control>
-				</itemlayout>
-				
-				<!-- Selected Item -->
-				<focusedlayout height="72" width="300">
-					<control type="label">
-						<posx>150</posx>
-						<width>300</width>
-						<height>72</height>
-						<info>ListItem.Label</info>
-						<font>HomeNav_Submenu</font>
-						<textcolor>HomeNav</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-						<aligny>center</aligny>
-					</control>
-				</focusedlayout>
-				<!-- Menu Items -->
-				<content>
-					<item id="0" description="Update library">
-						<visible>!Skin.HasSetting(XBMC0)</visible>
-						<label>653</label>
-						<onclick>UpdateLibrary(Video)</onclick>
-						<onclick condition="Library.HasContent(Music)">UpdateLibrary(Music)</onclick>
-					</item>
-					<item id="1" description="Now playing Video">
-						<visible>Player.HasMedia</visible>
-						<label>31977</label>
-						<onclick>fullscreen</onclick>
-					</item>
-					<item id="2" description="Settings">
-						<visible>!Skin.HasSetting(HideSettings)</visible>
-						<label>5</label>
-						<onclick>ActivateWindow(Settings)</onclick>
-					</item>
-					<item id="3" description="Favorites">
-						<visible>!Skin.HasSetting(XBMC2)</visible>
-						<label>1036</label>
-						<onclick>ActivateWindow(Favourites)</onclick>
-					</item>
-					<item id="4" description="LogOff Profile">
-						<visible>System.HasLoginScreen</visible>
-						<visible>System.Loggedon</visible>
-						<label>20126</label>
-						<onclick>dialog.close(all,true)</onclick>
-						<onclick>System.LogOff</onclick>
-					</item>
-					<item id="5" description="Master mode button">
-						<visible>System.HasLocks + System.IsMaster</visible>
-						<label>12332</label>
-						<onclick>xbmc.mastermode</onclick>
-					</item>
-					<item id="6" description="Master mode button">
-						<visible>System.HasLocks + !System.IsMaster</visible>
-						<label>12333</label>
-						<onclick>xbmc.mastermode</onclick>
-					</item>
-					<item id="7" description="Disc">
-						<visible>![System.Platform.ios | System.Platform.atv2]</visible>
-						<visible>!Skin.HasSetting(XBMC3)</visible>
-						<label>446</label>
-						<onclick>ActivateWindow(1112)</onclick>
-					</item>
-					<item id="8" description="Quit">
-						<visible>!Skin.HasSetting(XBMC4) + IsEmpty(Skin.String(shutdown))</visible>
-						<label fallback="13009">$VAR[QuitLabel2]</label>
-						<onclick>ActivateWindow(shutdownmenu)</onclick>
-					</item>
-					<item id="9" description="Quit">
-						<visible>!Skin.HasSetting(XBMC4) + StringCompare(Skin.String(shutdown),quit)</visible>
-						<label fallback="13009">$VAR[QuitLabel2]</label>
-						<onclick>XBMC.quit()</onclick>
-					</item>
-					<item id="10" description="Quit">
-						<visible>!Skin.HasSetting(XBMC4) + StringCompare(Skin.String(shutdown),powerdown)</visible>
-						<label fallback="13009">$VAR[QuitLabel2]</label>
-						<onclick>XBMC.powerdown()</onclick>
-					</item>
-					<item id="11" description="Quit">
-						<visible>!Skin.HasSetting(XBMC4) + StringCompare(Skin.String(shutdown),hibernate)</visible>
-						<label fallback="13009">$VAR[QuitLabel2]</label>
-						<onclick>XBMC.hibernate()</onclick>
-					</item>
-					<item id="12" description="Quit">
-						<visible>!Skin.HasSetting(XBMC4) + StringCompare(Skin.String(shutdown),suspend)</visible>
-						<label fallback="13009">$VAR[QuitLabel2]</label>
-						<onclick>XBMC.suspend()</onclick>
-					</item>
-					<item id="13" description="Quit">
-						<visible>!Skin.HasSetting(XBMC4) + StringCompare(Skin.String(shutdown),reboot)</visible>
-						<label fallback="13009">$VAR[QuitLabel2]</label>
-						<onclick>XBMC.reboot()</onclick>
-					</item>
-				</content>
-			</control>
-		</control>
-		<control type="grouplist" description="Slider">
-			<posx>-30</posx>
-			<posy>562</posy>
-			<height>492</height>
-			<width>1980</width>
-			<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeSlider_Gap6</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeSlider_Gap1</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeSlider_Gap2</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeSlider_Gap3</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeSlider_Gap4</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeSlider_Gap5</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeSlider_Gap6</include>
-			<align>center</align>
-			<aligny>top</aligny>
-			<orientation>horizontal</orientation>
-			<control type="image" description="Movie Menu Slider">
-				<visible>!Skin.HasSetting(MoviesSectionHide)</visible>
-				<animation type="Conditional" condition="!Control.HasFocus(301)">
-					<effect type="fade" start="100" end="0" time="0" reversible="false"/>
-				</animation>
-				<animation type="Conditional" condition="Control.HasFocus(301)">
-					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false"/>
-				</animation>
-				<width>330</width>
-				<height>132</height>
-				<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
-				<aspectratio>scale</aspectratio>
-				<animation condition="Container(301).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(301).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(301).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(301).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(301).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(301).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
-			</control>
-			<control type="image" description="TvShows Menu Slider">
-				<visible>!Skin.HasSetting(TVSectionHide)</visible>
-				<animation type="Conditional" condition="!Control.HasFocus(302)">
-					<effect type="fade" start="100" end="0" time="0" reversible="false"/>
-				</animation>
-				<animation type="Conditional" condition="Control.HasFocus(302)">
-					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false"/>
-				</animation>
-				<width>330</width>
-				<height>132</height>
-				<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
-				<aspectratio>scale</aspectratio>
-				<animation condition="Container(302).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(302).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(302).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(302).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(302).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(302).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
-			</control>
-			<control type="image" description="Music Menu Slider">
-				<visible>!Skin.HasSetting(MusicSectionHide)</visible>
-				<animation type="Conditional" condition="!Control.HasFocus(303)">
-					<effect type="fade" start="100" end="0" time="0" reversible="false"/>
-				</animation>
-				<animation type="Conditional" condition="Control.HasFocus(303)">
-					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false"/>
-				</animation>
-				<width>330</width>
-				<height>132</height>
-				<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
-				<aspectratio>scale</aspectratio>
-				<animation condition="Container(303).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(303).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(303).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(303).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(303).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(303).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
-			</control>
-			<control type="image" description="Pictures Menu Slider">
-				<visible>!Skin.HasSetting(PicturesSectionHide)</visible>
-				<animation type="Conditional" condition="!Control.HasFocus(304)">
-					<effect type="fade" start="100" end="0" time="0" reversible="false"/>
-				</animation>
-				<animation type="Conditional" condition="Control.HasFocus(304)">
-					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false"/>
-				</animation>
-				<width>330</width>
-				<height>132</height>
-				<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
-				<aspectratio>scale</aspectratio>
-				<animation condition="Container(304).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(304).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(304).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(304).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(304).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(304).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
-			</control>
-			<control type="image" description="Addons Menu Slider">
-				<visible>!Skin.HasSetting(AddonsSectionHide)</visible>
-				<animation type="Conditional" condition="!Control.HasFocus(305)">
-					<effect type="fade" start="100" end="0" time="0" reversible="false"/>
-				</animation>
-				<animation type="Conditional" condition="Control.HasFocus(305)">
-					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false"/>
-				</animation>
-				<width>330</width>
-				<height>132</height>
-				<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
-				<aspectratio>scale</aspectratio>
-				<animation condition="Container(305).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(305).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(305).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(305).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(305).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(305).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
-			</control>
-			<control type="image" description="Xbmc Menu Slider">
-				<animation type="Conditional" condition="!Control.HasFocus(306)">
-					<effect type="fade" start="100" end="0" time="0" reversible="false"/>
-				</animation>
-				<animation type="Conditional" condition="Control.HasFocus(306)">
-					<effect type="fade" start="0" end="100" time="150" delay="250" reversible="false"/>
-				</animation>
-				<width>330</width>
-				<height>132</height>
-				<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
-				<aspectratio>scale</aspectratio>
-				<animation condition="Container(306).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(306).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(306).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(306).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(306).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
-				<animation condition="Container(306).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
-			</control>
-		</control>
-		<control type="image" description="Bar NF">
-			<animation type="Conditional" condition="Control.HasFocus(311) | Control.HasFocus(312) | 
-				Control.HasFocus(313) | Control.HasFocus(314) | Control.HasFocus(315) | Control.HasFocus(316)">
-				<effect type="fade" start="0" end="100" time="0"/>
-			</animation>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMainBar_Focuser_PosX1</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMainBar_Focuser_PosX2</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMainBar_Focuser_PosX3</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMainBar_Focuser_PosX4</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMainBar_Focuser_PosX5</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMainBar_Focuser_PosX6</include>
-			<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMainBar_Focuser_PosX1</include>
-			<posy>472</posy>
-			<width>448</width>
-			<height>100</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<aspectratio>scale</aspectratio>
-			<texture>img/HomeBarNF.png</texture>
-			<include>Animation_MainBar_Focuser</include>
-		</control>
-		<control type="image" description="Bar FO">
-			<visible>Control.HasFocus(301) | Control.HasFocus(302) | Control.HasFocus(303)
-				| Control.HasFocus(304) | Control.HasFocus(305) | Control.HasFocus(306)</visible>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMainBar_Focuser_PosX1</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMainBar_Focuser_PosX2</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMainBar_Focuser_PosX3</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeMainBar_Focuser_PosX4</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeMainBar_Focuser_PosX5</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeMainBar_Focuser_PosX6</include>
-			<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeMainBar_Focuser_PosX1</include>
-			<posy>472</posy>
-			<width>448</width>
-			<height>100</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<aspectratio>scale</aspectratio>
-			<texture>img/HomeBarFO.png</texture>
-			<include>Animation_MainBar_Focuser</include>
-		</control>
-		<control type="grouplist" description="MainBarLabel">
-			<posx>30</posx>
-			<posy>480</posy>
-			<height>81</height>
-			<width>1860</width>
-			<include condition="IsEmpty(Skin.String(NumberOfMenuitems))">HomeSlider_Gap6</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeSlider_Gap1</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeSlider_Gap2</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeSlider_Gap3</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),4)">HomeSlider_Gap4</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),5)">HomeSlider_Gap5</include>
-			<include condition="StringCompare(Skin.String(NumberOfMenuitems),6)">HomeSlider_Gap6</include>
-			<align>center</align>
-			<aligny>top</aligny>
-			<orientation>horizontal</orientation>
-			<control type="label" description="My Movies">
-				<visible>!Skin.HasSetting(MoviesSectionHide)</visible>
-				<animation condition="Control.HasFocus(312) | Control.HasFocus(313) | Control.HasFocus(314) | Control.HasFocus(315) | Control.HasFocus(316)" effect="fade" start="100" end="50" time="180">Conditional</animation>
-				<posx>165</posx>
-				<width>330</width>
-				<height>81</height>
-				<font>size28</font>
-				<textcolor>White2</textcolor>
-				<shadowcolor>Black</shadowcolor>
-				<textoffsetx>0</textoffsetx>
-				<align>center</align>
-				<label fallback="20342">$INFO[Skin.String(MoviesName)]</label>
-			</control>
-			<control type="label" description="My TvShows">
-				<visible>!Skin.HasSetting(TVSectionHide)</visible>
-				<animation condition="Control.HasFocus(311) | Control.HasFocus(313) | Control.HasFocus(314) | Control.HasFocus(315) | Control.HasFocus(316)" effect="fade" start="100" end="50" time="180">Conditional</animation>
-				<posx>165</posx>
-				<width>330</width>
-				<height>81</height>
-				<font>size28</font>
-				<textcolor>White2</textcolor>
-				<shadowcolor>Black</shadowcolor>
-				<textoffsetx>0</textoffsetx>
-				<align>center</align>
-				<label fallback="20343">$INFO[Skin.String(TVName)]</label>
-			</control>
-			<control type="label" description="My Music">
-				<visible>!Skin.HasSetting(MusicSectionHide)</visible>
-				<animation condition="Control.HasFocus(311) | Control.HasFocus(312) | Control.HasFocus(314) | Control.HasFocus(315) | Control.HasFocus(316)" effect="fade" start="100" end="50" time="180">Conditional</animation>
-				<posx>165</posx>
-				<width>330</width>
-				<height>81</height>
-				<font>size28</font>
-				<textcolor>White2</textcolor>
-				<shadowcolor>Black</shadowcolor>
-				<textoffsetx>0</textoffsetx>
-				<align>center</align>
-				<label fallback="2">$INFO[Skin.String(MusicName)]</label>
-			</control>
-			<control type="label" description="My Pictures">
-				<visible>!Skin.HasSetting(PicturesSectionHide)</visible>
-				<animation condition="Control.HasFocus(311) | Control.HasFocus(312) | Control.HasFocus(313) | Control.HasFocus(315) | Control.HasFocus(316)" effect="fade" start="100" end="50" time="180">Conditional</animation>
-				<posx>165</posx>
-				<width>330</width>
-				<height>81</height>
-				<font>size28</font>
-				<textcolor>White2</textcolor>
-				<shadowcolor>Black</shadowcolor>
-				<textoffsetx>0</textoffsetx>
-				<align>center</align>
-				<label fallback="1">$INFO[Skin.String(PicturesName)]</label>
-			</control>
-			<control type="label" description="My Addons">
-				<visible>!Skin.HasSetting(AddonsSectionHide)</visible>
-				<animation condition="Control.HasFocus(311) | Control.HasFocus(312) | Control.HasFocus(313) | Control.HasFocus(314) | Control.HasFocus(316)" effect="fade" start="100" end="50" time="180">Conditional</animation>
-				<posx>165</posx>
-				<width>330</width>
-				<height>81</height>
-				<font>size28</font>
-				<textcolor>White2</textcolor>
-				<shadowcolor>Black</shadowcolor>
-				<textoffsetx>0</textoffsetx>
-				<align>center</align>
-				<label fallback="24001">$INFO[Skin.String(AddonsName)]</label>
-			</control>
-			<control type="label" description="My Xbmc">
-				<animation condition="Control.HasFocus(311) | Control.HasFocus(312) | Control.HasFocus(313) | Control.HasFocus(314) | Control.HasFocus(315)" effect="fade" start="100" end="50" time="180">Conditional</animation>
-				<posx>165</posx>
-				<width>330</width>
-				<height>81</height>
-				<font>size28</font>
-				<textcolor>White2</textcolor>
-				<shadowcolor>Black</shadowcolor>
-				<textoffsetx>0</textoffsetx>
-				<align>center</align>
-				<label fallback="XBMC">$INFO[Skin.String(XBMCName)]</label>
-			</control>
-		</control>
-	</include>
-	
+	<!-- ======================= -->	
 	<include name="Home_Menu">
+		<control type="wraplist" id="3000" description="indicator to get OnNext/OnPrevious for the MainMenu">
+			<width>1</width>
+			<height>1</height>
+			<align>center</align>
+			<itemlayout height="1" width="1"></itemlayout>
+			<focusedlayout height="1" width="1"></focusedlayout>
+			<content>
+				<item id="1" description="Movies"><visible>!Skin.HasSetting(MoviesSectionHide)</visible><onclick>noop</onclick></item>
+				<item id="2" description="TvShows"><visible>!Skin.HasSetting(TVSectionHide)</visible><onclick>noop</onclick></item>
+				<item id="3" description="Music"><visible>!Skin.HasSetting(MusicSectionHide)</visible><onclick>noop</onclick></item>
+				<item id="4" description="Pictures"><visible>!Skin.HasSetting(PicturesSectionHide)</visible><onclick>noop</onclick></item>
+				<item id="5" description="Addons"><visible>!Skin.HasSetting(AddonsSectionHide)</visible><onclick>noop</onclick></item>
+				<item id="6" description="XBMC"><visible>true</visible><onclick>noop</onclick></item>
+			</content>
+		</control>
 		<control type="grouplist" description="Submenus" id="9000">
 			<posx>60</posx>
 			<posy>591</posy>
@@ -1288,26 +163,27 @@
 				<visible>!Skin.HasSetting(MoviesSectionHide)</visible>
 				<width>300</width>
 				<height>432</height>
-				<control type="list" id="301">
-					<visible allowhiddenfocus="true">Control.HasFocus(301) | Control.HasFocus(311)</visible>
+				<control type="list" id="310">
+					<visible allowhiddenfocus="true">Control.HasFocus(310) | Control.HasFocus(3101)</visible>
 					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
 					<animation type="Visible">
 						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 					</animation>
-					<animation type="Conditional" condition="Control.HasFocus(311)">
+					<animation type="Conditional" condition="Control.HasFocus(3101)">
 						<effect type="fade" start="100" end="60" time="100" reversible="true"/>
 					</animation>
 					<width>300</width>
 					<height>432</height>
-					<onleft>SetProperty(HomeMenuDirection,left)</onleft>
-					<onright>SetProperty(HomeMenuDirection,right)</onright>
-					<onup>SetProperty(HomeMenuDirection,up)</onup>
-					<onup>311</onup>
-					<ondown>301</ondown>
-					<onleft>306</onleft>
-					<onright>302</onright>
+					<onleft>SetProperty(HomeMenuLastFocus,310L)</onleft>
+					<onright>SetProperty(HomeMenuLastFocus,310R)</onright>
+					<onleft>Control.Move(3000,-1)</onleft>
+					<onright>Control.Move(3000,1)</onright>
+					<onup>3101</onup>
+					<ondown>310</ondown>
+					<onleft>360</onleft>
+					<onright>320</onright>
 					<align>center</align>
 					<focusposition>3</focusposition>
 					<movement>3</movement>
@@ -1417,26 +293,27 @@
 				<visible>!Skin.HasSetting(TVSectionHide)</visible>
 				<width>300</width>
 				<height>432</height>
-				<control type="list" id="302">
-					<visible allowhiddenfocus="true">Control.HasFocus(302) | Control.HasFocus(312)</visible>
+				<control type="list" id="320">
+					<visible allowhiddenfocus="true">Control.HasFocus(320) | Control.HasFocus(3201)</visible>
 					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
 					<animation type="Visible">
 						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 					</animation>
-					<animation type="Conditional" condition="Control.HasFocus(312)">
+					<animation type="Conditional" condition="Control.HasFocus(3201)">
 						<effect type="fade" start="100" end="60" time="100" reversible="true"/>
 					</animation>
 					<width>300</width>
 					<height>432</height>
-					<onup>312</onup>
-					<ondown>302</ondown>
-					<onleft>301</onleft>
-					<onright>303</onright>
-					<onleft>SetProperty(HomeMenuDirection,left)</onleft>
-					<onright>SetProperty(HomeMenuDirection,right)</onright>
-					<onup>SetProperty(HomeMenuDirection,up)</onup>
+					<onup>3201</onup>
+					<ondown>320</ondown>
+					<onleft>310</onleft>
+					<onright>330</onright>
+					<onleft>SetProperty(HomeMenuLastFocus,320L)</onleft>
+					<onright>SetProperty(HomeMenuLastFocus,320R)</onright>
+					<onleft>Control.Move(3000,-1)</onleft>
+					<onright>Control.Move(3000,1)</onright>
 					<focusposition>3</focusposition>
 					<movement>3</movement>
 					<!-- Unselected Items -->
@@ -1544,26 +421,27 @@
 				<visible>!Skin.HasSetting(MusicSectionHide)</visible>
 				<width>300</width>
 				<height>432</height>
-				<control type="list" id="303">
-					<visible allowhiddenfocus="true">Control.HasFocus(303) | Control.HasFocus(313)</visible>
+				<control type="list" id="330">
+					<visible allowhiddenfocus="true">Control.HasFocus(330) | Control.HasFocus(3301)</visible>
 					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
 					<animation type="Visible">
 						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 					</animation>
-					<animation type="Conditional" condition="Control.HasFocus(313)">
+					<animation type="Conditional" condition="Control.HasFocus(3301)">
 						<effect type="fade" start="100" end="60" time="100" reversible="true"/>
 					</animation>
 					<width>300</width>
 					<height>432</height>
-					<onup>313</onup>
-					<ondown>303</ondown>
-					<onleft>302</onleft>
-					<onright>304</onright>
-					<onleft>SetProperty(HomeMenuDirection,left)</onleft>
-					<onright>SetProperty(HomeMenuDirection,right)</onright>
-					<onup>SetProperty(HomeMenuDirection,up)</onup>
+					<onup>3301</onup>
+					<ondown>330</ondown>
+					<onleft>320</onleft>
+					<onright>340</onright>
+					<onleft>SetProperty(HomeMenuLastFocus,330L)</onleft>
+					<onright>SetProperty(HomeMenuLastFocus,330R)</onright>
+					<onleft>Control.Move(3000,-1)</onleft>
+					<onright>Control.Move(3000,1)</onright>
 					<focusposition>3</focusposition>
 					<movement>3</movement>
 					<!-- Unselected Items -->
@@ -1672,26 +550,27 @@
 				<visible>!Skin.HasSetting(PicturesSectionHide)</visible>
 				<width>300</width>
 				<height>432</height>
-				<control type="list" id="304">
-					<visible allowhiddenfocus="true">Control.HasFocus(304) | Control.HasFocus(314)</visible>
+				<control type="list" id="340">
+					<visible allowhiddenfocus="true">Control.HasFocus(340) | Control.HasFocus(3401)</visible>
 					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
 					<animation type="Visible">
 						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 					</animation>
-					<animation type="Conditional" condition="Control.HasFocus(314)">
+					<animation type="Conditional" condition="Control.HasFocus(3401)">
 						<effect type="fade" start="100" end="60" time="100" reversible="true"/>
 					</animation>
 					<width>300</width>
 					<height>432</height>
-					<onup>314</onup>
-					<ondown>304</ondown>
-					<onleft>303</onleft>
-					<onright>305</onright>
-					<onleft>SetProperty(HomeMenuDirection,left)</onleft>
-					<onright>SetProperty(HomeMenuDirection,right)</onright>
-					<onup>SetProperty(HomeMenuDirection,up)</onup>
+					<onup>3401</onup>
+					<ondown>340</ondown>
+					<onleft>330</onleft>
+					<onright>350</onright>
+					<onleft>SetProperty(HomeMenuLastFocus,340L)</onleft>
+					<onright>SetProperty(HomeMenuLastFocus,340R)</onright>
+					<onleft>Control.Move(3000,-1)</onleft>
+					<onright>Control.Move(3000,1)</onright>
 					<focusposition>3</focusposition>
 					<movement>3</movement>
 					<!-- Unselected Items -->
@@ -1774,26 +653,27 @@
 				<visible>!Skin.HasSetting(AddonsSectionHide)</visible>
 				<width>300</width>
 				<height>432</height>
-				<control type="list" id="305">
-					<visible allowhiddenfocus="true">Control.HasFocus(305) | Control.HasFocus(315)</visible>
+				<control type="list" id="350">
+					<visible allowhiddenfocus="true">Control.HasFocus(350) | Control.HasFocus(3501)</visible>
 					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
 					<animation type="Visible">
 						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 					</animation>
-					<animation type="Conditional" condition="Control.HasFocus(315)">
+					<animation type="Conditional" condition="Control.HasFocus(3501)">
 						<effect type="fade" start="100" end="60" time="100" reversible="true"/>
 					</animation>
 					<width>300</width>
 					<height>432</height>
-					<onup>315</onup>
-					<ondown>305</ondown>
-					<onleft>304</onleft>
-					<onright>306</onright>
-					<onleft>SetProperty(HomeMenuDirection,left)</onleft>
-					<onright>SetProperty(HomeMenuDirection,right)</onright>
-					<onup>SetProperty(HomeMenuDirection,up)</onup>
+					<onup>3501</onup>
+					<ondown>350</ondown>
+					<onleft>340</onleft>
+					<onright>360</onright>
+					<onleft>SetProperty(HomeMenuLastFocus,350L)</onleft>
+					<onright>SetProperty(HomeMenuLastFocus,350R)</onright>
+					<onleft>Control.Move(3000,-1)</onleft>
+					<onright>Control.Move(3000,1)</onright>
 					<focusposition>3</focusposition>
 					<movement>3</movement>
 					<!-- Unselected Items -->
@@ -1901,26 +781,27 @@
 			<control type="group" description="Submenu: XBMC">
 				<width>300</width>
 				<height>432</height>
-				<control type="list" id="306">
-					<visible allowhiddenfocus="true">Control.HasFocus(306) | Control.HasFocus(316)</visible>
+				<control type="list" id="360">
+					<visible allowhiddenfocus="true">Control.HasFocus(360) | Control.HasFocus(3601)</visible>
 					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
 					<animation type="Visible">
 						<effect type="fade" start="0" end="100" time="150" delay="180" reversible="false"/>
 					</animation>
-					<animation type="Conditional" condition="Control.HasFocus(316)">
+					<animation type="Conditional" condition="Control.HasFocus(3601)">
 						<effect type="fade" start="100" end="60" time="100" reversible="true"/>
 					</animation>
 					<width>300</width>
 					<height>432</height>
 					<onup>noop</onup>
-					<ondown>306</ondown>
-					<onleft>305</onleft>
-					<onright>301</onright>
-					<onleft>SetProperty(HomeMenuDirection,left)</onleft>
-					<onright>SetProperty(HomeMenuDirection,right)</onright>
-					<onup>SetProperty(HomeMenuDirection,up)</onup>
+					<ondown>360</ondown>
+					<onleft>350</onleft>
+					<onright>310</onright>
+					<onleft>SetProperty(HomeMenuLastFocus,360L)</onleft>
+					<onright>SetProperty(HomeMenuLastFocus,360R)</onright>
+					<onleft>Control.Move(3000,-1)</onleft>
+					<onright>Control.Move(3000,1)</onright>
 					<focusposition>3</focusposition>
 					<movement>3</movement>
 					<!-- Unselected Items -->
@@ -2054,7 +935,7 @@
 				<width>330</width>
 				<height>132</height>
 				<control type="image">
-					<visible>Control.HasFocus(301)</visible>
+					<visible>Control.HasFocus(310)</visible>
 					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
@@ -2068,12 +949,12 @@
 					<height>132</height>
 					<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
 					<aspectratio>scale</aspectratio>
-					<animation condition="Container(301).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(301).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(301).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(301).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(301).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(301).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(310).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(310).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(310).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(310).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(310).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(310).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
 				</control>
 			</control>
 			<control type="group" description="TvShows Menu Slider">
@@ -2081,7 +962,7 @@
 				<width>330</width>
 				<height>132</height>
 				<control type="image">
-					<visible>Control.HasFocus(302)</visible>
+					<visible>Control.HasFocus(320)</visible>
 					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
@@ -2095,12 +976,12 @@
 					<height>132</height>
 					<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
 					<aspectratio>scale</aspectratio>
-					<animation condition="Container(302).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(302).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(302).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(302).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(302).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(302).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(320).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(320).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(320).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(320).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(320).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(320).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
 				</control>
 			</control>
 			<control type="group" description="Music Menu Slider">
@@ -2108,7 +989,7 @@
 				<width>330</width>
 				<height>132</height>
 				<control type="image">
-					<visible>Control.HasFocus(303)</visible>
+					<visible>Control.HasFocus(330)</visible>
 					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
@@ -2122,12 +1003,12 @@
 					<height>132</height>
 					<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
 					<aspectratio>scale</aspectratio>
-					<animation condition="Container(303).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(303).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(303).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(303).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(303).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(303).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(330).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(330).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(330).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(330).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(330).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(330).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
 				</control>
 			</control>
 			<control type="group" description="Pictures Menu Slider">
@@ -2135,7 +1016,7 @@
 				<width>330</width>
 				<height>132</height>
 				<control type="image">
-					<visible>Control.HasFocus(304)</visible>
+					<visible>Control.HasFocus(340)</visible>
 					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
@@ -2149,12 +1030,12 @@
 					<height>132</height>
 					<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
 					<aspectratio>scale</aspectratio>
-					<animation condition="Container(304).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(304).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(304).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(304).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(304).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(304).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(340).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(340).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(340).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(340).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(340).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(340).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
 				</control>
 			</control>
 			<control type="group" description="Addons Menu Slider">
@@ -2162,7 +1043,7 @@
 				<width>330</width>
 				<height>132</height>
 				<control type="image">
-					<visible>Control.HasFocus(305)</visible>
+					<visible>Control.HasFocus(350)</visible>
 					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
@@ -2176,12 +1057,12 @@
 					<height>132</height>
 					<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
 					<aspectratio>scale</aspectratio>
-					<animation condition="Container(305).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(305).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(305).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(305).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(305).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(305).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(350).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(350).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(350).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(350).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(350).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(350).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
 				</control>
 			</control>
 			<control type="group" description="Xbmc Menu Slider">
@@ -2189,7 +1070,7 @@
 				<width>330</width>
 				<height>132</height>
 				<control type="image">
-					<visible>Control.HasFocus(306)</visible>
+					<visible>Control.HasFocus(360)</visible>
 					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="100" reversible="false"/>
 					</animation>
@@ -2203,18 +1084,18 @@
 					<height>132</height>
 					<texture>home_nav/Home_Movies_Nav_Cursor.png</texture>
 					<aspectratio>scale</aspectratio>
-					<animation condition="Container(306).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(306).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(306).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(306).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(306).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
-					<animation condition="Container(306).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(360).Position(1)" effect="slide" start="0,0" end="0,72" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(360).Position(2)" effect="slide" start="0,0" end="0,144" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(360).Position(3)" effect="slide" start="0,0" end="0,216" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(360).Position(4)" effect="slide" start="0,0" end="0,288" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(360).Position(5)" effect="slide" start="0,0" end="0,360" time="200" reversible="true">Conditional</animation>
+					<animation condition="Container(360).Position(6)" effect="slide" start="0,0" end="0,432" time="200" reversible="true">Conditional</animation>
 				</control>
 			</control>
 		</control>
 		<control type="image" description="Bar NF">
-			<animation type="Conditional" condition="Control.HasFocus(311) | Control.HasFocus(312) | 
-				Control.HasFocus(313) | Control.HasFocus(314) | Control.HasFocus(315) | Control.HasFocus(316)">
+			<animation type="Conditional" condition="Control.HasFocus(3101) | Control.HasFocus(3201) | 
+				Control.HasFocus(3301) | Control.HasFocus(3401) | Control.HasFocus(3501) | Control.HasFocus(3601)">
 				<effect type="fade" start="0" end="100" time="0"/>
 			</animation>
 			<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMainBar_Focuser_PosX1</include>
@@ -2234,8 +1115,8 @@
 			<include>Animation_MainBar_Focuser</include>
 		</control>
 		<control type="image" description="Bar FO">
-			<visible>Control.HasFocus(301) | Control.HasFocus(302) | Control.HasFocus(303)
-				| Control.HasFocus(304) | Control.HasFocus(305) | Control.HasFocus(306)</visible>
+			<visible>Control.HasFocus(310) | Control.HasFocus(320) | Control.HasFocus(330)
+				| Control.HasFocus(340) | Control.HasFocus(350) | Control.HasFocus(360)</visible>
 			<include condition="StringCompare(Skin.String(NumberOfMenuitems),1)">HomeMainBar_Focuser_PosX1</include>
 			<include condition="StringCompare(Skin.String(NumberOfMenuitems),2)">HomeMainBar_Focuser_PosX2</include>
 			<include condition="StringCompare(Skin.String(NumberOfMenuitems),3)">HomeMainBar_Focuser_PosX3</include>
@@ -2269,7 +1150,7 @@
 			<orientation>horizontal</orientation>
 			<control type="label" description="My Movies">
 				<visible>!Skin.HasSetting(MoviesSectionHide)</visible>
-				<animation condition="Control.HasFocus(312) | Control.HasFocus(313) | Control.HasFocus(314) | Control.HasFocus(315) | Control.HasFocus(316)" effect="fade" start="100" end="50" time="180">Conditional</animation>
+				<animation condition="Control.HasFocus(3201) | Control.HasFocus(3301) | Control.HasFocus(3401) | Control.HasFocus(3501) | Control.HasFocus(3601)" effect="fade" start="100" end="50" time="180">Conditional</animation>
 				<posx>165</posx>
 				<width>330</width>
 				<height>81</height>
@@ -2282,7 +1163,7 @@
 			</control>
 			<control type="label" description="My TvShows">
 				<visible>!Skin.HasSetting(TVSectionHide)</visible>
-				<animation condition="Control.HasFocus(311) | Control.HasFocus(313) | Control.HasFocus(314) | Control.HasFocus(315) | Control.HasFocus(316)" effect="fade" start="100" end="50" time="180">Conditional</animation>
+				<animation condition="Control.HasFocus(3101) | Control.HasFocus(3301) | Control.HasFocus(3401) | Control.HasFocus(3501) | Control.HasFocus(3601)" effect="fade" start="100" end="50" time="180">Conditional</animation>
 				<posx>165</posx>
 				<width>330</width>
 				<height>81</height>
@@ -2295,7 +1176,7 @@
 			</control>
 			<control type="label" description="My Music">
 				<visible>!Skin.HasSetting(MusicSectionHide)</visible>
-				<animation condition="Control.HasFocus(311) | Control.HasFocus(312) | Control.HasFocus(314) | Control.HasFocus(315) | Control.HasFocus(316)" effect="fade" start="100" end="50" time="180">Conditional</animation>
+				<animation condition="Control.HasFocus(3101) | Control.HasFocus(3201) | Control.HasFocus(3401) | Control.HasFocus(3501) | Control.HasFocus(3601)" effect="fade" start="100" end="50" time="180">Conditional</animation>
 				<posx>165</posx>
 				<width>330</width>
 				<height>81</height>
@@ -2308,7 +1189,7 @@
 			</control>
 			<control type="label" description="My Pictures">
 				<visible>!Skin.HasSetting(PicturesSectionHide)</visible>
-				<animation condition="Control.HasFocus(311) | Control.HasFocus(312) | Control.HasFocus(313) | Control.HasFocus(315) | Control.HasFocus(316)" effect="fade" start="100" end="50" time="180">Conditional</animation>
+				<animation condition="Control.HasFocus(3101) | Control.HasFocus(3201) | Control.HasFocus(3301) | Control.HasFocus(3501) | Control.HasFocus(3601)" effect="fade" start="100" end="50" time="180">Conditional</animation>
 				<posx>165</posx>
 				<width>330</width>
 				<height>81</height>
@@ -2321,7 +1202,7 @@
 			</control>
 			<control type="label" description="My Addons">
 				<visible>!Skin.HasSetting(AddonsSectionHide)</visible>
-				<animation condition="Control.HasFocus(311) | Control.HasFocus(312) | Control.HasFocus(313) | Control.HasFocus(314) | Control.HasFocus(316)" effect="fade" start="100" end="50" time="180">Conditional</animation>
+				<animation condition="Control.HasFocus(3101) | Control.HasFocus(3201) | Control.HasFocus(3301) | Control.HasFocus(3401) | Control.HasFocus(3601)" effect="fade" start="100" end="50" time="180">Conditional</animation>
 				<posx>165</posx>
 				<width>330</width>
 				<height>81</height>
@@ -2333,7 +1214,7 @@
 				<label fallback="24001">$INFO[Skin.String(AddonsName)]</label>
 			</control>
 			<control type="label" description="My Xbmc">
-				<animation condition="Control.HasFocus(311) | Control.HasFocus(312) | Control.HasFocus(313) | Control.HasFocus(314) | Control.HasFocus(315)" effect="fade" start="100" end="50" time="180">Conditional</animation>
+				<animation condition="Control.HasFocus(3101) | Control.HasFocus(3201) | Control.HasFocus(3301) | Control.HasFocus(3401) | Control.HasFocus(3501)" effect="fade" start="100" end="50" time="180">Conditional</animation>
 				<posx>165</posx>
 				<width>330</width>
 				<height>81</height>
