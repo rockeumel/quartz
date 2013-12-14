@@ -4811,11 +4811,11 @@
 					</animation>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture fallback="DefaultVideo.png">$VAR[AlbumIcon_-1]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_-1]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_-1]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_-1]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
@@ -4839,7 +4839,6 @@
 						<effect type="fade" time="VisibleChange_AnimationTime" start="100" end="0" tween="circle" easing="out"/>
 					</animation>
 					<animation type="Hidden" condition="Control.HasFocus(330)" reversible="false">
-						<!--<effect type="slide" time="VisibleChange_AnimationTime" start="286" end="0"/>-->
 						<effect type="fade" time="VisibleChange_AnimationTime" start="0" end="100" tween="circle" easing="in"/>
 					</animation>
 					<animation type="Visible" condition="Control.HasFocus(330)">
@@ -4847,11 +4846,11 @@
 					</animation>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture fallback="DefaultVideo.png">$VAR[AlbumIcon_5]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_5]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_5]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_5]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
@@ -4881,11 +4880,11 @@
 					</animation>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture fallback="DefaultVideo.png">$VAR[AlbumIcon_0]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_0]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_0]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_0]</texture>
 					</control>
 					<control type="label" description="Now Playing Song Title">
 						<posx>-4</posx>
@@ -4935,11 +4934,11 @@
 					</animation>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture fallback="DefaultVideo.png">$VAR[AlbumIcon_1]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_1]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_1]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_1]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (2) flat">
@@ -4961,11 +4960,11 @@
 					</animation>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture fallback="DefaultVideo.png">$VAR[AlbumIcon_2]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_2]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_2]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_2]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (3) flat">
@@ -4987,11 +4986,11 @@
 					</animation>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture fallback="DefaultVideo.png">$VAR[AlbumIcon_3]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_3]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_3]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_3]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (4) flat">
@@ -5013,11 +5012,11 @@
 					</animation>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture fallback="DefaultVideo.png">$VAR[AlbumIcon_4]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_4]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_4]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_4]</texture>
 					</control>
 				</control>
 				
@@ -5043,11 +5042,11 @@
 					</animation>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture fallback="DefaultVideo.png">$VAR[AlbumIcon_4]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_4]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_4]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_4]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (3) flat">
@@ -5071,11 +5070,11 @@
 					</animation>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture fallback="DefaultVideo.png">$VAR[AlbumIcon_3]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_3]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_3]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_3]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (2) flat">
@@ -5099,11 +5098,11 @@
 					</animation>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture fallback="DefaultVideo.png">$VAR[AlbumIcon_2]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_2]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_2]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_2]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (1) flat">
@@ -5127,11 +5126,11 @@
 					</animation>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture fallback="DefaultVideo.png">$VAR[AlbumIcon_1]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_1]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_1]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_1]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (0) flat" id="3305">
@@ -5156,11 +5155,11 @@
 					</animation>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
-						<texture fallback="DefaultVideo.png">$VAR[AlbumIcon_0]</texture>
+						<texture fallback="DefaultAudio.png">$VAR[AlbumIcon_0]</texture>
 					</control>
 					<control type="image" description="Album Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_0]</texture>
+						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_0]</texture>
 					</control>
 				</control>
 
