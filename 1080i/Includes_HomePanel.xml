@@ -5406,11 +5406,11 @@
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[PictureIcon_-1]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[PictureIcon_-1]</texture>
 					</control>
 					<control type="image" description="Picture Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[PictureIcon_-1]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$VAR[PictureIcon_-1]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
@@ -5426,11 +5426,11 @@
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[PictureIcon_5]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[PictureIcon_5]</texture>
 					</control>
 					<control type="image" description="Picture Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[PictureIcon_5]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$VAR[PictureIcon_5]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
@@ -5443,11 +5443,11 @@
 					<posx>RA_IconSquare2_PosX</posx>
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[PictureIcon_0]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[PictureIcon_0]</texture>
 					</control>
 					<control type="image" description="Picture Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[PictureIcon_0]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$VAR[PictureIcon_0]</texture>
 					</control>
 					<control type="label" description="Now Playing Song Title">
 						<posx>-4</posx>
@@ -5511,11 +5511,11 @@
 					<posx>RA_IconSquare3_PosX</posx>
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[PictureIcon_1]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[PictureIcon_1]</texture>
 					</control>
 					<control type="image" description="Picture Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[PictureIcon_1]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$VAR[PictureIcon_1]</texture>
 					</control>
 					<control type="label" description="Picture Title">
 						<posx>-4</posx>
@@ -5551,11 +5551,11 @@
 					<posx>RA_IconSquare4_PosX</posx>
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[PictureIcon_2]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[PictureIcon_2]</texture>
 					</control>
 					<control type="image" description="Picture Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[PictureIcon_2]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$VAR[PictureIcon_2]</texture>
 					</control>
 					<control type="label" description="Picture Title">
 						<posx>-4</posx>
@@ -5591,11 +5591,11 @@
 					<posx>RA_IconSquare5_PosX</posx>
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[PictureIcon_3]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[PictureIcon_3]</texture>
 					</control>
 					<control type="image" description="Picture Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[PictureIcon_3]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$VAR[PictureIcon_3]</texture>
 					</control>
 					<control type="label" description="Picture Title">
 						<posx>-4</posx>
@@ -5631,11 +5631,11 @@
 					<posx>RA_IconSquare6_PosX</posx>
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$VAR[PictureIcon_4]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[PictureIcon_4]</texture>
 					</control>
 					<control type="image" description="Picture Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[PictureIcon_4]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$VAR[PictureIcon_4]</texture>
 					</control>
 					<control type="label" description="Picture Title">
 						<posx>-4</posx>
@@ -5682,11 +5682,11 @@
 					<animation effect="slide" time="ShelfScroll_AnimationTime" end="-300,0" reversible="false" tween="sine" easing="inout">Hidden</animation>
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$INFO[Container(3401).ListItem(-6).Icon]</texture>
+						<texture fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(-6).Icon]</texture>
 					</control>
 					<control type="image" description="Picture Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$INFO[Container(3401).ListItem(-6).Icon]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(-6).Icon]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
@@ -5704,11 +5704,11 @@
 					<animation effect="slide" time="ShelfScroll_AnimationTime" start="300,0" reversible="false" tween="sine" easing="inout">Hidden</animation>
 					<control type="image">
 						<include>Square_Icon_Properties</include>
-						<texture>$INFO[Container(3401).ListItem(1).Icon]</texture>
+						<texture fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(1).Icon]</texture>
 					</control>
 					<control type="image">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$INFO[Container(3401).ListItem(1).Icon]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(1).Icon]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
@@ -5728,11 +5728,11 @@
 					</animation>
 					<control type="image">
 						<include>Square_Icon_Properties</include>
-						<texture>$INFO[Container(3401).ListItem(0).Icon]</texture>
+						<texture fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(0).Icon]</texture>
 					</control>
 					<control type="image">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$INFO[Container(3401).ListItem(0).Icon]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(0).Icon]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
@@ -5755,11 +5755,11 @@
 					</animation>
 					<control type="image">
 						<include>Square_Icon_Properties</include>
-						<texture>$INFO[Container(3401).ListItem(-5).Icon]</texture>
+						<texture fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(-5).Icon]</texture>
 					</control>
 					<control type="image">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$INFO[Container(3401).ListItem(-5).Icon]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(-5).Icon]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
@@ -5779,11 +5779,11 @@
 					<animation effect="slide" time="ShelfScroll_AnimationTime" end="-350" reversible="false" tween="sine" easing="inout">Hidden</animation>
 					<control type="image">
 						<include>Square_Icon_Properties</include>
-						<texture>$INFO[Container(3401).ListItem(-4).Icon]</texture>
+						<texture fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(-4).Icon]</texture>
 					</control>
 					<control type="image">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$INFO[Container(3401).ListItem(-4).Icon]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(-4).Icon]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (2f --> 1f)">
@@ -5792,11 +5792,11 @@
 					<animation effect="slide" time="ShelfScroll_AnimationTime" end="-350" reversible="false" tween="sine" easing="inout">Hidden</animation>
 					<control type="image">
 						<include>Square_Icon_Properties</include>
-						<texture>$INFO[Container(3401).ListItem(-3).Icon]</texture>
+						<texture fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(-3).Icon]</texture>
 					</control>
 					<control type="image">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$INFO[Container(3401).ListItem(-3).Icon]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(-3).Icon]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (3f --> 2f)">
@@ -5805,11 +5805,11 @@
 					<animation effect="slide" time="ShelfScroll_AnimationTime" end="-350" reversible="false" tween="sine" easing="inout">Hidden</animation>
 					<control type="image">
 						<include>Square_Icon_Properties</include>
-						<texture>$INFO[Container(3401).ListItem(-2).Icon]</texture>
+						<texture fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(-2).Icon]</texture>
 					</control>
 					<control type="image">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$INFO[Container(3401).ListItem(-2).Icon]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(-2).Icon]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (4f --> 3f)">
@@ -5818,11 +5818,11 @@
 					<animation effect="slide" time="ShelfScroll_AnimationTime" end="-350" reversible="false" tween="sine" easing="inout">Hidden</animation>
 					<control type="image">
 						<include>Square_Icon_Properties</include>
-						<texture>$INFO[Container(3401).ListItem(-1).Icon]</texture>
+						<texture fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(-1).Icon]</texture>
 					</control>
 					<control type="image">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$INFO[Container(3401).ListItem(-1).Icon]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(-1).Icon]</texture>
 					</control>
 				</control>
 			</control>
@@ -5839,11 +5839,11 @@
 					<animation effect="slide" time="ShelfScroll_AnimationTime" start="-300,0" reversible="false" tween="sine" easing="inout">Hidden</animation>
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$INFO[Container(3401).ListItem(-1).Icon]</texture>
+						<texture fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(-1).Icon]</texture>
 					</control>
 					<control type="image" description="Picture Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$INFO[Container(3401).ListItem(-1).Icon]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(-1).Icon]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
@@ -5863,11 +5863,11 @@
 					</animation>
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$INFO[Container(3401).ListItem(0).Icon]</texture>
+						<texture fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(0).Icon]</texture>
 					</control>
 					<control type="image" description="Picture Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$INFO[Container(3401).ListItem(0).Icon]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(0).Icon]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
@@ -5891,11 +5891,11 @@
 					<animation effect="slide" time="ShelfScroll_AnimationTime" end="300,0" reversible="false" tween="sine" easing="inout">Hidden</animation>
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
-						<texture diffuse="home_recentlyadded/Square_Mask.png">$INFO[Container(3401).ListItem(6).Icon]</texture>
+						<texture fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(6).Icon]</texture>
 					</control>
 					<control type="image" description="Picture Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$INFO[Container(3401).ListItem(6).Icon]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(6).Icon]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
@@ -5914,11 +5914,11 @@
 					</animation>
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
-						<texture diffuse="home_recentlyadded/Square_Mask.png">$INFO[Container(3401).ListItem(5).Icon]</texture>
+						<texture fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(5).Icon]</texture>
 					</control>
 					<control type="image" description="Picture Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$INFO[Container(3401).ListItem(5).Icon]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(5).Icon]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconSquare_Width</width>
@@ -5938,11 +5938,11 @@
 					<animation effect="slide" time="ShelfScroll_AnimationTime" end="350" reversible="false" tween="sine" easing="inout">Hidden</animation>
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$INFO[Container(3401).ListItem(1).Icon]</texture>
+						<texture fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(1).Icon]</texture>
 					</control>
 					<control type="image" description="Picture Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$INFO[Container(3401).ListItem(1).Icon]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(1).Icon]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (1f --> -2f)" id="3403">
@@ -5951,11 +5951,11 @@
 					<animation effect="slide" time="ShelfScroll_AnimationTime" end="350" reversible="false" tween="sine" easing="inout">Hidden</animation>
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$INFO[Container(3401).ListItem(2).Icon]</texture>
+						<texture fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(2).Icon]</texture>
 					</control>
 					<control type="image" description="Picture Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$INFO[Container(3401).ListItem(2).Icon]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(2).Icon]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (2f --> 3f)">
@@ -5964,11 +5964,11 @@
 					<animation effect="slide" time="ShelfScroll_AnimationTime" end="350" reversible="false" tween="sine" easing="inout">Hidden</animation>
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$INFO[Container(3401).ListItem(3).Icon]</texture>
+						<texture fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(3).Icon]</texture>
 					</control>
 					<control type="image" description="Picture Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$INFO[Container(3401).ListItem(3).Icon]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(3).Icon]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (3f --> 4f)">
@@ -5977,11 +5977,11 @@
 					<animation effect="slide" time="ShelfScroll_AnimationTime" end="350" reversible="false" tween="sine" easing="inout">Hidden</animation>
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
-						<texture>$INFO[Container(3401).ListItem(4).Icon]</texture>
+						<texture fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(4).Icon]</texture>
 					</control>
 					<control type="image" description="Picture Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
-						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$INFO[Container(3401).ListItem(4).Icon]</texture>
+						<texture flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png" fallback="DefaultVideo.png">$INFO[Container(3401).ListItem(4).Icon]</texture>
 					</control>
 				</control>
 			</control>
