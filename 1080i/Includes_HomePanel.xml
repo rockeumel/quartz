@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<constant name="ShelfScroll_AnimationTime">2500</constant>
-	<constant name="VisibleChange_AnimationTime">350</constant>
+	<constant name="ShelfScroll_AnimationTime">250</constant>
+	<constant name="VisibleChange_AnimationTime">1500</constant>
 	<!-- =============================== -->
 	<!-- ###  Poster Icon Dimensions ### -->
 	<!-- =============================== -->
@@ -2736,6 +2736,7 @@
 					</control>
 				</control>
 				<control type="group" description="Item (0) flat">
+					<visible>IntegerGreaterThan(Container(3201).NumItems,0)</visible>
 					<posx>RA_IconSquare2_PosX</posx>
 					<control type="image" description="Episode Icon">
 						<include>Square_Icon_Properties</include>
@@ -4175,6 +4176,7 @@
 					</control>
 				</control>
 				<control type="group" description="Item (0) flat">
+					<visible>IntegerGreaterThan(Container(3301).NumItems,0)</visible>
 					<posx>RA_IconSquare2_PosX</posx>
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
@@ -5305,6 +5307,7 @@
 			</control>
 
 			<control type="label" description="Headline: Shortcuts">
+				<visible>IntegerGreaterThan(Container(3401).NumItems,0) + Skin.HasSetting(PicturesShelf_Custom)</visible>
 				<visible>Control.HasFocus(340) | Control.HasFocus(3401)</visible>
 				<posx>118</posx>
 				<posy>46</posy>
@@ -5316,20 +5319,20 @@
 				<label>$LOCALIZE[111]</label>
 				<animation effect="slide" start="0,0" end="351,0" time="ShelfScroll_AnimationTime" condition="Player.HasAudio + !Container(3401).HasPrevious" tween="sine"
 					easing="inout">Conditional</animation>
-				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
-				</animation>
-				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
-					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
-				</animation>
-				
-				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+				<animation type="Visible" condition="Container(3000).OnPrevious" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-820" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),340R)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-820,0"/>
 					<effect type="slide" time="0" start="0,0" end="820,0" delay="VisibleChange_AnimationTime"/>
+				</animation>
+				
+				<animation type="Visible" condition="Container(3000).OnNext" reversible="false">
+					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
+				</animation>
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),340L)" reversible="false">
+					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
+					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 			</control>
 			<control type="label" description="Headline: Now Playing">
@@ -5440,6 +5443,7 @@
 					</control>
 				</control>
 				<control type="group" description="Item (0) flat">
+					<visible>IntegerGreaterThan(Container(3401).NumItems,0)</visible>
 					<posx>RA_IconSquare2_PosX</posx>
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
@@ -6504,6 +6508,7 @@
 			</control>
 
 			<control type="label" description="Headline: Shortcuts">
+				<visible>IntegerGreaterThan(Container(3501).NumItems,0) + Skin.HasSetting(AddonsShelf_Custom)</visible>
 				<visible>Control.HasFocus(350) | Control.HasFocus(3501)</visible>
 				<posx>118</posx>
 				<posy>46</posy>
@@ -6515,24 +6520,24 @@
 				<label>$LOCALIZE[111]</label>
 				<animation effect="slide" start="0,0" end="351,0" time="ShelfScroll_AnimationTime" condition="Player.HasAudio + !Container(3501).HasPrevious" tween="sine"
 					easing="inout">Conditional</animation>
-				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
-				</animation>
-				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
-					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
-				</animation>
-				
-				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+				<animation type="Visible" condition="Container(3000).OnPrevious" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-820" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),350R)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-820,0"/>
 					<effect type="slide" time="0" start="0,0" end="820,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
+				
+				<animation type="Visible" condition="Container(3000).OnNext" reversible="false">
+					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
+				</animation>
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),350L)" reversible="false">
+					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
+					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
+				</animation>
 			</control>
 			<control type="label" description="Headline: Now Playing">
-				<description>Now Playing</description>
+				<visible>Player.HasAudio + [Control.HasFocus(350) | Control.HasFocus(3501)]</visible>
 				<posx>118</posx>
 				<posy>46</posy>
 				<width>600</width>
@@ -6541,7 +6546,6 @@
 				<textcolor>Shelf_Headline</textcolor>
 				<shadowcolor>Shelf_Headline_Shadow</shadowcolor>
 				<label>31023</label>
-				<visible>Player.HasAudio + [Control.HasFocus(350) | Control.HasFocus(3501)]</visible>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(3501).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
 				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
@@ -6639,6 +6643,7 @@
 					</control>
 				</control>
 				<control type="group" description="Item (0) flat">
+					<visible>IntegerGreaterThan(Container(3501).NumItems,0)</visible>
 					<posx>RA_IconSquare2_PosX</posx>
 					<control type="image" description="Addon Icon">
 						<include>Square_Icon_Properties</include>
