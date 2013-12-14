@@ -54,6 +54,7 @@
 <window id="0">
 	<defaultcontrol>8998</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+	<onload>SetProperty(HomeMenuLastFocus,noop)</onload>
 
 	<controls>
 		<include>Home_Background</include>
@@ -64,7 +65,7 @@
 		</control>
 
 		<!-- Home Navigation & Shelf -->
-		<!--<include condition="!Skin.HasSetting(MoviesSectionHide)">HomeShelf_Movies</include>-->
+		<include condition="!Skin.HasSetting(MoviesSectionHide)">HomeShelf_Movies</include>
 		<include condition="!Skin.HasSetting(TVSectionHide)">HomeShelf_TvShows</include>
 		<include condition="!Skin.HasSetting(MusicSectionHide)">HomeShelf_Music</include>
 		<include condition="!Skin.HasSetting(PicturesSectionHide)">HomeShelf_Pictures</include>

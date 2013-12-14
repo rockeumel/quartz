@@ -470,20 +470,6 @@
 	<include name="HomeShelf_Movies">
 		<control type="group">
 			<visible>!Skin.HasSetting(MoviesSectionHide) + Library.HasContent(Movies)</visible>
-			<control type="label" description="indicator for shelf visiblechange animation" id="317">
-				<posx>-1</posx>
-				<posy>-1</posy>
-				<width>1</width>
-				<height>1</height>
-				<label>-</label>
-				<visible>!Control.HasFocus(310) + !StringCompare(Window().Property(HomeMenuDirection),up)</visible>
-				<animation type="Visible" reversible="false">
-					<effect type="fade" time="VisibleChange_AnimationTime" start="0" end="100"/>
-				</animation>
-				<animation type="Hidden" reversible="false">
-					<effect type="fade" time="VisibleChange_AnimationTime" start="100" end="0"/>
-				</animation>
-			</control>
 			<control type="panel" id="3101">
 				<posx>78</posx>
 				<posy>RA_IconPoster_PosY</posy>
@@ -830,12 +816,13 @@
 
 			<control type="group" description="Icons: Not OnScroll">
 				<posy>RA_IconPoster_PosY</posy>
-				<visible>!Container(3101).OnScrollNext + !Container(3101).OnScrollPrevious + Control.HasFocus(3101)</visible>
+				<visible>[Control.HasFocus(3101) + !Container(3101).OnScrollNext + !Container(3101).OnScrollPrevious]
+					| [Control.HasFocus(310) + !Container(3000).OnScrollNext + !Container(3000).OnScrollPrevious]</visible>
 				<animation type="Visible" condition="Control.IsVisible(3102) | Control.IsVisible(3103)">
 					<effect type="fade" start="0" end="100" time="0" delay="ShelfScroll_AnimationTime"/>
 				</animation>
-				<animation type="Visible" condition="!Control.IsVisible(3102) + !Control.IsVisible(3103)">
-					<effect type="fade" start="0" end="100" time="0"/>
+				<animation type="Visible" condition="Control.IsVisible(3104) | Control.IsVisible(3105)">
+					<effect type="fade" start="0" end="100" time="0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 
 				<control type="group" description="Item (-1) rotated">
@@ -1823,56 +1810,54 @@
 				</control>
 				
 				<!-- to the right, from the right -->
-				<control type="group" description="Item (0) flat" id="">
-					<visible>Control.HasFocus(310) + [!Player.HasAudio | [Player.HasAudio + Container(3101).HasPrevious]]</visible>
+				<control type="group" description="Item (0) flat" id="3104">
+					<visible>IntegerGreaterThan(Container(3101).NumItems,0) + [!Player.HasAudio | [Player.HasAudio + Container(3101).HasPrevious]]</visible>
+					<visible>[Control.HasFocus(310) + Container(3000).OnPrevious] | 
+						[StringCompare(Window().Property(HomeMenuLastFocus),310R) + Container(3000).OnNext]</visible>
 					<posx>RA_IconPoster2_PosX</posx>
-					<camera x="-101" y="262"/>
-					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<camera x="-101" y="262"/>					
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310R)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-302,0"/>
-						<effect type="slide" time="0" start="0,0" end="302,0" delay="VisibleChange_AnimationTime"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="302,0" start="0" end="-45" tween="cubic" easing="in"/>
-						<effect type="rotatey" time="0" center="302,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="302,0" start="0" end="-45"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="Control.HasFocus(310)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-302" end="0"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="302,0" start="-45" end="0" tween="cubic" easing="out"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="302,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					<animation type="Visible" condition="Control.HasFocus(310)">
+						<effect type="fade" time="0" start="0" end="0"/>
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
 						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_0]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
-						<visible>Control.IsVisible(317)</visible>
 						<include>Movie_Icon_Reflection_Properties</include>
 						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_0]</texture>
 					</control>
 				</control>
-				<control type="group" description="Item (0) flat square">
-					<visible>Control.HasFocus(310) + !Container(3101).HasPrevious + Player.HasAudio</visible>
+				<control type="group" description="Item (0) flat square" id="3104">
+					<visible>!Container(3101).HasPrevious + Player.HasAudio</visible>
+					<visible>[Control.HasFocus(310) + Container(3000).OnPrevious] | 
+						[StringCompare(Window().Property(HomeMenuLastFocus),310R) + Container(3000).OnNext]</visible>
 					<posx>82</posx>
-					<camera x="-143" y="254"/>
-					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<camera x="-143" y="254"/>					
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310R)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-368,0"/>
-						<effect type="slide" time="0" start="0,0" end="368,0" delay="VisibleChange_AnimationTime"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="368,0" start="0" end="-45" tween="cubic" easing="in"/>
-						<effect type="rotatey" time="0" center="368,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="368,0" start="0" end="-45"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="Control.HasFocus(310)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-368" end="0"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="368,0" start="-45" end="0" tween="cubic" easing="out"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="368,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					<animation type="Visible" condition="Control.HasFocus(310)">
+						<effect type="fade" time="0" start="0" end="0"/>
 					</animation>
 					<control type="image" description="Now Playing Icon">
 						<include>Now_Playing_Icon_Properties</include>
 						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_0]</texture>
 					</control>
 					<control type="image" description="Now Playing Icon Reflection">
-						<visible>Control.IsVisible(317)</visible>
 						<include>Now_Playing_Icon_Reflection_Properties</include>
 						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[MovieIcon_0]</texture>
 					</control>
@@ -1904,168 +1889,162 @@
 					</control>
 				</control>
 				<control type="group" description="Item (1) flat">
-					<visible>IntegerGreaterThan(Container(3101).NumItems,1) + Control.HasFocus(310)</visible>
+					<visible>IntegerGreaterThan(Container(3101).NumItems,1)</visible>
+					<visible>[Control.HasFocus(310) + Container(3000).OnPrevious] | 
+						[StringCompare(Window().Property(HomeMenuLastFocus),310R) + Container(3000).OnNext]</visible>
 					<posx>RA_IconPoster3_PosX</posx>
 					<camera x="-101" y="262"/>
 					<animation condition="Player.HasAudio + !Container(3101).HasPrevious" effect="slide" start="0" end="75" time="0">Conditional</animation>
-					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310R)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-555,0"/>
-						<effect type="slide" time="0" start="0,0" end="555,0" delay="VisibleChange_AnimationTime"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="555,0" start="0" end="-45" tween="cubic" easing="in"/>
-						<effect type="rotatey" time="0" center="555,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="555,0" start="0" end="-45"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="Control.HasFocus(310)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-555" end="0"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="555,0" start="-45" end="0" tween="cubic" easing="out"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="555,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					<animation type="Visible" condition="Control.HasFocus(310)">
+						<effect type="fade" time="0" start="0" end="0"/>
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
 						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_1]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
-						<visible>Control.IsVisible(317)</visible>
 						<include>Movie_Icon_Reflection_Properties</include>
 						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_1]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (2) flat">
-					<visible>IntegerGreaterThan(Container(3101).NumItems,2) + Control.HasFocus(310)</visible>
+					<visible>IntegerGreaterThan(Container(3101).NumItems,2)</visible>
+					<visible>[Control.HasFocus(310) + Container(3000).OnPrevious] | 
+						[StringCompare(Window().Property(HomeMenuLastFocus),310R) + Container(3000).OnNext]</visible>
 					<posx>RA_IconPoster4_PosX</posx>
 					<camera x="-101" y="262"/>
 					<animation condition="Player.HasAudio + !Container(3101).HasPrevious" effect="slide" start="0" end="60" time="0">Conditional</animation>
-					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310R)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-808,0"/>
-						<effect type="slide" time="0" start="0,0" end="808,0" delay="VisibleChange_AnimationTime"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="808,0" start="0" end="-45" tween="cubic" easing="in"/>
-						<effect type="rotatey" time="0" center="808,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="808,0" start="0" end="-45"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="Control.HasFocus(310)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-808" end="0"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="808,0" start="-45" end="0" tween="cubic" easing="out"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="808,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					<animation type="Visible" condition="Control.HasFocus(310)">
+						<effect type="fade" time="0" start="0" end="0"/>
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
 						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_2]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
-						<visible>Control.IsVisible(317)</visible>
 						<include>Movie_Icon_Reflection_Properties</include>
 						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_2]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (3) flat">
-					<visible>IntegerGreaterThan(Container(3101).NumItems,3) + Control.HasFocus(310)</visible>
+					<visible>IntegerGreaterThan(Container(3101).NumItems,3)</visible>
+					<visible>[Control.HasFocus(310) + Container(3000).OnPrevious] | 
+						[StringCompare(Window().Property(HomeMenuLastFocus),310R) + Container(3000).OnNext]</visible>
 					<posx>RA_IconPoster5_PosX</posx>
 					<camera x="-101" y="262"/>
 					<animation condition="Player.HasAudio + !Container(3101).HasPrevious" effect="slide" start="0" end="45" time="0">Conditional</animation>
-					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310R)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1061,0"/>
-						<effect type="slide" time="0" start="0,0" end="1061,0" delay="VisibleChange_AnimationTime"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1061,0" start="0" end="-45" tween="cubic" easing="in"/>
-						<effect type="rotatey" time="0" center="1061,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1061,0" start="0" end="-45"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="Control.HasFocus(310)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-1061" end="0"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1061,0" start="-45" end="0" tween="cubic" easing="out"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1061,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					<animation type="Visible" condition="Control.HasFocus(310)">
+						<effect type="fade" time="0" start="0" end="0"/>
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
 						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_3]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
-						<visible>Control.IsVisible(317)</visible>
 						<include>Movie_Icon_Reflection_Properties</include>
 						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_3]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (4) flat">
-					<visible>IntegerGreaterThan(Container(3101).NumItems,4) + Control.HasFocus(310)</visible>
+					<visible>IntegerGreaterThan(Container(3101).NumItems,4)</visible>
+					<visible>[Control.HasFocus(310) + Container(3000).OnPrevious] | 
+						[StringCompare(Window().Property(HomeMenuLastFocus),310R) + Container(3000).OnNext]</visible>
 					<posx>RA_IconPoster6_PosX</posx>
 					<camera x="-101" y="262"/>
 					<animation condition="Player.HasAudio + !Container(3101).HasPrevious" effect="slide" start="0" end="30" time="0">Conditional</animation>
-					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310R)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1314,0"/>
-						<effect type="slide" time="0" start="0,0" end="1314,0" delay="VisibleChange_AnimationTime"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1314,0" start="0" end="-45" tween="cubic" easing="in"/>
-						<effect type="rotatey" time="0" center="1314,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1314,0" start="0" end="-45"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="Control.HasFocus(310)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-1314" end="0"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1314,0" start="-45" end="0" tween="cubic" easing="out"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1314,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					<animation type="Visible" condition="Control.HasFocus(310)">
+						<effect type="fade" time="0" start="0" end="0"/>
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
 						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_4]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
-						<visible>Control.IsVisible(317)</visible>
 						<include>Movie_Icon_Reflection_Properties</include>
 						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_4]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (5) flat">
-					<visible>IntegerGreaterThan(Container(3101).NumItems,5) + Control.HasFocus(310)</visible>
+					<visible>IntegerGreaterThan(Container(3101).NumItems,5)</visible>
+					<visible>[Control.HasFocus(310) + Container(3000).OnPrevious] | 
+						[StringCompare(Window().Property(HomeMenuLastFocus),310R) + Container(3000).OnNext]</visible>
 					<posx>RA_IconPoster7_PosX</posx>
 					<camera x="-101" y="262"/>
 					<animation condition="Player.HasAudio + !Container(3101).HasPrevious" effect="slide" start="0" end="15" time="0">Conditional</animation>
-					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310R)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1567,0"/>
-						<effect type="slide" time="0" start="0,0" end="1567,0" delay="VisibleChange_AnimationTime"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1567,0" start="0" end="-45" tween="cubic" easing="in"/>
-						<effect type="rotatey" time="0" center="1567,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1567,0" start="0" end="-45"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="Control.HasFocus(310)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-1567" end="0"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1567,0" start="-45" end="0" tween="cubic" easing="out"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1567,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					<animation type="Visible" condition="Control.HasFocus(310)">
+						<effect type="fade" time="0" start="0" end="0"/>
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
 						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_5]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
-						<visible>Control.IsVisible(317)</visible>
 						<include>Movie_Icon_Reflection_Properties</include>
 						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_5]</texture>
 					</control>
 				</control>
 				<control type="group" description="Item (6) flat">
-					<visible>IntegerGreaterThan(Container(3101).NumItems,6) + Control.HasFocus(310)</visible>
+					<visible>IntegerGreaterThan(Container(3101).NumItems,6)</visible>
+					<visible>[Control.HasFocus(310) + Container(3000).OnPrevious] | 
+						[StringCompare(Window().Property(HomeMenuLastFocus),310R) + Container(3000).OnNext]</visible>
 					<posx>RA_IconPoster8_PosX</posx>
 					<camera x="-101" y="262"/>
-					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310R)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-1820,0"/>
-						<effect type="slide" time="0" start="0,0" end="1820,0" delay="VisibleChange_AnimationTime"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1820,0" start="0" end="-45" tween="cubic" easing="in"/>
-						<effect type="rotatey" time="0" center="1820,0" start="0" end="45" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1820,0" start="0" end="-45"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="Control.HasFocus(310)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="-1820" end="0"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1820,0" start="-45" end="0" tween="cubic" easing="out"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1820,0" start="-45" end="0"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					<animation type="Visible" condition="Control.HasFocus(310)">
+						<effect type="fade" time="0" start="0" end="0"/>
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
 						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_6]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
-						<visible>Control.IsVisible(317)</visible>
 						<include>Movie_Icon_Reflection_Properties</include>
 						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_6]</texture>
 					</control>
@@ -2073,21 +2052,21 @@
 				
 				<!-- to the left, from the left -->
 				<control type="group" description="Item (6) flat">
-					<visible>IntegerGreaterThan(Container(3101).NumItems,6) + Control.HasFocus(310)</visible>
+					<visible>IntegerGreaterThan(Container(3101).NumItems,6)</visible>
+					<visible>[Control.HasFocus(310) + Container(3000).OnNext] | 
+						[StringCompare(Window().Property(HomeMenuLastFocus),310L) + Container(3000).OnPrevious]</visible>
 					<posx>RA_IconPoster8_PosX</posx>
 					<camera x="2021" y="262"/>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="slide" time="VisibleChange_AnimationTime" start="302" end="0"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1618" start="45" end="0" tween="cubic" easing="out"/>
-					</animation>
-					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310L)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="302,0"/>
-						<effect type="slide" time="0" start="0,0" end="-302,0" delay="VisibleChange_AnimationTime"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1618" start="0" end="45" tween="cubic" easing="in"/>
-						<effect type="rotatey" time="0" center="1618" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1618" start="0" end="45" tween="quadratic" easing="in"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					<animation type="Hidden" condition="Control.HasFocus(310)" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="302" end="0"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1618" start="45" end="0"/>
+					</animation>
+					<animation type="Visible" condition="Control.HasFocus(310)">
+						<effect type="fade" time="0" start="0" end="0"/>
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
@@ -2099,22 +2078,22 @@
 					</control>
 				</control>
 				<control type="group" description="Item (5) flat">
-					<visible>IntegerGreaterThan(Container(3101).NumItems,5) + Control.HasFocus(310)</visible>
+					<visible>IntegerGreaterThan(Container(3101).NumItems,5)</visible>
+					<visible>[Control.HasFocus(310) + Container(3000).OnNext] | 
+						[StringCompare(Window().Property(HomeMenuLastFocus),310L) + Container(3000).OnPrevious]</visible>
 					<posx>RA_IconPoster7_PosX</posx>
 					<camera x="2021" y="262"/>
 					<animation condition="Player.HasAudio + !Container(3101).HasPrevious" effect="slide" start="0" end="15" time="0">Conditional</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="slide" time="VisibleChange_AnimationTime" start="555" end="0"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1365" start="45" end="0" tween="cubic" easing="out"/>
-					</animation>
-					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310L)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="555,0"/>
-						<effect type="slide" time="0" start="0,0" end="-555,0" delay="VisibleChange_AnimationTime"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1365" start="0" end="45" tween="cubic" easing="in"/>
-						<effect type="rotatey" time="0" center="1365" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1365" start="0" end="45" tween="quadratic" easing="in"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					<animation type="Hidden" condition="Control.HasFocus(310)" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="555" end="0"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1365" start="45" end="0"/>
+					</animation>
+					<animation type="Visible" condition="Control.HasFocus(310)">
+						<effect type="fade" time="0" start="0" end="0"/>
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
@@ -2126,22 +2105,22 @@
 					</control>
 				</control>
 				<control type="group" description="Item (4) flat">
-					<visible>IntegerGreaterThan(Container(3101).NumItems,4) + Control.HasFocus(310)</visible>
+					<visible>IntegerGreaterThan(Container(3101).NumItems,4)</visible>
+					<visible>[Control.HasFocus(310) + Container(3000).OnNext] | 
+						[StringCompare(Window().Property(HomeMenuLastFocus),310L) + Container(3000).OnPrevious]</visible>
 					<posx>RA_IconPoster6_PosX</posx>
 					<camera x="2021" y="262"/>
 					<animation condition="Player.HasAudio + !Container(3101).HasPrevious" effect="slide" start="0" end="30" time="0">Conditional</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310L)" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1808,0"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1112" start="0" end="45" tween="quadratic" easing="in"/>
+					</animation>
+					<animation type="Hidden" condition="Control.HasFocus(310)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="808" end="0"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1112" start="45" end="0" tween="cubic" easing="out"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1112" start="45" end="0"/>
 					</animation>
-					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="808,0"/>
-						<effect type="slide" time="0" start="0,0" end="-808,0" delay="VisibleChange_AnimationTime"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="1112" start="0" end="45" tween="cubic" easing="in"/>
-						<effect type="rotatey" time="0" center="1112" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
-					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					<animation type="Visible" condition="Control.HasFocus(310)">
+						<effect type="fade" time="0" start="0" end="0"/>
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
@@ -2153,22 +2132,22 @@
 					</control>
 				</control>
 				<control type="group" description="Item (3) flat">
-					<visible>IntegerGreaterThan(Container(3101).NumItems,3) + Control.HasFocus(310)</visible>
+					<visible>IntegerGreaterThan(Container(3101).NumItems,3)</visible>
+					<visible>[Control.HasFocus(310) + Container(3000).OnNext] | 
+						[StringCompare(Window().Property(HomeMenuLastFocus),310L) + Container(3000).OnPrevious]</visible>
 					<posx>RA_IconPoster5_PosX</posx>
 					<camera x="2021" y="262"/>
 					<animation condition="Player.HasAudio + !Container(3101).HasPrevious" effect="slide" start="0" end="45" time="0">Conditional</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="slide" time="VisibleChange_AnimationTime" start="1061" end="0"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="859" start="45" end="0" tween="cubic" easing="out"/>
-					</animation>
-					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310L)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1061,0"/>
-						<effect type="slide" time="0" start="0,0" end="-1061,0" delay="VisibleChange_AnimationTime"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="859" start="0" end="45" tween="cubic" easing="in"/>
-						<effect type="rotatey" time="0" center="859" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="859" start="0" end="45" tween="quadratic" easing="in"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					<animation type="Hidden" condition="Control.HasFocus(310)" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="1061" end="0"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="859" start="45" end="0"/>
+					</animation>
+					<animation type="Visible" condition="Control.HasFocus(310)">
+						<effect type="fade" time="0" start="0" end="0"/>
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
@@ -2180,22 +2159,22 @@
 					</control>
 				</control>
 				<control type="group" description="Item (2) flat">
-					<visible>IntegerGreaterThan(Container(3101).NumItems,2) + Control.HasFocus(310)</visible>
+					<visible>IntegerGreaterThan(Container(3101).NumItems,2)</visible>
+					<visible>[Control.HasFocus(310) + Container(3000).OnNext] | 
+						[StringCompare(Window().Property(HomeMenuLastFocus),310L) + Container(3000).OnPrevious]</visible>
 					<posx>RA_IconPoster4_PosX</posx>
 					<camera x="2021" y="262"/>
 					<animation condition="Player.HasAudio + !Container(3101).HasPrevious" effect="slide" start="0" end="60" time="0">Conditional</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="slide" time="VisibleChange_AnimationTime" start="1314" end="0"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="606" start="45" end="0" tween="cubic" easing="out"/>
-					</animation>
-					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310L)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1314,0"/>
-						<effect type="slide" time="0" start="0,0" end="-1314,0" delay="VisibleChange_AnimationTime"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="606" start="0" end="45" tween="cubic" easing="in"/>
-						<effect type="rotatey" time="0" center="606" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="606" start="0" end="45" tween="quadratic" easing="in"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					<animation type="Hidden" condition="Control.HasFocus(310)" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="1314" end="0"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="606" start="45" end="0"/>
+					</animation>
+					<animation type="Visible" condition="Control.HasFocus(310)">
+						<effect type="fade" time="0" start="0" end="0"/>
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
@@ -2207,22 +2186,22 @@
 					</control>
 				</control>
 				<control type="group" description="Item (1) flat">
-					<visible>IntegerGreaterThan(Container(3101).NumItems,1) + Control.HasFocus(310)</visible>
+					<visible>IntegerGreaterThan(Container(3101).NumItems,1)</visible>
+					<visible>[Control.HasFocus(310) + Container(3000).OnNext] | 
+						[StringCompare(Window().Property(HomeMenuLastFocus),310L) + Container(3000).OnPrevious]</visible>
 					<posx>RA_IconPoster3_PosX</posx>
 					<camera x="2021" y="262"/>
 					<animation condition="Player.HasAudio + !Container(3101).HasPrevious" effect="slide" start="0" end="75" time="0">Conditional</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="slide" time="VisibleChange_AnimationTime" start="1567" end="0"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="353" start="45" end="0" tween="cubic" easing="out"/>
-					</animation>
-					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310L)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1567,0"/>
-						<effect type="slide" time="0" start="0,0" end="-1567,0" delay="VisibleChange_AnimationTime"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="353" start="0" end="45" tween="cubic" easing="in"/>
-						<effect type="rotatey" time="0" center="353" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="353" start="0" end="45" tween="quadratic" easing="in"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					<animation type="Hidden" condition="Control.HasFocus(310)" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="1567" end="0"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="353" start="45" end="0"/>
+					</animation>
+					<animation type="Visible" condition="Control.HasFocus(310)">
+						<effect type="fade" time="0" start="0" end="0"/>
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
@@ -2233,22 +2212,22 @@
 						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_1]</texture>
 					</control>
 				</control>
-				<control type="group" description="Item (0) flat">
-					<visible>Control.HasFocus(310) + [!Player.HasAudio | [Player.HasAudio + Container(3101).HasPrevious]]</visible>
+				<control type="group" description="Item (0) flat" id="3105">
+					<visible>IntegerGreaterThan(Container(3101).NumItems,0) + [!Player.HasAudio | [Player.HasAudio + Container(3101).HasPrevious]]</visible>
+					<visible>[Control.HasFocus(310) + Container(3000).OnNext] | 
+						[StringCompare(Window().Property(HomeMenuLastFocus),310L) + Container(3000).OnPrevious]</visible>
 					<posx>RA_IconPoster2_PosX</posx>
 					<camera x="2021" y="262"/>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="slide" time="VisibleChange_AnimationTime" start="1820" end="0"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="100" start="45" end="0" tween="cubic" easing="out"/>
-					</animation>
-					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310L)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1820,0"/>
-						<effect type="slide" time="0" start="0,0" end="-1820,0" delay="VisibleChange_AnimationTime"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="100" start="0" end="45" tween="cubic" easing="in"/>
-						<effect type="rotatey" time="0" center="100" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="100" start="0" end="45" tween="quadratic" easing="in"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					<animation type="Hidden" condition="Control.HasFocus(310)" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="1820" end="0"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="100" start="45" end="0"/>
+					</animation>
+					<animation type="Visible" condition="Control.HasFocus(310)">
+						<effect type="fade" time="0" start="0" end="0"/>
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
@@ -2259,22 +2238,22 @@
 						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_0]</texture>
 					</control>
 				</control>
-				<control type="group" description="Item (0) flat square">
-					<visible>Control.HasFocus(310) + !Container(3101).HasPrevious + Player.HasAudio</visible>
+				<control type="group" description="Item (0) flat square" id="3105">
+					<visible>IntegerGreaterThan(Container(3101).NumItems,0) + !Container(3101).HasPrevious + Player.HasAudio</visible>
+					<visible>[Control.HasFocus(310) + Container(3000).OnNext] | 
+						[StringCompare(Window().Property(HomeMenuLastFocus),310L) + Container(3000).OnPrevious]</visible>
 					<posx>82</posx>
 					<camera x="2063" y="254"/>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="slide" time="VisibleChange_AnimationTime" start="1838" end="0"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="82" start="45" end="0" tween="cubic" easing="out"/>
-					</animation>
-					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+					<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310L)" reversible="false">
 						<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1838,0"/>
-						<effect type="slide" time="0" start="0,0" end="-1838,0" delay="VisibleChange_AnimationTime"/>
-						<effect type="rotatey" time="VisibleChange_AnimationTime" center="82" start="0" end="45" tween="cubic" easing="in"/>
-						<effect type="rotatey" time="0" center="82" start="0" end="-45" delay="VisibleChange_AnimationTime"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="82" start="0" end="45" tween="quadratic" easing="in"/>
 					</animation>
-					<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-						<effect type="fade" time="0" start="0" end="100" delay="VisibleChange_AnimationTime"/>
+					<animation type="Hidden" condition="Control.HasFocus(310)" reversible="false">
+						<effect type="slide" time="VisibleChange_AnimationTime" start="1838" end="0"/>
+						<effect type="rotatey" time="VisibleChange_AnimationTime" center="82" start="45" end="0"/>
+					</animation>
+					<animation type="Visible" condition="Control.HasFocus(310)">
+						<effect type="fade" time="0" start="0" end="0"/>
 					</animation>
 					<control type="image" description="Now Playing Icon">
 						<include>Now_Playing_Icon_Properties</include>
@@ -2688,11 +2667,13 @@
 				<posy>RA_IconSquare_PosY</posy>
 				<visible>[Control.HasFocus(3201) + !Container(3201).OnScrollNext + !Container(3201).OnScrollPrevious]
 					| [Control.HasFocus(320) + !Container(3000).OnScrollNext + !Container(3000).OnScrollPrevious]</visible>
-				<animation type="Visible" condition="Control.IsVisible(3204) | Control.IsVisible(3205)">
-					<effect type="fade" start="0" end="100" time="0" delay="VisibleChange_AnimationTime"/>
-				</animation>
+				<!--<visible>[Control.HasFocus(3201) + !Container(3201).OnScrollNext + !Container(3201).OnScrollPrevious]
+					| [Control.HasFocus(320) + !Control.IsVisible(3204) + !Control.IsVisible(3205)]</visible>-->
 				<animation type="Visible" condition="Control.IsVisible(3202) | Control.IsVisible(3203)">
 					<effect type="fade" start="0" end="100" time="0" delay="ShelfScroll_AnimationTime"/>
+				</animation>
+				<animation type="Visible" condition="Control.IsVisible(3204) | Control.IsVisible(3205)">
+					<effect type="fade" start="0" end="100" time="0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 
 				<control type="group" description="Item (-1) rotated">
