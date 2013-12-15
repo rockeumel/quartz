@@ -2672,8 +2672,6 @@
 				<aspectratio>stretch</aspectratio>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(3201).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
-				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(3101).HasPrevious" tween="sine" easing="inout"
-					>Conditional</animation>
 				<animation type="Visible" condition="Container(3000).OnPrevious" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
