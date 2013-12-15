@@ -1801,7 +1801,7 @@
 					</control>
 				</control>
 				<control type="group" description="Item (7) rotated">
-					<posx>RA_IconPoster8_PosX</posx>
+					<posx>RA_IconPoster9_PosX</posx>
 					<visible>Container(3101).HasNext</visible>
 					<visible>
 						[Control.HasFocus(310) + Container(3000).OnPrevious] | 
@@ -1822,11 +1822,11 @@
 					</animation>
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
-						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_6]</texture>
+						<texture fallback="DefaultVideo.png">$VAR[MovieIcon_7]</texture>
 					</control>
 					<control type="image" description="Movie Icon Reflection">
 						<include>Movie_Icon_Reflection_Properties</include>
-						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_6]</texture>
+						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Poster_ReflectionMask.png">$VAR[MovieIcon_7]</texture>
 					</control>
 					<control type="image" description="Icon Dimmer">
 						<width>RA_IconPoster_Width</width>
