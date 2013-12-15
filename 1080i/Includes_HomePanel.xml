@@ -417,6 +417,22 @@
 		<value condition="Container(3401).Position(5)">$INFO[Container(3401).ListItem(-5).Label2]</value>
 		<value>$INFO[Container(3401).ListItem(0).Label2]</value>
 	</variable>
+	<variable name="NowPlaying_Label_Addons">
+		<value condition="Container(3501).Position(1)">$INFO[Container(3501).ListItem(-1).Label]</value>
+		<value condition="Container(3501).Position(2)">$INFO[Container(3501).ListItem(-2).Label]</value>
+		<value condition="Container(3501).Position(3)">$INFO[Container(3501).ListItem(-3).Label]</value>
+		<value condition="Container(3501).Position(4)">$INFO[Container(3501).ListItem(-4).Label]</value>
+		<value condition="Container(3501).Position(5)">$INFO[Container(3501).ListItem(-5).Label]</value>
+		<value>$INFO[Container(3501).ListItem(0).Label]</value>
+	</variable>
+	<variable name="NowPlaying_Label2_Addons">
+		<value condition="Container(3501).Position(1)">$INFO[Container(3501).ListItem(-1).Label2]</value>
+		<value condition="Container(3501).Position(2)">$INFO[Container(3501).ListItem(-2).Label2]</value>
+		<value condition="Container(3501).Position(3)">$INFO[Container(3501).ListItem(-3).Label2]</value>
+		<value condition="Container(3501).Position(4)">$INFO[Container(3501).ListItem(-4).Label2]</value>
+		<value condition="Container(3501).Position(5)">$INFO[Container(3501).ListItem(-5).Label2]</value>
+		<value>$INFO[Container(3501).ListItem(0).Label2]</value>
+	</variable>
 
 	<include name="Movie_Icon_Properties">
 		<width>RA_IconPoster_Width</width>
@@ -2367,7 +2383,7 @@
 				<onright>-</onright>
 				<onup>320</onup>
 				<ondown>320</ondown>
-				<scrolltime>250</scrolltime>
+				<scrolltime>0</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
 
@@ -3469,7 +3485,6 @@
 						<aligny>center</aligny>
 						<label>$VAR[NowPlaying_Label_Episodes]</label>
 						<visible>!Container(3201).HasPrevious + Player.HasAudio</visible>
-						<animation effect="fade" start="0" end="100" time="75" delay="75">Visible</animation>
 					</control>
 					<control type="label" description="Now Playing Artist">
 						<posx>-4</posx>
@@ -3483,7 +3498,6 @@
 						<aligny>center</aligny>
 						<label>$VAR[NowPlaying_Label2_Episodes]</label>
 						<visible>!Container(3201).HasPrevious + Player.HasAudio</visible>
-						<animation effect="fade" start="0" end="100" time="75" delay="75">Visible</animation>
 					</control>
 				</control>
 				<control type="group" description="Item (1) flat">
@@ -3732,6 +3746,32 @@
 						<include>Square_Icon_Reflection_Properties</include>
 						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[EpisodeIcon_0]</texture>
 					</control>
+					<control type="label" description="Now Playing Song Title">
+						<posx>-4</posx>
+						<posy>292</posy>
+						<width>294</width>
+						<height>45</height>
+						<font>Shelf_Title</font>
+						<textcolor>Shelf_Title</textcolor>
+						<shadowcolor>Shelf_TitleShadow</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[NowPlaying_Label_Episodes]</label>
+						<visible>!Container(3201).HasPrevious + Player.HasAudio</visible>
+					</control>
+					<control type="label" description="Now Playing Artist">
+						<posx>-4</posx>
+						<posy>322</posy>
+						<width>294</width>
+						<height>45</height>
+						<font>Shelf_Title2</font>
+						<textcolor>Shelf_Title2</textcolor>
+						<shadowcolor>Shelf_TitleShadow</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[NowPlaying_Label2_Episodes]</label>
+						<visible>!Container(3201).HasPrevious + Player.HasAudio</visible>
+					</control>
 				</control>
 
 			</control>
@@ -3764,7 +3804,7 @@
 				<onright>-</onright>
 				<onup>330</onup>
 				<ondown>330</ondown>
-				<scrolltime>250</scrolltime>
+				<scrolltime>0</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
 
@@ -4154,20 +4194,20 @@
 				<label>31023</label>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(3301).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
-				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
-				</animation>
-				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
-					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
-				</animation>
-				
-				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+				<animation type="Visible" condition="Container(3000).OnPrevious" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),330R)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
+				</animation>
+				
+				<animation type="Visible" condition="Container(3000).OnNext" reversible="false">
+					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
+				</animation>
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),330L)" reversible="false">
+					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
+					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 			</control>
 			<control type="image" description="Now Playing - separation line">
@@ -4974,7 +5014,6 @@
 						<aligny>center</aligny>
 						<label>$VAR[NowPlaying_Label_Albums]</label>
 						<visible>!Container(3301).HasPrevious + Player.HasAudio</visible>
-						<animation effect="fade" start="0" end="100" time="75" delay="75">Visible</animation>
 					</control>
 					<control type="label" description="Now Playing Artist">
 						<posx>-4</posx>
@@ -4988,7 +5027,6 @@
 						<aligny>center</aligny>
 						<label>$VAR[NowPlaying_Label2_Albums]</label>
 						<visible>!Container(3301).HasPrevious + Player.HasAudio</visible>
-						<animation effect="fade" start="0" end="100" time="75" delay="75">Visible</animation>
 					</control>
 				</control>
 				<control type="group" description="Item (1) flat">
@@ -5237,6 +5275,32 @@
 						<include>Square_Icon_Reflection_Properties</include>
 						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AlbumIcon_0]</texture>
 					</control>
+					<control type="label" description="Now Playing Song Title">
+						<posx>-4</posx>
+						<posy>292</posy>
+						<width>294</width>
+						<height>45</height>
+						<font>Shelf_Title</font>
+						<textcolor>Shelf_Title</textcolor>
+						<shadowcolor>Shelf_TitleShadow</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[NowPlaying_Label_Albums]</label>
+						<visible>!Container(3301).HasPrevious + Player.HasAudio</visible>
+					</control>
+					<control type="label" description="Now Playing Artist">
+						<posx>-4</posx>
+						<posy>322</posy>
+						<width>294</width>
+						<height>45</height>
+						<font>Shelf_Title2</font>
+						<textcolor>Shelf_Title2</textcolor>
+						<shadowcolor>Shelf_TitleShadow</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[NowPlaying_Label2_Albums]</label>
+						<visible>!Container(3301).HasPrevious + Player.HasAudio</visible>
+					</control>
 				</control>
 
 			</control>
@@ -5269,7 +5333,7 @@
 				<onright>-</onright>
 				<onup>340</onup>
 				<ondown>340</ondown>
-				<scrolltime>250</scrolltime>
+				<scrolltime>0</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
 
@@ -5409,7 +5473,7 @@
 				</animation>
 			</control>
 			<control type="label" description="Headline: Now Playing">
-				<description>Now Playing</description>
+				<visible>Player.HasAudio + [Control.HasFocus(340) | Control.HasFocus(3401)]</visible>
 				<posx>118</posx>
 				<posy>46</posy>
 				<width>600</width>
@@ -5418,23 +5482,22 @@
 				<textcolor>Shelf_Headline</textcolor>
 				<shadowcolor>Shelf_Headline_Shadow</shadowcolor>
 				<label>31023</label>
-				<visible>Player.HasAudio + [Control.HasFocus(340) | Control.HasFocus(3401)]</visible>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(3401).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
-				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
-				</animation>
-				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
-					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
-				</animation>
-				
-				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+				<animation type="Visible" condition="Container(3000).OnPrevious" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),340R)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
+				</animation>
+				
+				<animation type="Visible" condition="Container(3000).OnNext" reversible="false">
+					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
+				</animation>
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),340L)" reversible="false">
+					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
+					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 			</control>
 			<control type="image" description="Now Playing - separation line">
@@ -6174,7 +6237,6 @@
 						<aligny>center</aligny>
 						<label>$VAR[NowPlaying_Label_Pictures]</label>
 						<visible>!Container(3401).HasPrevious + Player.HasAudio</visible>
-						<animation effect="fade" start="0" end="100" time="75" delay="75">Visible</animation>
 					</control>
 					<control type="label" description="Now Playing Artist">
 						<posx>-4</posx>
@@ -6188,7 +6250,6 @@
 						<aligny>center</aligny>
 						<label>$VAR[NowPlaying_Label2_Pictures]</label>
 						<visible>!Container(3401).HasPrevious + Player.HasAudio</visible>
-						<animation effect="fade" start="0" end="100" time="75" delay="75">Visible</animation>
 					</control>
 				</control>
 				<control type="group" description="Item (1) flat">
@@ -6437,11 +6498,36 @@
 						<include>Square_Icon_Reflection_Properties</include>
 						<texture fallback="DefaultVideo.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[PictureIcon_0]</texture>
 					</control>
+					<control type="label" description="Now Playing Song Title">
+						<posx>-4</posx>
+						<posy>292</posy>
+						<width>294</width>
+						<height>45</height>
+						<font>Shelf_Title</font>
+						<textcolor>Shelf_Title</textcolor>
+						<shadowcolor>Shelf_TitleShadow</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[NowPlaying_Label_Pictures]</label>
+						<visible>!Container(3401).HasPrevious + Player.HasAudio</visible>
+					</control>
+					<control type="label" description="Now Playing Artist">
+						<posx>-4</posx>
+						<posy>322</posy>
+						<width>294</width>
+						<height>45</height>
+						<font>Shelf_Title2</font>
+						<textcolor>Shelf_Title2</textcolor>
+						<shadowcolor>Shelf_TitleShadow</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[NowPlaying_Label2_Pictures]</label>
+						<visible>!Container(3401).HasPrevious + Player.HasAudio</visible>
+					</control>
 				</control>
 
 			</control>
-
-
+			
 			<control type="image" description="Picture Focuser">
 				<posx>87</posx>
 				<posy>73</posy>
@@ -6470,7 +6556,7 @@
 				<onright>-</onright>
 				<onup>350</onup>
 				<ondown>350</ondown>
-				<scrolltime>250</scrolltime>
+				<scrolltime>0</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
 
@@ -6480,12 +6566,12 @@
 
 				<content>
 					<item id="99" description="Now PLaying">
+						<visible>Player.HasAudio</visible>
 						<label>$INFO[MusicPlayer.Title]</label>
 						<label2>$INFO[MusicPlayer.Artist]</label2>
-						<property name="CheckNowPlaying">*.*</property>
 						<onclick>ActivateWindow(MusicPlaylist)</onclick>
 						<thumb>$INFO[MusicPlayer.Cover]</thumb>
-						<visible>Player.HasAudio</visible>
+						<property name="CheckNowPlaying">*.*</property>
 					</item>
 					<item id="1" description="Addons">
 						<visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
@@ -6621,20 +6707,20 @@
 				<label>31023</label>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(3501).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
-				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
-				</animation>
-				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
-					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
-					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
-				</animation>
-				
-				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+				<animation type="Visible" condition="Container(3000).OnPrevious" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),350R)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
+				</animation>
+				
+				<animation type="Visible" condition="Container(3000).OnNext" reversible="false">
+					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
+				</animation>
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),350L)" reversible="false">
+					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
+					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 			</control>
 			<control type="image" description="Now Playing - separation line">
@@ -7374,7 +7460,6 @@
 						<aligny>center</aligny>
 						<label>$VAR[NowPlaying_Label_Addons]</label>
 						<visible>!Container(3501).HasPrevious + Player.HasAudio</visible>
-						<animation effect="fade" start="0" end="100" time="75" delay="75">Visible</animation>
 					</control>
 					<control type="label" description="Now Playing Artist">
 						<posx>-4</posx>
@@ -7388,7 +7473,6 @@
 						<aligny>center</aligny>
 						<label>$VAR[NowPlaying_Label2_Addons]</label>
 						<visible>!Container(3501).HasPrevious + Player.HasAudio</visible>
-						<animation effect="fade" start="0" end="100" time="75" delay="75">Visible</animation>
 					</control>
 				</control>
 				<control type="group" description="Item (1) flat">
@@ -7636,6 +7720,32 @@
 					<control type="image" description="Addon Icon Reflection">
 						<include>Square_Icon_Reflection_Properties</include>
 						<texture fallback="DefaultAudio.png" flipy="true" diffuse="home_recentlyadded/Square_ReflectionMask.png">$VAR[AddonIcon_0]</texture>
+					</control>
+					<control type="label" description="Now Playing Song Title">
+						<posx>-4</posx>
+						<posy>292</posy>
+						<width>294</width>
+						<height>45</height>
+						<font>Shelf_Title</font>
+						<textcolor>Shelf_Title</textcolor>
+						<shadowcolor>Shelf_TitleShadow</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[NowPlaying_Label_Addons]</label>
+						<visible>!Container(3501).HasPrevious + Player.HasAudio</visible>
+					</control>
+					<control type="label" description="Now Playing Artist">
+						<posx>-4</posx>
+						<posy>322</posy>
+						<width>294</width>
+						<height>45</height>
+						<font>Shelf_Title2</font>
+						<textcolor>Shelf_Title2</textcolor>
+						<shadowcolor>Shelf_TitleShadow</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[NowPlaying_Label2_Addons]</label>
+						<visible>!Container(3501).HasPrevious + Player.HasAudio</visible>
 					</control>
 				</control>
 
