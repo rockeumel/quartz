@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<constant name="ShelfScroll_AnimationTime">250</constant>
-	<constant name="VisibleChange_AnimationTime">350</constant>
+	<constant name="VisibleChange_AnimationTime">5000</constant>
 	<!-- =============================== -->
 	<!-- ###  Poster Icon Dimensions ### -->
 	<!-- =============================== -->
@@ -797,20 +797,36 @@
 				<aspectratio>stretch</aspectratio>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(3101).HasPrevious" tween="sine" easing="inout"
 					>Conditional</animation>
-				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+				<!--<animation type="Visible" condition="Container(3000).OnNext" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310L)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
 					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
-				
-				<animation type="Visible" condition="StringCompare(Window().Property(HomeMenuDirection),left) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+				<animation type="Visible" condition="Container(3000).OnPrevious" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
 				</animation>
-				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),right) + !StringCompare(Window().Property(HomeMenuDirection),up)" reversible="false">
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310R)" reversible="false">
 					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
 					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
+				</animation>-->
+				
+				
+				<animation type="Visible" condition="Container(3000).OnPrevious" reversible="false">
+					<effect type="slide" time="VisibleChange_AnimationTime" start="-403" end="0"/>
+				</animation>
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310R)" reversible="false">
+					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="-403,0"/>
+					<effect type="slide" time="0" start="0,0" end="403,0" delay="VisibleChange_AnimationTime"/>
+				</animation>
+				
+				<animation type="Visible" condition="Container(3000).OnNext" reversible="false">
+					<effect type="slide" time="VisibleChange_AnimationTime" start="1803" end="0"/>
+				</animation>
+				<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuLastFocus),310L)" reversible="false">
+					<effect type="slide" time="VisibleChange_AnimationTime" start="0,0" end="1803,0"/>
+					<effect type="slide" time="0" start="0,0" end="-1803,0" delay="VisibleChange_AnimationTime"/>
 				</animation>
 			</control>
 
