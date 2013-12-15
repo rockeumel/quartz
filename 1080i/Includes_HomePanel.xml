@@ -792,7 +792,7 @@
 				<posx>399</posx>
 				<posy>110</posy>
 				<width>3</width>
-				<height>340</height>
+				<height>304</height>
 				<texture>home_recentlyadded/RecentlyAdded_Seperator.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="slide" end="-351" time="ShelfScroll_AnimationTime" condition="Container(3101).HasPrevious" tween="sine" easing="inout"
