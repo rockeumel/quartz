@@ -178,6 +178,9 @@
 					<height>432</height>
 					<onleft>SetProperty(HomeMenuLastFocus,310L)</onleft>
 					<onright>SetProperty(HomeMenuLastFocus,310R)</onright>
+					<onup>SetProperty(HomeMenuDirection,Up)</onup>
+					<onleft>SetProperty(HomeMenuDirection,Left)</onleft>
+					<onright>SetProperty(HomeMenuDirection,Right)</onright>
 					<onleft>Control.Move(3000,-1)</onleft>
 					<onright>Control.Move(3000,1)</onright>
 					<onup>3101</onup>
@@ -312,6 +315,9 @@
 					<onright>330</onright>
 					<onleft>SetProperty(HomeMenuLastFocus,320L)</onleft>
 					<onright>SetProperty(HomeMenuLastFocus,320R)</onright>
+					<onup>SetProperty(HomeMenuDirection,Up)</onup>
+					<onleft>SetProperty(HomeMenuDirection,Left)</onleft>
+					<onright>SetProperty(HomeMenuDirection,Right)</onright>
 					<onleft>Control.Move(3000,-1)</onleft>
 					<onright>Control.Move(3000,1)</onright>
 					<focusposition>3</focusposition>
@@ -440,6 +446,9 @@
 					<onright>340</onright>
 					<onleft>SetProperty(HomeMenuLastFocus,330L)</onleft>
 					<onright>SetProperty(HomeMenuLastFocus,330R)</onright>
+					<onup>SetProperty(HomeMenuDirection,Up)</onup>
+					<onleft>SetProperty(HomeMenuDirection,Left)</onleft>
+					<onright>SetProperty(HomeMenuDirection,Right)</onright>
 					<onleft>Control.Move(3000,-1)</onleft>
 					<onright>Control.Move(3000,1)</onright>
 					<focusposition>3</focusposition>
@@ -569,6 +578,9 @@
 					<onright>350</onright>
 					<onleft>SetProperty(HomeMenuLastFocus,340L)</onleft>
 					<onright>SetProperty(HomeMenuLastFocus,340R)</onright>
+					<onup>SetProperty(HomeMenuDirection,Up)</onup>
+					<onleft>SetProperty(HomeMenuDirection,Left)</onleft>
+					<onright>SetProperty(HomeMenuDirection,Right)</onright>
 					<onleft>Control.Move(3000,-1)</onleft>
 					<onright>Control.Move(3000,1)</onright>
 					<focusposition>3</focusposition>
@@ -672,6 +684,9 @@
 					<onright>360</onright>
 					<onleft>SetProperty(HomeMenuLastFocus,350L)</onleft>
 					<onright>SetProperty(HomeMenuLastFocus,350R)</onright>
+					<onup>SetProperty(HomeMenuDirection,Up)</onup>
+					<onleft>SetProperty(HomeMenuDirection,Left)</onleft>
+					<onright>SetProperty(HomeMenuDirection,Right)</onright>
 					<onleft>Control.Move(3000,-1)</onleft>
 					<onright>Control.Move(3000,1)</onright>
 					<focusposition>3</focusposition>
@@ -800,6 +815,9 @@
 					<onright>310</onright>
 					<onleft>SetProperty(HomeMenuLastFocus,360L)</onleft>
 					<onright>SetProperty(HomeMenuLastFocus,360R)</onright>
+					<onup>SetProperty(HomeMenuDirection,Up)</onup>
+					<onleft>SetProperty(HomeMenuDirection,Left)</onleft>
+					<onright>SetProperty(HomeMenuDirection,Right)</onright>
 					<onleft>Control.Move(3000,-1)</onleft>
 					<onright>Control.Move(3000,1)</onright>
 					<focusposition>3</focusposition>
