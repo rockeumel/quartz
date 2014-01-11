@@ -1727,8 +1727,8 @@
 					</visible>
 					<camera x="101" y="151"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-40" end="-40">Conditional</animation>
-					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime">Hidden</animation>
-					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Visible</animation>
 					
 					<control type="image" description="Movie Icon">
 						<include>Movie_Icon_Properties</include>
@@ -1765,8 +1765,8 @@
 					</visible>
 					<camera x="143" y="162"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-40" end="-40">Conditional</animation>
-					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime">Hidden</animation>
-					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Visible</animation>
 					
 					<control type="image" description="Now Playing Icon">
 						<include>Now_Playing_Icon_Properties</include>
@@ -1795,8 +1795,8 @@
 					</visible>
 					<camera x="1819" y="151"/>
 					<animation effect="rotatey" center="1920" start="40" end="40" time="0" condition="true">Conditional</animation>
-					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime">Hidden</animation>
-					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Visible</animation>
 					
 					<animation type="Visible" condition="Control.HasFocus(310)">
 						<effect type="fade" time="0" start="0" end="0"/>
@@ -3308,8 +3308,8 @@
 					<visible>Container(3201).HasPrevious + Control.HasFocus(320)</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
-					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime">Hidden</animation>
-					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Visible</animation>
 					
 					<control type="image" description="Episode Icon">
 						<include>Square_Icon_Properties</include>
@@ -3331,8 +3331,8 @@
 					<visible>Container(3201).HasNext + Control.HasFocus(320)</visible>
 					<camera x="1777" y="143"/>
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
-					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime">Hidden</animation>
-					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Visible</animation>
 					
 					<!--<animation type="Hidden" condition="StringCompare(Window().Property(HomeMenuDirection),Right)" reversible="false">
 						<effect type="rotatey" center="1920" start="45" end="0" time="250"/>
@@ -4819,8 +4819,8 @@
 					<visible>Container(3301).HasPrevious + Control.HasFocus(330)</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
-					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime">Hidden</animation>
-					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Visible</animation>
 					
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
@@ -4842,8 +4842,8 @@
 					<visible>Container(3301).HasNext + Control.HasFocus(330)</visible>
 					<camera x="1777" y="143"/>
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
-					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime">Hidden</animation>
-					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Visible</animation>
 					
 					<control type="image" description="Album Icon">
 						<include>Square_Icon_Properties</include>
@@ -5993,8 +5993,8 @@
 					<visible>Container(3401).HasPrevious + Control.HasFocus(340)</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
-					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime">Hidden</animation>
-					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Visible</animation>
 					
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
@@ -6016,8 +6016,8 @@
 					<visible>Container(3401).HasNext + Control.HasFocus(340)</visible>
 					<camera x="1777" y="143"/>
 					<animation effect="rotatey" center="1920" start="45" end="45" time="0" condition="true">Conditional</animation>
-					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime">Hidden</animation>
-					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Visible</animation>
 					
 					<control type="image" description="Picture Icon">
 						<include>Square_Icon_Properties</include>
@@ -7171,8 +7171,8 @@
 					<visible>Container(3501).HasPrevious + Control.HasFocus(350)</visible>
 					<camera x="143" y="143"/>
 					<animation condition="true" effect="rotatey" center="0" time="0" start="-45" end="-45">Conditional</animation>
-					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime">Hidden</animation>
-					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="VisibleChange_AnimationTime" condition="!StringCompare(Window().Property(HomeMenuDirection),Up)">Visible</animation>
 					
 					<control type="image" description="Addon Icon">
 						<include>Square_Icon_Properties</include>
